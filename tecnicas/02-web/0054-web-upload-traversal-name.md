@@ -1,0 +1,46 @@
+# filename path traversal
+
+**A04 Insecure Design / A03 Injection** · `T1505 Server Software Component`
+
+Uploads mal validados levam a RCE (web shells), XSS armazenado, SSRF via SVG/XML,
+e overwrite de arquivos críticos. No teste, cobre content-type spoofing, double extensions,
+polyglots, path traversal no filename e processamento assíncrono (ImageMagick, LibreOffice).
+
+**Variante:** Se não validar **`../../` em Content-Disposition**, a nota fica genérica.
+
+**Método**
+
+1. Mapeio tipos aceitos e onde o arquivo fica servido.
+2. Testo MIME spoof, magic bytes, extensões (.php.png, .aspx;$), null bytes legados.
+3. Avalio SVG/HTML/XML para XSS/XXE.
+4. Verifico se o path de storage permite traversal.
+5. Se processamento server-side existir, testar CVEs conhecidos do pipeline (com autorização).
+
+## Exemplo
+
+```http
+POST /upload HTTP/1.1
+Host: app.lab.local
+Content-Type: multipart/form-data; boundary=----653cc7
+
+------653cc7
+Content-Disposition: form-data; name="file"; filename="probe_traversal-name.txt"
+Content-Type: text/plain
+
+lab-probe-653cc7
+------653cc7--
+# sem webshell em prod; só lab
+```
+
+**Freio:** Não faço upload de malware real. Use webshells de lab benignas e remova ao final.
+
+Já abri High demais em filename path traversal por sintoma sem efeito. Cruzei com: AV/sandbox em upload; alertas de content-type mismatch; CSP em user content. Sem side-effect, baixo.
+
+Detecto via: AV/sandbox em upload; alertas de content-type mismatch; CSP em user content.
+
+Corrijo com: Storage fora de webroot; rename random; allowlist de tipos; re-encode de imagens;
+desativar parsers perigosos; scanning.
+
+Levo no report: Arquivo de prova, URL de acesso, impacto demonstrado, limpeza documentada.
+
+Refs: WSTG-BUSL-08, OWASP Unrestricted File Upload
