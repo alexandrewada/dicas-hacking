@@ -1,0 +1,63 @@
+# manipulação de preço/quantidade — path
+
+manipulação de preço/quantidade como pivô. Path curto > monte de finding isolado.
+
+## Papel
+
+Frameworks que bindam JSON automaticamente permitem que o cliente defina campos privilegiados
+(role, isAdmin, price, balance, verified). No teste, inspeciona DTOs, compara response de GET
+com campos aceitos no PATCH e usa fuzzing de propriedades ocultas.
+
+## Por que pivota
+
+- Se não validar **Business logic High**, a nota fica genérica.
+- GET do objeto vs PATCH com role/price/tenant_id. Gateway que stripa ≠ origin que aceita.
+
+## Cadeia
+
+1. Entrada (escopo)
+2. Pivô: manipulação de preço/quantidade
+3. Objetivo do ROE
+4. Persistência só se pedido, com kill-switch
+
+## Execução do pivô
+
+1. Capturo modelo de objeto via GET/OPTIONS/docs.
+2. Reenvio PATCH/POST com campos extras (role, credits, organization_id).
+3. Testo notações nested e JSON merge patch.
+4. Verifico se campos read-only são honrados.
+5. Encadeio com IDOR se object_id também for controlável.
+
+## Exemplo
+
+```http
+PATCH /api/v1/profile HTTP/1.1
+Host: api.lab.local
+Cookie: session=USER_A
+Content-Type: application/json
+
+{"displayName":"lab","role":"admin","tenant_id":"TENANT_B"}
+# mass-assign price: GET depois e comparar role — tag fa5f3d
+```
+
+## Freio
+
+Documentação OpenAPI pode estar incompleta — fuzz mesmo assim.
+Alguns gateways stripam campos; teste direto no origin se autorizado.
+
+## No caminho
+
+Detectar: Schema validation rejects; alertas de propriedades desconhecidas.
+
+Remediar: Allowlist de campos por endpoint; DTOs separados input/output; testes de contrato.
+
+## Prova
+
+Request com campo privilegiado; response provando alteração.
+
+Começo pelo contrato real (OpenAPI/HAR/introspection), não pelo PDF de arquitetura.
+
+## Refs
+
+- OWASP API3
+- PortSwigger Mass Assignment
