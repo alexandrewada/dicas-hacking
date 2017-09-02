@@ -1,0 +1,56 @@
+# OAuth redirect_uri frouxo
+
+**A01 / A07** · `T1528 Steal Application Access Token`
+
+## Contexto
+
+Falhas clássicas: redirect_uri frouxo, mixed HTTP, state/nonce ausentes, code replay,
+token leak em referrer/logs, e confusão de client secreto vs público. Em 2024+ foco também
+em PKCE obrigatório, DPoP e sender-constraining.
+
+## O que muda aqui
+
+- Se não validar **Code/token para domínio atacante de lab**, a nota fica genérica.
+- redirect_uri, state/nonce, audience. Authorize → token → resource, hop a hop.
+
+## Como testo
+
+1. Mapeio clients (public/confidential) e grants.
+2. Testo redirect_uri variations (subdomain, query truncate, parse bugs).
+3. Remover/alterar state e nonce.
+4. Avalio code interception e reuse.
+5. Verifico vazamento de tokens em browser history e mobile WebViews.
+
+## PoC mínimo
+
+```http
+GET /oauth/authorize?client_id=APP_LAB&redirect_uri=https://evil.lab.local/cb&response_type=code&state=c7668f HTTP/1.1
+Host: idp.lab.local
+# fluxo redirect: capturar se redirect_uri fora do allowlist passa
+```
+
+## Campo
+
+MFA bypass de verdade completa o fator sem o segundo. UI skip sem backend não é finding de auth.
+
+open redirect_uri: se não reproduz efeito (authz/dado/exec), não infla severidade. Referência de sinal: IdP logs de redirect mismatch; anomaly em consent; short-lived codes.
+
+## Já me queimei
+
+Não roube tokens de usuários reais. Use clients de teste do cliente.
+
+## Blue
+
+- Detectar: IdP logs de redirect mismatch; anomaly em consent; short-lived codes.
+- Fechar: Allowlist estrita de redirect_uri; PKCE; state/nonce; rotacionar secrets;
+evitar implicit grant.
+
+## Evidência
+
+PoC de redirect malicioso em client de teste; impacto no token.
+
+## Refs
+
+- RFC 6749
+- RFC 8252
+- OWASP OAuth
