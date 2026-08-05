@@ -1,0 +1,19 @@
+# Config permissiva — o gate real das 1000 notas é `_build/audit.py`.
+# Aqui só evitamos erros graves em docs de fachada (README, trilhas, índice).
+default: true
+MD013: false          # line-length
+MD024: false          # duplicate headings
+MD025: false          # multiple H1
+MD026: false          # trailing punctuation
+MD029: false          # ordered list prefix
+MD033: false          # inline HTML
+MD034: false          # bare URL
+MD036: false          # emphasis as heading
+MD041: false          # first line H1
+MD046: false          # code block style
+MD047: false          # single trailing newline
+MD051: false          # link fragments
+MD055: false          # table pipe style
+MD056: false          # table column count
+MD060: false          # table column style
+frontMatter: true

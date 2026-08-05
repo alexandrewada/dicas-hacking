@@ -1,0 +1,46 @@
+name: quality
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  audit:
+    name: make audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install PyYAML
+        run: pip install --quiet pyyaml
+      - name: Audit
+        run: make audit
+
+  markdownlint:
+    name: markdownlint (docs)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Só fachada + trilhas + índice — 1000 notas ficam no audit.py
+      # (regras de line-length etc. desligadas em .markdownlint.yaml).
+      - uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: |
+            README.md
+            CONTRIBUTING.md
+            DISCLAIMER.md
+            trilhas/**/*.md
+            indice/**/*.md
+
+  refs-urls:
+    name: check refs_bank URLs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Probe canonical URLs
+        run: python3 _build/check_refs_urls.py
