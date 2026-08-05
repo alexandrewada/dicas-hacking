@@ -62,7 +62,7 @@ Não contorne DRM de terceiros fora do escopo do app do cliente.
 ## Refs
 
 - [OWASP MASTG](https://mas.owasp.org/MASTG/)
-- [OWASP MASTG — iOS](https://mas.owasp.org/MASTG/0x06a-Testing-IOS/)
+- [OWASP MASTG — iOS](https://mas.owasp.org/MASTG/0x06b-iOS-Security-Testing/)
 - [Frida documentation](https://frida.re/docs/home/)
 
 ## Relacionadas

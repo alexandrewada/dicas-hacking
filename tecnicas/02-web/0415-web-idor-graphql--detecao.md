@@ -68,7 +68,7 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 - [MITRE ATT&CK T1078](https://attack.mitre.org/techniques/T1078/)
 - [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
-- [WSTG-ATHZ-04](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Bypassing_Authorization_Schema)
+- [WSTG-ATHZ-04](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/02-Testing_for_Bypassing_Authorization_Schema)
 - [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
 - [PortSwigger — Access control](https://portswigger.net/web-security/access-control)
 

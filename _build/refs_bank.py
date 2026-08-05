@@ -22,8 +22,8 @@ SEED_REF_MAP: list[tuple[str, str, str]] = [
      "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/README"),
     (r"WSTG-INFO-02", "OWASP WSTG-INFO-02 Fingerprint Web Server",
      "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server"),
-    (r"WSTG-ATHZ-04", "OWASP WSTG-ATHZ-04 Testing for Bypassing Authorization Schema",
-     "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Bypassing_Authorization_Schema"),
+    (r"WSTG-ATHZ-04", "OWASP WSTG — Bypassing Authorization Schema",
+     "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/02-Testing_for_Bypassing_Authorization_Schema"),
     (r"WSTG-BUSL-08", "OWASP WSTG-BUSL-08 Testing for HTTP Uploading",
      "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/08-Test_Upload_of_Unexpected_File_Types"),
     (r"WSTG-INPV-01|WSTG-INPV-01/02", "OWASP WSTG-INPV-01 Reflected XSS",
@@ -47,7 +47,7 @@ SEED_REF_MAP: list[tuple[str, str, str]] = [
     (r"OWASP Unrestricted File Upload", "OWASP File Upload Cheat Sheet",
      "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html"),
     (r"OWASP JWT", "OWASP JWT Cheat Sheet",
-     "https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html"),
+     "https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html"),
     (r"OWASP GraphQL", "OWASP GraphQL Cheat Sheet",
      "https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html"),
     (r"OWASP API Top 10 API1|OWASP API3|API Top 10", "OWASP API Security Top 10",
@@ -98,8 +98,8 @@ SEED_REF_MAP: list[tuple[str, str, str]] = [
      "https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection"),
     (r"PayloadsAllTheThings SSTI", "PayloadsAllTheThings — SSTI",
      "https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection"),
-    (r"PayloadsAllTheThings Windows", "PayloadsAllTheThings — Windows PrivEsc",
-     "https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation"),
+    (r"PayloadsAllTheThings Windows", "PayloadsAllTheThings — Methodology and Resources",
+     "https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Methodology%20and%20Resources"),
     (r"AWS IMDSv2", "AWS — IMDSv2",
      "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html"),
     (r"AWS S3", "AWS — S3 security best practices",
@@ -174,7 +174,7 @@ FAMILY_REFS: dict[str, list[tuple[str, str]]] = {
     ],
     "auth-password-spray": [
         ("MITRE ATT&CK T1110.003", "https://attack.mitre.org/techniques/T1110/003/"),
-        ("Microsoft — Password spray guidance", "https://learn.microsoft.com/en-us/defender-for-identity/password-spray-alert"),
+        ("Microsoft — Compromised credentials alerts", "https://learn.microsoft.com/en-us/defender-for-identity/compromised-credentials-alerts"),
     ],
     "auth-mfa-bypass": [
         ("OWASP MFA Cheat Sheet", "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html"),
@@ -231,7 +231,7 @@ FAMILY_REFS: dict[str, list[tuple[str, str]]] = {
     ],
     "win-privesc": [
         ("HackTricks — Windows Privilege Escalation", "https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation"),
-        ("PayloadsAllTheThings — Windows PrivEsc", "https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation"),
+        ("PayloadsAllTheThings — Methodology and Resources", "https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Methodology%20and%20Resources"),
     ],
     "win-cred": [
         ("SpecterOps — DPAPI", "https://posts.specterops.io/operational-guidance-for-offensive-user-dpapi-abuse-1fb7fac8b107"),
@@ -258,11 +258,11 @@ FAMILY_REFS: dict[str, list[tuple[str, str]]] = {
         ("Kubernetes Attack Matrix", "https://microsoft.github.io/Threat-Matrix-for-Kubernetes/"),
     ],
     "mobile-android": [
-        ("OWASP MASTG — Android", "https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/"),
+        ("OWASP MASTG — Android", "https://mas.owasp.org/MASTG/0x05b-Android-Security-Testing/"),
         ("Frida documentation", "https://frida.re/docs/home/"),
     ],
     "mobile-ios": [
-        ("OWASP MASTG — iOS", "https://mas.owasp.org/MASTG/0x06a-Testing-IOS/"),
+        ("OWASP MASTG — iOS", "https://mas.owasp.org/MASTG/0x06b-iOS-Security-Testing/"),
         ("Frida documentation", "https://frida.re/docs/home/"),
     ],
     "wifi-evil-twin": [
@@ -341,9 +341,9 @@ def extract_wstg_ids(text: str) -> list[str]:
 WSTG_URLS: dict[str, str] = {
     "WSTG-INFO-01": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/01-Conduct_Search_Engine_Discovery_Reconnaissance_for_Information_Leakage",
     "WSTG-INFO-02": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server",
-    "WSTG-INFO-05": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/05-Review_Webpage_Content_for_Information_Leakage",
+    "WSTG-INFO-05": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/05-Review_Web_Page_Content_for_Information_Leakage",
     "WSTG-ATHZ-01": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/01-Testing_Directory_Traversal_File_Include",
-    "WSTG-ATHZ-04": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Bypassing_Authorization_Schema",
+    "WSTG-ATHZ-04": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/02-Testing_for_Bypassing_Authorization_Schema",
     "WSTG-BUSL-08": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/08-Test_Upload_of_Unexpected_File_Types",
     "WSTG-INPV-01": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting",
     "WSTG-INPV-02": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting",

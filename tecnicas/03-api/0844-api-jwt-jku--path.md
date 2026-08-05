@@ -73,7 +73,7 @@ Batch e webhook: ACL costuma autorizar o primeiro ID do array e ignorar o resto.
 - [MITRE ATT&CK T1550](https://attack.mitre.org/techniques/T1550/)
 - [RFC 7519 — JWT](https://www.rfc-editor.org/rfc/rfc7519)
 - [PortSwigger — JWT attacks](https://portswigger.net/web-security/jwt)
-- [OWASP JWT Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html)
+- [OWASP JWT Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html)
 
 ## Relacionadas
 

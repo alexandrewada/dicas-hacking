@@ -68,7 +68,7 @@ Mint → store → use → revoke. Quebro o fluxo e testo cada perna.
 
 - [MITRE ATT&CK T1110.003](https://attack.mitre.org/techniques/T1110/003/)
 - [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
-- [Microsoft — Password spray guidance](https://learn.microsoft.com/en-us/defender-for-identity/password-spray-alert)
+- [Microsoft — Compromised credentials alerts](https://learn.microsoft.com/en-us/defender-for-identity/compromised-credentials-alerts)
 
 ## Relacionadas
 

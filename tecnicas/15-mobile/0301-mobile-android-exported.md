@@ -62,7 +62,7 @@ Deep link / WebView / exported: intent até token sink é o ROI.
 - [MITRE ATT&CK T1412](https://attack.mitre.org/techniques/T1412/)
 - [OWASP MASTG](https://mas.owasp.org/MASTG/)
 - [Frida documentation](https://frida.re/docs/home/)
-- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/)
+- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05b-Android-Security-Testing/)
 
 ## Relacionadas
 

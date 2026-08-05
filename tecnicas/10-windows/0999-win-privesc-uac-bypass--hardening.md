@@ -54,7 +54,7 @@ Aceite de risco só por escrito, com prazo.
 
 - [MITRE ATT&CK T1548](https://attack.mitre.org/techniques/T1548/)
 - [MITRE ATT&CK T1053](https://attack.mitre.org/techniques/T1053/)
-- [PayloadsAllTheThings — Windows PrivEsc](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation)
+- [PayloadsAllTheThings — Methodology and Resources](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Methodology%20and%20Resources)
 - [MITRE ATT&CK](https://attack.mitre.org/)
 - [HackTricks — Windows Privilege Escalation](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation)
 
