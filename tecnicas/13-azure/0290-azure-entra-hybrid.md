@@ -1,3 +1,15 @@
+---
+id: "0290"
+categoria: "13-azure"
+familia: "azure-entra"
+slug: "hybrid"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["13-azure", "azure-entra", "base"]
+aliases: ["hybrid identity abuse", "hybrid"]
+---
+
 # hybrid identity abuse
 
 ## Contexto
@@ -46,5 +58,13 @@ Não mexo em produção GA sem change window.
 
 ## Refs
 
-- MSFT Entra security
-- RoadTools
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft Learn — Entra ID](https://learn.microsoft.com/en-us/entra/identity/)
+- [MITRE ATT&CK T1078.004](https://attack.mitre.org/techniques/T1078/004/)
+
+## Relacionadas
+
+- [hybrid identity abuse — evidência](0670-azure-entra-hybrid--evidencia.md)
+- [Illlicit consent grant](0281-azure-entra-consent.md)
+- [PRT / primary refresh token](0283-azure-entra-prt.md)
+- [Furos de Conditional Access](0282-azure-entra-ca-gap.md)

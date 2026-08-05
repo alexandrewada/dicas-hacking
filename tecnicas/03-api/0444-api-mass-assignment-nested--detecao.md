@@ -1,3 +1,15 @@
+---
+id: "0444"
+categoria: "03-api"
+familia: "api-mass-assignment"
+slug: "nested"
+angulo: "detecao"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-mass-assignment", "detecao", "t1190"]
+aliases: ["nested JSON binding", "nested", "nested-detecao"]
+---
+
 # nested JSON binding — detecção
 
 Gap de detecção em `T1190 Exploit Public-Facing Application` / nested JSON binding. PoC mínimo, telemetria ligada.
@@ -54,5 +66,16 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP API3
-- PortSwigger Mass Assignment
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Mass assignment](https://portswigger.net/web-security/access-control)
+- [OWASP API3 BOPLA](https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/)
+
+## Relacionadas
+
+- [nested JSON binding](0064-api-mass-assignment-nested.md)
+- [nested JSON binding — path](0824-api-mass-assignment-nested--path.md)
+- [import CSV com colunas extras](0069-api-mass-assignment-csv-import.md)
+- [GraphQL input objects](0067-api-mass-assignment-graphql-input.md)
+- [JSON Merge Patch RFC 7396](0065-api-mass-assignment-json-merge.md)
+- [ORM update com map completo](0070-api-mass-assignment-orm-bind.md)

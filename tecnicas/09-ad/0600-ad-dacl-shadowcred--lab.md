@@ -1,3 +1,15 @@
+---
+id: "0600"
+categoria: "09-ad"
+familia: "ad-dacl"
+slug: "shadowcred"
+angulo: "lab"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-dacl", "lab"]
+aliases: ["KeyCredentialLink / Shadow Credentials", "shadowcred", "shadowcred-lab"]
+---
+
 # KeyCredentialLink / Shadow Credentials — lab
 
 Lab só pra KeyCredentialLink / Shadow Credentials. Se não reproduz isolado, não confio no finding de prod.
@@ -48,5 +60,15 @@ Edge BloodHound; PoC controlado; ACE dump.
 
 ## Refs
 
-- SpecterOps BloodHound docs
-- MITRE AD techniques
+- [SpecterOps — BloodHound docs](https://bloodhound.specterops.io/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [MITRE ATT&CK T1484](https://attack.mitre.org/techniques/T1484/)
+
+## Relacionadas
+
+- [KeyCredentialLink / Shadow Credentials](0220-ad-dacl-shadowcred.md)
+- [KeyCredentialLink / Shadow Credentials — hardening](0980-ad-dacl-shadowcred--hardening.md)
+- [GenericAll em usuário/grupo](0211-ad-dacl-genericall.md)
+- [Direitos de DCSync](0213-ad-dacl-dcsync.md)
+- [WriteSPN → targeted roast](0216-ad-dacl-writespn.md)
+- [AD CS ESC1 (path)](0221-ad-cs-esc1.md)

@@ -1,3 +1,15 @@
+---
+id: "0504"
+categoria: "05-injection"
+familia: "inj-sqli"
+slug: "mssql-oob"
+angulo: "detecao"
+mitre: "T1190"
+owasp: ""
+tags: ["05-injection", "inj-sqli", "detecao", "t1190"]
+aliases: ["MSSQL out-of-band", "mssql-oob", "mssql-oob-detecao"]
+---
+
 # MSSQL out-of-band — detecção
 
 Purple em MSSQL out-of-band: uma execução limpa. A pergunta é se alertou — não se o exploit 'passa'.
@@ -55,6 +67,16 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- PortSwigger SQLi
-- OWASP SQLi
-- SQLMap usage ethics
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [PortSwigger — SQL injection](https://portswigger.net/web-security/sql-injection)
+- [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- [sqlmap — usage](https://sqlmap.org/)
+
+## Relacionadas
+
+- [MSSQL out-of-band](0124-inj-sqli-mssql-oob.md)
+- [MSSQL out-of-band — hardening](0884-inj-sqli-mssql-oob--hardening.md)
+- [JSON operators injection](0129-inj-sqli-json-sql.md)
+- [SQLi blind em MySQL](0122-inj-sqli-mysql-blind.md)
+- [MySQL error-based](0121-inj-sqli-mysql-error.md)
+- [polyglot SQL + NoSQL](0130-inj-sqli-nosqli-bridge.md)

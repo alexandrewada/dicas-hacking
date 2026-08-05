@@ -1,3 +1,15 @@
+---
+id: "0940"
+categoria: "07-ssrf-xxe"
+familia: "xxe-classic"
+slug: "dos"
+angulo: "hardening"
+mitre: ""
+owasp: ""
+tags: ["07-ssrf-xxe", "xxe-classic", "hardening"]
+aliases: ["XML bomb (lab controlado)", "dos", "dos-hardening"]
+---
+
 # XML bomb (lab controlado) — hardening
 
 Do PoC ao controle — XML bomb (lab controlado).
@@ -40,5 +52,14 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- OWASP XXE
-- PortSwigger XXE
+- [OWASP XXE Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [PortSwigger — XXE](https://portswigger.net/web-security/xxe)
+
+## Relacionadas
+
+- [XML bomb (lab controlado)](0180-xxe-classic-dos.md)
+- [XML bomb (lab controlado) — lab](0560-xxe-classic-dos--lab.md)
+- [leitura de arquivo local](0171-xxe-classic-file-read.md)
+- [OOXML/XLSX XXE](0176-xxe-classic-office.md)
+- [OOB parameter entities](0173-xxe-classic-oob.md)
+- [XXE em SAML](0175-xxe-classic-saml.md)

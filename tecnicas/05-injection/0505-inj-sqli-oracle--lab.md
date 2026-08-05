@@ -1,3 +1,15 @@
+---
+id: "0505"
+categoria: "05-injection"
+familia: "inj-sqli"
+slug: "oracle"
+angulo: "lab"
+mitre: ""
+owasp: ""
+tags: ["05-injection", "inj-sqli", "lab"]
+aliases: ["Oracle SQLi", "oracle", "oracle-lab"]
+---
+
 # Oracle SQLi — lab
 
 Critério: outro analista fecha sozinho com esta nota.
@@ -47,6 +59,15 @@ Payload + response diferencial; amostra de dado de teste; query log se disponív
 
 ## Refs
 
-- PortSwigger SQLi
-- OWASP SQLi
-- SQLMap usage ethics
+- [PortSwigger — SQL injection](https://portswigger.net/web-security/sql-injection)
+- [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- [sqlmap — usage](https://sqlmap.org/)
+
+## Relacionadas
+
+- [Oracle SQLi](0125-inj-sqli-oracle.md)
+- [Oracle SQLi — hardening](0885-inj-sqli-oracle--hardening.md)
+- [JSON operators injection](0129-inj-sqli-json-sql.md)
+- [MSSQL out-of-band](0124-inj-sqli-mssql-oob.md)
+- [SQLi blind em MySQL](0122-inj-sqli-mysql-blind.md)
+- [MySQL error-based](0121-inj-sqli-mysql-error.md)

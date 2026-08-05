@@ -1,3 +1,15 @@
+---
+id: "0640"
+categoria: "11-linux"
+familia: "linux-privesc"
+slug: "pkexec"
+angulo: "evidencia"
+mitre: "T1548"
+owasp: ""
+tags: ["11-linux", "linux-privesc", "evidencia", "t1548"]
+aliases: ["polkit histórico", "pkexec", "pkexec-evidencia"]
+---
+
 # polkit histórico — evidência
 
 Pacote pra polkit histórico sobreviver peer review.
@@ -53,5 +65,15 @@ Não teste dirtypipe-like em hosts críticos sem janela.
 
 ## Refs
 
-- GTFOBins
-- HackTricks Linux PrivEsc
+- [MITRE ATT&CK T1548](https://attack.mitre.org/techniques/T1548/)
+- [MITRE ATT&CK T1611](https://attack.mitre.org/techniques/T1611/)
+- [GTFOBins](https://gtfobins.github.io/)
+- [HackTricks — Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+
+## Relacionadas
+
+- [polkit histórico](0260-linux-privesc-pkexec.md)
+- [SUID / GTFOBins](0251-linux-privesc-suid.md)
+- [sudoers misconfig](0252-linux-privesc-sudo.md)
+- [Abuso do grupo docker / sock](0256-linux-privesc-docker.md)
+- [capabilities (cap_setuid)](0253-linux-privesc-caps.md)

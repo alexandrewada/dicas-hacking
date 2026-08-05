@@ -1,3 +1,15 @@
+---
+id: "0460"
+categoria: "03-api"
+familia: "api-graphql"
+slug: "apq"
+angulo: "detecao"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-graphql", "detecao", "t1190"]
+aliases: ["Automatic Persisted Queries abuse", "apq", "apq-detecao"]
+---
+
 # Automatic Persisted Queries abuse — detecção
 
 Purple em Automatic Persisted Queries abuse: uma execução limpa. A pergunta é se alertou — não se o exploit 'passa'.
@@ -55,5 +67,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP GraphQL Cheat Sheet
-- PayloadsAllTheThings GraphQL
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP GraphQL Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)
+- [PayloadsAllTheThings — GraphQL](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection)
+
+## Relacionadas
+
+- [Automatic Persisted Queries abuse](0080-api-graphql-apq.md)
+- [Automatic Persisted Queries abuse — path](0840-api-graphql-apq--path.md)
+- [aliases para bypass de rate limit](0073-api-graphql-alias-bruteforce.md)
+- [batch HTTP GraphQL](0075-api-graphql-batch.md)
+- [CSRF em mutations cookie-based](0076-api-graphql-csrf.md)
+- [diretivas custom perigosas](0079-api-graphql-directive.md)

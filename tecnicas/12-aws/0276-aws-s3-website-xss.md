@@ -1,3 +1,15 @@
+---
+id: "0276"
+categoria: "12-aws"
+familia: "aws-s3"
+slug: "website-xss"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["12-aws", "aws-s3", "base"]
+aliases: ["static website XSS", "website-xss"]
+---
+
 # static website XSS
 
 ## Contexto
@@ -24,6 +36,7 @@ continuam a vazar dados. Teste também takeover de buckets referenciados (subdom
 # AWS lab — identidade de teste, sem wipe
 aws sts get-caller-identity --profile lab_b3478e
 aws s3api get-bucket-policy --bucket lab-bucket-website-xss --profile lab_b3478e
+# seguro: Get*/List*; destrutivo (DeleteBucket) só em lab throwaway
 # effective perms website-xss
 ```
 
@@ -45,4 +58,13 @@ Não baixe datasets inteiros de PII — evidência mínima.
 
 ## Refs
 
-- AWS S3 security best practices
+- [AWS — S3 security best practices](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html)
+- [HackTricks — AWS S3](https://book.hacktricks.xyz/cloud-security/aws-security/aws-unauthenticated-enum-access/s3)
+
+## Relacionadas
+
+- [static website XSS — evidência](0656-aws-s3-website-xss--evidencia.md)
+- [ACL authenticated users](0273-aws-s3-acl.md)
+- [access logs públicos](0279-aws-s3-logging.md)
+- [bucket como malware host](0280-aws-s3-malware.md)
+- [policy Principal *](0275-aws-s3-policy.md)

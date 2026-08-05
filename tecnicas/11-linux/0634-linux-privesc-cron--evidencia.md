@@ -1,3 +1,15 @@
+---
+id: "0634"
+categoria: "11-linux"
+familia: "linux-privesc"
+slug: "cron"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["11-linux", "linux-privesc", "evidencia"]
+aliases: ["cron/wildcard injection", "cron", "cron-evidencia"]
+---
+
 # cron/wildcard injection — evidência
 
 Pacote pra cron/wildcard injection sobreviver peer review.
@@ -50,5 +62,13 @@ Não teste dirtypipe-like em hosts críticos sem janela.
 
 ## Refs
 
-- GTFOBins
-- HackTricks Linux PrivEsc
+- [GTFOBins](https://gtfobins.github.io/)
+- [HackTricks — Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+
+## Relacionadas
+
+- [cron/wildcard injection](0254-linux-privesc-cron.md)
+- [SUID / GTFOBins](0251-linux-privesc-suid.md)
+- [sudoers misconfig](0252-linux-privesc-sudo.md)
+- [Abuso do grupo docker / sock](0256-linux-privesc-docker.md)
+- [capabilities (cap_setuid)](0253-linux-privesc-caps.md)

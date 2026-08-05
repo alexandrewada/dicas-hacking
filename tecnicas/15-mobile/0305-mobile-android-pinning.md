@@ -1,3 +1,15 @@
+---
+id: "0305"
+categoria: "15-mobile"
+familia: "mobile-android"
+slug: "pinning"
+angulo: "base"
+mitre: "T1420"
+owasp: ""
+tags: ["15-mobile", "mobile-android", "base", "t1420"]
+aliases: ["pinning bypass lab", "pinning"]
+---
+
 # pinning bypass lab
 
 **Mobile** · `T1420 / T1412 (mobile ATT&CK)`
@@ -19,10 +31,10 @@ Foco em impacto em dados e auth, não só em root detection bypass cosmético.
 ## PoC mínimo
 
 ```bash
-# mobile lab build — sem store production
-adb shell am start -a android.intent.action.VIEW \
-  -d 'app://lab/pinning?token=TOKEN_LAB_5cd37a'
-# deep link / exported → token sink
+# Android pinning — build de teste
+adb shell run-as app.lab ls shared_prefs/
+adb backup -f bak_5cd37a.ab app.lab # só lab build
+frida -U -f app.lab -l bypass_pinning.js # NÃO em prod store
 ```
 
 **Freio:** Não publique apps modificados. Respeite store ToS e escopo.
@@ -35,4 +47,18 @@ Corrijo com: Android Keystore; non-exported components; WebView harden; SSL pinn
 
 Levo no report: Componente explorado; dado acessado; API finding correlato.
 
-Refs: OWASP MASVS/MASTG, Frida docs
+## Refs
+
+- [MITRE ATT&CK T1420](https://attack.mitre.org/techniques/T1420/)
+- [MITRE ATT&CK T1412](https://attack.mitre.org/techniques/T1412/)
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [Frida documentation](https://frida.re/docs/home/)
+- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/)
+
+## Relacionadas
+
+- [pinning bypass lab — evidência](0685-mobile-android-pinning--evidencia.md)
+- [token em logcat](0310-mobile-android-auth.md)
+- [backup enabled](0307-mobile-android-backup.md)
+- [clipboard leaks](0308-mobile-android-clip.md)
+- [crypto caseira fraca](0306-mobile-android-crypto.md)

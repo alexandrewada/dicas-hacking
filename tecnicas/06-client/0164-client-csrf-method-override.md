@@ -1,3 +1,15 @@
+---
+id: "0164"
+categoria: "06-client"
+familia: "client-csrf"
+slug: "method-override"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["06-client", "client-csrf", "base"]
+aliases: ["X-HTTP-Method-Override", "method-override"]
+---
+
 # X-HTTP-Method-Override
 
 ## Leitura rápida
@@ -48,5 +60,14 @@ PoC HTML; request forjado; efeito na conta teste.
 
 ## Refs
 
-- OWASP CSRF
-- PortSwigger CSRF
+- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — CSRF](https://portswigger.net/web-security/csrf)
+
+## Relacionadas
+
+- [X-HTTP-Method-Override — lab](0544-client-csrf-method-override--lab.md)
+- [X-HTTP-Method-Override — hardening](0924-client-csrf-method-override--hardening.md)
+- [clickjacking + CSRF](0170-client-csrf-clickjacking.md)
+- [CORS reflection + CSRF](0169-client-csrf-cors.md)
+- [JSON CSRF via text/plain](0163-client-csrf-json-csrf.md)
+- [logout CSRF](0168-client-csrf-logout.md)

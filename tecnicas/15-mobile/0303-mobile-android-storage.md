@@ -1,3 +1,15 @@
+---
+id: "0303"
+categoria: "15-mobile"
+familia: "mobile-android"
+slug: "storage"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["15-mobile", "mobile-android", "base"]
+aliases: ["storage world-readable", "storage"]
+---
+
 # storage world-readable
 
 ## Leitura rápida
@@ -21,10 +33,10 @@ Foco em impacto em dados e auth, não só em root detection bypass cosmético.
 ## Sinal / query
 
 ```bash
-# mobile lab build — sem store production
-adb shell am start -a android.intent.action.VIEW \
-  -d 'app://lab/storage?token=TOKEN_LAB_453090'
-# deep link / exported → token sink
+# Android storage — build de teste
+adb shell run-as app.lab ls shared_prefs/
+adb backup -f bak_453090.ab app.lab # só lab build
+frida -U -f app.lab -l bypass_pinning.js # NÃO em prod store
 ```
 
 Frida em build de teste ≠ pin quebrado na store. Deixo a nuance no report.
@@ -45,5 +57,14 @@ Componente explorado; dado acessado; API finding correlato.
 
 ## Refs
 
-- OWASP MASVS/MASTG
-- Frida docs
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [Frida documentation](https://frida.re/docs/home/)
+- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/)
+
+## Relacionadas
+
+- [storage world-readable — evidência](0683-mobile-android-storage--evidencia.md)
+- [token em logcat](0310-mobile-android-auth.md)
+- [backup enabled](0307-mobile-android-backup.md)
+- [clipboard leaks](0308-mobile-android-clip.md)
+- [crypto caseira fraca](0306-mobile-android-crypto.md)

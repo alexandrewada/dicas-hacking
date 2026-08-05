@@ -1,3 +1,15 @@
+---
+id: "0734"
+categoria: "19-crypto"
+familia: "crypto-tls"
+slug: "expired"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["19-crypto", "crypto-tls", "evidencia"]
+aliases: ["cert expired/self-signed em prod", "expired", "expired-evidencia"]
+---
+
 # cert expired/self-signed em prod — evidência
 
 Pacote pra cert expired/self-signed em prod sobreviver peer review.
@@ -51,5 +63,13 @@ Não faço stress massivo em prod. POODLE-class é histórico — contextualize 
 
 ## Refs
 
-- OWASP Transport Layer Protection
-- Mozilla TLS guidelines
+- [OWASP Transport Layer Protection](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
+- [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/)
+
+## Relacionadas
+
+- [cert expired/self-signed em prod](0354-crypto-tls-expired.md)
+- [hostname mismatch](0353-crypto-tls-cert-mismatch.md)
+- [CRIME/BREACH context](0359-crypto-tls-compression.md)
+- [Certificate Transparency gaps](0360-crypto-tls-ct.md)
+- [HSTS ausente](0355-crypto-tls-hsts.md)

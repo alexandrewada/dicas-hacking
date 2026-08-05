@@ -1,3 +1,15 @@
+---
+id: "0130"
+categoria: "05-injection"
+familia: "inj-sqli"
+slug: "nosqli-bridge"
+angulo: "base"
+mitre: "T1190"
+owasp: ""
+tags: ["05-injection", "inj-sqli", "base", "t1190"]
+aliases: ["polyglot SQL + NoSQL", "nosqli-bridge"]
+---
+
 # polyglot SQL + NoSQL
 
 `T1190`
@@ -51,6 +63,16 @@ No PDF — Payload + response diferencial; amostra de dado de teste; query log s
 
 ## Refs
 
-- PortSwigger SQLi
-- OWASP SQLi
-- SQLMap usage ethics
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [PortSwigger — SQL injection](https://portswigger.net/web-security/sql-injection)
+- [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- [sqlmap — usage](https://sqlmap.org/)
+
+## Relacionadas
+
+- [polyglot SQL + NoSQL — lab](0510-inj-sqli-nosqli-bridge--lab.md)
+- [polyglot SQL + NoSQL — hardening](0890-inj-sqli-nosqli-bridge--hardening.md)
+- [JSON operators injection](0129-inj-sqli-json-sql.md)
+- [MSSQL out-of-band](0124-inj-sqli-mssql-oob.md)
+- [SQLi blind em MySQL](0122-inj-sqli-mysql-blind.md)
+- [MySQL error-based](0121-inj-sqli-mysql-error.md)

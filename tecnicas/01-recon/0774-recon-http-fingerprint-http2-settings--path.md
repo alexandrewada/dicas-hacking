@@ -1,3 +1,15 @@
+---
+id: "0774"
+categoria: "01-recon"
+familia: "recon-http-fingerprint"
+slug: "http2-settings"
+angulo: "path"
+mitre: "T1592"
+owasp: "WSTG-INFO-02"
+tags: ["01-recon", "recon-http-fingerprint", "path", "t1592"]
+aliases: ["HTTP/2 SETTINGS fingerprint", "http2-settings", "http2-settings-path"]
+---
+
 # HTTP/2 SETTINGS fingerprint — path
 
 HTTP/2 SETTINGS fingerprint como pivô. Path curto > monte de finding isolado.
@@ -55,6 +67,17 @@ Achado de recon que eu reporto: ativo fora do inventário com superfície autent
 
 ## Refs
 
-- WSTG-INFO-02
-- RFC 9110
-- OWASP Secure Headers
+- [MITRE ATT&CK T1592](https://attack.mitre.org/techniques/T1592/)
+- [WSTG-INFO-02](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server)
+- [RFC 9110 — HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110)
+- [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)
+- [PortSwigger — HTTP information gathering](https://portswigger.net/web-security)
+
+## Relacionadas
+
+- [HTTP/2 SETTINGS fingerprint](0014-recon-http-fingerprint-http2-settings.md)
+- [HTTP/2 SETTINGS fingerprint — detecção](0394-recon-http-fingerprint-http2-settings--detecao.md)
+- [endpoints ACME/challenge](0020-recon-http-fingerprint-acme-probe.md)
+- [heurística via Cache-Control/ETag](0017-recon-http-fingerprint-cache-headers.md)
+- [cookies default de framework](0012-recon-http-fingerprint-cookie-banner.md)
+- [CSP como mapa de domínios](0019-recon-http-fingerprint-csp-leak.md)

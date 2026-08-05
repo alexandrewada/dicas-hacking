@@ -1,3 +1,15 @@
+---
+id: "0649"
+categoria: "12-aws"
+familia: "aws-privesc"
+slug: "orgs"
+angulo: "evidencia"
+mitre: "T1078.004"
+owasp: ""
+tags: ["12-aws", "aws-privesc", "evidencia", "t1078.004"]
+aliases: ["Organizations / SCP bypass gaps", "orgs", "orgs-evidencia"]
+---
+
 # Organizations / SCP bypass gaps — evidência
 
 Pacote pra Organizations / SCP bypass gaps sobreviver peer review.
@@ -49,5 +61,14 @@ Não crie backdoors permanentes. Cuidado com custos (instâncias grandes).
 
 ## Refs
 
-- Rhino Security Labs AWS privesc
-- MITRE Cloud
+- [MITRE ATT&CK T1078.004](https://attack.mitre.org/techniques/T1078/004/)
+- [Rhino Security Labs — AWS privilege escalation](https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
+
+## Relacionadas
+
+- [Organizations / SCP bypass gaps](0269-aws-privesc-orgs.md)
+- [Credencial via IMDS](0266-aws-privesc-imds.md)
+- [PassRole + compute](0262-aws-privesc-passrole.md)
+- [trust policy frouxa](0264-aws-privesc-assume-role.md)

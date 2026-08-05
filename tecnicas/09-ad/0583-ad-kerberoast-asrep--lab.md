@@ -1,3 +1,15 @@
+---
+id: "0583"
+categoria: "09-ad"
+familia: "ad-kerberoast"
+slug: "asrep"
+angulo: "lab"
+mitre: "T1558.003"
+owasp: ""
+tags: ["09-ad", "ad-kerberoast", "lab", "t1558.003"]
+aliases: ["AS-REP roasting", "asrep", "asrep-lab"]
+---
+
 # AS-REP roasting — lab
 
 Lab só pra AS-REP roasting. Se não reproduz isolado, não confio no finding de prod.
@@ -49,5 +61,17 @@ SPN list; hash crackado de conta lab/serviço fraco; path BloodHound.
 
 ## Refs
 
-- MITRE T1558
-- SpecterOps Kerberoasting
+- [MITRE ATT&CK T1558.003](https://attack.mitre.org/techniques/T1558/003/)
+- [MITRE ATT&CK T1558.004](https://attack.mitre.org/techniques/T1558/004/)
+- [MITRE ATT&CK T1558](https://attack.mitre.org/techniques/T1558/)
+- [SpecterOps — Kerberoasting](https://posts.specterops.io/kerberoasting-revisited-d9c270baaf91)
+- [SpecterOps — BloodHound](https://bloodhound.specterops.io/)
+
+## Relacionadas
+
+- [AS-REP roasting](0203-ad-kerberoast-asrep.md)
+- [AS-REP roasting — hardening](0963-ad-kerberoast-asrep--hardening.md)
+- [Kerberoasting (TGS RC4)](0201-ad-kerberoast-rc4.md)
+- [path pós-roast](0205-ad-kerberoast-bloodhound.md)
+- [detecção de ausência de gMSA](0206-ad-kerberoast-gmsa.md)
+- [Direitos de DCSync (path)](0213-ad-dacl-dcsync.md)

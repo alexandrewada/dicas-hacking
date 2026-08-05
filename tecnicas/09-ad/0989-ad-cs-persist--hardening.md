@@ -1,3 +1,15 @@
+---
+id: "0989"
+categoria: "09-ad"
+familia: "ad-cs"
+slug: "persist"
+angulo: "hardening"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-cs", "hardening"]
+aliases: ["persistência via certs", "persist", "persist-hardening"]
+---
+
 # persistência via certs — hardening
 
 Do PoC ao controle — persistência via certs.
@@ -43,5 +55,13 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- SpecterOps Certified Pre-Owned
-- MITRE T1649
+- [SpecterOps — Certified Pre-Owned (AD CS)](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
+- [MITRE ATT&CK T1649](https://attack.mitre.org/techniques/T1649/)
+
+## Relacionadas
+
+- [persistência via certs](0229-ad-cs-persist.md)
+- [persistência via certs — lab](0609-ad-cs-persist--lab.md)
+- [AD CS ESC1](0221-ad-cs-esc1.md)
+- [AD CS ESC8 (relay HTTP)](0227-ad-cs-esc8.md)
+- [detecção de enrollment anômalo](0230-ad-cs-detect.md)

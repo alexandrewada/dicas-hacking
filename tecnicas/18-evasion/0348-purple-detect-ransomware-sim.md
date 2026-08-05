@@ -1,3 +1,15 @@
+---
+id: "0348"
+categoria: "18-evasion"
+familia: "purple-detect"
+slug: "ransomware-sim"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["18-evasion", "purple-detect", "base"]
+aliases: ["ransomware simulation safe", "ransomware-sim"]
+---
+
 # ransomware simulation safe
 
 `Detection engineering`
@@ -54,5 +66,14 @@ No PDF — Matriz técnica→alerta; screenshots SIEM; recomendações.
 
 ## Refs
 
-- MITRE ATT&CK
-- Atomic Red Team
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+- [SigmaHQ rules](https://github.com/SigmaHQ/sigma)
+
+## Relacionadas
+
+- [ransomware simulation safe — evidência](0728-purple-detect-ransomware-sim--evidencia.md)
+- [Atomic Red Team na prática](0341-purple-detect-atomic.md)
+- [canary tokens validation](0349-purple-detect-canary.md)
+- [CloudTrail gaps](0345-purple-detect-cloudtrail.md)
+- [DNS anomaly detection test](0346-purple-detect-dns-dga.md)

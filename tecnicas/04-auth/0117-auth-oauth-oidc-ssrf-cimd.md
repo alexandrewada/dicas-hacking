@@ -1,3 +1,15 @@
+---
+id: "0117"
+categoria: "04-auth"
+familia: "auth-oauth-oidc"
+slug: "ssrf-cimd"
+angulo: "base"
+mitre: "T1528"
+owasp: ""
+tags: ["04-auth", "auth-oauth-oidc", "base", "t1528"]
+aliases: ["SSRF em client registration", "ssrf-cimd"]
+---
+
 # SSRF em client registration
 
 **A01 / A07** · `T1528 Steal Application Access Token`
@@ -47,6 +59,17 @@ evitar implicit grant.
 
 ## Refs
 
-- RFC 6749
-- RFC 8252
-- OWASP OAuth
+- [MITRE ATT&CK T1528](https://attack.mitre.org/techniques/T1528/)
+- [RFC 6749 — OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749)
+- [RFC 8252 — OAuth for Native Apps](https://www.rfc-editor.org/rfc/rfc8252)
+- [OWASP OAuth 2.0 Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html)
+- [PortSwigger — OAuth authentication](https://portswigger.net/web-security/oauth)
+
+## Relacionadas
+
+- [SSRF em client registration — detecção](0497-auth-oauth-oidc-ssrf-cimd--detecao.md)
+- [SSRF em client registration — hardening](0877-auth-oauth-oidc-ssrf-cimd--hardening.md)
+- [device authorization grant abuse](0119-auth-oauth-oidc-device-code.md)
+- [implicit grant legado](0114-auth-oauth-oidc-implicit.md)
+- [client_assertion fraca](0120-auth-oauth-oidc-jwt-client-auth.md)
+- [mix-up attack (multi-IdP)](0116-auth-oauth-oidc-mixup.md)

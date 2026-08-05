@@ -1,3 +1,15 @@
+---
+id: "0688"
+categoria: "15-mobile"
+familia: "mobile-android"
+slug: "clip"
+angulo: "evidencia"
+mitre: "T1420"
+owasp: ""
+tags: ["15-mobile", "mobile-android", "evidencia", "t1420"]
+aliases: ["clipboard leaks", "clip", "clip-evidencia"]
+---
+
 # clipboard leaks — evidência
 
 Pacote pra clipboard leaks sobreviver peer review.
@@ -52,5 +64,16 @@ Não publique apps modificados. Respeite store ToS e escopo.
 
 ## Refs
 
-- OWASP MASVS/MASTG
-- Frida docs
+- [MITRE ATT&CK T1420](https://attack.mitre.org/techniques/T1420/)
+- [MITRE ATT&CK T1412](https://attack.mitre.org/techniques/T1412/)
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [Frida documentation](https://frida.re/docs/home/)
+- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/)
+
+## Relacionadas
+
+- [clipboard leaks](0308-mobile-android-clip.md)
+- [token em logcat](0310-mobile-android-auth.md)
+- [backup enabled](0307-mobile-android-backup.md)
+- [crypto caseira fraca](0306-mobile-android-crypto.md)
+- [deeplink hijack](0304-mobile-android-deeplink.md)

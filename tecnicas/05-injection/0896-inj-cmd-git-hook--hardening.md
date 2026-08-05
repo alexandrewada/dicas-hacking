@@ -1,3 +1,15 @@
+---
+id: "0896"
+categoria: "05-injection"
+familia: "inj-cmd"
+slug: "git-hook"
+angulo: "hardening"
+mitre: "T1059"
+owasp: "WSTG-INPV-12"
+tags: ["05-injection", "inj-cmd", "hardening", "t1059"]
+aliases: ["git options injection", "git-hook", "git-hook-hardening"]
+---
+
 # git options injection — hardening
 
 Do PoC ao controle — git options injection.
@@ -38,5 +50,16 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- OWASP Command Injection
-- WSTG-INPV-12
+- [MITRE ATT&CK T1059](https://attack.mitre.org/techniques/T1059/)
+- [WSTG-INPV-12](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection)
+- [OWASP OS Command Injection Defense](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
+- [PortSwigger — OS command injection](https://portswigger.net/web-security/os-command-injection)
+
+## Relacionadas
+
+- [git options injection](0136-inj-cmd-git-hook.md)
+- [git options injection — lab](0516-inj-cmd-git-hook--lab.md)
+- [argument injection sem shell](0133-inj-cmd-arg-inject.md)
+- [ambientes embedded/busybox](0138-inj-cmd-busybox.md)
+- [sendmail/pipe](0137-inj-cmd-email-pipe.md)
+- [bypass de denylist](0139-inj-cmd-filter-bypass.md)

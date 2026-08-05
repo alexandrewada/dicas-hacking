@@ -1,3 +1,15 @@
+---
+id: "0257"
+categoria: "11-linux"
+familia: "linux-privesc"
+slug: "ld-preload"
+angulo: "base"
+mitre: "T1548"
+owasp: ""
+tags: ["11-linux", "linux-privesc", "base", "t1548"]
+aliases: ["LD_PRELOAD / hijack", "ld-preload"]
+---
+
 # LD_PRELOAD / hijack
 
 **Local privesc** · `T1548 / T1611`
@@ -19,11 +31,12 @@ exploit-as-a-service.
 ## Sinal / query
 
 ```bash
-# linux privesc lab
-find / -perm -4000 -type f 2>/dev/null | head
-sudo -l
-getcap -r / 2>/dev/null | head
-# foco ld-preload tag 7d01ba
+# linux ld-preload — enum mínimo lab
+ls -la /etc/cron* /var/spool/cron 2>/dev/null | head
+showmount -e nfs.lab.local 2>/dev/null
+echo $LD_PRELOAD
+# kernel exploit: SOMENTE lab clonado — tag 7d01ba
+# prod: evidencia de versão + CVE sem crash
 ```
 
 **Freio:** Kernel exploits são instáveis — prefira misconfigs.
@@ -36,4 +49,17 @@ Corrijo com: Remove SUID desnecessário; sudo least privilege; patch; immutable 
 
 Levo no report: Vetor; id antes/depois; artefato removido.
 
-Refs: GTFOBins, HackTricks Linux PrivEsc
+## Refs
+
+- [MITRE ATT&CK T1548](https://attack.mitre.org/techniques/T1548/)
+- [MITRE ATT&CK T1611](https://attack.mitre.org/techniques/T1611/)
+- [GTFOBins](https://gtfobins.github.io/)
+- [HackTricks — Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+
+## Relacionadas
+
+- [LD_PRELOAD / hijack — evidência](0637-linux-privesc-ld-preload--evidencia.md)
+- [SUID / GTFOBins](0251-linux-privesc-suid.md)
+- [sudoers misconfig](0252-linux-privesc-sudo.md)
+- [Abuso do grupo docker / sock](0256-linux-privesc-docker.md)
+- [capabilities (cap_setuid)](0253-linux-privesc-caps.md)

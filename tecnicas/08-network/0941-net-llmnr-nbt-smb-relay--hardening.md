@@ -1,3 +1,15 @@
+---
+id: "0941"
+categoria: "08-network"
+familia: "net-llmnr-nbt"
+slug: "smb-relay"
+angulo: "hardening"
+mitre: "T1557"
+owasp: ""
+tags: ["08-network", "net-llmnr-nbt", "hardening", "t1557"]
+aliases: ["NTLM relay via LLMNR/NBT-NS", "smb-relay", "smb-relay-hardening"]
+---
+
 # NTLM relay via LLMNR/NBT-NS — hardening
 
 Do PoC ao controle — NTLM relay via LLMNR/NBT-NS.
@@ -41,5 +53,19 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- MITRE T1557.001
-- SpecterOps AD guides
+- [MITRE ATT&CK T1557](https://attack.mitre.org/techniques/T1557/)
+- [MITRE ATT&CK T1557.001](https://attack.mitre.org/techniques/T1557/001/)
+- [SpecterOps — AD security](https://posts.specterops.io/)
+- [HackTricks — LLMNR/NBT-NS spoofing](https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-network/spoofing-llmnr-nbt-ns-mdns-dns-and-wpad-and-relay-attacks)
+
+## Relacionadas
+
+- [NTLM relay via LLMNR/NBT-NS](0181-net-llmnr-nbt-smb-relay.md)
+- [NTLM relay via LLMNR/NBT-NS — lab](0561-net-llmnr-nbt-smb-relay--lab.md)
+- [crack NetNTLMv2 de conta teste](0188-net-llmnr-nbt-crack.md)
+- [detecção purple](0189-net-llmnr-nbt-detect.md)
+- [coerção EFS](0187-net-llmnr-nbt-efs.md)
+- [playbook de hardening GPO](0190-net-llmnr-nbt-hardening.md)
+- [signing disabled (path)](0196-net-smb-signing.md)
+- [Direitos de DCSync (path)](../09-ad/0213-ad-dacl-dcsync.md)
+- [AD CS ESC8 (relay HTTP) (path)](../09-ad/0227-ad-cs-esc8.md)

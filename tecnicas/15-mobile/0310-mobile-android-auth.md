@@ -1,3 +1,15 @@
+---
+id: "0310"
+categoria: "15-mobile"
+familia: "mobile-android"
+slug: "auth"
+angulo: "base"
+mitre: "T1420"
+owasp: ""
+tags: ["15-mobile", "mobile-android", "base", "t1420"]
+aliases: ["token em logcat", "auth"]
+---
+
 # token em logcat
 
 **Mobile** · `T1420 / T1412 (mobile ATT&CK)`
@@ -35,4 +47,18 @@ Corrijo com: Android Keystore; non-exported components; WebView harden; SSL pinn
 
 Levo no report: Componente explorado; dado acessado; API finding correlato.
 
-Refs: OWASP MASVS/MASTG, Frida docs
+## Refs
+
+- [MITRE ATT&CK T1420](https://attack.mitre.org/techniques/T1420/)
+- [MITRE ATT&CK T1412](https://attack.mitre.org/techniques/T1412/)
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [Frida documentation](https://frida.re/docs/home/)
+- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/)
+
+## Relacionadas
+
+- [token em logcat — evidência](0690-mobile-android-auth--evidencia.md)
+- [backup enabled](0307-mobile-android-backup.md)
+- [clipboard leaks](0308-mobile-android-clip.md)
+- [crypto caseira fraca](0306-mobile-android-crypto.md)
+- [deeplink hijack](0304-mobile-android-deeplink.md)

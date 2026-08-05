@@ -1,3 +1,15 @@
+---
+id: "0346"
+categoria: "18-evasion"
+familia: "purple-detect"
+slug: "dns-dga"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["18-evasion", "purple-detect", "base"]
+aliases: ["DNS anomaly detection test", "dns-dga"]
+---
+
 # DNS anomaly detection test
 
 **Purple Team** · `Detection engineering`
@@ -50,5 +62,14 @@ Sigma/KQL amarrado ao MITRE da técnica — 'suspicious powershell' genérico n�
 
 ## Refs
 
-- MITRE ATT&CK
-- Atomic Red Team
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+- [SigmaHQ rules](https://github.com/SigmaHQ/sigma)
+
+## Relacionadas
+
+- [DNS anomaly detection test — evidência](0726-purple-detect-dns-dga--evidencia.md)
+- [Atomic Red Team na prática](0341-purple-detect-atomic.md)
+- [canary tokens validation](0349-purple-detect-canary.md)
+- [CloudTrail gaps](0345-purple-detect-cloudtrail.md)
+- [EDR bypass discussion ética](0343-purple-detect-edr-bypass.md)

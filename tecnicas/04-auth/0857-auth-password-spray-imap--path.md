@@ -1,3 +1,15 @@
+---
+id: "0857"
+categoria: "04-auth"
+familia: "auth-password-spray"
+slug: "imap"
+angulo: "path"
+mitre: "T1110.003"
+owasp: ""
+tags: ["04-auth", "auth-password-spray", "path", "t1110.003"]
+aliases: ["IMAP/POP spraying", "imap", "imap-path"]
+---
+
 # IMAP/POP spraying — path
 
 IMAP/POP spraying como pivô. Path curto > monte de finding isolado.
@@ -54,5 +66,15 @@ Mint → store → use → revoke. Quebro o fluxo e testo cada perna.
 
 ## Refs
 
-- MITRE T1110.003
-- Microsoft Password Spray guidance
+- [MITRE ATT&CK T1110.003](https://attack.mitre.org/techniques/T1110/003/)
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft — Password spray guidance](https://learn.microsoft.com/en-us/defender-for-identity/password-spray-alert)
+
+## Relacionadas
+
+- [IMAP/POP spraying](0097-auth-password-spray-imap.md)
+- [IMAP/POP spraying — detecção](0477-auth-password-spray-imap--detecao.md)
+- [Kerberos pre-auth spray](0095-auth-password-spray-kerberos.md)
+- [SMTP AUTH legado](0096-auth-password-spray-legacy-smtp.md)
+- [bypass de lockout por pool de IPs](0098-auth-password-spray-lockout-bypass.md)
+- [Password spray em Microsoft 365](0091-auth-password-spray-o365.md)

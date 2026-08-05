@@ -1,3 +1,15 @@
+---
+id: "0581"
+categoria: "09-ad"
+familia: "ad-kerberoast"
+slug: "rc4"
+angulo: "lab"
+mitre: "T1558.003"
+owasp: ""
+tags: ["09-ad", "ad-kerberoast", "lab", "t1558.003"]
+aliases: ["Kerberoasting (TGS RC4)", "rc4", "rc4-lab"]
+---
+
 # Kerberoasting (TGS RC4) — lab
 
 Critério: outro analista fecha sozinho com esta nota.
@@ -47,5 +59,17 @@ SPN list; hash crackado de conta lab/serviço fraco; path BloodHound.
 
 ## Refs
 
-- MITRE T1558
-- SpecterOps Kerberoasting
+- [MITRE ATT&CK T1558.003](https://attack.mitre.org/techniques/T1558/003/)
+- [MITRE ATT&CK T1558.004](https://attack.mitre.org/techniques/T1558/004/)
+- [MITRE ATT&CK T1558](https://attack.mitre.org/techniques/T1558/)
+- [SpecterOps — Kerberoasting](https://posts.specterops.io/kerberoasting-revisited-d9c270baaf91)
+- [SpecterOps — BloodHound](https://bloodhound.specterops.io/)
+
+## Relacionadas
+
+- [Kerberoasting (TGS RC4)](0201-ad-kerberoast-rc4.md)
+- [Kerberoasting (TGS RC4) — hardening](0961-ad-kerberoast-rc4--hardening.md)
+- [AS-REP roasting](0203-ad-kerberoast-asrep.md)
+- [path pós-roast](0205-ad-kerberoast-bloodhound.md)
+- [detecção de ausência de gMSA](0206-ad-kerberoast-gmsa.md)
+- [Direitos de DCSync (path)](0213-ad-dacl-dcsync.md)

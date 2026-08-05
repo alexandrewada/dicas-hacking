@@ -1,3 +1,15 @@
+---
+id: "0488"
+categoria: "04-auth"
+familia: "auth-mfa-bypass"
+slug: "backup-codes"
+angulo: "detecao"
+mitre: "T1621"
+owasp: ""
+tags: ["04-auth", "auth-mfa-bypass", "detecao", "t1621"]
+aliases: ["backup codes em massa", "backup-codes", "backup-codes-detecao"]
+---
+
 # backup codes em massa — detecção
 
 Gap de detecção em `T1621 Multi-Factor Authentication Request Generation` / backup codes em massa. PoC mínimo, telemetria ligada.
@@ -53,5 +65,14 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP MFA Cheat Sheet
-- MITRE T1621
+- [MITRE ATT&CK T1621](https://attack.mitre.org/techniques/T1621/)
+- [OWASP Multifactor Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [backup codes em massa](0108-auth-mfa-bypass-backup-codes.md)
+- [backup codes em massa — path](0868-auth-mfa-bypass-backup-codes--path.md)
+- [MFA fatigue (push bombing)](0104-auth-mfa-bypass-fatigue.md)
+- [protocolos legados sem MFA](0101-auth-mfa-bypass-legacy-auth.md)
+- [token sem amr/acr](0106-auth-mfa-bypass-oauth-skip.md)
+- [OTP 6 dígitos sem rate limit](0102-auth-mfa-bypass-otp-brute.md)

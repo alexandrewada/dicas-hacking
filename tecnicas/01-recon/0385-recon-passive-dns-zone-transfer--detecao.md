@@ -1,3 +1,15 @@
+---
+id: "0385"
+categoria: "01-recon"
+familia: "recon-passive-dns"
+slug: "zone-transfer"
+angulo: "detecao"
+mitre: "T1590"
+owasp: ""
+tags: ["01-recon", "recon-passive-dns", "detecao", "t1590"]
+aliases: ["teste autorizado de AXFR", "zone-transfer", "zone-transfer-detecao"]
+---
+
 # teste autorizado de AXFR — detecção
 
 Gap de detecção em `T1590 Gather Victim Network Information` / teste autorizado de AXFR. PoC mínimo, telemetria ligada.
@@ -58,6 +70,17 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP Testing Guide WSTG-INFO
-- MITRE ATT&CK T1590
-- RFC 1035
+- [MITRE ATT&CK T1590](https://attack.mitre.org/techniques/T1590/)
+- [OWASP WSTG — Information Gathering](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/README)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [RFC 1035 — DNS](https://www.rfc-editor.org/rfc/rfc1035)
+- [crt.sh — Certificate Transparency](https://crt.sh/)
+
+## Relacionadas
+
+- [teste autorizado de AXFR](0005-recon-passive-dns-zone-transfer.md)
+- [teste autorizado de AXFR — path](0765-recon-passive-dns-zone-transfer--path.md)
+- [clustering por ASN e netblocks](0004-recon-passive-dns-asn-cluster.md)
+- [descoberta de origem atrás de CDN](0010-recon-passive-dns-cdn-origin.md)
+- [via Certificate Transparency (crt.sh)](0001-recon-passive-dns-crtsh.md)
+- [auditoria DMARC/BIMI](0007-recon-passive-dns-dmarc-policy.md)

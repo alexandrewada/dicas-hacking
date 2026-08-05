@@ -1,3 +1,15 @@
+---
+id: "0288"
+categoria: "13-azure"
+familia: "azure-entra"
+slug: "device-code"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["13-azure", "azure-entra", "base"]
+aliases: ["device code phishing", "device-code"]
+---
+
 # device code phishing
 
 ## Leitura rápida
@@ -21,10 +33,10 @@ Foco em paths até Global Admin / privileged roles.
 ## Exemplo
 
 ```bash
-# Entra lab — Graph read mínimo
-az login --service-principal -u APP_LAB -p PASS_LAB --tenant TENANT_LAB
-az rest --method GET --url 'https://graph.microsoft.com/v1.0/me'
-# variante device-code tag b881bf
+# Entra device-code — Graph read / role enum em tenant lab
+az ad sp list --display-name 'APP_LAB' -o table
+az rest --method GET --url 'https://graph.microsoft.com/v1.0/roleManagement/directory/roleAssignments'
+# tag b881bf — sem spam de CA challenge
 ```
 
 Entra: consent, PRT, CA e roles. Grafo de identity manda mais que NSG.
@@ -46,5 +58,13 @@ Role path; app permission; prova em lab tenant se possível.
 
 ## Refs
 
-- MSFT Entra security
-- RoadTools
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft Learn — Entra ID](https://learn.microsoft.com/en-us/entra/identity/)
+- [MITRE ATT&CK T1078.004](https://attack.mitre.org/techniques/T1078/004/)
+
+## Relacionadas
+
+- [device code phishing — evidência](0668-azure-entra-device-code--evidencia.md)
+- [Illlicit consent grant](0281-azure-entra-consent.md)
+- [PRT / primary refresh token](0283-azure-entra-prt.md)
+- [Furos de Conditional Access](0282-azure-entra-ca-gap.md)

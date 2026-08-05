@@ -1,3 +1,15 @@
+---
+id: "0021"
+categoria: "01-recon"
+familia: "recon-osint-people"
+slug: "github-dorks"
+angulo: "base"
+mitre: "T1589"
+owasp: ""
+tags: ["01-recon", "recon-osint-people", "base", "t1589"]
+aliases: ["GitHub dorking autorizado", "github-dorks"]
+---
+
 # GitHub dorking autorizado
 
 **A07 Identification and Authentication Failures (contexto)** · `T1589 Gather Victim Identity Information`
@@ -34,4 +46,17 @@ Corrijo com: Treinamento contínuo; passwordless/FIDO2; rate-limit de auth; cana
 
 Levo no report: Lista de identidades com fonte; **sem** senhas em claro no relatório se evitável.
 
-Refs: OSINT Framework, MITRE T1589, NIST SP 800-63
+## Refs
+
+- [MITRE ATT&CK T1589](https://attack.mitre.org/techniques/T1589/)
+- [OSINT Framework](https://osintframework.com/)
+- [NIST SP 800-63](https://pages.nist.gov/800-63-3/)
+
+## Relacionadas
+
+- [GitHub dorking autorizado — detecção](0401-recon-osint-people-github-dorks--detecao.md)
+- [GitHub dorking autorizado — path](0781-recon-osint-people-github-dorks--path.md)
+- [correlação com breaches corporativos](0027-recon-osint-people-breach-corp.md)
+- [vazamento de calendários/ICS](0025-recon-osint-people-calendar-leak.md)
+- [inferência de formato de e-mail](0026-recon-osint-people-email-format.md)
+- [pretext a partir de LinkedIn](0023-recon-osint-people-linkedin-pretext.md)

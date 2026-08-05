@@ -1,3 +1,15 @@
+---
+id: "0175"
+categoria: "07-ssrf-xxe"
+familia: "xxe-classic"
+slug: "saml"
+angulo: "base"
+mitre: "T1190"
+owasp: ""
+tags: ["07-ssrf-xxe", "xxe-classic", "base", "t1190"]
+aliases: ["XXE em SAML", "saml"]
+---
+
 # XXE em SAML
 
 **A03 / A05** · `T1190`
@@ -55,5 +67,15 @@ Entity PoC; conteúdo de arquivo não sensível; parser/versão.
 
 ## Refs
 
-- OWASP XXE
-- PortSwigger XXE
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP XXE Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [PortSwigger — XXE](https://portswigger.net/web-security/xxe)
+
+## Relacionadas
+
+- [XXE em SAML — lab](0555-xxe-classic-saml--lab.md)
+- [XXE em SAML — hardening](0935-xxe-classic-saml--hardening.md)
+- [XML bomb (lab controlado)](0180-xxe-classic-dos.md)
+- [leitura de arquivo local](0171-xxe-classic-file-read.md)
+- [OOXML/XLSX XXE](0176-xxe-classic-office.md)
+- [OOB parameter entities](0173-xxe-classic-oob.md)

@@ -1,3 +1,15 @@
+---
+id: "0887"
+categoria: "05-injection"
+familia: "inj-sqli"
+slug: "orm-raw"
+angulo: "hardening"
+mitre: ""
+owasp: ""
+tags: ["05-injection", "inj-sqli", "hardening"]
+aliases: ["ORM raw/order_by injection", "orm-raw", "orm-raw-hardening"]
+---
+
 # ORM raw/order_by injection — hardening
 
 Do PoC ao controle — ORM raw/order_by injection.
@@ -42,6 +54,15 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- PortSwigger SQLi
-- OWASP SQLi
-- SQLMap usage ethics
+- [PortSwigger — SQL injection](https://portswigger.net/web-security/sql-injection)
+- [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- [sqlmap — usage](https://sqlmap.org/)
+
+## Relacionadas
+
+- [ORM raw/order_by injection](0127-inj-sqli-orm-raw.md)
+- [ORM raw/order_by injection — lab](0507-inj-sqli-orm-raw--lab.md)
+- [JSON operators injection](0129-inj-sqli-json-sql.md)
+- [MSSQL out-of-band](0124-inj-sqli-mssql-oob.md)
+- [SQLi blind em MySQL](0122-inj-sqli-mysql-blind.md)
+- [MySQL error-based](0121-inj-sqli-mysql-error.md)

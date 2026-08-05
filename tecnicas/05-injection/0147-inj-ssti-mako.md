@@ -1,3 +1,15 @@
+---
+id: "0147"
+categoria: "05-injection"
+familia: "inj-ssti"
+slug: "mako"
+angulo: "base"
+mitre: "T1190"
+owasp: ""
+tags: ["05-injection", "inj-ssti", "base", "t1190"]
+aliases: ["Mako Python", "mako"]
+---
+
 # Mako Python
 
 **A03 Injection** · `T1190`
@@ -47,5 +59,15 @@ Sink e context primeiro. O mesmo input vira SQL, LDAP, OS ou template — classe
 
 ## Refs
 
-- PortSwigger SSTI
-- PayloadsAllTheThings SSTI
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [PortSwigger — SSTI](https://portswigger.net/web-security/server-side-template-injection)
+- [PayloadsAllTheThings — SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
+
+## Relacionadas
+
+- [Mako Python — lab](0527-inj-ssti-mako--lab.md)
+- [Mako Python — hardening](0907-inj-ssti-mako--hardening.md)
+- [templates de e-mail marketing](0149-inj-ssti-email-tmpl.md)
+- [Freemarker](0142-inj-ssti-freemarker.md)
+- [SSTI em Jinja2](0141-inj-ssti-jinja2.md)
+- [HTML templates → PDF](0150-inj-ssti-pdf-tmpl.md)

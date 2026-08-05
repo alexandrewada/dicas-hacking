@@ -1,3 +1,15 @@
+---
+id: "0865"
+categoria: "04-auth"
+familia: "auth-mfa-bypass"
+slug: "saml-skip"
+angulo: "path"
+mitre: "T1621"
+owasp: ""
+tags: ["04-auth", "auth-mfa-bypass", "path", "t1621"]
+aliases: ["skip MFA em SAML secondary", "saml-skip", "saml-skip-path"]
+---
+
 # skip MFA em SAML secondary — path
 
 skip MFA em SAML secondary como pivô. Path curto > monte de finding isolado.
@@ -55,5 +67,14 @@ Mint → store → use → revoke. Quebro o fluxo e testo cada perna.
 
 ## Refs
 
-- OWASP MFA Cheat Sheet
-- MITRE T1621
+- [MITRE ATT&CK T1621](https://attack.mitre.org/techniques/T1621/)
+- [OWASP Multifactor Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [skip MFA em SAML secondary](0105-auth-mfa-bypass-saml-skip.md)
+- [skip MFA em SAML secondary — detecção](0485-auth-mfa-bypass-saml-skip--detecao.md)
+- [backup codes em massa](0108-auth-mfa-bypass-backup-codes.md)
+- [MFA fatigue (push bombing)](0104-auth-mfa-bypass-fatigue.md)
+- [protocolos legados sem MFA](0101-auth-mfa-bypass-legacy-auth.md)
+- [token sem amr/acr](0106-auth-mfa-bypass-oauth-skip.md)

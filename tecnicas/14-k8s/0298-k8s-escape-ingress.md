@@ -1,3 +1,15 @@
+---
+id: "0298"
+categoria: "14-k8s"
+familia: "k8s-escape"
+slug: "ingress"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["14-k8s", "k8s-escape", "base"]
+aliases: ["ingress misconfig", "ingress"]
+---
+
 # ingress misconfig
 
 ## Contexto
@@ -21,10 +33,10 @@ docker.sock, e metadata cloud. Pentest k8s exige cuidado para não derrubar work
 ## No lab ficou assim
 
 ```bash
-# k8s lab namespace
-kubectl -n lab-1a0e49 auth can-i --list --as=system:serviceaccount:lab:sa-ingress
-kubectl -n lab-1a0e49 get secrets
-# prova RBAC excessivo ingress
+# k8s ingress lab namespace
+kubectl -n lab auth can-i --list --as=system:serviceaccount:lab:sa-ingress
+kubectl -n lab get rolebinding,clusterrolebinding -o wide | head
+# imds via pod: curl 169.254.169.254 — só lab; tag 1a0e49
 ```
 
 ## OpSec
@@ -46,5 +58,13 @@ no privileged. |
 
 ## Refs
 
-- Kubernetes Attack Matrix
-- NSA/CISA k8s hardening
+- [Microsoft — Kubernetes attack matrix](https://microsoft.github.io/Threat-Matrix-for-Kubernetes/)
+- [NSA/CISA — Kubernetes hardening](https://media.defense.gov/2022/Aug/29/2003064742/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220829.PDF)
+
+## Relacionadas
+
+- [ingress misconfig — evidência](0678-k8s-escape-ingress--evidencia.md)
+- [Token de ServiceAccount](0291-k8s-escape-sa-token.md)
+- [RBAC wildcards](0292-k8s-escape-rbac.md)
+- [Pod privileged](0293-k8s-escape-privileged.md)
+- [cloud metadata from pod](0296-k8s-escape-imds.md)

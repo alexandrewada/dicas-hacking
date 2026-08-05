@@ -1,3 +1,15 @@
+---
+id: "0642"
+categoria: "12-aws"
+familia: "aws-privesc"
+slug: "passrole"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["12-aws", "aws-privesc", "evidencia"]
+aliases: ["PassRole + compute", "passrole", "passrole-evidencia"]
+---
+
 # PassRole + compute — evidência
 
 Pacote pra PassRole + compute sobreviver peer review.
@@ -53,5 +65,14 @@ Não crie backdoors permanentes. Cuidado com custos (instâncias grandes).
 
 ## Refs
 
-- Rhino Security Labs AWS privesc
-- MITRE Cloud
+- [Rhino Security Labs — AWS privilege escalation](https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
+
+## Relacionadas
+
+- [PassRole + compute](0262-aws-privesc-passrole.md)
+- [Credencial via IMDS](0266-aws-privesc-imds.md)
+- [trust policy frouxa](0264-aws-privesc-assume-role.md)
+- [UpdateFunctionCode (path)](0263-aws-privesc-lambda-update.md)
+- [ACL authenticated users (path)](0273-aws-s3-acl.md)

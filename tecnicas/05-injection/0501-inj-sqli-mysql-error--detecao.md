@@ -1,3 +1,15 @@
+---
+id: "0501"
+categoria: "05-injection"
+familia: "inj-sqli"
+slug: "mysql-error"
+angulo: "detecao"
+mitre: "T1190"
+owasp: ""
+tags: ["05-injection", "inj-sqli", "detecao", "t1190"]
+aliases: ["MySQL error-based", "mysql-error", "mysql-error-detecao"]
+---
+
 # MySQL error-based — detecção
 
 Purple em MySQL error-based: uma execução limpa. A pergunta é se alertou — não se o exploit 'passa'.
@@ -55,6 +67,18 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- PortSwigger SQLi
-- OWASP SQLi
-- SQLMap usage ethics
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [PortSwigger — SQL injection](https://portswigger.net/web-security/sql-injection)
+- [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- [sqlmap — usage](https://sqlmap.org/)
+
+## Relacionadas
+
+- [MySQL error-based](0121-inj-sqli-mysql-error.md)
+- [MySQL error-based — hardening](0881-inj-sqli-mysql-error--hardening.md)
+- [JSON operators injection](0129-inj-sqli-json-sql.md)
+- [MSSQL out-of-band](0124-inj-sqli-mssql-oob.md)
+- [SQLi blind em MySQL](0122-inj-sqli-mysql-blind.md)
+- [polyglot SQL + NoSQL](0130-inj-sqli-nosqli-bridge.md)
+- [Command injection cega (OOB) (path)](0131-inj-cmd-unix-blind.md)
+- [web shell via extensão (path)](../02-web/0051-web-upload-webshell.md)

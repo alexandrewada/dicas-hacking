@@ -1,3 +1,15 @@
+---
+id: "0223"
+categoria: "09-ad"
+familia: "ad-cs"
+slug: "esc3"
+angulo: "base"
+mitre: "T1649"
+owasp: ""
+tags: ["09-ad", "ad-cs", "base", "t1649"]
+aliases: ["ESC3 enrollment agent", "esc3"]
+---
+
 # ESC3 enrollment agent
 
 **Identity** · `T1649 Steal or Forge Authentication Certificates`
@@ -51,5 +63,14 @@ Template vulnerável; cert de teste; auth proof; revogação.
 
 ## Refs
 
-- SpecterOps Certified Pre-Owned
-- MITRE T1649
+- [MITRE ATT&CK T1649](https://attack.mitre.org/techniques/T1649/)
+- [SpecterOps — Certified Pre-Owned (AD CS)](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
+
+## Relacionadas
+
+- [ESC3 enrollment agent — lab](0603-ad-cs-esc3--lab.md)
+- [ESC3 enrollment agent — hardening](0983-ad-cs-esc3--hardening.md)
+- [AD CS ESC1](0221-ad-cs-esc1.md)
+- [AD CS ESC8 (relay HTTP)](0227-ad-cs-esc8.md)
+- [persistência via certs](0229-ad-cs-persist.md)
+- [detecção de enrollment anômalo](0230-ad-cs-detect.md)

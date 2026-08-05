@@ -1,3 +1,15 @@
+---
+id: "0676"
+categoria: "14-k8s"
+familia: "k8s-escape"
+slug: "imds"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["14-k8s", "k8s-escape", "evidencia"]
+aliases: ["cloud metadata from pod", "imds", "imds-evidencia"]
+---
+
 # cloud metadata from pod — evidência
 
 Pacote pra cloud metadata from pod sobreviver peer review.
@@ -50,5 +62,15 @@ Não delete namespaces. Privileged probes podem afetar nós.
 
 ## Refs
 
-- Kubernetes Attack Matrix
-- NSA/CISA k8s hardening
+- [Microsoft — Kubernetes attack matrix](https://microsoft.github.io/Threat-Matrix-for-Kubernetes/)
+- [NSA/CISA — Kubernetes hardening](https://media.defense.gov/2022/Aug/29/2003064742/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220829.PDF)
+- [AWS — Instance metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html)
+
+## Relacionadas
+
+- [cloud metadata from pod](0296-k8s-escape-imds.md)
+- [Token de ServiceAccount](0291-k8s-escape-sa-token.md)
+- [RBAC wildcards](0292-k8s-escape-rbac.md)
+- [Pod privileged](0293-k8s-escape-privileged.md)
+- [Credencial via IMDS (path)](../12-aws/0266-aws-privesc-imds.md)
+- [hostPath mount (path)](0294-k8s-escape-hostpath.md)

@@ -1,3 +1,15 @@
+---
+id: "0965"
+categoria: "09-ad"
+familia: "ad-kerberoast"
+slug: "bloodhound"
+angulo: "hardening"
+mitre: "T1558.003"
+owasp: ""
+tags: ["09-ad", "ad-kerberoast", "hardening", "t1558.003"]
+aliases: ["path pós-roast", "bloodhound", "bloodhound-hardening"]
+---
+
 # path pós-roast — hardening
 
 Do PoC ao controle — path pós-roast.
@@ -41,5 +53,19 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- MITRE T1558
-- SpecterOps Kerberoasting
+- [MITRE ATT&CK T1558.003](https://attack.mitre.org/techniques/T1558/003/)
+- [MITRE ATT&CK T1558.004](https://attack.mitre.org/techniques/T1558/004/)
+- [MITRE ATT&CK T1558](https://attack.mitre.org/techniques/T1558/)
+- [SpecterOps — Kerberoasting](https://posts.specterops.io/kerberoasting-revisited-d9c270baaf91)
+- [SpecterOps — BloodHound](https://bloodhound.specterops.io/)
+
+## Relacionadas
+
+- [path pós-roast](0205-ad-kerberoast-bloodhound.md)
+- [path pós-roast — lab](0585-ad-kerberoast-bloodhound--lab.md)
+- [Kerberoasting (TGS RC4)](0201-ad-kerberoast-rc4.md)
+- [AS-REP roasting](0203-ad-kerberoast-asrep.md)
+- [detecção de ausência de gMSA](0206-ad-kerberoast-gmsa.md)
+- [Direitos de DCSync (path)](0213-ad-dacl-dcsync.md)
+- [GenericAll em usuário/grupo (path)](0211-ad-dacl-genericall.md)
+- [AD CS ESC1 (path)](0221-ad-cs-esc1.md)

@@ -1,3 +1,15 @@
+---
+id: "0304"
+categoria: "15-mobile"
+familia: "mobile-android"
+slug: "deeplink"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["15-mobile", "mobile-android", "base"]
+aliases: ["deeplink hijack", "deeplink"]
+---
+
 # deeplink hijack
 
 ## Contexto
@@ -21,10 +33,11 @@ Foco em impacto em dados e auth, não só em root detection bypass cosmético.
 ## Sinal / query
 
 ```bash
-# mobile lab build — sem store production
+# Android lab build — sem store
+adb shell dumpsys package app.lab | grep -A2 exported=true
 adb shell am start -a android.intent.action.VIEW \
   -d 'app://lab/deeplink?token=TOKEN_LAB_49f6dc'
-# deep link / exported → token sink
+# WebView: overrideUrlLoading → token sink
 ```
 
 ## OpSec
@@ -45,5 +58,16 @@ Não publique apps modificados. Respeite store ToS e escopo.
 
 ## Refs
 
-- OWASP MASVS/MASTG
-- Frida docs
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [Frida documentation](https://frida.re/docs/home/)
+- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/)
+
+## Relacionadas
+
+- [deeplink hijack — evidência](0684-mobile-android-deeplink--evidencia.md)
+- [token em logcat](0310-mobile-android-auth.md)
+- [backup enabled](0307-mobile-android-backup.md)
+- [clipboard leaks](0308-mobile-android-clip.md)
+- [crypto caseira fraca](0306-mobile-android-crypto.md)
+- [WebView XSS/bridge (path)](0302-mobile-android-webview.md)
+- [storage world-readable (path)](0303-mobile-android-storage.md)

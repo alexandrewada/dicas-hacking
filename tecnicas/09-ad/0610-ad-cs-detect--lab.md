@@ -1,3 +1,15 @@
+---
+id: "0610"
+categoria: "09-ad"
+familia: "ad-cs"
+slug: "detect"
+angulo: "lab"
+mitre: "T1649"
+owasp: ""
+tags: ["09-ad", "ad-cs", "lab", "t1649"]
+aliases: ["detecção de enrollment anômalo", "detect", "detect-lab"]
+---
+
 # detecção de enrollment anômalo — lab
 
 Critério: outro analista fecha sozinho com esta nota.
@@ -28,8 +40,10 @@ Espelho do alvo. Sem WAF/EDR às vezes — anoto o delta.
 ## Exemplo
 
 ```bash
-impacket-GetADUsers lab.local/USER_A:PASS_LAB -all -dc-ip DC01.lab.local | head
-# detect c18168
+# AD CS detect — lab CA, conta teste
+certipy find -u USER_A@lab.local -p PASS_LAB -dc-ip DC01.lab.local -vulnerable
+# persist: renovar cert de conta teste; detect: correlacionar 4886→4768
+# tag c18168 — sem shadow em prod
 ```
 
 ## Pitfall
@@ -45,5 +59,13 @@ Template vulnerável; cert de teste; auth proof; revogação.
 
 ## Refs
 
-- SpecterOps Certified Pre-Owned
-- MITRE T1649
+- [MITRE ATT&CK T1649](https://attack.mitre.org/techniques/T1649/)
+- [SpecterOps — Certified Pre-Owned (AD CS)](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
+
+## Relacionadas
+
+- [detecção de enrollment anômalo](0230-ad-cs-detect.md)
+- [detecção de enrollment anômalo — hardening](0990-ad-cs-detect--hardening.md)
+- [AD CS ESC1](0221-ad-cs-esc1.md)
+- [AD CS ESC8 (relay HTTP)](0227-ad-cs-esc8.md)
+- [persistência via certs](0229-ad-cs-persist.md)

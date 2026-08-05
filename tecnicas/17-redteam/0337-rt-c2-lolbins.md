@@ -1,3 +1,15 @@
+---
+id: "0337"
+categoria: "17-redteam"
+familia: "rt-c2"
+slug: "lolbins"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["17-redteam", "rt-c2", "base"]
+aliases: ["LOLBins para living-off-land", "lolbins"]
+---
+
 # LOLBins para living-off-land
 
 ## Leitura rápida
@@ -44,5 +56,14 @@ Diagrama de infra; IOCs entregues ao blue; timeline.
 
 ## Refs
 
-- Red Team Field Manual ethics
-- MITRE C2
+- [Red team ethics / ROE](https://attack.mitre.org/)
+- [MITRE ATT&CK — Command and Control](https://attack.mitre.org/tactics/TA0011/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+
+## Relacionadas
+
+- [LOLBins para living-off-land — evidência](0717-rt-c2-lolbins--evidencia.md)
+- [debrief com SOC](0340-rt-c2-debrief.md)
+- [DNS C2](0332-rt-c2-dns.md)
+- [domain fronting histórico](0333-rt-c2-domain-front.md)
+- [exfil controlada de dados fake](0339-rt-c2-exfil.md)

@@ -1,3 +1,15 @@
+---
+id: "0496"
+categoria: "04-auth"
+familia: "auth-oauth-oidc"
+slug: "mixup"
+angulo: "detecao"
+mitre: "T1528"
+owasp: ""
+tags: ["04-auth", "auth-oauth-oidc", "detecao", "t1528"]
+aliases: ["mix-up attack (multi-IdP)", "mixup", "mixup-detecao"]
+---
+
 # mix-up attack (multi-IdP) — detecção
 
 Purple em mix-up attack (multi-IdP): uma execução limpa. A pergunta é se alertou — não se o exploit 'passa'.
@@ -54,6 +66,17 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- RFC 6749
-- RFC 8252
-- OWASP OAuth
+- [MITRE ATT&CK T1528](https://attack.mitre.org/techniques/T1528/)
+- [RFC 6749 — OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749)
+- [RFC 8252 — OAuth for Native Apps](https://www.rfc-editor.org/rfc/rfc8252)
+- [OWASP OAuth 2.0 Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html)
+- [PortSwigger — OAuth authentication](https://portswigger.net/web-security/oauth)
+
+## Relacionadas
+
+- [mix-up attack (multi-IdP)](0116-auth-oauth-oidc-mixup.md)
+- [mix-up attack (multi-IdP) — path](0876-auth-oauth-oidc-mixup--path.md)
+- [device authorization grant abuse](0119-auth-oauth-oidc-device-code.md)
+- [implicit grant legado](0114-auth-oauth-oidc-implicit.md)
+- [client_assertion fraca](0120-auth-oauth-oidc-jwt-client-auth.md)
+- [PKCE ausente em public client](0113-auth-oauth-oidc-pkce.md)

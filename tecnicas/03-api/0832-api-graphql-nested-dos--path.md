@@ -1,3 +1,15 @@
+---
+id: "0832"
+categoria: "03-api"
+familia: "api-graphql"
+slug: "nested-dos"
+angulo: "path"
+mitre: ""
+owasp: ""
+tags: ["03-api", "api-graphql", "path"]
+aliases: ["DoS por aninhamento", "nested-dos", "nested-dos-path"]
+---
+
 # DoS por aninhamento — path
 
 DoS por aninhamento como pivô. Path curto > monte de finding isolado.
@@ -59,5 +71,14 @@ Começo pelo contrato real (OpenAPI/HAR/introspection), não pelo PDF de arquite
 
 ## Refs
 
-- OWASP GraphQL Cheat Sheet
-- PayloadsAllTheThings GraphQL
+- [OWASP GraphQL Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)
+- [PayloadsAllTheThings — GraphQL](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection)
+
+## Relacionadas
+
+- [DoS por aninhamento](0072-api-graphql-nested-dos.md)
+- [DoS por aninhamento — detecção](0452-api-graphql-nested-dos--detecao.md)
+- [aliases para bypass de rate limit](0073-api-graphql-alias-bruteforce.md)
+- [Automatic Persisted Queries abuse](0080-api-graphql-apq.md)
+- [batch HTTP GraphQL](0075-api-graphql-batch.md)
+- [CSRF em mutations cookie-based](0076-api-graphql-csrf.md)

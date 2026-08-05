@@ -1,3 +1,15 @@
+---
+id: "0302"
+categoria: "15-mobile"
+familia: "mobile-android"
+slug: "webview"
+angulo: "base"
+mitre: "T1420"
+owasp: ""
+tags: ["15-mobile", "mobile-android", "base", "t1420"]
+aliases: ["WebView XSS/bridge", "webview"]
+---
+
 # WebView XSS/bridge
 
 **Mobile** · `T1420 / T1412 (mobile ATT&CK)`
@@ -19,10 +31,11 @@ Foco em impacto em dados e auth, não só em root detection bypass cosmético.
 ## No lab ficou assim
 
 ```bash
-# mobile lab build — sem store production
+# Android lab build — sem store
+adb shell dumpsys package app.lab | grep -A2 exported=true
 adb shell am start -a android.intent.action.VIEW \
   -d 'app://lab/webview?token=TOKEN_LAB_6d8372'
-# deep link / exported → token sink
+# WebView: overrideUrlLoading → token sink
 ```
 
 ## Diferencial desta nota
@@ -45,5 +58,16 @@ Frida em build de teste ≠ pin quebrado na store. Deixo a nuance no report.
 
 ## Refs
 
-- OWASP MASVS/MASTG
-- Frida docs
+- [MITRE ATT&CK T1420](https://attack.mitre.org/techniques/T1420/)
+- [MITRE ATT&CK T1412](https://attack.mitre.org/techniques/T1412/)
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [Frida documentation](https://frida.re/docs/home/)
+- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/)
+
+## Relacionadas
+
+- [WebView XSS/bridge — evidência](0682-mobile-android-webview--evidencia.md)
+- [token em logcat](0310-mobile-android-auth.md)
+- [backup enabled](0307-mobile-android-backup.md)
+- [clipboard leaks](0308-mobile-android-clip.md)
+- [crypto caseira fraca](0306-mobile-android-crypto.md)

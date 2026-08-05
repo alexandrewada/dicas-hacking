@@ -1,3 +1,15 @@
+---
+id: "0196"
+categoria: "08-network"
+familia: "net-smb"
+slug: "signing"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["08-network", "net-smb", "base"]
+aliases: ["signing disabled", "signing"]
+---
+
 # signing disabled
 
 ## Contexto
@@ -44,5 +56,15 @@ Não delete arquivos. Writable share ≠ ordem para ransomware demo.
 
 ## Refs
 
-- MITRE T1135
-- WSTG network
+- [MITRE ATT&CK T1135](https://attack.mitre.org/techniques/T1135/)
+- [OWASP WSTG — Network testing](https://owasp.org/www-project-web-security-testing-guide/latest/)
+- [HackTricks — SMB](https://book.hacktricks.xyz/network-services-pentesting/pentesting-smb)
+
+## Relacionadas
+
+- [signing disabled — lab](0576-net-smb-signing--lab.md)
+- [signing disabled — hardening](0956-net-smb-signing--hardening.md)
+- [share de software deployment](0200-net-smb-av-bypass-share.md)
+- [backups expostos](0199-net-smb-backup.md)
+- [DFS enum](0197-net-smb-dfs.md)
+- [GPP cpasswords históricos](0193-net-smb-gpp.md)

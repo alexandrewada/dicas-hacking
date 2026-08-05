@@ -1,3 +1,15 @@
+---
+id: "0621"
+categoria: "10-windows"
+familia: "win-cred"
+slug: "lsass"
+angulo: "lab"
+mitre: "T1003"
+owasp: ""
+tags: ["10-windows", "win-cred", "lab", "t1003"]
+aliases: ["LSASS dump (autorizado)", "lsass", "lsass-lab"]
+---
+
 # LSASS dump (autorizado) — lab
 
 Critério: outro analista fecha sozinho com esta nota.
@@ -46,5 +58,18 @@ Tipo de credencial; host; uso em lateral (sem dumps completos).
 
 ## Refs
 
-- MITRE Credential Access
-- SpecterOps DPAPI
+- [MITRE ATT&CK T1003](https://attack.mitre.org/techniques/T1003/)
+- [MITRE ATT&CK T1555](https://attack.mitre.org/techniques/T1555/)
+- [MITRE ATT&CK T1552](https://attack.mitre.org/techniques/T1552/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [SpecterOps — DPAPI](https://posts.specterops.io/operational-guidance-for-offensive-user-dpapi-abuse-1fb7fac8b107)
+
+## Relacionadas
+
+- [LSASS dump (autorizado)](0241-win-cred-lsass.md)
+- [browser saved passwords](0247-win-cred-browser.md)
+- [user/machine certs](0249-win-cred-cert.md)
+- [DPAPI masterkey abuse](0242-win-cred-dpapi.md)
+- [GPP/legacy secrets](0250-win-cred-gpp.md)
+- [Direitos de DCSync (path)](../09-ad/0213-ad-dacl-dcsync.md)
+- [NTDS.dit (escopo DC) (path)](0246-win-cred-ntds.md)

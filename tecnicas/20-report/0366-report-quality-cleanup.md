@@ -1,3 +1,15 @@
+---
+id: "0366"
+categoria: "20-report"
+familia: "report-quality"
+slug: "cleanup"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "base"]
+aliases: ["cleanup & artifact list", "cleanup"]
+---
+
 # cleanup & artifact list
 
 **Methodology** · `N/A`
@@ -46,6 +58,14 @@ CVSS é input. Justifico environmental e impacto real do cliente.
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [cleanup & artifact list — evidência](0746-report-quality-cleanup--evidencia.md)
+- [apêndice técnico vs executivo](0369-report-quality-appendix.md)
+- [narrativa de account takeover](0367-report-quality-ato.md)
+- [Traduzir risco pro CISO](0364-report-quality-business.md)
+- [findings encadeados](0368-report-quality-chain.md)

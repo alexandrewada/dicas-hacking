@@ -1,3 +1,15 @@
+---
+id: "0856"
+categoria: "04-auth"
+familia: "auth-password-spray"
+slug: "legacy-smtp"
+angulo: "path"
+mitre: "T1110.003"
+owasp: ""
+tags: ["04-auth", "auth-password-spray", "path", "t1110.003"]
+aliases: ["SMTP AUTH legado", "legacy-smtp", "legacy-smtp-path"]
+---
+
 # SMTP AUTH legado — path
 
 SMTP AUTH legado como pivô. Path curto > monte de finding isolado.
@@ -54,5 +66,15 @@ Mint → store → use → revoke. Quebro o fluxo e testo cada perna.
 
 ## Refs
 
-- MITRE T1110.003
-- Microsoft Password Spray guidance
+- [MITRE ATT&CK T1110.003](https://attack.mitre.org/techniques/T1110/003/)
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft — Password spray guidance](https://learn.microsoft.com/en-us/defender-for-identity/password-spray-alert)
+
+## Relacionadas
+
+- [SMTP AUTH legado](0096-auth-password-spray-legacy-smtp.md)
+- [SMTP AUTH legado — detecção](0476-auth-password-spray-legacy-smtp--detecao.md)
+- [IMAP/POP spraying](0097-auth-password-spray-imap.md)
+- [Kerberos pre-auth spray](0095-auth-password-spray-kerberos.md)
+- [bypass de lockout por pool de IPs](0098-auth-password-spray-lockout-bypass.md)
+- [Password spray em Microsoft 365](0091-auth-password-spray-o365.md)

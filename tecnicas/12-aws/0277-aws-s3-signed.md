@@ -1,3 +1,15 @@
+---
+id: "0277"
+categoria: "12-aws"
+familia: "aws-s3"
+slug: "signed"
+angulo: "base"
+mitre: "T1530"
+owasp: ""
+tags: ["12-aws", "aws-s3", "base", "t1530"]
+aliases: ["signed URL overbroad", "signed"]
+---
+
 # signed URL overbroad
 
 **Cloud storage** · `T1530 Data from Cloud Storage`
@@ -21,6 +33,7 @@ continuam a vazar dados. Teste também takeover de buckets referenciados (subdom
 # AWS lab — identidade de teste, sem wipe
 aws sts get-caller-identity --profile lab_f936bf
 aws s3api get-bucket-policy --bucket lab-bucket-signed --profile lab_f936bf
+# seguro: Get*/List*; destrutivo (DeleteBucket) só em lab throwaway
 # effective perms signed
 ```
 
@@ -34,4 +47,16 @@ Corrijo com: Block Public Access; least privilege policies; encryption; access l
 
 Levo no report: URL/policy; amostra redigida; screenshot console se fornecido.
 
-Refs: AWS S3 security best practices
+## Refs
+
+- [MITRE ATT&CK T1530](https://attack.mitre.org/techniques/T1530/)
+- [AWS — S3 security best practices](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html)
+- [HackTricks — AWS S3](https://book.hacktricks.xyz/cloud-security/aws-security/aws-unauthenticated-enum-access/s3)
+
+## Relacionadas
+
+- [signed URL overbroad — evidência](0657-aws-s3-signed--evidencia.md)
+- [ACL authenticated users](0273-aws-s3-acl.md)
+- [access logs públicos](0279-aws-s3-logging.md)
+- [bucket como malware host](0280-aws-s3-malware.md)
+- [policy Principal *](0275-aws-s3-policy.md)

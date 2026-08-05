@@ -1,3 +1,15 @@
+---
+id: "0469"
+categoria: "03-api"
+familia: "api-jwt"
+slug: "jwks-mix"
+angulo: "detecao"
+mitre: "T1550"
+owasp: ""
+tags: ["03-api", "api-jwt", "detecao", "t1550"]
+aliases: ["JWKS key confusion multi-tenant", "jwks-mix", "jwks-mix-detecao"]
+---
+
 # JWKS key confusion multi-tenant — detecção
 
 Gap de detecção em `T1550 Use Alternate Authentication Material` / JWKS key confusion multi-tenant. PoC mínimo, telemetria ligada.
@@ -54,6 +66,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- RFC 7519
-- PortSwigger JWT
-- OWASP JWT Cheat Sheet
+- [MITRE ATT&CK T1550](https://attack.mitre.org/techniques/T1550/)
+- [RFC 7519 — JWT](https://www.rfc-editor.org/rfc/rfc7519)
+- [PortSwigger — JWT attacks](https://portswigger.net/web-security/jwt)
+- [OWASP JWT Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [JWKS key confusion multi-tenant](0089-api-jwt-jwks-mix.md)
+- [JWKS key confusion multi-tenant — path](0849-api-jwt-jwks-mix--path.md)
+- [JWT com alg=none](0081-api-jwt-alg-none.md)
+- [Confusão RS256/HS256](0082-api-jwt-rs-hs.md)
+- [tampering de role/admin](0086-api-jwt-claim-tamper.md)

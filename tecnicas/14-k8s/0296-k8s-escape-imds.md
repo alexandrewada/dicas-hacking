@@ -1,3 +1,15 @@
+---
+id: "0296"
+categoria: "14-k8s"
+familia: "k8s-escape"
+slug: "imds"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["14-k8s", "k8s-escape", "base"]
+aliases: ["cloud metadata from pod", "imds"]
+---
+
 # cloud metadata from pod
 
 ## Leitura rápida
@@ -21,10 +33,10 @@ docker.sock, e metadata cloud. Pentest k8s exige cuidado para não derrubar work
 ## Sinal / query
 
 ```bash
-# k8s lab namespace
-kubectl -n lab-e990a9 auth can-i --list --as=system:serviceaccount:lab:sa-imds
-kubectl -n lab-e990a9 get secrets
-# prova RBAC excessivo imds
+# k8s imds lab namespace
+kubectl -n lab auth can-i --list --as=system:serviceaccount:lab:sa-imds
+kubectl -n lab get rolebinding,clusterrolebinding -o wide | head
+# imds via pod: curl 169.254.169.254 — só lab; tag e990a9
 ```
 
 privileged / hostPath / CAP_SYS_ADMIN — mostro node FS ou cred do node.
@@ -46,5 +58,15 @@ kubectl auth can-i; token redigido; PoC read secret.
 
 ## Refs
 
-- Kubernetes Attack Matrix
-- NSA/CISA k8s hardening
+- [Microsoft — Kubernetes attack matrix](https://microsoft.github.io/Threat-Matrix-for-Kubernetes/)
+- [NSA/CISA — Kubernetes hardening](https://media.defense.gov/2022/Aug/29/2003064742/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220829.PDF)
+- [AWS — Instance metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html)
+
+## Relacionadas
+
+- [cloud metadata from pod — evidência](0676-k8s-escape-imds--evidencia.md)
+- [Token de ServiceAccount](0291-k8s-escape-sa-token.md)
+- [RBAC wildcards](0292-k8s-escape-rbac.md)
+- [Pod privileged](0293-k8s-escape-privileged.md)
+- [Credencial via IMDS (path)](../12-aws/0266-aws-privesc-imds.md)
+- [hostPath mount (path)](0294-k8s-escape-hostpath.md)

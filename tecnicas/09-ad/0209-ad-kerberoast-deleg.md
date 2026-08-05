@@ -1,3 +1,15 @@
+---
+id: "0209"
+categoria: "09-ad"
+familia: "ad-kerberoast"
+slug: "deleg"
+angulo: "base"
+mitre: "T1558.003"
+owasp: ""
+tags: ["09-ad", "ad-kerberoast", "base", "t1558.003"]
+aliases: ["roast + delegation abuse", "deleg"]
+---
+
 # roast + delegation abuse
 
 `T1558.003 Kerberoasting / T1558.004 AS-REP`
@@ -52,5 +64,17 @@ No PDF — SPN list; hash crackado de conta lab/serviço fraco; path BloodHound.
 
 ## Refs
 
-- MITRE T1558
-- SpecterOps Kerberoasting
+- [MITRE ATT&CK T1558.003](https://attack.mitre.org/techniques/T1558/003/)
+- [MITRE ATT&CK T1558.004](https://attack.mitre.org/techniques/T1558/004/)
+- [MITRE ATT&CK T1558](https://attack.mitre.org/techniques/T1558/)
+- [SpecterOps — Kerberoasting](https://posts.specterops.io/kerberoasting-revisited-d9c270baaf91)
+- [SpecterOps — BloodHound](https://bloodhound.specterops.io/)
+
+## Relacionadas
+
+- [roast + delegation abuse — lab](0589-ad-kerberoast-deleg--lab.md)
+- [roast + delegation abuse — hardening](0969-ad-kerberoast-deleg--hardening.md)
+- [Kerberoasting (TGS RC4)](0201-ad-kerberoast-rc4.md)
+- [AS-REP roasting](0203-ad-kerberoast-asrep.md)
+- [path pós-roast](0205-ad-kerberoast-bloodhound.md)
+- [detecção de ausência de gMSA](0206-ad-kerberoast-gmsa.md)

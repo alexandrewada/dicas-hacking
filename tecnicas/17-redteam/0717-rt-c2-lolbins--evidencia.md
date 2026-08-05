@@ -1,3 +1,15 @@
+---
+id: "0717"
+categoria: "17-redteam"
+familia: "rt-c2"
+slug: "lolbins"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["17-redteam", "rt-c2", "evidencia"]
+aliases: ["LOLBins para living-off-land", "lolbins", "lolbins-evidencia"]
+---
+
 # LOLBins para living-off-land — evidência
 
 Pacote pra LOLBins para living-off-land sobreviver peer review.
@@ -45,5 +57,14 @@ Não uso infra de C2 criminal. Não aponte para fora do escopo.
 
 ## Refs
 
-- Red Team Field Manual ethics
-- MITRE C2
+- [Red team ethics / ROE](https://attack.mitre.org/)
+- [MITRE ATT&CK — Command and Control](https://attack.mitre.org/tactics/TA0011/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+
+## Relacionadas
+
+- [LOLBins para living-off-land](0337-rt-c2-lolbins.md)
+- [debrief com SOC](0340-rt-c2-debrief.md)
+- [DNS C2](0332-rt-c2-dns.md)
+- [domain fronting histórico](0333-rt-c2-domain-front.md)
+- [exfil controlada de dados fake](0339-rt-c2-exfil.md)

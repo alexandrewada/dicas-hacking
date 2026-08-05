@@ -1,3 +1,15 @@
+---
+id: "0829"
+categoria: "03-api"
+familia: "api-mass-assignment"
+slug: "csv-import"
+angulo: "path"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-mass-assignment", "path", "t1190"]
+aliases: ["import CSV com colunas extras", "csv-import", "csv-import-path"]
+---
+
 # import CSV com colunas extras — path
 
 import CSV com colunas extras como pivô. Path curto > monte de finding isolado.
@@ -59,5 +71,16 @@ Request com campo privilegiado; response provando alteração.
 
 ## Refs
 
-- OWASP API3
-- PortSwigger Mass Assignment
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Mass assignment](https://portswigger.net/web-security/access-control)
+- [OWASP API3 BOPLA](https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/)
+
+## Relacionadas
+
+- [import CSV com colunas extras](0069-api-mass-assignment-csv-import.md)
+- [import CSV com colunas extras — detecção](0449-api-mass-assignment-csv-import--detecao.md)
+- [GraphQL input objects](0067-api-mass-assignment-graphql-input.md)
+- [JSON Merge Patch RFC 7396](0065-api-mass-assignment-json-merge.md)
+- [nested JSON binding](0064-api-mass-assignment-nested.md)
+- [ORM update com map completo](0070-api-mass-assignment-orm-bind.md)

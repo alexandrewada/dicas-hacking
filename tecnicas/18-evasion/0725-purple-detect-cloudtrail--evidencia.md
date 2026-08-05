@@ -1,3 +1,15 @@
+---
+id: "0725"
+categoria: "18-evasion"
+familia: "purple-detect"
+slug: "cloudtrail"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["18-evasion", "purple-detect", "evidencia"]
+aliases: ["CloudTrail gaps", "cloudtrail", "cloudtrail-evidencia"]
+---
+
 # CloudTrail gaps — evidência
 
 Pacote pra CloudTrail gaps sobreviver peer review.
@@ -51,5 +63,14 @@ Não desabilito EDR para 'passar'. Documento bypass se no escopo.
 
 ## Refs
 
-- MITRE ATT&CK
-- Atomic Red Team
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+- [SigmaHQ rules](https://github.com/SigmaHQ/sigma)
+
+## Relacionadas
+
+- [CloudTrail gaps](0345-purple-detect-cloudtrail.md)
+- [Atomic Red Team na prática](0341-purple-detect-atomic.md)
+- [canary tokens validation](0349-purple-detect-canary.md)
+- [DNS anomaly detection test](0346-purple-detect-dns-dga.md)
+- [EDR bypass discussion ética](0343-purple-detect-edr-bypass.md)

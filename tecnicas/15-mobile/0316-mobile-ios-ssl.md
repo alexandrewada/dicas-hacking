@@ -1,3 +1,15 @@
+---
+id: "0316"
+categoria: "15-mobile"
+familia: "mobile-ios"
+slug: "ssl"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["15-mobile", "mobile-ios", "base"]
+aliases: ["SSL kill switch lab", "ssl"]
+---
+
 # SSL kill switch lab
 
 `Mobile ATT&CK`
@@ -22,10 +34,10 @@ URL schemes, e backup artifacts. Teste em device jailbroken de lab quando necess
 ## Sinal / query
 
 ```bash
-# mobile lab build — sem store production
-adb shell am start -a android.intent.action.VIEW \
-  -d 'app://lab/ssl?token=TOKEN_LAB_eada08'
-# deep link / exported → token sink
+# iOS lab IPA — ssl
+frida -U -f app.lab.ios -l enumerate_keychain.js
+# url scheme: xcrun simctl openurl booted 'applab://ssl?t=eada08'
+# ATS bypass só em build debug
 ```
 
 ## Nota de operador
@@ -48,4 +60,14 @@ No PDF — Artefato Keychain de teste; request API.
 
 ## Refs
 
-- OWASP MASTG iOS
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [OWASP MASTG — iOS](https://mas.owasp.org/MASTG/0x06a-Testing-IOS/)
+- [Frida documentation](https://frida.re/docs/home/)
+
+## Relacionadas
+
+- [SSL kill switch lab — evidência](0696-mobile-ios-ssl--evidencia.md)
+- [ATS exceptions](0312-mobile-ios-ats.md)
+- [itunes backup secrets](0315-mobile-ios-backup.md)
+- [biometry bypass lab](0317-mobile-ios-biometry.md)
+- [app groups misuse](0318-mobile-ios-ipc.md)

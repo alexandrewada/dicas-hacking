@@ -1,3 +1,15 @@
+---
+id: "0427"
+categoria: "02-web"
+familia: "web-ssrf"
+slug: "file-proto"
+angulo: "detecao"
+mitre: ""
+owasp: ""
+tags: ["02-web", "web-ssrf", "detecao"]
+aliases: ["file:// e wrappers", "file-proto", "file-proto-detecao"]
+---
+
 # file:// e wrappers — detecção
 
 Se o SOC não vê file:// e wrappers, o finding é de cobertura, não de ego ofensivo.
@@ -52,6 +64,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP SSRF
-- PortSwigger SSRF
-- AWS IMDSv2
+- [OWASP SSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — SSRF](https://portswigger.net/web-security/ssrf)
+- [AWS — IMDSv2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html)
+
+## Relacionadas
+
+- [file:// e wrappers](0047-web-ssrf-file-proto.md)
+- [file:// e wrappers — path](0807-web-ssrf-file-proto--path.md)
+- [SSRF até o IMDS (role cloud)](0041-web-ssrf-imds.md)
+- [SSRF cego com out-of-band](0042-web-ssrf-blind.md)
+- [SSRF com DNS rebinding](0044-web-ssrf-dns-rebind.md)
+- [leitura de arquivo local (path)](../07-ssrf-xxe/0171-xxe-classic-file-read.md)

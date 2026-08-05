@@ -1,3 +1,15 @@
+---
+id: "0068"
+categoria: "03-api"
+familia: "api-mass-assignment"
+slug: "query-param"
+angulo: "base"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-mass-assignment", "base", "t1190"]
+aliases: ["HPP / mass assign via query", "query-param"]
+---
+
 # HPP / mass assign via query
 
 **API3:2023 Broken Object Property Level Authorization** · `T1190 Exploit Public-Facing Application`
@@ -55,5 +67,16 @@ Request com campo privilegiado; response provando alteração.
 
 ## Refs
 
-- OWASP API3
-- PortSwigger Mass Assignment
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Mass assignment](https://portswigger.net/web-security/access-control)
+- [OWASP API3 BOPLA](https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/)
+
+## Relacionadas
+
+- [HPP / mass assign via query — detecção](0448-api-mass-assignment-query-param--detecao.md)
+- [HPP / mass assign via query — path](0828-api-mass-assignment-query-param--path.md)
+- [import CSV com colunas extras](0069-api-mass-assignment-csv-import.md)
+- [GraphQL input objects](0067-api-mass-assignment-graphql-input.md)
+- [JSON Merge Patch RFC 7396](0065-api-mass-assignment-json-merge.md)
+- [nested JSON binding](0064-api-mass-assignment-nested.md)

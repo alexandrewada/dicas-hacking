@@ -1,3 +1,15 @@
+---
+id: "0750"
+categoria: "20-report"
+familia: "report-quality"
+slug: "redaction"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "evidencia"]
+aliases: ["como publicar amostra sem vazar cliente", "redaction", "redaction-evidencia"]
+---
+
 # como publicar amostra sem vazar cliente — evidência
 
 Pacote pra como publicar amostra sem vazar cliente sobreviver peer review.
@@ -49,6 +61,14 @@ Não inclua dados reais de clientes em material público — redija.
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [como publicar amostra sem vazar cliente](0370-report-quality-redaction.md)
+- [apêndice técnico vs executivo](0369-report-quality-appendix.md)
+- [narrativa de account takeover](0367-report-quality-ato.md)
+- [Traduzir risco pro CISO](0364-report-quality-business.md)
+- [findings encadeados](0368-report-quality-chain.md)

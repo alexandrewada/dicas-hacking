@@ -1,3 +1,15 @@
+---
+id: "0803"
+categoria: "02-web"
+familia: "web-ssrf"
+slug: "redirect"
+angulo: "path"
+mitre: "T1090"
+owasp: ""
+tags: ["02-web", "web-ssrf", "path", "t1090"]
+aliases: ["bypass via redirect aberto", "redirect", "redirect-path"]
+---
+
 # bypass via redirect aberto — path
 
 bypass via redirect aberto como pivô. Path curto > monte de finding isolado.
@@ -60,6 +72,16 @@ Parâmetro é boundary: de onde veio o valor (cookie, claim, hidden) importa mai
 
 ## Refs
 
-- OWASP SSRF
-- PortSwigger SSRF
-- AWS IMDSv2
+- [MITRE ATT&CK T1090](https://attack.mitre.org/techniques/T1090/)
+- [MITRE ATT&CK T1552](https://attack.mitre.org/techniques/T1552/)
+- [OWASP SSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — SSRF](https://portswigger.net/web-security/ssrf)
+- [AWS — IMDSv2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html)
+
+## Relacionadas
+
+- [bypass via redirect aberto](0043-web-ssrf-redirect.md)
+- [bypass via redirect aberto — detecção](0423-web-ssrf-redirect--detecao.md)
+- [SSRF até o IMDS (role cloud)](0041-web-ssrf-imds.md)
+- [SSRF cego com out-of-band](0042-web-ssrf-blind.md)
+- [SSRF com DNS rebinding](0044-web-ssrf-dns-rebind.md)

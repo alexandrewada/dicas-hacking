@@ -1,3 +1,15 @@
+---
+id: "0265"
+categoria: "12-aws"
+familia: "aws-privesc"
+slug: "ssm"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["12-aws", "aws-privesc", "base"]
+aliases: ["SSM SendCommand", "ssm"]
+---
+
 # SSM SendCommand
 
 ## Leitura rápida
@@ -25,6 +37,7 @@ e prova com ação mínima em conta sandbox do cliente.
 # AWS lab — identidade de teste, sem wipe
 aws sts get-caller-identity --profile lab_f049e9
 aws s3api get-bucket-policy --bucket lab-bucket-ssm --profile lab_f049e9
+# seguro: Get*/List*; destrutivo (DeleteBucket) só em lab throwaway
 # effective perms ssm
 ```
 
@@ -46,5 +59,13 @@ Identidade inicial; API calls; identidade final; cleanup.
 
 ## Refs
 
-- Rhino Security Labs AWS privesc
-- MITRE Cloud
+- [Rhino Security Labs — AWS privilege escalation](https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
+
+## Relacionadas
+
+- [SSM SendCommand — evidência](0645-aws-privesc-ssm--evidencia.md)
+- [Credencial via IMDS](0266-aws-privesc-imds.md)
+- [PassRole + compute](0262-aws-privesc-passrole.md)
+- [trust policy frouxa](0264-aws-privesc-assume-role.md)

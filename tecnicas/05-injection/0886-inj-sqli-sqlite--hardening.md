@@ -1,3 +1,15 @@
+---
+id: "0886"
+categoria: "05-injection"
+familia: "inj-sqli"
+slug: "sqlite"
+angulo: "hardening"
+mitre: "T1190"
+owasp: ""
+tags: ["05-injection", "inj-sqli", "hardening", "t1190"]
+aliases: ["SQLite em apps embarcadas", "sqlite", "sqlite-hardening"]
+---
+
 # SQLite em apps embarcadas — hardening
 
 Do PoC ao controle — SQLite em apps embarcadas.
@@ -42,6 +54,16 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- PortSwigger SQLi
-- OWASP SQLi
-- SQLMap usage ethics
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [PortSwigger — SQL injection](https://portswigger.net/web-security/sql-injection)
+- [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- [sqlmap — usage](https://sqlmap.org/)
+
+## Relacionadas
+
+- [SQLite em apps embarcadas](0126-inj-sqli-sqlite.md)
+- [SQLite em apps embarcadas — lab](0506-inj-sqli-sqlite--lab.md)
+- [JSON operators injection](0129-inj-sqli-json-sql.md)
+- [MSSQL out-of-band](0124-inj-sqli-mssql-oob.md)
+- [SQLi blind em MySQL](0122-inj-sqli-mysql-blind.md)
+- [MySQL error-based](0121-inj-sqli-mysql-error.md)

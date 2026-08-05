@@ -1,3 +1,15 @@
+---
+id: "0253"
+categoria: "11-linux"
+familia: "linux-privesc"
+slug: "caps"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["11-linux", "linux-privesc", "base"]
+aliases: ["capabilities (cap_setuid)", "caps"]
+---
+
 # capabilities (cap_setuid)
 
 ## Leitura rápida
@@ -21,11 +33,9 @@ exploit-as-a-service.
 ## Sinal / query
 
 ```bash
-# linux privesc lab
-find / -perm -4000 -type f 2>/dev/null | head
-sudo -l
-getcap -r / 2>/dev/null | head
-# foco caps tag 92454e
+getcap -r / 2>/dev/null | grep -E 'cap_setuid|cap_sys_admin' | tee caps_92454e.txt
+# lab: explorar bin com cap_setuid+ep; prod: só inventário
+# caps
 ```
 
 Exploit local com crash potencial fica no lab clonado.
@@ -47,5 +57,12 @@ Vetor; id antes/depois; artefato removido.
 
 ## Refs
 
-- GTFOBins
-- HackTricks Linux PrivEsc
+- [GTFOBins](https://gtfobins.github.io/)
+- [HackTricks — Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+
+## Relacionadas
+
+- [capabilities (cap_setuid) — evidência](0633-linux-privesc-caps--evidencia.md)
+- [SUID / GTFOBins](0251-linux-privesc-suid.md)
+- [sudoers misconfig](0252-linux-privesc-sudo.md)
+- [Abuso do grupo docker / sock](0256-linux-privesc-docker.md)

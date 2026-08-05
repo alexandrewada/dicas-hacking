@@ -1,3 +1,15 @@
+---
+id: "0251"
+categoria: "11-linux"
+familia: "linux-privesc"
+slug: "suid"
+angulo: "base"
+mitre: "T1548"
+owasp: ""
+tags: ["11-linux", "linux-privesc", "base", "t1548"]
+aliases: ["SUID / GTFOBins", "suid"]
+---
+
 # SUID / GTFOBins
 
 **Local privesc** · `T1548 / T1611`
@@ -19,11 +31,11 @@ exploit-as-a-service.
 ## Sinal / query
 
 ```bash
-# linux privesc lab
-find / -perm -4000 -type f 2>/dev/null | head
-sudo -l
-getcap -r / 2>/dev/null | head
-# foco suid tag d61b22
+# lab — SUID GTFO; prod: só enum
+find / -perm -4000 -type f 2>/dev/null | tee suid_d61b22.txt
+# seguro em prod: listar + comparar baseline
+# destrutivo só em lab: ./vuln_suid -c 'id'  # NÃO em prod
+gtfobins hint: suid
 ```
 
 ## Diferencial desta nota
@@ -47,5 +59,14 @@ SUID/capabilities/docker.sock/sudo -l antes de kernel exploit barulhento.
 
 ## Refs
 
-- GTFOBins
-- HackTricks Linux PrivEsc
+- [MITRE ATT&CK T1548](https://attack.mitre.org/techniques/T1548/)
+- [MITRE ATT&CK T1611](https://attack.mitre.org/techniques/T1611/)
+- [GTFOBins](https://gtfobins.github.io/)
+- [HackTricks — Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+
+## Relacionadas
+
+- [SUID / GTFOBins — evidência](0631-linux-privesc-suid--evidencia.md)
+- [sudoers misconfig](0252-linux-privesc-sudo.md)
+- [Abuso do grupo docker / sock](0256-linux-privesc-docker.md)
+- [capabilities (cap_setuid)](0253-linux-privesc-caps.md)

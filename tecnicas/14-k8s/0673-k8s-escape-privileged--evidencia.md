@@ -1,3 +1,15 @@
+---
+id: "0673"
+categoria: "14-k8s"
+familia: "k8s-escape"
+slug: "privileged"
+angulo: "evidencia"
+mitre: "T1611"
+owasp: ""
+tags: ["14-k8s", "k8s-escape", "evidencia", "t1611"]
+aliases: ["Pod privileged", "privileged", "privileged-evidencia"]
+---
+
 # Pod privileged — evidência
 
 Pacote pra Pod privileged sobreviver peer review.
@@ -51,5 +63,14 @@ Não delete namespaces. Privileged probes podem afetar nós.
 
 ## Refs
 
-- Kubernetes Attack Matrix
-- NSA/CISA k8s hardening
+- [MITRE ATT&CK T1611](https://attack.mitre.org/techniques/T1611/)
+- [MITRE ATT&CK T1078](https://attack.mitre.org/techniques/T1078/)
+- [Microsoft — Kubernetes attack matrix](https://microsoft.github.io/Threat-Matrix-for-Kubernetes/)
+- [NSA/CISA — Kubernetes hardening](https://media.defense.gov/2022/Aug/29/2003064742/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220829.PDF)
+
+## Relacionadas
+
+- [Pod privileged](0293-k8s-escape-privileged.md)
+- [Token de ServiceAccount](0291-k8s-escape-sa-token.md)
+- [RBAC wildcards](0292-k8s-escape-rbac.md)
+- [cloud metadata from pod](0296-k8s-escape-imds.md)

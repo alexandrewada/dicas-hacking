@@ -1,3 +1,15 @@
+---
+id: "0698"
+categoria: "15-mobile"
+familia: "mobile-ios"
+slug: "ipc"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["15-mobile", "mobile-ios", "evidencia"]
+aliases: ["app groups misuse", "ipc", "ipc-evidencia"]
+---
+
 # app groups misuse — evidência
 
 Pacote pra app groups misuse sobreviver peer review.
@@ -50,4 +62,14 @@ Não contorne DRM de terceiros fora do escopo do app do cliente.
 
 ## Refs
 
-- OWASP MASTG iOS
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [OWASP MASTG — iOS](https://mas.owasp.org/MASTG/0x06a-Testing-IOS/)
+- [Frida documentation](https://frida.re/docs/home/)
+
+## Relacionadas
+
+- [app groups misuse](0318-mobile-ios-ipc.md)
+- [ATS exceptions](0312-mobile-ios-ats.md)
+- [itunes backup secrets](0315-mobile-ios-backup.md)
+- [biometry bypass lab](0317-mobile-ios-biometry.md)
+- [Keychain fraco](0311-mobile-ios-keychain.md)

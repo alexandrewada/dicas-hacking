@@ -1,3 +1,15 @@
+---
+id: "0418"
+categoria: "02-web"
+familia: "web-idor"
+slug: "signed-url"
+angulo: "detecao"
+mitre: "T1078"
+owasp: "WSTG-ATHZ-04"
+tags: ["02-web", "web-idor", "detecao", "t1078"]
+aliases: ["abuso de signed URLs", "signed-url", "signed-url-detecao"]
+---
+
 # abuso de signed URLs — detecção
 
 Purple em abuso de signed URLs: uma execução limpa. A pergunta é se alertou — não se o exploit 'passa'.
@@ -57,6 +69,16 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP API Top 10 API1
-- WSTG-ATHZ-04
-- PortSwigger Access Control
+- [MITRE ATT&CK T1078](https://attack.mitre.org/techniques/T1078/)
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [WSTG-ATHZ-04](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Bypassing_Authorization_Schema)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Access control](https://portswigger.net/web-security/access-control)
+
+## Relacionadas
+
+- [abuso de signed URLs](0038-web-idor-signed-url.md)
+- [abuso de signed URLs — path](0798-web-idor-signed-url--path.md)
+- [IDOR com IDs numéricos](0031-web-idor-numeric.md)
+- [endpoints batch/export](0034-web-idor-batch.md)
+- [BOLA em GraphQL](0035-web-idor-graphql.md)

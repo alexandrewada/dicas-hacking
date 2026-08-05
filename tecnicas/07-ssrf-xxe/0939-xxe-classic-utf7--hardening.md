@@ -1,3 +1,15 @@
+---
+id: "0939"
+categoria: "07-ssrf-xxe"
+familia: "xxe-classic"
+slug: "utf7"
+angulo: "hardening"
+mitre: ""
+owasp: ""
+tags: ["07-ssrf-xxe", "xxe-classic", "hardening"]
+aliases: ["encodings bypass", "utf7", "utf7-hardening"]
+---
+
 # encodings bypass — hardening
 
 Do PoC ao controle — encodings bypass.
@@ -41,5 +53,14 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- OWASP XXE
-- PortSwigger XXE
+- [OWASP XXE Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [PortSwigger — XXE](https://portswigger.net/web-security/xxe)
+
+## Relacionadas
+
+- [encodings bypass](0179-xxe-classic-utf7.md)
+- [encodings bypass — lab](0559-xxe-classic-utf7--lab.md)
+- [XML bomb (lab controlado)](0180-xxe-classic-dos.md)
+- [leitura de arquivo local](0171-xxe-classic-file-read.md)
+- [OOXML/XLSX XXE](0176-xxe-classic-office.md)
+- [OOB parameter entities](0173-xxe-classic-oob.md)

@@ -1,3 +1,15 @@
+---
+id: "0722"
+categoria: "18-evasion"
+familia: "purple-detect"
+slug: "sysmon"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["18-evasion", "purple-detect", "evidencia"]
+aliases: ["Sysmon coverage gaps", "sysmon", "sysmon-evidencia"]
+---
+
 # Sysmon coverage gaps — evidência
 
 Pacote pra Sysmon coverage gaps sobreviver peer review.
@@ -45,5 +57,14 @@ Não desabilito EDR para 'passar'. Documento bypass se no escopo.
 
 ## Refs
 
-- MITRE ATT&CK
-- Atomic Red Team
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+- [SigmaHQ rules](https://github.com/SigmaHQ/sigma)
+
+## Relacionadas
+
+- [Sysmon coverage gaps](0342-purple-detect-sysmon.md)
+- [Atomic Red Team na prática](0341-purple-detect-atomic.md)
+- [canary tokens validation](0349-purple-detect-canary.md)
+- [CloudTrail gaps](0345-purple-detect-cloudtrail.md)
+- [DNS anomaly detection test](0346-purple-detect-dns-dga.md)

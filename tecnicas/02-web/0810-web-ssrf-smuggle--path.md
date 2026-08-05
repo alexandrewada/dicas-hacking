@@ -1,3 +1,15 @@
+---
+id: "0810"
+categoria: "02-web"
+familia: "web-ssrf"
+slug: "smuggle"
+angulo: "path"
+mitre: "T1090"
+owasp: ""
+tags: ["02-web", "web-ssrf", "path", "t1090"]
+aliases: ["HTTP request smuggling + SSRF", "smuggle", "smuggle-path"]
+---
+
 # HTTP request smuggling + SSRF — path
 
 HTTP request smuggling + SSRF como pivô. Path curto > monte de finding isolado.
@@ -60,6 +72,16 @@ WAF bypass só depois da prova de impacto. Senão vira discussão de tool com o 
 
 ## Refs
 
-- OWASP SSRF
-- PortSwigger SSRF
-- AWS IMDSv2
+- [MITRE ATT&CK T1090](https://attack.mitre.org/techniques/T1090/)
+- [MITRE ATT&CK T1552](https://attack.mitre.org/techniques/T1552/)
+- [OWASP SSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — SSRF](https://portswigger.net/web-security/ssrf)
+- [AWS — IMDSv2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html)
+
+## Relacionadas
+
+- [HTTP request smuggling + SSRF](0050-web-ssrf-smuggle.md)
+- [HTTP request smuggling + SSRF — detecção](0430-web-ssrf-smuggle--detecao.md)
+- [SSRF até o IMDS (role cloud)](0041-web-ssrf-imds.md)
+- [SSRF cego com out-of-band](0042-web-ssrf-blind.md)
+- [SSRF com DNS rebinding](0044-web-ssrf-dns-rebind.md)

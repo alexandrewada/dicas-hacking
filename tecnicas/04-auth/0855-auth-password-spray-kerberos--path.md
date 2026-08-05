@@ -1,3 +1,15 @@
+---
+id: "0855"
+categoria: "04-auth"
+familia: "auth-password-spray"
+slug: "kerberos"
+angulo: "path"
+mitre: "T1110.003"
+owasp: ""
+tags: ["04-auth", "auth-password-spray", "path", "t1110.003"]
+aliases: ["Kerberos pre-auth spray", "kerberos", "kerberos-path"]
+---
+
 # Kerberos pre-auth spray — path
 
 Kerberos pre-auth spray como pivô. Path curto > monte de finding isolado.
@@ -55,5 +67,15 @@ MFA bypass de verdade completa o fator sem o segundo. UI skip sem backend não �
 
 ## Refs
 
-- MITRE T1110.003
-- Microsoft Password Spray guidance
+- [MITRE ATT&CK T1110.003](https://attack.mitre.org/techniques/T1110/003/)
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft — Password spray guidance](https://learn.microsoft.com/en-us/defender-for-identity/password-spray-alert)
+
+## Relacionadas
+
+- [Kerberos pre-auth spray](0095-auth-password-spray-kerberos.md)
+- [Kerberos pre-auth spray — detecção](0475-auth-password-spray-kerberos--detecao.md)
+- [IMAP/POP spraying](0097-auth-password-spray-imap.md)
+- [SMTP AUTH legado](0096-auth-password-spray-legacy-smtp.md)
+- [bypass de lockout por pool de IPs](0098-auth-password-spray-lockout-bypass.md)
+- [Password spray em Microsoft 365](0091-auth-password-spray-o365.md)

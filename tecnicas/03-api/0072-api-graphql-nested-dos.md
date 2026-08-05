@@ -1,3 +1,15 @@
+---
+id: "0072"
+categoria: "03-api"
+familia: "api-graphql"
+slug: "nested-dos"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["03-api", "api-graphql", "base"]
+aliases: ["DoS por aninhamento", "nested-dos"]
+---
+
 # DoS por aninhamento
 
 ## Leitura rápida
@@ -50,5 +62,14 @@ Schema extrato (se permitido); prova de bypass authz; custo de query.
 
 ## Refs
 
-- OWASP GraphQL Cheat Sheet
-- PayloadsAllTheThings GraphQL
+- [OWASP GraphQL Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)
+- [PayloadsAllTheThings — GraphQL](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection)
+
+## Relacionadas
+
+- [DoS por aninhamento — detecção](0452-api-graphql-nested-dos--detecao.md)
+- [DoS por aninhamento — path](0832-api-graphql-nested-dos--path.md)
+- [aliases para bypass de rate limit](0073-api-graphql-alias-bruteforce.md)
+- [Automatic Persisted Queries abuse](0080-api-graphql-apq.md)
+- [batch HTTP GraphQL](0075-api-graphql-batch.md)
+- [CSRF em mutations cookie-based](0076-api-graphql-csrf.md)

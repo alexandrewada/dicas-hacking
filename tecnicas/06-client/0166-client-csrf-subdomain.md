@@ -1,3 +1,15 @@
+---
+id: "0166"
+categoria: "06-client"
+familia: "client-csrf"
+slug: "subdomain"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["06-client", "client-csrf", "base"]
+aliases: ["XSS em subdomínio → CSRF", "subdomain"]
+---
+
 # XSS em subdomínio → CSRF
 
 ## Leitura rápida
@@ -49,5 +61,14 @@ PoC HTML; request forjado; efeito na conta teste.
 
 ## Refs
 
-- OWASP CSRF
-- PortSwigger CSRF
+- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — CSRF](https://portswigger.net/web-security/csrf)
+
+## Relacionadas
+
+- [XSS em subdomínio → CSRF — lab](0546-client-csrf-subdomain--lab.md)
+- [XSS em subdomínio → CSRF — hardening](0926-client-csrf-subdomain--hardening.md)
+- [clickjacking + CSRF](0170-client-csrf-clickjacking.md)
+- [CORS reflection + CSRF](0169-client-csrf-cors.md)
+- [JSON CSRF via text/plain](0163-client-csrf-json-csrf.md)
+- [logout CSRF](0168-client-csrf-logout.md)

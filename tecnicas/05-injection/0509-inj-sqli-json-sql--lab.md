@@ -1,3 +1,15 @@
+---
+id: "0509"
+categoria: "05-injection"
+familia: "inj-sqli"
+slug: "json-sql"
+angulo: "lab"
+mitre: "T1190"
+owasp: ""
+tags: ["05-injection", "inj-sqli", "lab", "t1190"]
+aliases: ["JSON operators injection", "json-sql", "json-sql-lab"]
+---
+
 # JSON operators injection — lab
 
 Lab só pra JSON operators injection. Se não reproduz isolado, não confio no finding de prod.
@@ -49,6 +61,16 @@ Payload + response diferencial; amostra de dado de teste; query log se disponív
 
 ## Refs
 
-- PortSwigger SQLi
-- OWASP SQLi
-- SQLMap usage ethics
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [PortSwigger — SQL injection](https://portswigger.net/web-security/sql-injection)
+- [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- [sqlmap — usage](https://sqlmap.org/)
+
+## Relacionadas
+
+- [JSON operators injection](0129-inj-sqli-json-sql.md)
+- [JSON operators injection — hardening](0889-inj-sqli-json-sql--hardening.md)
+- [MSSQL out-of-band](0124-inj-sqli-mssql-oob.md)
+- [SQLi blind em MySQL](0122-inj-sqli-mysql-blind.md)
+- [MySQL error-based](0121-inj-sqli-mysql-error.md)
+- [polyglot SQL + NoSQL](0130-inj-sqli-nosqli-bridge.md)

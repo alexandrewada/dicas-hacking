@@ -1,3 +1,15 @@
+---
+id: "0035"
+categoria: "02-web"
+familia: "web-idor"
+slug: "graphql"
+angulo: "base"
+mitre: "T1078"
+owasp: "WSTG-ATHZ-04"
+tags: ["02-web", "web-idor", "base", "t1078"]
+aliases: ["BOLA em GraphQL", "graphql"]
+---
+
 # BOLA em GraphQL
 
 **API1:2023 BOLA / A01 Broken Access Control** · `T1078 Valid Accounts (abuso de sessão) / T1190`
@@ -57,6 +69,17 @@ Dois usuários, request diff, response mostrando dado de outro tenant (redigido)
 
 ## Refs
 
-- OWASP API Top 10 API1
-- WSTG-ATHZ-04
-- PortSwigger Access Control
+- [MITRE ATT&CK T1078](https://attack.mitre.org/techniques/T1078/)
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [WSTG-ATHZ-04](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Bypassing_Authorization_Schema)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Access control](https://portswigger.net/web-security/access-control)
+
+## Relacionadas
+
+- [BOLA em GraphQL — detecção](0415-web-idor-graphql--detecao.md)
+- [BOLA em GraphQL — path](0795-web-idor-graphql--path.md)
+- [IDOR com IDs numéricos](0031-web-idor-numeric.md)
+- [endpoints batch/export](0034-web-idor-batch.md)
+- [autorização por campo (path)](../03-api/0074-api-graphql-field-authz.md)
+- [GraphQL input objects (path)](../03-api/0067-api-mass-assignment-graphql-input.md)

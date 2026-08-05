@@ -1,3 +1,15 @@
+---
+id: "0745"
+categoria: "20-report"
+familia: "report-quality"
+slug: "retest"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "evidencia"]
+aliases: ["critérios de reteste", "retest", "retest-evidencia"]
+---
+
 # critérios de reteste — evidência
 
 Pacote pra critérios de reteste sobreviver peer review.
@@ -51,6 +63,14 @@ Não inclua dados reais de clientes em material público — redija.
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [critérios de reteste](0365-report-quality-retest.md)
+- [apêndice técnico vs executivo](0369-report-quality-appendix.md)
+- [narrativa de account takeover](0367-report-quality-ato.md)
+- [Traduzir risco pro CISO](0364-report-quality-business.md)
+- [findings encadeados](0368-report-quality-chain.md)

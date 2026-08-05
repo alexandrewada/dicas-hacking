@@ -1,3 +1,15 @@
+---
+id: "0168"
+categoria: "06-client"
+familia: "client-csrf"
+slug: "logout"
+angulo: "base"
+mitre: "T1185"
+owasp: ""
+tags: ["06-client", "client-csrf", "base", "t1185"]
+aliases: ["logout CSRF", "logout"]
+---
+
 # logout CSRF
 
 **A01 Broken Access Control** · `T1185 Browser Session Hijacking (adjunto)`
@@ -37,4 +49,17 @@ re-auth para ações críticas.
 
 Levo no report: PoC HTML; request forjado; efeito na conta teste.
 
-Refs: OWASP CSRF, PortSwigger CSRF
+## Refs
+
+- [MITRE ATT&CK T1185](https://attack.mitre.org/techniques/T1185/)
+- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — CSRF](https://portswigger.net/web-security/csrf)
+
+## Relacionadas
+
+- [logout CSRF — lab](0548-client-csrf-logout--lab.md)
+- [logout CSRF — hardening](0928-client-csrf-logout--hardening.md)
+- [clickjacking + CSRF](0170-client-csrf-clickjacking.md)
+- [CORS reflection + CSRF](0169-client-csrf-cors.md)
+- [JSON CSRF via text/plain](0163-client-csrf-json-csrf.md)
+- [X-HTTP-Method-Override](0164-client-csrf-method-override.md)

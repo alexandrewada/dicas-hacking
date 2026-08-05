@@ -1,3 +1,15 @@
+---
+id: "0078"
+categoria: "03-api"
+familia: "api-graphql"
+slug: "suggestion"
+angulo: "base"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-graphql", "base", "t1190"]
+aliases: ["field suggestions leak", "suggestion"]
+---
+
 # field suggestions leak
 
 ## Contexto
@@ -50,5 +62,15 @@ persisted queries. |
 
 ## Refs
 
-- OWASP GraphQL Cheat Sheet
-- PayloadsAllTheThings GraphQL
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP GraphQL Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)
+- [PayloadsAllTheThings — GraphQL](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection)
+
+## Relacionadas
+
+- [field suggestions leak — detecção](0458-api-graphql-suggestion--detecao.md)
+- [field suggestions leak — path](0838-api-graphql-suggestion--path.md)
+- [aliases para bypass de rate limit](0073-api-graphql-alias-bruteforce.md)
+- [Automatic Persisted Queries abuse](0080-api-graphql-apq.md)
+- [batch HTTP GraphQL](0075-api-graphql-batch.md)
+- [CSRF em mutations cookie-based](0076-api-graphql-csrf.md)

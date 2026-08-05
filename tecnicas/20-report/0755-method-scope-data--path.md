@@ -1,3 +1,15 @@
+---
+id: "0755"
+categoria: "20-report"
+familia: "method-scope"
+slug: "data"
+angulo: "path"
+mitre: ""
+owasp: ""
+tags: ["20-report", "method-scope", "path"]
+aliases: ["manejo de PII/LGPD", "data", "data-path"]
+---
+
 # manejo de PII/LGPD — path
 
 manejo de PII/LGPD como pivô. Path curto > monte de finding isolado.
@@ -55,5 +67,14 @@ Finding sem reteste path e cleanup vira pingue-pongue.
 
 ## Refs
 
-- PTES Pre-engagement
-- CREST guides
+- [PTES](http://www.pentest-standard.org/)
+- [CREST guides](https://www.crest-approved.org/)
+- [PTES Pre-engagement](http://www.pentest-standard.org/index.php/Pre-engagement)
+
+## Relacionadas
+
+- [manejo de PII/LGPD](0375-method-scope-data.md)
+- [scoping multi-cloud](0373-method-scope-cloud.md)
+- [credenciais fornecidas vs discovered](0377-method-scope-creds.md)
+- [política de stress/DoS](0372-method-scope-ddos.md)
+- [stop-and-call criteria](0376-method-scope-emergency.md)

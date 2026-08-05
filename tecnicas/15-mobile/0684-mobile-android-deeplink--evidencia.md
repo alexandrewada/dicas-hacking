@@ -1,3 +1,15 @@
+---
+id: "0684"
+categoria: "15-mobile"
+familia: "mobile-android"
+slug: "deeplink"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["15-mobile", "mobile-android", "evidencia"]
+aliases: ["deeplink hijack", "deeplink", "deeplink-evidencia"]
+---
+
 # deeplink hijack — evidência
 
 Pacote pra deeplink hijack sobreviver peer review.
@@ -49,5 +61,16 @@ Não publique apps modificados. Respeite store ToS e escopo.
 
 ## Refs
 
-- OWASP MASVS/MASTG
-- Frida docs
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [Frida documentation](https://frida.re/docs/home/)
+- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/)
+
+## Relacionadas
+
+- [deeplink hijack](0304-mobile-android-deeplink.md)
+- [token em logcat](0310-mobile-android-auth.md)
+- [backup enabled](0307-mobile-android-backup.md)
+- [clipboard leaks](0308-mobile-android-clip.md)
+- [crypto caseira fraca](0306-mobile-android-crypto.md)
+- [WebView XSS/bridge (path)](0302-mobile-android-webview.md)
+- [storage world-readable (path)](0303-mobile-android-storage.md)

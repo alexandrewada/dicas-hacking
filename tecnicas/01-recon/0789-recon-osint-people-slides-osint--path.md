@@ -1,3 +1,15 @@
+---
+id: "0789"
+categoria: "01-recon"
+familia: "recon-osint-people"
+slug: "slides-osint"
+angulo: "path"
+mitre: "T1589"
+owasp: ""
+tags: ["01-recon", "recon-osint-people", "path", "t1589"]
+aliases: ["slides e talks públicas", "slides-osint", "slides-osint-path"]
+---
+
 # slides e talks públicas — path
 
 slides e talks públicas como pivô. Path curto > monte de finding isolado.
@@ -54,6 +66,15 @@ CNAME órfão com cache CDN mentindo: confirmo NXDOMAIN/whois do alvo antes de C
 
 ## Refs
 
-- OSINT Framework
-- MITRE T1589
-- NIST SP 800-63
+- [MITRE ATT&CK T1589](https://attack.mitre.org/techniques/T1589/)
+- [OSINT Framework](https://osintframework.com/)
+- [NIST SP 800-63](https://pages.nist.gov/800-63-3/)
+
+## Relacionadas
+
+- [slides e talks públicas](0029-recon-osint-people-slides-osint.md)
+- [slides e talks públicas — detecção](0409-recon-osint-people-slides-osint--detecao.md)
+- [correlação com breaches corporativos](0027-recon-osint-people-breach-corp.md)
+- [vazamento de calendários/ICS](0025-recon-osint-people-calendar-leak.md)
+- [inferência de formato de e-mail](0026-recon-osint-people-email-format.md)
+- [GitHub dorking autorizado](0021-recon-osint-people-github-dorks.md)

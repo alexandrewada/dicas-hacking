@@ -1,3 +1,15 @@
+---
+id: "0683"
+categoria: "15-mobile"
+familia: "mobile-android"
+slug: "storage"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["15-mobile", "mobile-android", "evidencia"]
+aliases: ["storage world-readable", "storage", "storage-evidencia"]
+---
+
 # storage world-readable — evidência
 
 Pacote pra storage world-readable sobreviver peer review.
@@ -45,5 +57,14 @@ Não publique apps modificados. Respeite store ToS e escopo.
 
 ## Refs
 
-- OWASP MASVS/MASTG
-- Frida docs
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [Frida documentation](https://frida.re/docs/home/)
+- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/)
+
+## Relacionadas
+
+- [storage world-readable](0303-mobile-android-storage.md)
+- [token em logcat](0310-mobile-android-auth.md)
+- [backup enabled](0307-mobile-android-backup.md)
+- [clipboard leaks](0308-mobile-android-clip.md)
+- [crypto caseira fraca](0306-mobile-android-crypto.md)

@@ -1,3 +1,15 @@
+---
+id: "0151"
+categoria: "06-client"
+familia: "client-xss"
+slug: "reflected"
+angulo: "base"
+mitre: ""
+owasp: "WSTG-INPV-01"
+tags: ["06-client", "client-xss", "base"]
+aliases: ["reflected XSS", "reflected"]
+---
+
 # reflected XSS
 
 ## Leitura rápida
@@ -45,6 +57,15 @@ PoC HTML; cookie flags; impacto narrado.
 
 ## Refs
 
-- PortSwigger XSS
-- OWASP XSS
-- WSTG-INPV-01/02
+- [WSTG-INPV-01](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting)
+- [PortSwigger — XSS](https://portswigger.net/web-security/cross-site-scripting)
+- [OWASP XSS Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [reflected XSS — lab](0531-client-xss-reflected--lab.md)
+- [reflected XSS — hardening](0911-client-xss-reflected--hardening.md)
+- [template injection client (Angular/Vue)](0158-client-xss-angular.md)
+- [XSS até account takeover](0160-client-xss-ato-chain.md)
+- [CSP bypass gadgets](0155-client-xss-csp-bypass.md)
+- [DOM XSS](0153-client-xss-dom.md)

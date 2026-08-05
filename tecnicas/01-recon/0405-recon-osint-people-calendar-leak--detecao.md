@@ -1,3 +1,15 @@
+---
+id: "0405"
+categoria: "01-recon"
+familia: "recon-osint-people"
+slug: "calendar-leak"
+angulo: "detecao"
+mitre: "T1589"
+owasp: ""
+tags: ["01-recon", "recon-osint-people", "detecao", "t1589"]
+aliases: ["vazamento de calendários/ICS", "calendar-leak", "calendar-leak-detecao"]
+---
+
 # vazamento de calendários/ICS — detecção
 
 Gap de detecção em `T1589 Gather Victim Identity Information` / vazamento de calendários/ICS. PoC mínimo, telemetria ligada.
@@ -53,6 +65,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OSINT Framework
-- MITRE T1589
-- NIST SP 800-63
+- [MITRE ATT&CK T1589](https://attack.mitre.org/techniques/T1589/)
+- [OSINT Framework](https://osintframework.com/)
+- [NIST SP 800-63](https://pages.nist.gov/800-63-3/)
+
+## Relacionadas
+
+- [vazamento de calendários/ICS](0025-recon-osint-people-calendar-leak.md)
+- [vazamento de calendários/ICS — path](0785-recon-osint-people-calendar-leak--path.md)
+- [correlação com breaches corporativos](0027-recon-osint-people-breach-corp.md)
+- [inferência de formato de e-mail](0026-recon-osint-people-email-format.md)
+- [GitHub dorking autorizado](0021-recon-osint-people-github-dorks.md)
+- [pretext a partir de LinkedIn](0023-recon-osint-people-linkedin-pretext.md)

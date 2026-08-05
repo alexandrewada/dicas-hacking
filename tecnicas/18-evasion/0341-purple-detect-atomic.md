@@ -1,3 +1,15 @@
+---
+id: "0341"
+categoria: "18-evasion"
+familia: "purple-detect"
+slug: "atomic"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["18-evasion", "purple-detect", "base"]
+aliases: ["Atomic Red Team na prática", "atomic"]
+---
+
 # Atomic Red Team na prática
 
 `Detection engineering`
@@ -54,5 +66,16 @@ No PDF — Matriz técnica→alerta; screenshots SIEM; recomendações.
 
 ## Refs
 
-- MITRE ATT&CK
-- Atomic Red Team
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+- [SigmaHQ rules](https://github.com/SigmaHQ/sigma)
+
+## Relacionadas
+
+- [Atomic Red Team na prática — evidência](0721-purple-detect-atomic--evidencia.md)
+- [canary tokens validation](0349-purple-detect-canary.md)
+- [CloudTrail gaps](0345-purple-detect-cloudtrail.md)
+- [DNS anomaly detection test](0346-purple-detect-dns-dga.md)
+- [EDR bypass discussion ética](0343-purple-detect-edr-bypass.md)
+- [sugerir regra Sigma (path)](0344-purple-detect-sigma.md)
+- [Sysmon coverage gaps (path)](0342-purple-detect-sysmon.md)

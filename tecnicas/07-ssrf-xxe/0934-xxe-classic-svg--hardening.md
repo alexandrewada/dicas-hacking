@@ -1,3 +1,15 @@
+---
+id: "0934"
+categoria: "07-ssrf-xxe"
+familia: "xxe-classic"
+slug: "svg"
+angulo: "hardening"
+mitre: ""
+owasp: ""
+tags: ["07-ssrf-xxe", "xxe-classic", "hardening"]
+aliases: ["SVG XXE", "svg", "svg-hardening"]
+---
+
 # SVG XXE — hardening
 
 Do PoC ao controle — SVG XXE.
@@ -41,5 +53,14 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- OWASP XXE
-- PortSwigger XXE
+- [OWASP XXE Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [PortSwigger — XXE](https://portswigger.net/web-security/xxe)
+
+## Relacionadas
+
+- [SVG XXE](0174-xxe-classic-svg.md)
+- [SVG XXE — lab](0554-xxe-classic-svg--lab.md)
+- [XML bomb (lab controlado)](0180-xxe-classic-dos.md)
+- [leitura de arquivo local](0171-xxe-classic-file-read.md)
+- [OOXML/XLSX XXE](0176-xxe-classic-office.md)
+- [OOB parameter entities](0173-xxe-classic-oob.md)

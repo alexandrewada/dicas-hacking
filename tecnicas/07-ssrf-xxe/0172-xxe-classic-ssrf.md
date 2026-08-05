@@ -1,3 +1,15 @@
+---
+id: "0172"
+categoria: "07-ssrf-xxe"
+familia: "xxe-classic"
+slug: "ssrf"
+angulo: "base"
+mitre: "T1190"
+owasp: ""
+tags: ["07-ssrf-xxe", "xxe-classic", "base", "t1190"]
+aliases: ["XXE → SSRF", "ssrf"]
+---
+
 # XXE → SSRF
 
 **A03 / A05** · `T1190`
@@ -37,4 +49,17 @@ Corrijo com: Desabilitar external entities; usar JSON; patch parsers; network eg
 
 Levo no report: Entity PoC; conteúdo de arquivo não sensível; parser/versão.
 
-Refs: OWASP XXE, PortSwigger XXE
+## Refs
+
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP XXE Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [PortSwigger — XXE](https://portswigger.net/web-security/xxe)
+
+## Relacionadas
+
+- [XXE → SSRF — lab](0552-xxe-classic-ssrf--lab.md)
+- [XXE → SSRF — hardening](0932-xxe-classic-ssrf--hardening.md)
+- [XML bomb (lab controlado)](0180-xxe-classic-dos.md)
+- [leitura de arquivo local](0171-xxe-classic-file-read.md)
+- [OOXML/XLSX XXE](0176-xxe-classic-office.md)
+- [OOB parameter entities](0173-xxe-classic-oob.md)

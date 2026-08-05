@@ -1,3 +1,15 @@
+---
+id: "0406"
+categoria: "01-recon"
+familia: "recon-osint-people"
+slug: "email-format"
+angulo: "detecao"
+mitre: ""
+owasp: ""
+tags: ["01-recon", "recon-osint-people", "detecao"]
+aliases: ["inferência de formato de e-mail", "email-format", "email-format-detecao"]
+---
+
 # inferência de formato de e-mail — detecção
 
 Se o SOC não vê inferência de formato de e-mail, o finding é de cobertura, não de ego ofensivo.
@@ -50,6 +62,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OSINT Framework
-- MITRE T1589
-- NIST SP 800-63
+- [OSINT Framework](https://osintframework.com/)
+- [MITRE ATT&CK T1589](https://attack.mitre.org/techniques/T1589/)
+- [NIST SP 800-63](https://pages.nist.gov/800-63-3/)
+
+## Relacionadas
+
+- [inferência de formato de e-mail](0026-recon-osint-people-email-format.md)
+- [inferência de formato de e-mail — path](0786-recon-osint-people-email-format--path.md)
+- [correlação com breaches corporativos](0027-recon-osint-people-breach-corp.md)
+- [vazamento de calendários/ICS](0025-recon-osint-people-calendar-leak.md)
+- [GitHub dorking autorizado](0021-recon-osint-people-github-dorks.md)
+- [pretext a partir de LinkedIn](0023-recon-osint-people-linkedin-pretext.md)

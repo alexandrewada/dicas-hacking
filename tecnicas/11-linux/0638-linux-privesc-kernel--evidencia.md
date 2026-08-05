@@ -1,3 +1,15 @@
+---
+id: "0638"
+categoria: "11-linux"
+familia: "linux-privesc"
+slug: "kernel"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["11-linux", "linux-privesc", "evidencia"]
+aliases: ["kernel exploit (lab)", "kernel", "kernel-evidencia"]
+---
+
 # kernel exploit (lab) — evidência
 
 Pacote pra kernel exploit (lab) sobreviver peer review.
@@ -53,5 +65,13 @@ Não teste dirtypipe-like em hosts críticos sem janela.
 
 ## Refs
 
-- GTFOBins
-- HackTricks Linux PrivEsc
+- [GTFOBins](https://gtfobins.github.io/)
+- [HackTricks — Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+
+## Relacionadas
+
+- [kernel exploit (lab)](0258-linux-privesc-kernel.md)
+- [SUID / GTFOBins](0251-linux-privesc-suid.md)
+- [sudoers misconfig](0252-linux-privesc-sudo.md)
+- [Abuso do grupo docker / sock](0256-linux-privesc-docker.md)
+- [capabilities (cap_setuid)](0253-linux-privesc-caps.md)

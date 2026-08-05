@@ -1,3 +1,15 @@
+---
+id: "0407"
+categoria: "01-recon"
+familia: "recon-osint-people"
+slug: "breach-corp"
+angulo: "detecao"
+mitre: "T1589"
+owasp: ""
+tags: ["01-recon", "recon-osint-people", "detecao", "t1589"]
+aliases: ["correlação com breaches corporativos", "breach-corp", "breach-corp-detecao"]
+---
+
 # correlação com breaches corporativos — detecção
 
 Se o SOC não vê correlação com breaches corporativos, o finding é de cobertura, não de ego ofensivo.
@@ -50,6 +62,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OSINT Framework
-- MITRE T1589
-- NIST SP 800-63
+- [MITRE ATT&CK T1589](https://attack.mitre.org/techniques/T1589/)
+- [OSINT Framework](https://osintframework.com/)
+- [NIST SP 800-63](https://pages.nist.gov/800-63-3/)
+
+## Relacionadas
+
+- [correlação com breaches corporativos](0027-recon-osint-people-breach-corp.md)
+- [correlação com breaches corporativos — path](0787-recon-osint-people-breach-corp--path.md)
+- [vazamento de calendários/ICS](0025-recon-osint-people-calendar-leak.md)
+- [inferência de formato de e-mail](0026-recon-osint-people-email-format.md)
+- [GitHub dorking autorizado](0021-recon-osint-people-github-dorks.md)
+- [pretext a partir de LinkedIn](0023-recon-osint-people-linkedin-pretext.md)

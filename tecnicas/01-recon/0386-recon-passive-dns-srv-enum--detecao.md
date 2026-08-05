@@ -1,3 +1,15 @@
+---
+id: "0386"
+categoria: "01-recon"
+familia: "recon-passive-dns"
+slug: "srv-enum"
+angulo: "detecao"
+mitre: "T1590"
+owasp: ""
+tags: ["01-recon", "recon-passive-dns", "detecao", "t1590"]
+aliases: ["enumeração de registros SRV", "srv-enum", "srv-enum-detecao"]
+---
+
 # enumeração de registros SRV — detecção
 
 Se o SOC não vê enumeração de registros SRV, o finding é de cobertura, não de ego ofensivo.
@@ -55,6 +67,17 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP Testing Guide WSTG-INFO
-- MITRE ATT&CK T1590
-- RFC 1035
+- [MITRE ATT&CK T1590](https://attack.mitre.org/techniques/T1590/)
+- [OWASP WSTG — Information Gathering](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/README)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [RFC 1035 — DNS](https://www.rfc-editor.org/rfc/rfc1035)
+- [crt.sh — Certificate Transparency](https://crt.sh/)
+
+## Relacionadas
+
+- [enumeração de registros SRV](0006-recon-passive-dns-srv-enum.md)
+- [enumeração de registros SRV — path](0766-recon-passive-dns-srv-enum--path.md)
+- [clustering por ASN e netblocks](0004-recon-passive-dns-asn-cluster.md)
+- [descoberta de origem atrás de CDN](0010-recon-passive-dns-cdn-origin.md)
+- [via Certificate Transparency (crt.sh)](0001-recon-passive-dns-crtsh.md)
+- [auditoria DMARC/BIMI](0007-recon-passive-dns-dmarc-policy.md)

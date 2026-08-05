@@ -1,3 +1,15 @@
+---
+id: "0061"
+categoria: "03-api"
+familia: "api-mass-assignment"
+slug: "role-flag"
+angulo: "base"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-mass-assignment", "base", "t1190"]
+aliases: ["isAdmin/role elevation", "role-flag"]
+---
+
 # isAdmin/role elevation
 
 `T1190 Exploit Public-Facing Application`
@@ -54,5 +66,18 @@ No PDF — Request com campo privilegiado; response provando alteração.
 
 ## Refs
 
-- OWASP API3
-- PortSwigger Mass Assignment
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Mass assignment](https://portswigger.net/web-security/access-control)
+- [OWASP API3 BOPLA](https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/)
+
+## Relacionadas
+
+- [isAdmin/role elevation — detecção](0441-api-mass-assignment-role-flag--detecao.md)
+- [isAdmin/role elevation — path](0821-api-mass-assignment-role-flag--path.md)
+- [import CSV com colunas extras](0069-api-mass-assignment-csv-import.md)
+- [GraphQL input objects](0067-api-mass-assignment-graphql-input.md)
+- [JSON Merge Patch RFC 7396](0065-api-mass-assignment-json-merge.md)
+- [nested JSON binding](0064-api-mass-assignment-nested.md)
+- [IDOR com IDs numéricos (path)](../02-web/0031-web-idor-numeric.md)
+- [scope elevation (path)](../04-auth/0118-auth-oauth-oidc-scope-escalation.md)

@@ -1,3 +1,15 @@
+---
+id: "0149"
+categoria: "05-injection"
+familia: "inj-ssti"
+slug: "email-tmpl"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["05-injection", "inj-ssti", "base"]
+aliases: ["templates de e-mail marketing", "email-tmpl"]
+---
+
 # templates de e-mail marketing
 
 ## Leitura rápida
@@ -48,5 +60,14 @@ Engine identificado; PoC `id`; trecho de código vulnerável se fornecido.
 
 ## Refs
 
-- PortSwigger SSTI
-- PayloadsAllTheThings SSTI
+- [PortSwigger — SSTI](https://portswigger.net/web-security/server-side-template-injection)
+- [PayloadsAllTheThings — SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
+
+## Relacionadas
+
+- [templates de e-mail marketing — lab](0529-inj-ssti-email-tmpl--lab.md)
+- [templates de e-mail marketing — hardening](0909-inj-ssti-email-tmpl--hardening.md)
+- [Freemarker](0142-inj-ssti-freemarker.md)
+- [SSTI em Jinja2](0141-inj-ssti-jinja2.md)
+- [Mako Python](0147-inj-ssti-mako.md)
+- [HTML templates → PDF](0150-inj-ssti-pdf-tmpl.md)

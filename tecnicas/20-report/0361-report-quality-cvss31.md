@@ -1,3 +1,15 @@
+---
+id: "0361"
+categoria: "20-report"
+familia: "report-quality"
+slug: "cvss31"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "base"]
+aliases: ["CVSS 3.1 scoring disciplinado", "cvss31"]
+---
+
 # CVSS 3.1 scoring disciplinado
 
 ## Contexto
@@ -46,6 +58,14 @@ Não inclua dados reais de clientes em material público — redija.
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [CVSS 3.1 scoring disciplinado — evidência](0741-report-quality-cvss31--evidencia.md)
+- [apêndice técnico vs executivo](0369-report-quality-appendix.md)
+- [narrativa de account takeover](0367-report-quality-ato.md)
+- [Traduzir risco pro CISO](0364-report-quality-business.md)
+- [findings encadeados](0368-report-quality-chain.md)

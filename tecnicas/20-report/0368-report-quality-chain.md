@@ -1,3 +1,15 @@
+---
+id: "0368"
+categoria: "20-report"
+familia: "report-quality"
+slug: "chain"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "base"]
+aliases: ["findings encadeados", "chain"]
+---
+
 # findings encadeados
 
 **Methodology** · `N/A`
@@ -46,6 +58,14 @@ Finding sem reteste path e cleanup vira pingue-pongue.
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [findings encadeados — evidência](0748-report-quality-chain--evidencia.md)
+- [apêndice técnico vs executivo](0369-report-quality-appendix.md)
+- [narrativa de account takeover](0367-report-quality-ato.md)
+- [Traduzir risco pro CISO](0364-report-quality-business.md)
+- [cleanup & artifact list](0366-report-quality-cleanup.md)

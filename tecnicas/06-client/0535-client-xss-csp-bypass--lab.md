@@ -1,3 +1,15 @@
+---
+id: "0535"
+categoria: "06-client"
+familia: "client-xss"
+slug: "csp-bypass"
+angulo: "lab"
+mitre: ""
+owasp: "WSTG-INPV-01"
+tags: ["06-client", "client-xss", "lab"]
+aliases: ["CSP bypass gadgets", "csp-bypass", "csp-bypass-lab"]
+---
+
 # CSP bypass gadgets — lab
 
 Critério: outro analista fecha sozinho com esta nota.
@@ -44,6 +56,15 @@ PoC HTML; cookie flags; impacto narrado.
 
 ## Refs
 
-- PortSwigger XSS
-- OWASP XSS
-- WSTG-INPV-01/02
+- [WSTG-INPV-01](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting)
+- [PortSwigger — XSS](https://portswigger.net/web-security/cross-site-scripting)
+- [OWASP XSS Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [CSP bypass gadgets](0155-client-xss-csp-bypass.md)
+- [CSP bypass gadgets — hardening](0915-client-xss-csp-bypass--hardening.md)
+- [template injection client (Angular/Vue)](0158-client-xss-angular.md)
+- [XSS até account takeover](0160-client-xss-ato-chain.md)
+- [DOM XSS](0153-client-xss-dom.md)
+- [mutation XSS (mXSS)](0156-client-xss-mutation.md)

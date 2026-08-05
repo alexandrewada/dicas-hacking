@@ -1,3 +1,15 @@
+---
+id: "0199"
+categoria: "08-network"
+familia: "net-smb"
+slug: "backup"
+angulo: "base"
+mitre: "T1135"
+owasp: ""
+tags: ["08-network", "net-smb", "base", "t1135"]
+aliases: ["backups expostos", "backup"]
+---
+
 # backups expostos
 
 **Misconfiguration** · `T1135 Network Share Discovery`
@@ -44,5 +56,15 @@ Mensuro SMB/LDAP signing e EPA antes de montar relay. Sem isso o path é teatro.
 
 ## Refs
 
-- MITRE T1135
-- WSTG network
+- [MITRE ATT&CK T1135](https://attack.mitre.org/techniques/T1135/)
+- [OWASP WSTG — Network testing](https://owasp.org/www-project-web-security-testing-guide/latest/)
+- [HackTricks — SMB](https://book.hacktricks.xyz/network-services-pentesting/pentesting-smb)
+
+## Relacionadas
+
+- [backups expostos — lab](0579-net-smb-backup--lab.md)
+- [backups expostos — hardening](0959-net-smb-backup--hardening.md)
+- [share de software deployment](0200-net-smb-av-bypass-share.md)
+- [DFS enum](0197-net-smb-dfs.md)
+- [GPP cpasswords históricos](0193-net-smb-gpp.md)
+- [null session enum](0191-net-smb-null.md)

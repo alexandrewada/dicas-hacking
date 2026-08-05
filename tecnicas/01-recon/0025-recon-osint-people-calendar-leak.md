@@ -1,3 +1,15 @@
+---
+id: "0025"
+categoria: "01-recon"
+familia: "recon-osint-people"
+slug: "calendar-leak"
+angulo: "base"
+mitre: "T1589"
+owasp: ""
+tags: ["01-recon", "recon-osint-people", "base", "t1589"]
+aliases: ["vazamento de calendários/ICS", "calendar-leak"]
+---
+
 # vazamento de calendários/ICS
 
 ## Contexto
@@ -45,6 +57,15 @@ LGPD: minimize PII no relatório.
 
 ## Refs
 
-- OSINT Framework
-- MITRE T1589
-- NIST SP 800-63
+- [MITRE ATT&CK T1589](https://attack.mitre.org/techniques/T1589/)
+- [OSINT Framework](https://osintframework.com/)
+- [NIST SP 800-63](https://pages.nist.gov/800-63-3/)
+
+## Relacionadas
+
+- [vazamento de calendários/ICS — detecção](0405-recon-osint-people-calendar-leak--detecao.md)
+- [vazamento de calendários/ICS — path](0785-recon-osint-people-calendar-leak--path.md)
+- [correlação com breaches corporativos](0027-recon-osint-people-breach-corp.md)
+- [inferência de formato de e-mail](0026-recon-osint-people-email-format.md)
+- [GitHub dorking autorizado](0021-recon-osint-people-github-dorks.md)
+- [pretext a partir de LinkedIn](0023-recon-osint-people-linkedin-pretext.md)

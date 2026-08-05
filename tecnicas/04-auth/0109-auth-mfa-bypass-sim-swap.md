@@ -1,3 +1,15 @@
+---
+id: "0109"
+categoria: "04-auth"
+familia: "auth-mfa-bypass"
+slug: "sim-swap"
+angulo: "base"
+mitre: "T1621"
+owasp: ""
+tags: ["04-auth", "auth-mfa-bypass", "base", "t1621"]
+aliases: ["sim swap como premissa", "sim-swap"]
+---
+
 # sim swap como premissa
 
 **A07** · `T1621 Multi-Factor Authentication Request Generation`
@@ -50,5 +62,14 @@ Fluxo sem MFA; HAR redigido; política Cond. Access ausente.
 
 ## Refs
 
-- OWASP MFA Cheat Sheet
-- MITRE T1621
+- [MITRE ATT&CK T1621](https://attack.mitre.org/techniques/T1621/)
+- [OWASP Multifactor Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [sim swap como premissa — detecção](0489-auth-mfa-bypass-sim-swap--detecao.md)
+- [sim swap como premissa — path](0869-auth-mfa-bypass-sim-swap--path.md)
+- [backup codes em massa](0108-auth-mfa-bypass-backup-codes.md)
+- [MFA fatigue (push bombing)](0104-auth-mfa-bypass-fatigue.md)
+- [protocolos legados sem MFA](0101-auth-mfa-bypass-legacy-auth.md)
+- [token sem amr/acr](0106-auth-mfa-bypass-oauth-skip.md)

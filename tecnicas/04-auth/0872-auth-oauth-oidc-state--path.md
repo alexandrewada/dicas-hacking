@@ -1,3 +1,15 @@
+---
+id: "0872"
+categoria: "04-auth"
+familia: "auth-oauth-oidc"
+slug: "state"
+angulo: "path"
+mitre: "T1528"
+owasp: ""
+tags: ["04-auth", "auth-oauth-oidc", "path", "t1528"]
+aliases: ["CSRF de login sem state", "state", "state-path"]
+---
+
 # CSRF de login sem state — path
 
 CSRF de login sem state como pivô. Path curto > monte de finding isolado.
@@ -56,6 +68,17 @@ Mint → store → use → revoke. Quebro o fluxo e testo cada perna.
 
 ## Refs
 
-- RFC 6749
-- RFC 8252
-- OWASP OAuth
+- [MITRE ATT&CK T1528](https://attack.mitre.org/techniques/T1528/)
+- [RFC 6749 — OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749)
+- [RFC 8252 — OAuth for Native Apps](https://www.rfc-editor.org/rfc/rfc8252)
+- [OWASP OAuth 2.0 Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html)
+- [PortSwigger — OAuth authentication](https://portswigger.net/web-security/oauth)
+
+## Relacionadas
+
+- [CSRF de login sem state](0112-auth-oauth-oidc-state.md)
+- [CSRF de login sem state — detecção](0492-auth-oauth-oidc-state--detecao.md)
+- [device authorization grant abuse](0119-auth-oauth-oidc-device-code.md)
+- [implicit grant legado](0114-auth-oauth-oidc-implicit.md)
+- [client_assertion fraca](0120-auth-oauth-oidc-jwt-client-auth.md)
+- [mix-up attack (multi-IdP)](0116-auth-oauth-oidc-mixup.md)

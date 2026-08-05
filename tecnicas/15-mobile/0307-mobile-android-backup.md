@@ -1,3 +1,15 @@
+---
+id: "0307"
+categoria: "15-mobile"
+familia: "mobile-android"
+slug: "backup"
+angulo: "base"
+mitre: "T1420"
+owasp: ""
+tags: ["15-mobile", "mobile-android", "base", "t1420"]
+aliases: ["backup enabled", "backup"]
+---
+
 # backup enabled
 
 `T1420 / T1412 (mobile ATT&CK)`
@@ -23,10 +35,10 @@ Foco em impacto em dados e auth, não só em root detection bypass cosmético.
 ## Exemplo
 
 ```bash
-# mobile lab build — sem store production
-adb shell am start -a android.intent.action.VIEW \
-  -d 'app://lab/backup?token=TOKEN_LAB_4a3c18'
-# deep link / exported → token sink
+# Android backup — build de teste
+adb shell run-as app.lab ls shared_prefs/
+adb backup -f bak_4a3c18.ab app.lab # só lab build
+frida -U -f app.lab -l bypass_pinning.js # NÃO em prod store
 ```
 
 ## Nota de operador
@@ -49,5 +61,16 @@ No PDF — Componente explorado; dado acessado; API finding correlato.
 
 ## Refs
 
-- OWASP MASVS/MASTG
-- Frida docs
+- [MITRE ATT&CK T1420](https://attack.mitre.org/techniques/T1420/)
+- [MITRE ATT&CK T1412](https://attack.mitre.org/techniques/T1412/)
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [Frida documentation](https://frida.re/docs/home/)
+- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/)
+
+## Relacionadas
+
+- [backup enabled — evidência](0687-mobile-android-backup--evidencia.md)
+- [token em logcat](0310-mobile-android-auth.md)
+- [clipboard leaks](0308-mobile-android-clip.md)
+- [crypto caseira fraca](0306-mobile-android-crypto.md)
+- [deeplink hijack](0304-mobile-android-deeplink.md)

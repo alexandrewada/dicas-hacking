@@ -1,3 +1,15 @@
+---
+id: "0480"
+categoria: "04-auth"
+familia: "auth-password-spray"
+slug: "purple"
+angulo: "detecao"
+mitre: ""
+owasp: ""
+tags: ["04-auth", "auth-password-spray", "detecao"]
+aliases: ["exercício purple team", "purple", "purple-detecao"]
+---
+
 # exercício purple team — detecção
 
 Se o SOC não vê exercício purple team, o finding é de cobertura, não de ego ofensivo.
@@ -50,5 +62,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- MITRE T1110.003
-- Microsoft Password Spray guidance
+- [MITRE ATT&CK T1110.003](https://attack.mitre.org/techniques/T1110/003/)
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft — Password spray guidance](https://learn.microsoft.com/en-us/defender-for-identity/password-spray-alert)
+
+## Relacionadas
+
+- [exercício purple team](0100-auth-password-spray-purple.md)
+- [exercício purple team — path](0860-auth-password-spray-purple--path.md)
+- [IMAP/POP spraying](0097-auth-password-spray-imap.md)
+- [Kerberos pre-auth spray](0095-auth-password-spray-kerberos.md)
+- [SMTP AUTH legado](0096-auth-password-spray-legacy-smtp.md)
+- [bypass de lockout por pool de IPs](0098-auth-password-spray-lockout-bypass.md)

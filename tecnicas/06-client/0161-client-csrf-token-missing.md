@@ -1,3 +1,15 @@
+---
+id: "0161"
+categoria: "06-client"
+familia: "client-csrf"
+slug: "token-missing"
+angulo: "base"
+mitre: "T1185"
+owasp: ""
+tags: ["06-client", "client-csrf", "base", "t1185"]
+aliases: ["ausência total de token", "token-missing"]
+---
+
 # ausência total de token
 
 **A01 Broken Access Control** · `T1185 Browser Session Hijacking (adjunto)`
@@ -48,5 +60,16 @@ re-auth para ações críticas.
 
 ## Refs
 
-- OWASP CSRF
-- PortSwigger CSRF
+- [MITRE ATT&CK T1185](https://attack.mitre.org/techniques/T1185/)
+- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — CSRF](https://portswigger.net/web-security/csrf)
+
+## Relacionadas
+
+- [ausência total de token — lab](0541-client-csrf-token-missing--lab.md)
+- [ausência total de token — hardening](0921-client-csrf-token-missing--hardening.md)
+- [clickjacking + CSRF](0170-client-csrf-clickjacking.md)
+- [CORS reflection + CSRF](0169-client-csrf-cors.md)
+- [JSON CSRF via text/plain](0163-client-csrf-json-csrf.md)
+- [logout CSRF](0168-client-csrf-logout.md)
+- [isAdmin/role elevation (path)](../03-api/0061-api-mass-assignment-role-flag.md)

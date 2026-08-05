@@ -1,3 +1,15 @@
+---
+id: "0701"
+categoria: "16-wireless"
+familia: "wifi-evil-twin"
+slug: "portal"
+angulo: "evidencia"
+mitre: "T1557"
+owasp: ""
+tags: ["16-wireless", "wifi-evil-twin", "evidencia", "t1557"]
+aliases: ["captive portal credential harvest", "portal", "portal-evidencia"]
+---
+
 # captive portal credential harvest — evidência
 
 Pacote pra captive portal credential harvest sobreviver peer review.
@@ -50,5 +62,16 @@ Não opere jammers ilegais. Não capture tráfego de terceiros fora do escopo.
 
 ## Refs
 
-- OWASP wireless
-- Aircrack docs ethics
+- [MITRE ATT&CK T1557](https://attack.mitre.org/techniques/T1557/)
+- [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/latest/)
+- [Aircrack-ng documentation](https://www.aircrack-ng.org/doku.php)
+- [HackTricks — WiFi](https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-wifi)
+
+## Relacionadas
+
+- [captive portal credential harvest](0321-wifi-evil-twin-portal.md)
+- [teste de WIPS](0327-wifi-evil-twin-detect.md)
+- [Evil twin / EAP sem validar cert](0323-wifi-evil-twin-eap.md)
+- [guest isolation bypass](0329-wifi-evil-twin-guest.md)
+- [IoT wifi default creds](0328-wifi-evil-twin-iot.md)
+- [contra VPN SSL (path)](../04-auth/0092-auth-password-spray-vpn.md)

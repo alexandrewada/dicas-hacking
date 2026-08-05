@@ -1,3 +1,15 @@
+---
+id: "0801"
+categoria: "02-web"
+familia: "web-ssrf"
+slug: "imds"
+angulo: "path"
+mitre: "T1090"
+owasp: ""
+tags: ["02-web", "web-ssrf", "path", "t1090"]
+aliases: ["SSRF até o IMDS (role cloud)", "imds", "imds-path"]
+---
+
 # SSRF até o IMDS (role cloud) — path
 
 SSRF até o IMDS (role cloud) como pivô. Path curto > monte de finding isolado.
@@ -61,6 +73,18 @@ Impacto que eu aceito: ATO, cross-tenant, escrita privilegiada, RCE. Reflection 
 
 ## Refs
 
-- OWASP SSRF
-- PortSwigger SSRF
-- AWS IMDSv2
+- [MITRE ATT&CK T1090](https://attack.mitre.org/techniques/T1090/)
+- [MITRE ATT&CK T1552](https://attack.mitre.org/techniques/T1552/)
+- [OWASP SSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — SSRF](https://portswigger.net/web-security/ssrf)
+- [AWS — IMDSv2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html)
+
+## Relacionadas
+
+- [SSRF até o IMDS (role cloud)](0041-web-ssrf-imds.md)
+- [SSRF até o IMDS (role cloud) — detecção](0421-web-ssrf-imds--detecao.md)
+- [SSRF cego com out-of-band](0042-web-ssrf-blind.md)
+- [SSRF com DNS rebinding](0044-web-ssrf-dns-rebind.md)
+- [Credencial via IMDS (path)](../12-aws/0266-aws-privesc-imds.md)
+- [PassRole + compute (path)](../12-aws/0262-aws-privesc-passrole.md)
+- [S3 GetObject público (path)](../12-aws/0272-aws-s3-public-get.md)

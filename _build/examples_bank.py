@@ -285,27 +285,258 @@ KEYWORD_EXAMPLES: list[tuple[str, str, str, str, str]] = [
         "{slug} {tag}",
     ),
     (
-        r"linux-privesc/",
+        r"ad-cs/(persist|detect)",
         "bash",
-        "# linux privesc lab\n"
-        "find / -perm -4000 -type f 2>/dev/null | head\n"
+        "# AD CS {slug} — lab CA, conta teste\n"
+        "certipy find -u USER_A@lab.local -p PASS_LAB -dc-ip DC01.lab.local -vulnerable\n"
+        "# persist: renovar cert de conta teste; detect: correlacionar 4886→4768\n"
+        "# tag {tag} — sem shadow em prod",
+        "kusto",
+        "SecurityEvent\n| where EventID in (4886, 4887, 4768)\n| where Account == 'USER_A' or CertificateThumbprint has '{tag}'\n| project TimeGenerated, EventID, Account, CertificateThumbprint\n// AD CS {slug}",
+    ),
+    (
+        r"linux-privesc/suid",
+        "bash",
+        "# lab — SUID GTFO; prod: só enum\n"
+        "find / -perm -4000 -type f 2>/dev/null | tee suid_{tag}.txt\n"
+        "# seguro em prod: listar + comparar baseline\n"
+        "# destrutivo só em lab: ./vuln_suid -c 'id'  # NÃO em prod\n"
+        "gtfobins hint: {slug}",
+        "yaml",
+        "title: Linux SUID abuse {tag}\n"
+        "logsource:\n"
+        "  product: linux\n"
+        "  service: auditd\n"
+        "detection:\n"
+        "  selection:\n"
+        "    type: EXECVE\n"
+        "    a0|endswith: '/vuln_suid'\n"
+        "  condition: selection\n",
+    ),
+    (
+        r"linux-privesc/sudo",
+        "bash",
+        "# sudo -l em lab; sem NOPASSWD abuse em prod sem ROE\n"
         "sudo -l\n"
-        "getcap -r / 2>/dev/null | head\n"
-        "# foco {slug} tag {tag}",
+        "# seguro: documentar comando permitido\n"
+        "# lab only: sudo vim -c ':!id'  # se NOPASSWD vim\n"
+        "# tag {tag} ({slug})",
         "text",
-        "auditd: execve of SUID OR sudo unusual OR capset\n"
+        "auditd: USER_CMD sudo by USER_A unusual command\n"
+        "alerta se comando fora do allowlist — {slug} {tag}",
+    ),
+    (
+        r"linux-privesc/caps",
+        "bash",
+        "getcap -r / 2>/dev/null | grep -E 'cap_setuid|cap_sys_admin' | tee caps_{tag}.txt\n"
+        "# lab: explorar bin com cap_setuid+ep; prod: só inventário\n"
+        "# {slug}",
+        "text",
+        "auditd capset OR unexpected getcap enumeration from USER_A\n"
         "{slug} {tag}",
     ),
     (
-        r"aws-privesc/|aws-s3/",
+        r"linux-privesc/docker",
         "bash",
-        "# AWS lab — identidade de teste, sem wipe\n"
-        "aws sts get-caller-identity --profile lab_{tag}\n"
-        "aws s3api get-bucket-policy --bucket lab-bucket-{slug} --profile lab_{tag}\n"
-        "# effective perms {slug}",
+        "# docker.sock / privileged — lab namespace\n"
+        "ls -la /var/run/docker.sock\n"
+        "# seguro em prod: reportar permissão sem spawn\n"
+        "# lab only: docker run -v /:/mnt --rm alpine chroot /mnt id\n"
+        "# tag {tag}",
+        "kusto",
+        "Syslog\n| where SyslogMessage has 'docker' and SyslogMessage has 'mount'\n| where ProcessName == 'dockerd'\n| project TimeGenerated, HostName, SyslogMessage\n// docker escape {tag}",
+    ),
+    (
+        r"linux-privesc/(cron|nfs|ld-preload|kernel)",
+        "bash",
+        "# linux {slug} — enum mínimo lab\n"
+        "ls -la /etc/cron* /var/spool/cron 2>/dev/null | head\n"
+        "showmount -e nfs.lab.local 2>/dev/null\n"
+        "echo $LD_PRELOAD\n"
+        "# kernel exploit: SOMENTE lab clonado — tag {tag}\n"
+        "# prod: evidencia de versão + CVE sem crash",
         "text",
-        "CloudTrail eventName like AssumeRole/PutBucketPolicy\n"
-        "userIdentity.accessKeyId=ASIA_LAB_{tag} — {slug}",
+        "auditd: cron job write OR nfs mount OR ld.so preload change\n"
+        "variant {slug} tag {tag}",
+    ),
+    (
+        r"azure-entra/consent",
+        "bash",
+        "# Entra consent — app de lab, tenant de teste\n"
+        "az rest --method GET --url 'https://graph.microsoft.com/v1.0/oauth2PermissionGrants'\n"
+        "# seguro: listar grants; sem consent phishing em prod\n"
+        "# tag {tag}",
+        "kusto",
+        "AuditLogs\n| where OperationName has 'Consent to application'\n| where Result == 'success'\n| project TimeGenerated, InitiatedBy, TargetResources\n// consent {tag}",
+    ),
+    (
+        r"azure-entra/prt",
+        "bash",
+        "# PRT / Primary Refresh Token — só lab device\n"
+        "az account get-access-token --resource https://graph.microsoft.com\n"
+        "# NÃO extrair PRT de endpoint prod; tag {tag}",
+        "kusto",
+        "SigninLogs\n| where DeviceDetail.isCompliant == false or AuthenticationProtocol has 'prt'\n| where UserPrincipalName == 'USER_A@lab.local'\n| project TimeGenerated, AppDisplayName, IPAddress\n// PRT {tag}",
+    ),
+    (
+        r"azure-entra/(ca-gap|app-role|pim|b2b|saml|device-code)",
+        "bash",
+        "# Entra {slug} — Graph read / role enum em tenant lab\n"
+        "az ad sp list --display-name 'APP_LAB' -o table\n"
+        "az rest --method GET --url 'https://graph.microsoft.com/v1.0/roleManagement/directory/roleAssignments'\n"
+        "# tag {tag} — sem spam de CA challenge",
+        "kusto",
+        "AuditLogs\n| where OperationName has '{slug}' or OperationName has 'Add app role'\n| project TimeGenerated, OperationName, InitiatedBy\n// entra {tag}",
+    ),
+    (
+        r"k8s-escape/sa-token",
+        "bash",
+        "# k8s lab ns — SA token mount\n"
+        "TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)\n"
+        "curl -sk -H \"Authorization: Bearer $TOKEN\" https://kubernetes.default/api/v1/namespaces/lab/secrets | head\n"
+        "# seguro: can-i; lab: get secrets — tag {tag}",
+        "yaml",
+        "title: K8s SA secret list {tag}\n"
+        "logsource:\n"
+        "  product: kubernetes\n"
+        "detection:\n"
+        "  selection:\n"
+        "    verb: list\n"
+        "    objectRef.resource: secrets\n"
+        "    user.username|contains: 'system:serviceaccount:lab:'\n"
+        "  condition: selection\n",
+    ),
+    (
+        r"k8s-escape/privileged|k8s-escape/hostpath",
+        "bash",
+        "# privileged/hostPath — lab only\n"
+        "kubectl -n lab-{tag} auth can-i create pods --as=system:serviceaccount:lab:sa-{slug}\n"
+        "kubectl -n lab-{tag} get psp,validatingadmissionpolicy 2>/dev/null | head\n"
+        "# lab only: pod privileged + hostPath / (não aplicar em prod)\n"
+        "# kubectl run probe-{slug} --image=busybox --privileged — tag {tag}",
+        "text",
+        "apiserver audit: create pod privileged=true OR hostPath=/\n"
+        "ns=lab user=sa-{slug} tag={tag}",
+    ),
+    (
+        r"k8s-escape/(rbac|docker-sock|etcd|ingress|imds)",
+        "bash",
+        "# k8s {slug} lab namespace\n"
+        "kubectl -n lab auth can-i --list --as=system:serviceaccount:lab:sa-{slug}\n"
+        "kubectl -n lab get rolebinding,clusterrolebinding -o wide | head\n"
+        "# imds via pod: curl 169.254.169.254 — só lab; tag {tag}",
+        "kusto",
+        "ContainerLog\n| where LogEntry has '169.254.169.254' or LogEntry has 'etcd'\n| project TimeGenerated, PodName, LogEntry\n// k8s {slug} {tag}",
+    ),
+    (
+        r"mobile-android/(exported|deeplink|webview)",
+        "bash",
+        "# Android lab build — sem store\n"
+        "adb shell dumpsys package app.lab | grep -A2 exported=true\n"
+        "adb shell am start -a android.intent.action.VIEW \\\n"
+        "  -d 'app://lab/{slug}?token=TOKEN_LAB_{tag}'\n"
+        "# WebView: overrideUrlLoading → token sink",
+        "text",
+        "mobile_telemetry: exported activity/deeplink with foreign token\n"
+        "component={slug} tag={tag}",
+    ),
+    (
+        r"mobile-android/(storage|pinning|crypto|backup|clip)",
+        "bash",
+        "# Android {slug} — build de teste\n"
+        "adb shell run-as app.lab ls shared_prefs/\n"
+        "adb backup -f bak_{tag}.ab app.lab  # só lab build\n"
+        "frida -U -f app.lab -l bypass_pinning.js  # NÃO em prod store",
+        "text",
+        "backup enabled OR plaintext token in shared_prefs\n"
+        "variant {slug} tag {tag}",
+    ),
+    (
+        r"mobile-ios/(keychain|url-scheme|ats|pasteboard|ssl|biometry|ipc|backup)",
+        "bash",
+        "# iOS lab IPA — {slug}\n"
+        "frida -U -f app.lab.ios -l enumerate_keychain.js\n"
+        "# url scheme: xcrun simctl openurl booted 'applab://{slug}?t={tag}'\n"
+        "# ATS bypass só em build debug",
+        "text",
+        "ios_telemetry: keychain access OR ats exception OR pasteboard token\n"
+        "{slug} {tag}",
+    ),
+    (
+        r"wifi-evil-twin/(portal|karma|eap|pmkid|wps|wpa3|detect|iot)",
+        "bash",
+        "# RF lab — ROE escrito: canal/área/potência\n"
+        "# seguro: scan passivo\n"
+        "airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF wlan0mon | tee wifi_{tag}.log\n"
+        "# destrutivo só em lab isolado: hostapd evil twin SSID LAB-{tag}\n"
+        "# NÃO pulverizar o prédio — {slug}",
+        "yaml",
+        "title: Rogue AP {slug}\n"
+        "detection:\n"
+        "  selection:\n"
+        "    event.category: wireless\n"
+        "    wireless.ssid: 'LAB-{tag}'\n"
+        "  condition: selection\n",
+    ),
+    (
+        r"crypto-tls/(legacy|weak-cipher|renego)",
+        "bash",
+        "# TLS no host real do app — {slug}\n"
+        "echo | openssl s_client -connect TARGET.lab.local:{port} -tls1 2>&1 | head -20\n"
+        "# seguro: enum cipher; sem downgrade ativo contra usuários reais\n"
+        "nmap --script ssl-enum-ciphers -p {port} TARGET.lab.local\n"
+        "# tag {tag}",
+        "text",
+        "tls_inspection: protocol<=TLS1.0 OR cipher RC4/3DES on TARGET:{port}\n"
+        "{slug} {tag}",
+    ),
+    (
+        r"crypto-tls/(cert-mismatch|expired|hsts|mixed|mtls)",
+        "bash",
+        "# TLS {slug}\n"
+        "echo | openssl s_client -connect TARGET.lab.local:{port} -servername WRONG.lab.local 2>&1 | grep -E 'verify|subject'\n"
+        "curl -skI https://TARGET.lab.local | grep -i strict-transport\n"
+        "# tag {tag}",
+        "kusto",
+        "AppServiceHTTPLogs\n| where ScStatus == 400 or Cssystem has 'cert'\n| where CsHost == 'TARGET.lab.local'\n| take 20\n// tls {slug} {tag}",
+    ),
+    (
+        r"api-jwt/(kid-sqli|jku|weak-secret|refresh|aud-iss|claim-tamper)",
+        "http",
+        "GET /api/v1/admin HTTP/1.1\n"
+        "Host: api.lab.local\n"
+        "Authorization: Bearer JWT_{slug}_{tag}\n"
+        "# seguro em prod: claim tamper em token de TESTE\n"
+        "# lab: kid=../../dev/null / jku=https://evil.lab.local/jwks.json",
+        "kusto",
+        "AppTraces\n| where Message has 'jwt' and (Message has 'kid' or Message has 'jku' or Message has 'aud')\n| project TimeGenerated, Message\n// jwt {slug} {tag}",
+    ),
+    (
+        r"api-graphql/(introspection|nested-dos|alias-bruteforce|batch|csrf|suggestion)",
+        "http",
+        "POST /graphql HTTP/1.1\n"
+        "Host: api.lab.local\n"
+        "Content-Type: application/json\n"
+        "\n"
+        '{{"query":"query {{ __schema {{ types {{ name }} }} }}"}}\n'
+        "# {slug}: introspection/DoS — rate-limit no lab; tag {tag}\n"
+        "# prod: profundidade 1, sem nested bomb",
+        "text",
+        "graphql_complexity > budget OR introspection enabled in prod\n"
+        "variant {slug} tag {tag}",
+    ),
+    (
+        r"linux-privesc/",
+        "bash",
+        "# linux privesc lab — {slug}\n"
+        "find / -perm -4000 -type f 2>/dev/null | head\n"
+        "sudo -l\n"
+        "getcap -r / 2>/dev/null | head\n"
+        "# foco {slug} tag {tag}\n"
+        "# exploit com crash: só lab clonado",
+        "text",
+        "auditd: execve of SUID OR sudo unusual OR capset\n"
+        "{slug} {tag}",
     ),
     (
         r"azure-entra/",
@@ -314,9 +545,44 @@ KEYWORD_EXAMPLES: list[tuple[str, str, str, str, str]] = [
         "az login --service-principal -u APP_LAB -p PASS_LAB --tenant TENANT_LAB\n"
         "az rest --method GET --url 'https://graph.microsoft.com/v1.0/me'\n"
         "# variante {slug} tag {tag}",
+        "kusto",
+        "AuditLogs\n| where TimeGenerated > ago(1h)\n| where InitiatedBy has 'USER_A' or TargetResources has '{slug}'\n| project TimeGenerated, OperationName, Result\n// entra {tag}",
+    ),
+    (
+        r"aws-privesc/|aws-s3/",
+        "bash",
+        "# AWS lab — identidade de teste, sem wipe\n"
+        "aws sts get-caller-identity --profile lab_{tag}\n"
+        "aws s3api get-bucket-policy --bucket lab-bucket-{slug} --profile lab_{tag}\n"
+        "# seguro: Get*/List*; destrutivo (DeleteBucket) só em lab throwaway\n"
+        "# effective perms {slug}",
+        "kusto",
+        "CloudTrail\n| where eventName in ('AssumeRole','PutBucketPolicy','CreatePolicyVersion')\n| where userIdentity.accessKeyId has 'ASIA_LAB' or userIdentity.accessKeyId has '{tag}'\n| project eventTime, eventName, userIdentity.arn, sourceIPAddress\n// aws {slug}",
+    ),
+    (
+        r"rt-c2/",
+        "bash",
+        "# C2 lab — kill-switch e janela\n"
+        "curl -sk https://c2.lab.local/{slug}/beacon -H 'X-Session: {tag}'\n"
+        "# só conta teste; sem persistência fora do ROE",
         "text",
-        "AAD non-interactive sign-in + Consent / Add app role assignment\n"
-        "{slug} {tag}",
+        "proxy/DNS: periodic beacon to c2.lab.local path /{slug}/\n"
+        "JA3/UA anomaly tag {tag}",
+    ),
+    (
+        r"purple-detect/",
+        "yaml",
+        "title: Purple {slug}\n"
+        "logsource:\n"
+        "  product: windows\n"
+        "detection:\n"
+        "  selection:\n"
+        "    EventID: 1\n"
+        "    CommandLine|contains: '{tag}'\n"
+        "  condition: selection\n"
+        "# atomic {slug} — uma execução limpa",
+        "kusto",
+        "DeviceProcessEvents\n| where ProcessCommandLine has '{tag}'\n| project Timestamp, DeviceName, ProcessCommandLine\n// purple {slug}",
     ),
     (
         r"k8s-escape/",
@@ -349,31 +615,6 @@ KEYWORD_EXAMPLES: list[tuple[str, str, str, str, str]] = [
         "text",
         "wireless IDS: unexpected AP BSSID spoofing LAB-{tag}\n"
         "assoc de conta teste USER_A — {slug}",
-    ),
-    (
-        r"rt-c2/",
-        "bash",
-        "# C2 lab — kill-switch e janela\n"
-        "curl -sk https://c2.lab.local/{slug}/beacon -H 'X-Session: {tag}'\n"
-        "# só conta teste; sem persistência fora do ROE",
-        "text",
-        "proxy/DNS: periodic beacon to c2.lab.local path /{slug}/\n"
-        "JA3/UA anomaly tag {tag}",
-    ),
-    (
-        r"purple-detect/",
-        "yaml",
-        "title: Purple {slug}\n"
-        "logsource:\n"
-        "  product: windows\n"
-        "detection:\n"
-        "  selection:\n"
-        "    EventID: 1\n"
-        "    CommandLine|contains: '{tag}'\n"
-        "  condition: selection\n"
-        "# atomic {slug} — uma execução limpa",
-        "kusto",
-        "DeviceProcessEvents\n| where ProcessCommandLine has '{tag}'\n| project Timestamp, DeviceName, ProcessCommandLine\n// purple {slug}",
     ),
     (
         r"crypto-tls/",

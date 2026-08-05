@@ -1,3 +1,15 @@
+---
+id: "0577"
+categoria: "08-network"
+familia: "net-smb"
+slug: "dfs"
+angulo: "lab"
+mitre: ""
+owasp: ""
+tags: ["08-network", "net-smb", "lab"]
+aliases: ["DFS enum", "dfs", "dfs-lab"]
+---
+
 # DFS enum — lab
 
 Critério: outro analista fecha sozinho com esta nota.
@@ -44,5 +56,15 @@ Lista de shares; exemplo redigido de segredo; ACL.
 
 ## Refs
 
-- MITRE T1135
-- WSTG network
+- [MITRE ATT&CK T1135](https://attack.mitre.org/techniques/T1135/)
+- [OWASP WSTG — Network testing](https://owasp.org/www-project-web-security-testing-guide/latest/)
+- [HackTricks — SMB](https://book.hacktricks.xyz/network-services-pentesting/pentesting-smb)
+
+## Relacionadas
+
+- [DFS enum](0197-net-smb-dfs.md)
+- [DFS enum — hardening](0957-net-smb-dfs--hardening.md)
+- [share de software deployment](0200-net-smb-av-bypass-share.md)
+- [backups expostos](0199-net-smb-backup.md)
+- [GPP cpasswords históricos](0193-net-smb-gpp.md)
+- [null session enum](0191-net-smb-null.md)

@@ -1,3 +1,15 @@
+---
+id: "0453"
+categoria: "03-api"
+familia: "api-graphql"
+slug: "alias-bruteforce"
+angulo: "detecao"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-graphql", "detecao", "t1190"]
+aliases: ["aliases para bypass de rate limit", "alias-bruteforce", "alias-bruteforce-detecao"]
+---
+
 # aliases para bypass de rate limit — detecção
 
 Gap de detecção em `T1190` / aliases para bypass de rate limit. PoC mínimo, telemetria ligada.
@@ -54,5 +66,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP GraphQL Cheat Sheet
-- PayloadsAllTheThings GraphQL
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP GraphQL Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)
+- [PayloadsAllTheThings — GraphQL](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection)
+
+## Relacionadas
+
+- [aliases para bypass de rate limit](0073-api-graphql-alias-bruteforce.md)
+- [aliases para bypass de rate limit — path](0833-api-graphql-alias-bruteforce--path.md)
+- [Automatic Persisted Queries abuse](0080-api-graphql-apq.md)
+- [batch HTTP GraphQL](0075-api-graphql-batch.md)
+- [CSRF em mutations cookie-based](0076-api-graphql-csrf.md)
+- [diretivas custom perigosas](0079-api-graphql-directive.md)

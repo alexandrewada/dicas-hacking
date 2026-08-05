@@ -1,3 +1,15 @@
+---
+id: "0806"
+categoria: "02-web"
+familia: "web-ssrf"
+slug: "parser-diff"
+angulo: "path"
+mitre: ""
+owasp: ""
+tags: ["02-web", "web-ssrf", "path"]
+aliases: ["diferenciais de parser URL", "parser-diff", "parser-diff-path"]
+---
+
 # diferenciais de parser URL — path
 
 diferenciais de parser URL como pivô. Path curto > monte de finding isolado.
@@ -60,6 +72,14 @@ Impacto que eu aceito: ATO, cross-tenant, escrita privilegiada, RCE. Reflection 
 
 ## Refs
 
-- OWASP SSRF
-- PortSwigger SSRF
-- AWS IMDSv2
+- [OWASP SSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — SSRF](https://portswigger.net/web-security/ssrf)
+- [AWS — IMDSv2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html)
+
+## Relacionadas
+
+- [diferenciais de parser URL](0046-web-ssrf-parser-diff.md)
+- [diferenciais de parser URL — detecção](0426-web-ssrf-parser-diff--detecao.md)
+- [SSRF até o IMDS (role cloud)](0041-web-ssrf-imds.md)
+- [SSRF cego com out-of-band](0042-web-ssrf-blind.md)
+- [SSRF com DNS rebinding](0044-web-ssrf-dns-rebind.md)

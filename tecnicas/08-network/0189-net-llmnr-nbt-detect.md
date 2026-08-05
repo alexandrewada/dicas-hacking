@@ -1,3 +1,15 @@
+---
+id: "0189"
+categoria: "08-network"
+familia: "net-llmnr-nbt"
+slug: "detect"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["08-network", "net-llmnr-nbt", "base"]
+aliases: ["detecção purple", "detect"]
+---
+
 # detecção purple
 
 ## Contexto
@@ -47,5 +59,15 @@ EPA; Network access control. |
 
 ## Refs
 
-- MITRE T1557.001
-- SpecterOps AD guides
+- [MITRE ATT&CK T1557.001](https://attack.mitre.org/techniques/T1557/001/)
+- [SpecterOps — AD security](https://posts.specterops.io/)
+- [HackTricks — LLMNR/NBT-NS spoofing](https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-network/spoofing-llmnr-nbt-ns-mdns-dns-and-wpad-and-relay-attacks)
+
+## Relacionadas
+
+- [detecção purple — lab](0569-net-llmnr-nbt-detect--lab.md)
+- [detecção purple — hardening](0949-net-llmnr-nbt-detect--hardening.md)
+- [crack NetNTLMv2 de conta teste](0188-net-llmnr-nbt-crack.md)
+- [coerção EFS](0187-net-llmnr-nbt-efs.md)
+- [playbook de hardening GPO](0190-net-llmnr-nbt-hardening.md)
+- [HTTP → LDAP relay](0183-net-llmnr-nbt-http-relay.md)

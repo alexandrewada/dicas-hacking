@@ -1,3 +1,15 @@
+---
+id: "0742"
+categoria: "20-report"
+familia: "report-quality"
+slug: "cvss40"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "evidencia"]
+aliases: ["CVSS 4.0 essentials", "cvss40", "cvss40-evidencia"]
+---
+
 # CVSS 4.0 essentials — evidência
 
 Pacote pra CVSS 4.0 essentials sobreviver peer review.
@@ -51,6 +63,14 @@ Não inclua dados reais de clientes em material público — redija.
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [CVSS 4.0 essentials](0362-report-quality-cvss40.md)
+- [apêndice técnico vs executivo](0369-report-quality-appendix.md)
+- [narrativa de account takeover](0367-report-quality-ato.md)
+- [Traduzir risco pro CISO](0364-report-quality-business.md)
+- [findings encadeados](0368-report-quality-chain.md)

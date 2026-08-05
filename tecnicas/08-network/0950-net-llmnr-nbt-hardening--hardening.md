@@ -1,3 +1,15 @@
+---
+id: "0950"
+categoria: "08-network"
+familia: "net-llmnr-nbt"
+slug: "hardening"
+angulo: "hardening"
+mitre: "T1557"
+owasp: ""
+tags: ["08-network", "net-llmnr-nbt", "hardening", "t1557"]
+aliases: ["playbook de hardening GPO", "hardening", "hardening-hardening"]
+---
+
 # playbook de hardening GPO — hardening
 
 Do PoC ao controle — playbook de hardening GPO.
@@ -41,5 +53,16 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- MITRE T1557.001
-- SpecterOps AD guides
+- [MITRE ATT&CK T1557](https://attack.mitre.org/techniques/T1557/)
+- [MITRE ATT&CK T1557.001](https://attack.mitre.org/techniques/T1557/001/)
+- [SpecterOps — AD security](https://posts.specterops.io/)
+- [HackTricks — LLMNR/NBT-NS spoofing](https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-network/spoofing-llmnr-nbt-ns-mdns-dns-and-wpad-and-relay-attacks)
+
+## Relacionadas
+
+- [playbook de hardening GPO](0190-net-llmnr-nbt-hardening.md)
+- [playbook de hardening GPO — lab](0570-net-llmnr-nbt-hardening--lab.md)
+- [crack NetNTLMv2 de conta teste](0188-net-llmnr-nbt-crack.md)
+- [detecção purple](0189-net-llmnr-nbt-detect.md)
+- [coerção EFS](0187-net-llmnr-nbt-efs.md)
+- [HTTP → LDAP relay](0183-net-llmnr-nbt-http-relay.md)

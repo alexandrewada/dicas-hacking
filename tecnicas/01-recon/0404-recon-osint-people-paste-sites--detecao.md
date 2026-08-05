@@ -1,3 +1,15 @@
+---
+id: "0404"
+categoria: "01-recon"
+familia: "recon-osint-people"
+slug: "paste-sites"
+angulo: "detecao"
+mitre: "T1589"
+owasp: ""
+tags: ["01-recon", "recon-osint-people", "detecao", "t1589"]
+aliases: ["monitoramento de pastes", "paste-sites", "paste-sites-detecao"]
+---
+
 # monitoramento de pastes — detecção
 
 Gap de detecção em `T1589 Gather Victim Identity Information` / monitoramento de pastes. PoC mínimo, telemetria ligada.
@@ -53,6 +65,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OSINT Framework
-- MITRE T1589
-- NIST SP 800-63
+- [MITRE ATT&CK T1589](https://attack.mitre.org/techniques/T1589/)
+- [OSINT Framework](https://osintframework.com/)
+- [NIST SP 800-63](https://pages.nist.gov/800-63-3/)
+
+## Relacionadas
+
+- [monitoramento de pastes](0024-recon-osint-people-paste-sites.md)
+- [monitoramento de pastes — path](0784-recon-osint-people-paste-sites--path.md)
+- [correlação com breaches corporativos](0027-recon-osint-people-breach-corp.md)
+- [vazamento de calendários/ICS](0025-recon-osint-people-calendar-leak.md)
+- [inferência de formato de e-mail](0026-recon-osint-people-email-format.md)
+- [GitHub dorking autorizado](0021-recon-osint-people-github-dorks.md)

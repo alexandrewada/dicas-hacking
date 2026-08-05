@@ -1,3 +1,15 @@
+---
+id: "0052"
+categoria: "02-web"
+familia: "web-upload"
+slug: "svg-xss"
+angulo: "base"
+mitre: "T1505"
+owasp: "WSTG-BUSL-08"
+tags: ["02-web", "web-upload", "base", "t1505"]
+aliases: ["XSS via SVG", "svg-xss"]
+---
+
 # XSS via SVG
 
 **A04 Insecure Design / A03 Injection** · `T1505 Server Software Component`
@@ -55,5 +67,16 @@ desativar parsers perigosos; scanning.
 
 ## Refs
 
-- WSTG-BUSL-08
-- OWASP Unrestricted File Upload
+- [MITRE ATT&CK T1505](https://attack.mitre.org/techniques/T1505/)
+- [WSTG-BUSL-08](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/08-Test_Upload_of_Unexpected_File_Types)
+- [OWASP File Upload Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html)
+- [PortSwigger — File upload vulnerabilities](https://portswigger.net/web-security/file-upload)
+
+## Relacionadas
+
+- [XSS via SVG — detecção](0432-web-upload-svg-xss--detecao.md)
+- [XSS via SVG — path](0812-web-upload-svg-xss--path.md)
+- [pipeline OCR/async](0058-web-upload-async-ocr.md)
+- [Content-Disposition injection](0057-web-upload-content-disp.md)
+- [formatos less-common (HEIC/TIFF)](0060-web-upload-heic.md)
+- [ImageMagick/Ghostscript sink](0055-web-upload-imagemagick.md)

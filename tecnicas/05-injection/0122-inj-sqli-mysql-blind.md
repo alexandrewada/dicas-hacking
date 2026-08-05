@@ -1,3 +1,15 @@
+---
+id: "0122"
+categoria: "05-injection"
+familia: "inj-sqli"
+slug: "mysql-blind"
+angulo: "base"
+mitre: "T1190"
+owasp: ""
+tags: ["05-injection", "inj-sqli", "base", "t1190"]
+aliases: ["SQLi blind em MySQL", "mysql-blind"]
+---
+
 # SQLi blind em MySQL
 
 **A03 Injection** · `T1190`
@@ -52,6 +64,16 @@ Payload + response diferencial; amostra de dado de teste; query log se disponív
 
 ## Refs
 
-- PortSwigger SQLi
-- OWASP SQLi
-- SQLMap usage ethics
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [PortSwigger — SQL injection](https://portswigger.net/web-security/sql-injection)
+- [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- [sqlmap — usage](https://sqlmap.org/)
+
+## Relacionadas
+
+- [SQLi blind em MySQL — detecção](0502-inj-sqli-mysql-blind--detecao.md)
+- [SQLi blind em MySQL — hardening](0882-inj-sqli-mysql-blind--hardening.md)
+- [JSON operators injection](0129-inj-sqli-json-sql.md)
+- [MSSQL out-of-band](0124-inj-sqli-mssql-oob.md)
+- [MySQL error-based](0121-inj-sqli-mysql-error.md)
+- [polyglot SQL + NoSQL](0130-inj-sqli-nosqli-bridge.md)

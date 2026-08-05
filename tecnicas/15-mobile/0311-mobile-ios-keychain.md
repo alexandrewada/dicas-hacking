@@ -1,3 +1,15 @@
+---
+id: "0311"
+categoria: "15-mobile"
+familia: "mobile-ios"
+slug: "keychain"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["15-mobile", "mobile-ios", "base"]
+aliases: ["Keychain fraco", "keychain"]
+---
+
 # Keychain fraco
 
 **Mobile** · `Mobile ATT&CK`
@@ -18,10 +30,10 @@ URL schemes, e backup artifacts. Teste em device jailbroken de lab quando necess
 ## No lab ficou assim
 
 ```bash
-# mobile lab build — sem store production
-adb shell am start -a android.intent.action.VIEW \
-  -d 'app://lab/keychain?token=TOKEN_LAB_8693d8'
-# deep link / exported → token sink
+# iOS lab IPA — keychain
+frida -U -f app.lab.ios -l enumerate_keychain.js
+# url scheme: xcrun simctl openurl booted 'applab://keychain?t=8693d8'
+# ATS bypass só em build debug
 ```
 
 ## Diferencial desta nota
@@ -44,4 +56,14 @@ Keystore vs SharedPreferences plaintext — backup flags entram com nuance.
 
 ## Refs
 
-- OWASP MASTG iOS
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [OWASP MASTG — iOS](https://mas.owasp.org/MASTG/0x06a-Testing-IOS/)
+- [Frida documentation](https://frida.re/docs/home/)
+
+## Relacionadas
+
+- [Keychain fraco — evidência](0691-mobile-ios-keychain--evidencia.md)
+- [ATS exceptions](0312-mobile-ios-ats.md)
+- [itunes backup secrets](0315-mobile-ios-backup.md)
+- [biometry bypass lab](0317-mobile-ios-biometry.md)
+- [app groups misuse](0318-mobile-ios-ipc.md)

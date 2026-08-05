@@ -1,3 +1,15 @@
+---
+id: "0450"
+categoria: "03-api"
+familia: "api-mass-assignment"
+slug: "orm-bind"
+angulo: "detecao"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-mass-assignment", "detecao", "t1190"]
+aliases: ["ORM update com map completo", "orm-bind", "orm-bind-detecao"]
+---
+
 # ORM update com map completo — detecção
 
 Purple em ORM update com map completo: uma execução limpa. A pergunta é se alertou — não se o exploit 'passa'.
@@ -55,5 +67,16 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP API3
-- PortSwigger Mass Assignment
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Mass assignment](https://portswigger.net/web-security/access-control)
+- [OWASP API3 BOPLA](https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/)
+
+## Relacionadas
+
+- [ORM update com map completo](0070-api-mass-assignment-orm-bind.md)
+- [ORM update com map completo — path](0830-api-mass-assignment-orm-bind--path.md)
+- [import CSV com colunas extras](0069-api-mass-assignment-csv-import.md)
+- [GraphQL input objects](0067-api-mass-assignment-graphql-input.md)
+- [JSON Merge Patch RFC 7396](0065-api-mass-assignment-json-merge.md)
+- [nested JSON binding](0064-api-mass-assignment-nested.md)

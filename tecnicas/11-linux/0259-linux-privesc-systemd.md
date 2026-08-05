@@ -1,3 +1,15 @@
+---
+id: "0259"
+categoria: "11-linux"
+familia: "linux-privesc"
+slug: "systemd"
+angulo: "base"
+mitre: "T1548"
+owasp: ""
+tags: ["11-linux", "linux-privesc", "base", "t1548"]
+aliases: ["systemd unit writable", "systemd"]
+---
+
 # systemd unit writable
 
 `T1548 / T1611`
@@ -23,11 +35,12 @@ exploit-as-a-service.
 ## PoC mínimo
 
 ```bash
-# linux privesc lab
+# linux privesc lab — systemd
 find / -perm -4000 -type f 2>/dev/null | head
 sudo -l
 getcap -r / 2>/dev/null | head
 # foco systemd tag 9191d6
+# exploit com crash: só lab clonado
 ```
 
 ## Nota de operador
@@ -51,5 +64,15 @@ No PDF — Vetor; id antes/depois; artefato removido.
 
 ## Refs
 
-- GTFOBins
-- HackTricks Linux PrivEsc
+- [MITRE ATT&CK T1548](https://attack.mitre.org/techniques/T1548/)
+- [MITRE ATT&CK T1611](https://attack.mitre.org/techniques/T1611/)
+- [GTFOBins](https://gtfobins.github.io/)
+- [HackTricks — Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+
+## Relacionadas
+
+- [systemd unit writable — evidência](0639-linux-privesc-systemd--evidencia.md)
+- [SUID / GTFOBins](0251-linux-privesc-suid.md)
+- [sudoers misconfig](0252-linux-privesc-sudo.md)
+- [Abuso do grupo docker / sock](0256-linux-privesc-docker.md)
+- [capabilities (cap_setuid)](0253-linux-privesc-caps.md)

@@ -1,3 +1,15 @@
+---
+id: "0174"
+categoria: "07-ssrf-xxe"
+familia: "xxe-classic"
+slug: "svg"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["07-ssrf-xxe", "xxe-classic", "base"]
+aliases: ["SVG XXE", "svg"]
+---
+
 # SVG XXE
 
 ## Contexto
@@ -49,5 +61,14 @@ Billion laughs pode derrubar serviço: combine com SOC.
 
 ## Refs
 
-- OWASP XXE
-- PortSwigger XXE
+- [OWASP XXE Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [PortSwigger — XXE](https://portswigger.net/web-security/xxe)
+
+## Relacionadas
+
+- [SVG XXE — lab](0554-xxe-classic-svg--lab.md)
+- [SVG XXE — hardening](0934-xxe-classic-svg--hardening.md)
+- [XML bomb (lab controlado)](0180-xxe-classic-dos.md)
+- [leitura de arquivo local](0171-xxe-classic-file-read.md)
+- [OOXML/XLSX XXE](0176-xxe-classic-office.md)
+- [OOB parameter entities](0173-xxe-classic-oob.md)

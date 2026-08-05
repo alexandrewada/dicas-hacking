@@ -1,3 +1,15 @@
+---
+id: "0221"
+categoria: "09-ad"
+familia: "ad-cs"
+slug: "esc1"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-cs", "base"]
+aliases: ["AD CS ESC1", "esc1"]
+---
+
 # AD CS ESC1
 
 ## Contexto
@@ -49,5 +61,14 @@ proteger HTTP enrollment; EPA. |
 
 ## Refs
 
-- SpecterOps Certified Pre-Owned
-- MITRE T1649
+- [SpecterOps — Certified Pre-Owned (AD CS)](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
+- [MITRE ATT&CK T1649](https://attack.mitre.org/techniques/T1649/)
+
+## Relacionadas
+
+- [AD CS ESC1 — lab](0601-ad-cs-esc1--lab.md)
+- [AD CS ESC1 — hardening](0981-ad-cs-esc1--hardening.md)
+- [AD CS ESC8 (relay HTTP)](0227-ad-cs-esc8.md)
+- [persistência via certs](0229-ad-cs-persist.md)
+- [detecção de enrollment anômalo](0230-ad-cs-detect.md)
+- [Direitos de DCSync (path)](0213-ad-dacl-dcsync.md)

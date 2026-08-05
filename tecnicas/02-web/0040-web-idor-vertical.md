@@ -1,3 +1,15 @@
+---
+id: "0040"
+categoria: "02-web"
+familia: "web-idor"
+slug: "vertical"
+angulo: "base"
+mitre: "T1078"
+owasp: "WSTG-ATHZ-04"
+tags: ["02-web", "web-idor", "base", "t1078"]
+aliases: ["escalação vertical via object type", "vertical"]
+---
+
 # escalação vertical via object type
 
 **API1:2023 BOLA / A01 Broken Access Control** · `T1078 Valid Accounts (abuso de sessão) / T1190`
@@ -39,4 +51,18 @@ testes automatizados de BOLA; IDs opacos sem sequential leak se desejável.
 
 Levo no report: Dois usuários, request diff, response mostrando dado de outro tenant (redigido).
 
-Refs: OWASP API Top 10 API1, WSTG-ATHZ-04, PortSwigger Access Control
+## Refs
+
+- [MITRE ATT&CK T1078](https://attack.mitre.org/techniques/T1078/)
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [WSTG-ATHZ-04](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Bypassing_Authorization_Schema)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Access control](https://portswigger.net/web-security/access-control)
+
+## Relacionadas
+
+- [escalação vertical via object type — detecção](0420-web-idor-vertical--detecao.md)
+- [escalação vertical via object type — path](0800-web-idor-vertical--path.md)
+- [IDOR com IDs numéricos](0031-web-idor-numeric.md)
+- [endpoints batch/export](0034-web-idor-batch.md)
+- [BOLA em GraphQL](0035-web-idor-graphql.md)

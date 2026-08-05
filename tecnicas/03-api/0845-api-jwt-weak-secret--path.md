@@ -1,3 +1,15 @@
+---
+id: "0845"
+categoria: "03-api"
+familia: "api-jwt"
+slug: "weak-secret"
+angulo: "path"
+mitre: "T1550"
+owasp: ""
+tags: ["03-api", "api-jwt", "path", "t1550"]
+aliases: ["HMAC secret fraco", "weak-secret", "weak-secret-path"]
+---
+
 # HMAC secret fraco — path
 
 HMAC secret fraco como pivô. Path curto > monte de finding isolado.
@@ -57,6 +69,15 @@ Batch e webhook: ACL costuma autorizar o primeiro ID do array e ignorar o resto.
 
 ## Refs
 
-- RFC 7519
-- PortSwigger JWT
-- OWASP JWT Cheat Sheet
+- [MITRE ATT&CK T1550](https://attack.mitre.org/techniques/T1550/)
+- [RFC 7519 — JWT](https://www.rfc-editor.org/rfc/rfc7519)
+- [PortSwigger — JWT attacks](https://portswigger.net/web-security/jwt)
+- [OWASP JWT Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [HMAC secret fraco](0085-api-jwt-weak-secret.md)
+- [HMAC secret fraco — detecção](0465-api-jwt-weak-secret--detecao.md)
+- [JWT com alg=none](0081-api-jwt-alg-none.md)
+- [Confusão RS256/HS256](0082-api-jwt-rs-hs.md)
+- [tampering de role/admin](0086-api-jwt-claim-tamper.md)

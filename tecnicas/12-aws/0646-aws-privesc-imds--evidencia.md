@@ -1,3 +1,15 @@
+---
+id: "0646"
+categoria: "12-aws"
+familia: "aws-privesc"
+slug: "imds"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["12-aws", "aws-privesc", "evidencia"]
+aliases: ["Credencial via IMDS", "imds", "imds-evidencia"]
+---
+
 # Credencial via IMDS — evidência
 
 Pacote pra Credencial via IMDS sobreviver peer review.
@@ -54,5 +66,14 @@ Não crie backdoors permanentes. Cuidado com custos (instâncias grandes).
 
 ## Refs
 
-- Rhino Security Labs AWS privesc
-- MITRE Cloud
+- [Rhino Security Labs — AWS privilege escalation](https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [AWS — Instance metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html)
+- [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
+
+## Relacionadas
+
+- [Credencial via IMDS](0266-aws-privesc-imds.md)
+- [PassRole + compute](0262-aws-privesc-passrole.md)
+- [trust policy frouxa](0264-aws-privesc-assume-role.md)
+- [policy Principal * (path)](0275-aws-s3-policy.md)

@@ -1,3 +1,15 @@
+---
+id: "0114"
+categoria: "04-auth"
+familia: "auth-oauth-oidc"
+slug: "implicit"
+angulo: "base"
+mitre: "T1528"
+owasp: ""
+tags: ["04-auth", "auth-oauth-oidc", "base", "t1528"]
+aliases: ["implicit grant legado", "implicit"]
+---
+
 # implicit grant legado
 
 **A01 / A07** · `T1528 Steal Application Access Token`
@@ -51,6 +63,17 @@ PoC de redirect malicioso em client de teste; impacto no token.
 
 ## Refs
 
-- RFC 6749
-- RFC 8252
-- OWASP OAuth
+- [MITRE ATT&CK T1528](https://attack.mitre.org/techniques/T1528/)
+- [RFC 6749 — OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749)
+- [RFC 8252 — OAuth for Native Apps](https://www.rfc-editor.org/rfc/rfc8252)
+- [OWASP OAuth 2.0 Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html)
+- [PortSwigger — OAuth authentication](https://portswigger.net/web-security/oauth)
+
+## Relacionadas
+
+- [implicit grant legado — detecção](0494-auth-oauth-oidc-implicit--detecao.md)
+- [implicit grant legado — path](0874-auth-oauth-oidc-implicit--path.md)
+- [device authorization grant abuse](0119-auth-oauth-oidc-device-code.md)
+- [client_assertion fraca](0120-auth-oauth-oidc-jwt-client-auth.md)
+- [mix-up attack (multi-IdP)](0116-auth-oauth-oidc-mixup.md)
+- [PKCE ausente em public client](0113-auth-oauth-oidc-pkce.md)

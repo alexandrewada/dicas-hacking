@@ -1,3 +1,15 @@
+---
+id: "0944"
+categoria: "08-network"
+familia: "net-llmnr-nbt"
+slug: "wpad"
+angulo: "hardening"
+mitre: "T1557"
+owasp: ""
+tags: ["08-network", "net-llmnr-nbt", "hardening", "t1557"]
+aliases: ["WPAD spoofing", "wpad", "wpad-hardening"]
+---
+
 # WPAD spoofing — hardening
 
 Do PoC ao controle — WPAD spoofing.
@@ -42,5 +54,16 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- MITRE T1557.001
-- SpecterOps AD guides
+- [MITRE ATT&CK T1557](https://attack.mitre.org/techniques/T1557/)
+- [MITRE ATT&CK T1557.001](https://attack.mitre.org/techniques/T1557/001/)
+- [SpecterOps — AD security](https://posts.specterops.io/)
+- [HackTricks — LLMNR/NBT-NS spoofing](https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-network/spoofing-llmnr-nbt-ns-mdns-dns-and-wpad-and-relay-attacks)
+
+## Relacionadas
+
+- [WPAD spoofing](0184-net-llmnr-nbt-wpad.md)
+- [WPAD spoofing — lab](0564-net-llmnr-nbt-wpad--lab.md)
+- [crack NetNTLMv2 de conta teste](0188-net-llmnr-nbt-crack.md)
+- [detecção purple](0189-net-llmnr-nbt-detect.md)
+- [coerção EFS](0187-net-llmnr-nbt-efs.md)
+- [playbook de hardening GPO](0190-net-llmnr-nbt-hardening.md)

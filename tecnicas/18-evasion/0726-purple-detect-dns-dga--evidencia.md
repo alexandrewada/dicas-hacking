@@ -1,3 +1,15 @@
+---
+id: "0726"
+categoria: "18-evasion"
+familia: "purple-detect"
+slug: "dns-dga"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["18-evasion", "purple-detect", "evidencia"]
+aliases: ["DNS anomaly detection test", "dns-dga", "dns-dga-evidencia"]
+---
+
 # DNS anomaly detection test — evidência
 
 Pacote pra DNS anomaly detection test sobreviver peer review.
@@ -52,5 +64,14 @@ Não desabilito EDR para 'passar'. Documento bypass se no escopo.
 
 ## Refs
 
-- MITRE ATT&CK
-- Atomic Red Team
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+- [SigmaHQ rules](https://github.com/SigmaHQ/sigma)
+
+## Relacionadas
+
+- [DNS anomaly detection test](0346-purple-detect-dns-dga.md)
+- [Atomic Red Team na prática](0341-purple-detect-atomic.md)
+- [canary tokens validation](0349-purple-detect-canary.md)
+- [CloudTrail gaps](0345-purple-detect-cloudtrail.md)
+- [EDR bypass discussion ética](0343-purple-detect-edr-bypass.md)

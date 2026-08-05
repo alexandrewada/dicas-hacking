@@ -1,3 +1,15 @@
+---
+id: "0761"
+categoria: "01-recon"
+familia: "recon-passive-dns"
+slug: "crtsh"
+angulo: "path"
+mitre: "T1590"
+owasp: ""
+tags: ["01-recon", "recon-passive-dns", "path", "t1590"]
+aliases: ["via Certificate Transparency (crt.sh)", "crtsh", "crtsh-path"]
+---
+
 # via Certificate Transparency (crt.sh) — path
 
 via Certificate Transparency (crt.sh) como pivô. Path curto > monte de finding isolado.
@@ -62,6 +74,20 @@ CNAME órfão com cache CDN mentindo: confirmo NXDOMAIN/whois do alvo antes de C
 
 ## Refs
 
-- OWASP Testing Guide WSTG-INFO
-- MITRE ATT&CK T1590
-- RFC 1035
+- [MITRE ATT&CK T1590](https://attack.mitre.org/techniques/T1590/)
+- [OWASP WSTG — Information Gathering](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/README)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [RFC 1035 — DNS](https://www.rfc-editor.org/rfc/rfc1035)
+- [crt.sh — Certificate Transparency](https://crt.sh/)
+
+## Relacionadas
+
+- [via Certificate Transparency (crt.sh)](0001-recon-passive-dns-crtsh.md)
+- [via Certificate Transparency (crt.sh) — detecção](0381-recon-passive-dns-crtsh--detecao.md)
+- [clustering por ASN e netblocks](0004-recon-passive-dns-asn-cluster.md)
+- [descoberta de origem atrás de CDN](0010-recon-passive-dns-cdn-origin.md)
+- [auditoria DMARC/BIMI](0007-recon-passive-dns-dmarc-policy.md)
+- [infraestrutura de e-mail e relays](0009-recon-passive-dns-mx-infra.md)
+- [análise SPF/DKIM para takeover de envio (path)](0002-recon-passive-dns-spf-takeover.md)
+- [perfil TLS/JA3S (path)](0011-recon-http-fingerprint-tls-ja3.md)
+- [IDOR com IDs numéricos (path)](../02-web/0031-web-idor-numeric.md)

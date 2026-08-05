@@ -1,3 +1,15 @@
+---
+id: "0757"
+categoria: "20-report"
+familia: "method-scope"
+slug: "creds"
+angulo: "path"
+mitre: ""
+owasp: ""
+tags: ["20-report", "method-scope", "path"]
+aliases: ["credenciais fornecidas vs discovered", "creds", "creds-path"]
+---
+
 # credenciais fornecidas vs discovered — path
 
 credenciais fornecidas vs discovered como pivô. Path curto > monte de finding isolado.
@@ -55,5 +67,14 @@ Finding sem reteste path e cleanup vira pingue-pongue.
 
 ## Refs
 
-- PTES Pre-engagement
-- CREST guides
+- [PTES](http://www.pentest-standard.org/)
+- [CREST guides](https://www.crest-approved.org/)
+- [PTES Pre-engagement](http://www.pentest-standard.org/index.php/Pre-engagement)
+
+## Relacionadas
+
+- [credenciais fornecidas vs discovered](0377-method-scope-creds.md)
+- [scoping multi-cloud](0373-method-scope-cloud.md)
+- [manejo de PII/LGPD](0375-method-scope-data.md)
+- [política de stress/DoS](0372-method-scope-ddos.md)
+- [stop-and-call criteria](0376-method-scope-emergency.md)

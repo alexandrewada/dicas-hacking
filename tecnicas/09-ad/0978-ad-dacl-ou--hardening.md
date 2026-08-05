@@ -1,3 +1,15 @@
+---
+id: "0978"
+categoria: "09-ad"
+familia: "ad-dacl"
+slug: "ou"
+angulo: "hardening"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-dacl", "hardening"]
+aliases: ["controle de OU", "ou", "ou-hardening"]
+---
+
 # controle de OU — hardening
 
 Do PoC ao controle — controle de OU.
@@ -41,5 +53,15 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- SpecterOps BloodHound docs
-- MITRE AD techniques
+- [SpecterOps — BloodHound docs](https://bloodhound.specterops.io/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [MITRE ATT&CK T1484](https://attack.mitre.org/techniques/T1484/)
+
+## Relacionadas
+
+- [controle de OU](0218-ad-dacl-ou.md)
+- [controle de OU — lab](0598-ad-dacl-ou--lab.md)
+- [GenericAll em usuário/grupo](0211-ad-dacl-genericall.md)
+- [Direitos de DCSync](0213-ad-dacl-dcsync.md)
+- [KeyCredentialLink / Shadow Credentials](0220-ad-dacl-shadowcred.md)
+- [WriteSPN → targeted roast](0216-ad-dacl-writespn.md)

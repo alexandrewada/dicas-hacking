@@ -1,3 +1,15 @@
+---
+id: "0364"
+categoria: "20-report"
+familia: "report-quality"
+slug: "business"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "base"]
+aliases: ["Traduzir risco pro CISO", "business"]
+---
+
 # Traduzir risco pro CISO
 
 **Methodology** · `N/A`
@@ -46,6 +58,14 @@ CVSS é input. Justifico environmental e impacto real do cliente.
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [Traduzir risco pro CISO — evidência](0744-report-quality-business--evidencia.md)
+- [apêndice técnico vs executivo](0369-report-quality-appendix.md)
+- [narrativa de account takeover](0367-report-quality-ato.md)
+- [findings encadeados](0368-report-quality-chain.md)
+- [cleanup & artifact list](0366-report-quality-cleanup.md)

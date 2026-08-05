@@ -1,3 +1,15 @@
+---
+id: "0357"
+categoria: "19-crypto"
+familia: "crypto-tls"
+slug: "mtls"
+angulo: "base"
+mitre: "T1573"
+owasp: ""
+tags: ["19-crypto", "crypto-tls", "base", "t1573"]
+aliases: ["mTLS misconfig", "mtls"]
+---
+
 # mTLS misconfig
 
 **Crypto** · `T1573 Encrypted Channel (contexto) / misconfig`
@@ -18,10 +30,10 @@ em mobile) ainda aparece. Inclua também cookie Secure flags e HSTS. Evito DoS c
 ## No lab ficou assim
 
 ```bash
-# TLS no host real do app
-nmap --script ssl-enum-ciphers -p 8443 TARGET.lab.local
-echo | openssl s_client -connect TARGET.lab.local:8443 -tls1_0 2>&1 | head
-# variante mtls tag 7370ce
+# TLS mtls
+echo | openssl s_client -connect TARGET.lab.local:8443 -servername WRONG.lab.local 2>&1 | grep -E 'verify|subject'
+curl -skI https://TARGET.lab.local | grep -i strict-transport
+# tag 7370ce
 ```
 
 ## Diferencial desta nota
@@ -44,5 +56,14 @@ Downgrade só com cliente vulnerável no escopo.
 
 ## Refs
 
-- OWASP Transport Layer Protection
-- Mozilla TLS guidelines
+- [MITRE ATT&CK T1573](https://attack.mitre.org/techniques/T1573/)
+- [OWASP Transport Layer Protection](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
+- [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/)
+
+## Relacionadas
+
+- [mTLS misconfig — evidência](0737-crypto-tls-mtls--evidencia.md)
+- [hostname mismatch](0353-crypto-tls-cert-mismatch.md)
+- [CRIME/BREACH context](0359-crypto-tls-compression.md)
+- [Certificate Transparency gaps](0360-crypto-tls-ct.md)
+- [cert expired/self-signed em prod](0354-crypto-tls-expired.md)

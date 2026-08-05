@@ -1,3 +1,15 @@
+---
+id: "0697"
+categoria: "15-mobile"
+familia: "mobile-ios"
+slug: "biometry"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["15-mobile", "mobile-ios", "evidencia"]
+aliases: ["biometry bypass lab", "biometry", "biometry-evidencia"]
+---
+
 # biometry bypass lab — evidência
 
 Pacote pra biometry bypass lab sobreviver peer review.
@@ -48,4 +60,14 @@ Não contorne DRM de terceiros fora do escopo do app do cliente.
 
 ## Refs
 
-- OWASP MASTG iOS
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [OWASP MASTG — iOS](https://mas.owasp.org/MASTG/0x06a-Testing-IOS/)
+- [Frida documentation](https://frida.re/docs/home/)
+
+## Relacionadas
+
+- [biometry bypass lab](0317-mobile-ios-biometry.md)
+- [ATS exceptions](0312-mobile-ios-ats.md)
+- [itunes backup secrets](0315-mobile-ios-backup.md)
+- [app groups misuse](0318-mobile-ios-ipc.md)
+- [Keychain fraco](0311-mobile-ios-keychain.md)

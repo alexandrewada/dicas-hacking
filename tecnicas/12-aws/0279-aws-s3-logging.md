@@ -1,3 +1,15 @@
+---
+id: "0279"
+categoria: "12-aws"
+familia: "aws-s3"
+slug: "logging"
+angulo: "base"
+mitre: "T1530"
+owasp: ""
+tags: ["12-aws", "aws-s3", "base", "t1530"]
+aliases: ["access logs públicos", "logging"]
+---
+
 # access logs públicos
 
 **Cloud storage** · `T1530 Data from Cloud Storage`
@@ -26,6 +38,7 @@ continuam a vazar dados. Teste também takeover de buckets referenciados (subdom
 # AWS lab — identidade de teste, sem wipe
 aws sts get-caller-identity --profile lab_9705a7
 aws s3api get-bucket-policy --bucket lab-bucket-logging --profile lab_9705a7
+# seguro: Get*/List*; destrutivo (DeleteBucket) só em lab throwaway
 # effective perms logging
 ```
 
@@ -50,4 +63,14 @@ URL/policy; amostra redigida; screenshot console se fornecido.
 
 ## Refs
 
-- AWS S3 security best practices
+- [MITRE ATT&CK T1530](https://attack.mitre.org/techniques/T1530/)
+- [AWS — S3 security best practices](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html)
+- [HackTricks — AWS S3](https://book.hacktricks.xyz/cloud-security/aws-security/aws-unauthenticated-enum-access/s3)
+
+## Relacionadas
+
+- [access logs públicos — evidência](0659-aws-s3-logging--evidencia.md)
+- [ACL authenticated users](0273-aws-s3-acl.md)
+- [bucket como malware host](0280-aws-s3-malware.md)
+- [policy Principal *](0275-aws-s3-policy.md)
+- [S3 GetObject público](0272-aws-s3-public-get.md)

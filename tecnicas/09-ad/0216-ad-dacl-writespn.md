@@ -1,3 +1,15 @@
+---
+id: "0216"
+categoria: "09-ad"
+familia: "ad-dacl"
+slug: "writespn"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-dacl", "base"]
+aliases: ["WriteSPN → targeted roast", "writespn"]
+---
+
 # WriteSPN → targeted roast
 
 ## Contexto
@@ -47,5 +59,15 @@ remover ACEs excessivos. |
 
 ## Refs
 
-- SpecterOps BloodHound docs
-- MITRE AD techniques
+- [SpecterOps — BloodHound docs](https://bloodhound.specterops.io/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [MITRE ATT&CK T1484](https://attack.mitre.org/techniques/T1484/)
+
+## Relacionadas
+
+- [WriteSPN → targeted roast — lab](0596-ad-dacl-writespn--lab.md)
+- [WriteSPN → targeted roast — hardening](0976-ad-dacl-writespn--hardening.md)
+- [GenericAll em usuário/grupo](0211-ad-dacl-genericall.md)
+- [Direitos de DCSync](0213-ad-dacl-dcsync.md)
+- [KeyCredentialLink / Shadow Credentials](0220-ad-dacl-shadowcred.md)
+- [Kerberoasting (TGS RC4) (path)](0201-ad-kerberoast-rc4.md)

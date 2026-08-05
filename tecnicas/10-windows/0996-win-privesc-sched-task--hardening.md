@@ -1,3 +1,15 @@
+---
+id: "0996"
+categoria: "10-windows"
+familia: "win-privesc"
+slug: "sched-task"
+angulo: "hardening"
+mitre: "T1548"
+owasp: ""
+tags: ["10-windows", "win-privesc", "hardening", "t1548"]
+aliases: ["scheduled task ACL", "sched-task", "sched-task-hardening"]
+---
+
 # scheduled task ACL — hardening
 
 Do PoC ao controle — scheduled task ACL.
@@ -41,5 +53,17 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- PayloadsAllTheThings Windows PrivEsc
-- MITRE PrivEsc
+- [MITRE ATT&CK T1548](https://attack.mitre.org/techniques/T1548/)
+- [MITRE ATT&CK T1053](https://attack.mitre.org/techniques/T1053/)
+- [PayloadsAllTheThings — Windows PrivEsc](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [HackTricks — Windows Privilege Escalation](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation)
+
+## Relacionadas
+
+- [scheduled task ACL](0236-win-privesc-sched-task.md)
+- [scheduled task ACL — lab](0616-win-privesc-sched-task--lab.md)
+- [AlwaysInstallElevated](0234-win-privesc-alwaysinstall.md)
+- [autologon registry secrets](0235-win-privesc-autologon.md)
+- [DLL hijacking](0237-win-privesc-dll-hijack.md)
+- [vulnerable driver (BYOVD)](0240-win-privesc-driver.md)

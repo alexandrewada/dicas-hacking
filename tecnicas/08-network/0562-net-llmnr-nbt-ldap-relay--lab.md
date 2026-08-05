@@ -1,3 +1,15 @@
+---
+id: "0562"
+categoria: "08-network"
+familia: "net-llmnr-nbt"
+slug: "ldap-relay"
+angulo: "lab"
+mitre: ""
+owasp: ""
+tags: ["08-network", "net-llmnr-nbt", "lab"]
+aliases: ["relay para LDAP", "ldap-relay", "ldap-relay-lab"]
+---
+
 # relay para LDAP — lab
 
 Critério: outro analista fecha sozinho com esta nota.
@@ -46,5 +58,15 @@ Hash de conta de teste / relay success; GPO recomendada.
 
 ## Refs
 
-- MITRE T1557.001
-- SpecterOps AD guides
+- [MITRE ATT&CK T1557.001](https://attack.mitre.org/techniques/T1557/001/)
+- [SpecterOps — AD security](https://posts.specterops.io/)
+- [HackTricks — LLMNR/NBT-NS spoofing](https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-network/spoofing-llmnr-nbt-ns-mdns-dns-and-wpad-and-relay-attacks)
+
+## Relacionadas
+
+- [relay para LDAP](0182-net-llmnr-nbt-ldap-relay.md)
+- [relay para LDAP — hardening](0942-net-llmnr-nbt-ldap-relay--hardening.md)
+- [crack NetNTLMv2 de conta teste](0188-net-llmnr-nbt-crack.md)
+- [detecção purple](0189-net-llmnr-nbt-detect.md)
+- [coerção EFS](0187-net-llmnr-nbt-efs.md)
+- [playbook de hardening GPO](0190-net-llmnr-nbt-hardening.md)

@@ -1,3 +1,15 @@
+---
+id: "0091"
+categoria: "04-auth"
+familia: "auth-password-spray"
+slug: "o365"
+angulo: "base"
+mitre: "T1110.003"
+owasp: ""
+tags: ["04-auth", "auth-password-spray", "base", "t1110.003"]
+aliases: ["Password spray em Microsoft 365", "o365"]
+---
+
 # Password spray em Microsoft 365
 
 ## Contexto
@@ -45,5 +57,17 @@ O365/Entra tem smart lockout; ajuste metodologia.
 
 ## Refs
 
-- MITRE T1110.003
-- Microsoft Password Spray guidance
+- [MITRE ATT&CK T1110.003](https://attack.mitre.org/techniques/T1110/003/)
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft — Password spray guidance](https://learn.microsoft.com/en-us/defender-for-identity/password-spray-alert)
+
+## Relacionadas
+
+- [Password spray em Microsoft 365 — detecção](0471-auth-password-spray-o365--detecao.md)
+- [Password spray em Microsoft 365 — path](0851-auth-password-spray-o365--path.md)
+- [IMAP/POP spraying](0097-auth-password-spray-imap.md)
+- [Kerberos pre-auth spray](0095-auth-password-spray-kerberos.md)
+- [SMTP AUTH legado](0096-auth-password-spray-legacy-smtp.md)
+- [bypass de lockout por pool de IPs](0098-auth-password-spray-lockout-bypass.md)
+- [MFA fatigue (push bombing) (path)](0104-auth-mfa-bypass-fatigue.md)
+- [Furos de Conditional Access (path)](../13-azure/0282-azure-entra-ca-gap.md)

@@ -1,3 +1,15 @@
+---
+id: "0222"
+categoria: "09-ad"
+familia: "ad-cs"
+slug: "esc2"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-cs", "base"]
+aliases: ["ESC2 any purpose EKU", "esc2"]
+---
+
 # ESC2 any purpose EKU
 
 ## Contexto
@@ -46,5 +58,14 @@ proteger HTTP enrollment; EPA. |
 
 ## Refs
 
-- SpecterOps Certified Pre-Owned
-- MITRE T1649
+- [SpecterOps — Certified Pre-Owned (AD CS)](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
+- [MITRE ATT&CK T1649](https://attack.mitre.org/techniques/T1649/)
+
+## Relacionadas
+
+- [ESC2 any purpose EKU — lab](0602-ad-cs-esc2--lab.md)
+- [ESC2 any purpose EKU — hardening](0982-ad-cs-esc2--hardening.md)
+- [AD CS ESC1](0221-ad-cs-esc1.md)
+- [AD CS ESC8 (relay HTTP)](0227-ad-cs-esc8.md)
+- [persistência via certs](0229-ad-cs-persist.md)
+- [detecção de enrollment anômalo](0230-ad-cs-detect.md)

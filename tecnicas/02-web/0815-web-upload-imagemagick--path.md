@@ -1,3 +1,15 @@
+---
+id: "0815"
+categoria: "02-web"
+familia: "web-upload"
+slug: "imagemagick"
+angulo: "path"
+mitre: "T1505"
+owasp: "WSTG-BUSL-08"
+tags: ["02-web", "web-upload", "path", "t1505"]
+aliases: ["ImageMagick/Ghostscript sink", "imagemagick", "imagemagick-path"]
+---
+
 # ImageMagick/Ghostscript sink — path
 
 ImageMagick/Ghostscript sink como pivô. Path curto > monte de finding isolado.
@@ -63,5 +75,16 @@ Impacto que eu aceito: ATO, cross-tenant, escrita privilegiada, RCE. Reflection 
 
 ## Refs
 
-- WSTG-BUSL-08
-- OWASP Unrestricted File Upload
+- [MITRE ATT&CK T1505](https://attack.mitre.org/techniques/T1505/)
+- [WSTG-BUSL-08](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/08-Test_Upload_of_Unexpected_File_Types)
+- [OWASP File Upload Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html)
+- [PortSwigger — File upload vulnerabilities](https://portswigger.net/web-security/file-upload)
+
+## Relacionadas
+
+- [ImageMagick/Ghostscript sink](0055-web-upload-imagemagick.md)
+- [ImageMagick/Ghostscript sink — detecção](0435-web-upload-imagemagick--detecao.md)
+- [pipeline OCR/async](0058-web-upload-async-ocr.md)
+- [Content-Disposition injection](0057-web-upload-content-disp.md)
+- [formatos less-common (HEIC/TIFF)](0060-web-upload-heic.md)
+- [polyglot PDF/HTML](0053-web-upload-polyglot.md)

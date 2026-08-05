@@ -1,3 +1,15 @@
+---
+id: "0858"
+categoria: "04-auth"
+familia: "auth-password-spray"
+slug: "lockout-bypass"
+angulo: "path"
+mitre: "T1110.003"
+owasp: ""
+tags: ["04-auth", "auth-password-spray", "path", "t1110.003"]
+aliases: ["bypass de lockout por pool de IPs", "lockout-bypass", "lockout-bypass-path"]
+---
+
 # bypass de lockout por pool de IPs — path
 
 bypass de lockout por pool de IPs como pivô. Path curto > monte de finding isolado.
@@ -54,5 +66,15 @@ MFA bypass de verdade completa o fator sem o segundo. UI skip sem backend não �
 
 ## Refs
 
-- MITRE T1110.003
-- Microsoft Password Spray guidance
+- [MITRE ATT&CK T1110.003](https://attack.mitre.org/techniques/T1110/003/)
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft — Password spray guidance](https://learn.microsoft.com/en-us/defender-for-identity/password-spray-alert)
+
+## Relacionadas
+
+- [bypass de lockout por pool de IPs](0098-auth-password-spray-lockout-bypass.md)
+- [bypass de lockout por pool de IPs — detecção](0478-auth-password-spray-lockout-bypass--detecao.md)
+- [IMAP/POP spraying](0097-auth-password-spray-imap.md)
+- [Kerberos pre-auth spray](0095-auth-password-spray-kerberos.md)
+- [SMTP AUTH legado](0096-auth-password-spray-legacy-smtp.md)
+- [Password spray em Microsoft 365](0091-auth-password-spray-o365.md)

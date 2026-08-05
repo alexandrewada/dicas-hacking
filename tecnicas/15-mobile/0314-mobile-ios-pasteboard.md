@@ -1,3 +1,15 @@
+---
+id: "0314"
+categoria: "15-mobile"
+familia: "mobile-ios"
+slug: "pasteboard"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["15-mobile", "mobile-ios", "base"]
+aliases: ["UIPasteboard leaks", "pasteboard"]
+---
+
 # UIPasteboard leaks
 
 `Mobile ATT&CK`
@@ -22,10 +34,10 @@ URL schemes, e backup artifacts. Teste em device jailbroken de lab quando necess
 ## No lab ficou assim
 
 ```bash
-# mobile lab build — sem store production
-adb shell am start -a android.intent.action.VIEW \
-  -d 'app://lab/pasteboard?token=TOKEN_LAB_0da6c0'
-# deep link / exported → token sink
+# iOS lab IPA — pasteboard
+frida -U -f app.lab.ios -l enumerate_keychain.js
+# url scheme: xcrun simctl openurl booted 'applab://pasteboard?t=0da6c0'
+# ATS bypass só em build debug
 ```
 
 ## Nota de operador
@@ -48,4 +60,14 @@ No PDF — Artefato Keychain de teste; request API.
 
 ## Refs
 
-- OWASP MASTG iOS
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [OWASP MASTG — iOS](https://mas.owasp.org/MASTG/0x06a-Testing-IOS/)
+- [Frida documentation](https://frida.re/docs/home/)
+
+## Relacionadas
+
+- [UIPasteboard leaks — evidência](0694-mobile-ios-pasteboard--evidencia.md)
+- [ATS exceptions](0312-mobile-ios-ats.md)
+- [itunes backup secrets](0315-mobile-ios-backup.md)
+- [biometry bypass lab](0317-mobile-ios-biometry.md)
+- [app groups misuse](0318-mobile-ios-ipc.md)

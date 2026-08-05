@@ -1,3 +1,15 @@
+---
+id: "0518"
+categoria: "05-injection"
+familia: "inj-cmd"
+slug: "busybox"
+angulo: "lab"
+mitre: "T1059"
+owasp: "WSTG-INPV-12"
+tags: ["05-injection", "inj-cmd", "lab", "t1059"]
+aliases: ["ambientes embedded/busybox", "busybox", "busybox-lab"]
+---
+
 # ambientes embedded/busybox — lab
 
 Sandbox throwaway — ambientes embedded/busybox sem ruído de cliente.
@@ -48,5 +60,16 @@ Output de `id`/`whoami`; árvore de processo; limpeza.
 
 ## Refs
 
-- OWASP Command Injection
-- WSTG-INPV-12
+- [MITRE ATT&CK T1059](https://attack.mitre.org/techniques/T1059/)
+- [WSTG-INPV-12](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection)
+- [OWASP OS Command Injection Defense](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
+- [PortSwigger — OS command injection](https://portswigger.net/web-security/os-command-injection)
+
+## Relacionadas
+
+- [ambientes embedded/busybox](0138-inj-cmd-busybox.md)
+- [ambientes embedded/busybox — hardening](0898-inj-cmd-busybox--hardening.md)
+- [argument injection sem shell](0133-inj-cmd-arg-inject.md)
+- [sendmail/pipe](0137-inj-cmd-email-pipe.md)
+- [bypass de denylist](0139-inj-cmd-filter-bypass.md)
+- [git options injection](0136-inj-cmd-git-hook.md)

@@ -1,3 +1,15 @@
+---
+id: "0359"
+categoria: "19-crypto"
+familia: "crypto-tls"
+slug: "compression"
+angulo: "base"
+mitre: "T1573"
+owasp: ""
+tags: ["19-crypto", "crypto-tls", "base", "t1573"]
+aliases: ["CRIME/BREACH context", "compression"]
+---
+
 # CRIME/BREACH context
 
 **Crypto** · `T1573 Encrypted Channel (contexto) / misconfig`
@@ -44,5 +56,14 @@ TLS no stack real do app, não só ssllabs no apex.
 
 ## Refs
 
-- OWASP Transport Layer Protection
-- Mozilla TLS guidelines
+- [MITRE ATT&CK T1573](https://attack.mitre.org/techniques/T1573/)
+- [OWASP Transport Layer Protection](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
+- [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/)
+
+## Relacionadas
+
+- [CRIME/BREACH context — evidência](0739-crypto-tls-compression--evidencia.md)
+- [hostname mismatch](0353-crypto-tls-cert-mismatch.md)
+- [Certificate Transparency gaps](0360-crypto-tls-ct.md)
+- [cert expired/self-signed em prod](0354-crypto-tls-expired.md)
+- [HSTS ausente](0355-crypto-tls-hsts.md)

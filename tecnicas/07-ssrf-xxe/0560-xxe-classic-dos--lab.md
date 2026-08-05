@@ -1,3 +1,15 @@
+---
+id: "0560"
+categoria: "07-ssrf-xxe"
+familia: "xxe-classic"
+slug: "dos"
+angulo: "lab"
+mitre: ""
+owasp: ""
+tags: ["07-ssrf-xxe", "xxe-classic", "lab"]
+aliases: ["XML bomb (lab controlado)", "dos", "dos-lab"]
+---
+
 # XML bomb (lab controlado) — lab
 
 Sandbox throwaway — XML bomb (lab controlado) sem ruído de cliente.
@@ -50,5 +62,14 @@ Entity PoC; conteúdo de arquivo não sensível; parser/versão.
 
 ## Refs
 
-- OWASP XXE
-- PortSwigger XXE
+- [OWASP XXE Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [PortSwigger — XXE](https://portswigger.net/web-security/xxe)
+
+## Relacionadas
+
+- [XML bomb (lab controlado)](0180-xxe-classic-dos.md)
+- [XML bomb (lab controlado) — hardening](0940-xxe-classic-dos--hardening.md)
+- [leitura de arquivo local](0171-xxe-classic-file-read.md)
+- [OOXML/XLSX XXE](0176-xxe-classic-office.md)
+- [OOB parameter entities](0173-xxe-classic-oob.md)
+- [XXE em SAML](0175-xxe-classic-saml.md)

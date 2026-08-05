@@ -1,3 +1,15 @@
+---
+id: "0410"
+categoria: "01-recon"
+familia: "recon-osint-people"
+slug: "whois-privacy"
+angulo: "detecao"
+mitre: "T1589"
+owasp: ""
+tags: ["01-recon", "recon-osint-people", "detecao", "t1589"]
+aliases: ["WHOIS e contatos de abuse", "whois-privacy", "whois-privacy-detecao"]
+---
+
 # WHOIS e contatos de abuse — detecção
 
 Purple em WHOIS e contatos de abuse: uma execução limpa. A pergunta é se alertou — não se o exploit 'passa'.
@@ -54,6 +66,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OSINT Framework
-- MITRE T1589
-- NIST SP 800-63
+- [MITRE ATT&CK T1589](https://attack.mitre.org/techniques/T1589/)
+- [OSINT Framework](https://osintframework.com/)
+- [NIST SP 800-63](https://pages.nist.gov/800-63-3/)
+
+## Relacionadas
+
+- [WHOIS e contatos de abuse](0030-recon-osint-people-whois-privacy.md)
+- [WHOIS e contatos de abuse — path](0790-recon-osint-people-whois-privacy--path.md)
+- [correlação com breaches corporativos](0027-recon-osint-people-breach-corp.md)
+- [vazamento de calendários/ICS](0025-recon-osint-people-calendar-leak.md)
+- [inferência de formato de e-mail](0026-recon-osint-people-email-format.md)
+- [GitHub dorking autorizado](0021-recon-osint-people-github-dorks.md)

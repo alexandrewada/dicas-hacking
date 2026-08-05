@@ -1,3 +1,15 @@
+---
+id: "0340"
+categoria: "17-redteam"
+familia: "rt-c2"
+slug: "debrief"
+angulo: "base"
+mitre: "T1071"
+owasp: ""
+tags: ["17-redteam", "rt-c2", "base", "t1071"]
+aliases: ["debrief com SOC", "debrief"]
+---
+
 # debrief com SOC
 
 **Red Team** · `T1071 Application Layer Protocol`
@@ -49,5 +61,15 @@ Diagrama de infra; IOCs entregues ao blue; timeline.
 
 ## Refs
 
-- Red Team Field Manual ethics
-- MITRE C2
+- [MITRE ATT&CK T1071](https://attack.mitre.org/techniques/T1071/)
+- [Red team ethics / ROE](https://attack.mitre.org/)
+- [MITRE ATT&CK — Command and Control](https://attack.mitre.org/tactics/TA0011/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+
+## Relacionadas
+
+- [debrief com SOC — evidência](0720-rt-c2-debrief--evidencia.md)
+- [DNS C2](0332-rt-c2-dns.md)
+- [domain fronting histórico](0333-rt-c2-domain-front.md)
+- [exfil controlada de dados fake](0339-rt-c2-exfil.md)
+- [HTTPS beaconing](0331-rt-c2-https.md)

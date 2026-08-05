@@ -1,3 +1,15 @@
+---
+id: "0729"
+categoria: "18-evasion"
+familia: "purple-detect"
+slug: "canary"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["18-evasion", "purple-detect", "evidencia"]
+aliases: ["canary tokens validation", "canary", "canary-evidencia"]
+---
+
 # canary tokens validation — evidência
 
 Pacote pra canary tokens validation sobreviver peer review.
@@ -45,5 +57,14 @@ Não desabilito EDR para 'passar'. Documento bypass se no escopo.
 
 ## Refs
 
-- MITRE ATT&CK
-- Atomic Red Team
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+- [SigmaHQ rules](https://github.com/SigmaHQ/sigma)
+
+## Relacionadas
+
+- [canary tokens validation](0349-purple-detect-canary.md)
+- [Atomic Red Team na prática](0341-purple-detect-atomic.md)
+- [CloudTrail gaps](0345-purple-detect-cloudtrail.md)
+- [DNS anomaly detection test](0346-purple-detect-dns-dga.md)
+- [EDR bypass discussion ética](0343-purple-detect-edr-bypass.md)

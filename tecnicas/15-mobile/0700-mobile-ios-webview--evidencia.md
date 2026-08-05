@@ -1,3 +1,15 @@
+---
+id: "0700"
+categoria: "15-mobile"
+familia: "mobile-ios"
+slug: "webview"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["15-mobile", "mobile-ios", "evidencia"]
+aliases: ["WKWebView issues", "webview", "webview-evidencia"]
+---
+
 # WKWebView issues — evidência
 
 Pacote pra WKWebView issues sobreviver peer review.
@@ -48,4 +60,14 @@ Não contorne DRM de terceiros fora do escopo do app do cliente.
 
 ## Refs
 
-- OWASP MASTG iOS
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [OWASP MASTG — iOS](https://mas.owasp.org/MASTG/0x06a-Testing-IOS/)
+- [Frida documentation](https://frida.re/docs/home/)
+
+## Relacionadas
+
+- [WKWebView issues](0320-mobile-ios-webview.md)
+- [ATS exceptions](0312-mobile-ios-ats.md)
+- [itunes backup secrets](0315-mobile-ios-backup.md)
+- [biometry bypass lab](0317-mobile-ios-biometry.md)
+- [app groups misuse](0318-mobile-ios-ipc.md)

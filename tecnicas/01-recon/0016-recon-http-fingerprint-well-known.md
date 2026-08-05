@@ -1,3 +1,15 @@
+---
+id: "0016"
+categoria: "01-recon"
+familia: "recon-http-fingerprint"
+slug: "well-known"
+angulo: "base"
+mitre: ""
+owasp: "WSTG-INFO-02"
+tags: ["01-recon", "recon-http-fingerprint", "base"]
+aliases: ["paths /.well-known/", "well-known"]
+---
+
 # paths /.well-known/
 
 ## Leitura rápida
@@ -46,6 +58,16 @@ Request/response sanitizados; versão inferida; confiança (alta/média/baixa).
 
 ## Refs
 
-- WSTG-INFO-02
-- RFC 9110
-- OWASP Secure Headers
+- [WSTG-INFO-02](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server)
+- [RFC 9110 — HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110)
+- [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)
+- [PortSwigger — HTTP information gathering](https://portswigger.net/web-security)
+
+## Relacionadas
+
+- [paths /.well-known/ — detecção](0396-recon-http-fingerprint-well-known--detecao.md)
+- [paths /.well-known/ — path](0776-recon-http-fingerprint-well-known--path.md)
+- [endpoints ACME/challenge](0020-recon-http-fingerprint-acme-probe.md)
+- [heurística via Cache-Control/ETag](0017-recon-http-fingerprint-cache-headers.md)
+- [cookies default de framework](0012-recon-http-fingerprint-cookie-banner.md)
+- [CSP como mapa de domínios](0019-recon-http-fingerprint-csp-leak.md)

@@ -1,3 +1,15 @@
+---
+id: "0885"
+categoria: "05-injection"
+familia: "inj-sqli"
+slug: "oracle"
+angulo: "hardening"
+mitre: ""
+owasp: ""
+tags: ["05-injection", "inj-sqli", "hardening"]
+aliases: ["Oracle SQLi", "oracle", "oracle-hardening"]
+---
+
 # Oracle SQLi — hardening
 
 Do PoC ao controle — Oracle SQLi.
@@ -40,6 +52,15 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- PortSwigger SQLi
-- OWASP SQLi
-- SQLMap usage ethics
+- [PortSwigger — SQL injection](https://portswigger.net/web-security/sql-injection)
+- [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- [sqlmap — usage](https://sqlmap.org/)
+
+## Relacionadas
+
+- [Oracle SQLi](0125-inj-sqli-oracle.md)
+- [Oracle SQLi — lab](0505-inj-sqli-oracle--lab.md)
+- [JSON operators injection](0129-inj-sqli-json-sql.md)
+- [MSSQL out-of-band](0124-inj-sqli-mssql-oob.md)
+- [SQLi blind em MySQL](0122-inj-sqli-mysql-blind.md)
+- [MySQL error-based](0121-inj-sqli-mysql-error.md)

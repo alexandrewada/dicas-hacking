@@ -1,3 +1,15 @@
+---
+id: "0301"
+categoria: "15-mobile"
+familia: "mobile-android"
+slug: "exported"
+angulo: "base"
+mitre: "T1420"
+owasp: ""
+tags: ["15-mobile", "mobile-android", "base", "t1420"]
+aliases: ["activity/service exported", "exported"]
+---
+
 # activity/service exported
 
 **Mobile** · `T1420 / T1412 (mobile ATT&CK)`
@@ -19,10 +31,11 @@ Foco em impacto em dados e auth, não só em root detection bypass cosmético.
 ## No lab ficou assim
 
 ```bash
-# mobile lab build — sem store production
+# Android lab build — sem store
+adb shell dumpsys package app.lab | grep -A2 exported=true
 adb shell am start -a android.intent.action.VIEW \
   -d 'app://lab/exported?token=TOKEN_LAB_cc9a61'
-# deep link / exported → token sink
+# WebView: overrideUrlLoading → token sink
 ```
 
 ## Diferencial desta nota
@@ -45,5 +58,16 @@ Deep link / WebView / exported: intent até token sink é o ROI.
 
 ## Refs
 
-- OWASP MASVS/MASTG
-- Frida docs
+- [MITRE ATT&CK T1420](https://attack.mitre.org/techniques/T1420/)
+- [MITRE ATT&CK T1412](https://attack.mitre.org/techniques/T1412/)
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [Frida documentation](https://frida.re/docs/home/)
+- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/)
+
+## Relacionadas
+
+- [activity/service exported — evidência](0681-mobile-android-exported--evidencia.md)
+- [token em logcat](0310-mobile-android-auth.md)
+- [backup enabled](0307-mobile-android-backup.md)
+- [clipboard leaks](0308-mobile-android-clip.md)
+- [crypto caseira fraca](0306-mobile-android-crypto.md)

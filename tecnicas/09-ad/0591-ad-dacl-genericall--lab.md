@@ -1,3 +1,15 @@
+---
+id: "0591"
+categoria: "09-ad"
+familia: "ad-dacl"
+slug: "genericall"
+angulo: "lab"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-dacl", "lab"]
+aliases: ["GenericAll em usuário/grupo", "genericall", "genericall-lab"]
+---
+
 # GenericAll em usuário/grupo — lab
 
 Lab só pra GenericAll em usuário/grupo. Se não reproduz isolado, não confio no finding de prod.
@@ -48,5 +60,15 @@ Edge BloodHound; PoC controlado; ACE dump.
 
 ## Refs
 
-- SpecterOps BloodHound docs
-- MITRE AD techniques
+- [SpecterOps — BloodHound docs](https://bloodhound.specterops.io/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [MITRE ATT&CK T1484](https://attack.mitre.org/techniques/T1484/)
+
+## Relacionadas
+
+- [GenericAll em usuário/grupo](0211-ad-dacl-genericall.md)
+- [GenericAll em usuário/grupo — hardening](0971-ad-dacl-genericall--hardening.md)
+- [Direitos de DCSync](0213-ad-dacl-dcsync.md)
+- [KeyCredentialLink / Shadow Credentials](0220-ad-dacl-shadowcred.md)
+- [WriteSPN → targeted roast](0216-ad-dacl-writespn.md)
+- [AddMember a grupo privilegiado (path)](0214-ad-dacl-addmember.md)

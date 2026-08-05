@@ -1,3 +1,15 @@
+---
+id: "0213"
+categoria: "09-ad"
+familia: "ad-dacl"
+slug: "dcsync"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-dacl", "base"]
+aliases: ["Direitos de DCSync", "dcsync"]
+---
+
 # Direitos de DCSync
 
 ## Contexto
@@ -48,5 +60,17 @@ remover ACEs excessivos. |
 
 ## Refs
 
-- SpecterOps BloodHound docs
-- MITRE AD techniques
+- [SpecterOps — BloodHound docs](https://bloodhound.specterops.io/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [MITRE ATT&CK T1003.006](https://attack.mitre.org/techniques/T1003/006/)
+- [MITRE ATT&CK T1484](https://attack.mitre.org/techniques/T1484/)
+
+## Relacionadas
+
+- [Direitos de DCSync — lab](0593-ad-dacl-dcsync--lab.md)
+- [Direitos de DCSync — hardening](0973-ad-dacl-dcsync--hardening.md)
+- [GenericAll em usuário/grupo](0211-ad-dacl-genericall.md)
+- [KeyCredentialLink / Shadow Credentials](0220-ad-dacl-shadowcred.md)
+- [WriteSPN → targeted roast](0216-ad-dacl-writespn.md)
+- [AD CS ESC1 (path)](0221-ad-cs-esc1.md)
+- [NTDS.dit (escopo DC) (path)](../10-windows/0246-win-cred-ntds.md)

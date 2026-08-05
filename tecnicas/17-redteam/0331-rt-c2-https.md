@@ -1,3 +1,15 @@
+---
+id: "0331"
+categoria: "17-redteam"
+familia: "rt-c2"
+slug: "https"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["17-redteam", "rt-c2", "base"]
+aliases: ["HTTPS beaconing", "https"]
+---
+
 # HTTPS beaconing
 
 ## Leitura rápida
@@ -44,5 +56,16 @@ Diagrama de infra; IOCs entregues ao blue; timeline.
 
 ## Refs
 
-- Red Team Field Manual ethics
-- MITRE C2
+- [Red team ethics / ROE](https://attack.mitre.org/)
+- [MITRE ATT&CK — Command and Control](https://attack.mitre.org/tactics/TA0011/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+
+## Relacionadas
+
+- [HTTPS beaconing — evidência](0711-rt-c2-https--evidencia.md)
+- [debrief com SOC](0340-rt-c2-debrief.md)
+- [DNS C2](0332-rt-c2-dns.md)
+- [domain fronting histórico](0333-rt-c2-domain-front.md)
+- [exfil controlada de dados fake](0339-rt-c2-exfil.md)
+- [sugerir regra Sigma (path)](../18-evasion/0344-purple-detect-sigma.md)
+- [Kill-switch de C2 (path)](0335-rt-c2-killswitch.md)

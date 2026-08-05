@@ -1,3 +1,15 @@
+---
+id: "0521"
+categoria: "05-injection"
+familia: "inj-ssti"
+slug: "jinja2"
+angulo: "lab"
+mitre: ""
+owasp: ""
+tags: ["05-injection", "inj-ssti", "lab"]
+aliases: ["SSTI em Jinja2", "jinja2", "jinja2-lab"]
+---
+
 # SSTI em Jinja2 — lab
 
 Critério: outro analista fecha sozinho com esta nota.
@@ -48,5 +60,16 @@ Engine identificado; PoC `id`; trecho de código vulnerável se fornecido.
 
 ## Refs
 
-- PortSwigger SSTI
-- PayloadsAllTheThings SSTI
+- [PortSwigger — SSTI](https://portswigger.net/web-security/server-side-template-injection)
+- [PayloadsAllTheThings — SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
+
+## Relacionadas
+
+- [SSTI em Jinja2](0141-inj-ssti-jinja2.md)
+- [SSTI em Jinja2 — hardening](0901-inj-ssti-jinja2--hardening.md)
+- [templates de e-mail marketing](0149-inj-ssti-email-tmpl.md)
+- [Freemarker](0142-inj-ssti-freemarker.md)
+- [Mako Python](0147-inj-ssti-mako.md)
+- [HTML templates → PDF](0150-inj-ssti-pdf-tmpl.md)
+- [Command injection cega (OOB) (path)](0131-inj-cmd-unix-blind.md)
+- [sudoers misconfig (path)](../11-linux/0252-linux-privesc-sudo.md)

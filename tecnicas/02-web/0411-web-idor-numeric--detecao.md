@@ -1,3 +1,15 @@
+---
+id: "0411"
+categoria: "02-web"
+familia: "web-idor"
+slug: "numeric"
+angulo: "detecao"
+mitre: "T1078"
+owasp: "WSTG-ATHZ-04"
+tags: ["02-web", "web-idor", "detecao", "t1078"]
+aliases: ["IDOR com IDs numéricos", "numeric", "numeric-detecao"]
+---
+
 # IDOR com IDs numéricos — detecção
 
 Gap de detecção em `T1078 Valid Accounts (abuso de sessão) / T1190` / IDOR com IDs numéricos. PoC mínimo, telemetria ligada.
@@ -60,6 +72,17 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP API Top 10 API1
-- WSTG-ATHZ-04
-- PortSwigger Access Control
+- [MITRE ATT&CK T1078](https://attack.mitre.org/techniques/T1078/)
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [WSTG-ATHZ-04](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Bypassing_Authorization_Schema)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Access control](https://portswigger.net/web-security/access-control)
+
+## Relacionadas
+
+- [IDOR com IDs numéricos](0031-web-idor-numeric.md)
+- [IDOR com IDs numéricos — path](0791-web-idor-numeric--path.md)
+- [endpoints batch/export](0034-web-idor-batch.md)
+- [BOLA em GraphQL](0035-web-idor-graphql.md)
+- [isAdmin/role elevation (path)](../03-api/0061-api-mass-assignment-role-flag.md)
+- [tampering de role/admin (path)](../03-api/0086-api-jwt-claim-tamper.md)

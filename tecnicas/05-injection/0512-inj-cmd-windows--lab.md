@@ -1,3 +1,15 @@
+---
+id: "0512"
+categoria: "05-injection"
+familia: "inj-cmd"
+slug: "windows"
+angulo: "lab"
+mitre: ""
+owasp: "WSTG-INPV-12"
+tags: ["05-injection", "inj-cmd", "lab"]
+aliases: ["Windows cmd/PowerShell", "windows", "windows-lab"]
+---
+
 # Windows cmd/PowerShell — lab
 
 Sandbox throwaway — Windows cmd/PowerShell sem ruído de cliente.
@@ -48,5 +60,15 @@ Output de `id`/`whoami`; árvore de processo; limpeza.
 
 ## Refs
 
-- OWASP Command Injection
-- WSTG-INPV-12
+- [WSTG-INPV-12](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection)
+- [OWASP OS Command Injection Defense](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
+- [PortSwigger — OS command injection](https://portswigger.net/web-security/os-command-injection)
+
+## Relacionadas
+
+- [Windows cmd/PowerShell](0132-inj-cmd-windows.md)
+- [Windows cmd/PowerShell — hardening](0892-inj-cmd-windows--hardening.md)
+- [argument injection sem shell](0133-inj-cmd-arg-inject.md)
+- [ambientes embedded/busybox](0138-inj-cmd-busybox.md)
+- [sendmail/pipe](0137-inj-cmd-email-pipe.md)
+- [bypass de denylist](0139-inj-cmd-filter-bypass.md)

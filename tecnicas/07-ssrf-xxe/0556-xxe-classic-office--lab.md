@@ -1,3 +1,15 @@
+---
+id: "0556"
+categoria: "07-ssrf-xxe"
+familia: "xxe-classic"
+slug: "office"
+angulo: "lab"
+mitre: "T1190"
+owasp: ""
+tags: ["07-ssrf-xxe", "xxe-classic", "lab", "t1190"]
+aliases: ["OOXML/XLSX XXE", "office", "office-lab"]
+---
+
 # OOXML/XLSX XXE — lab
 
 Sandbox throwaway — OOXML/XLSX XXE sem ruído de cliente.
@@ -50,5 +62,15 @@ Entity PoC; conteúdo de arquivo não sensível; parser/versão.
 
 ## Refs
 
-- OWASP XXE
-- PortSwigger XXE
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP XXE Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [PortSwigger — XXE](https://portswigger.net/web-security/xxe)
+
+## Relacionadas
+
+- [OOXML/XLSX XXE](0176-xxe-classic-office.md)
+- [OOXML/XLSX XXE — hardening](0936-xxe-classic-office--hardening.md)
+- [XML bomb (lab controlado)](0180-xxe-classic-dos.md)
+- [leitura de arquivo local](0171-xxe-classic-file-read.md)
+- [OOB parameter entities](0173-xxe-classic-oob.md)
+- [XXE em SAML](0175-xxe-classic-saml.md)

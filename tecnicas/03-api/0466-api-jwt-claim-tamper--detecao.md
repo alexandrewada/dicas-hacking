@@ -1,3 +1,15 @@
+---
+id: "0466"
+categoria: "03-api"
+familia: "api-jwt"
+slug: "claim-tamper"
+angulo: "detecao"
+mitre: "T1550"
+owasp: ""
+tags: ["03-api", "api-jwt", "detecao", "t1550"]
+aliases: ["tampering de role/admin", "claim-tamper", "claim-tamper-detecao"]
+---
+
 # tampering de role/admin — detecção
 
 Gap de detecção em `T1550 Use Alternate Authentication Material` / tampering de role/admin. PoC mínimo, telemetria ligada.
@@ -54,6 +66,14 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- RFC 7519
-- PortSwigger JWT
-- OWASP JWT Cheat Sheet
+- [MITRE ATT&CK T1550](https://attack.mitre.org/techniques/T1550/)
+- [RFC 7519 — JWT](https://www.rfc-editor.org/rfc/rfc7519)
+- [PortSwigger — JWT attacks](https://portswigger.net/web-security/jwt)
+- [OWASP JWT Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [tampering de role/admin](0086-api-jwt-claim-tamper.md)
+- [tampering de role/admin — path](0846-api-jwt-claim-tamper--path.md)
+- [JWT com alg=none](0081-api-jwt-alg-none.md)
+- [Confusão RS256/HS256](0082-api-jwt-rs-hs.md)

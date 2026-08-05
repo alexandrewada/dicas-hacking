@@ -1,3 +1,15 @@
+---
+id: "0286"
+categoria: "13-azure"
+familia: "azure-entra"
+slug: "b2b"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["13-azure", "azure-entra", "base"]
+aliases: ["guest user escalation", "b2b"]
+---
+
 # guest user escalation
 
 ## Leitura rápida
@@ -21,10 +33,10 @@ Foco em paths até Global Admin / privileged roles.
 ## PoC mínimo
 
 ```bash
-# Entra lab — Graph read mínimo
-az login --service-principal -u APP_LAB -p PASS_LAB --tenant TENANT_LAB
-az rest --method GET --url 'https://graph.microsoft.com/v1.0/me'
-# variante b2b tag f84588
+# Entra b2b — Graph read / role enum em tenant lab
+az ad sp list --display-name 'APP_LAB' -o table
+az rest --method GET --url 'https://graph.microsoft.com/v1.0/roleManagement/directory/roleAssignments'
+# tag f84588 — sem spam de CA challenge
 ```
 
 Entra: consent, PRT, CA e roles. Grafo de identity manda mais que NSG.
@@ -46,5 +58,13 @@ Role path; app permission; prova em lab tenant se possível.
 
 ## Refs
 
-- MSFT Entra security
-- RoadTools
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft Learn — Entra ID](https://learn.microsoft.com/en-us/entra/identity/)
+- [MITRE ATT&CK T1078.004](https://attack.mitre.org/techniques/T1078/004/)
+
+## Relacionadas
+
+- [guest user escalation — evidência](0666-azure-entra-b2b--evidencia.md)
+- [Illlicit consent grant](0281-azure-entra-consent.md)
+- [PRT / primary refresh token](0283-azure-entra-prt.md)
+- [Furos de Conditional Access](0282-azure-entra-ca-gap.md)

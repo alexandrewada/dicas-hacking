@@ -1,3 +1,15 @@
+---
+id: "0255"
+categoria: "11-linux"
+familia: "linux-privesc"
+slug: "nfs"
+angulo: "base"
+mitre: "T1548"
+owasp: ""
+tags: ["11-linux", "linux-privesc", "base", "t1548"]
+aliases: ["NFS no_root_squash", "nfs"]
+---
+
 # NFS no_root_squash
 
 **Local privesc** · `T1548 / T1611`
@@ -19,11 +31,12 @@ exploit-as-a-service.
 ## No lab ficou assim
 
 ```bash
-# linux privesc lab
-find / -perm -4000 -type f 2>/dev/null | head
-sudo -l
-getcap -r / 2>/dev/null | head
-# foco nfs tag 83698e
+# linux nfs — enum mínimo lab
+ls -la /etc/cron* /var/spool/cron 2>/dev/null | head
+showmount -e nfs.lab.local 2>/dev/null
+echo $LD_PRELOAD
+# kernel exploit: SOMENTE lab clonado — tag 83698e
+# prod: evidencia de versão + CVE sem crash
 ```
 
 ## Diferencial desta nota
@@ -47,5 +60,15 @@ Exploit local com crash potencial fica no lab clonado.
 
 ## Refs
 
-- GTFOBins
-- HackTricks Linux PrivEsc
+- [MITRE ATT&CK T1548](https://attack.mitre.org/techniques/T1548/)
+- [MITRE ATT&CK T1611](https://attack.mitre.org/techniques/T1611/)
+- [GTFOBins](https://gtfobins.github.io/)
+- [HackTricks — Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+
+## Relacionadas
+
+- [NFS no_root_squash — evidência](0635-linux-privesc-nfs--evidencia.md)
+- [SUID / GTFOBins](0251-linux-privesc-suid.md)
+- [sudoers misconfig](0252-linux-privesc-sudo.md)
+- [Abuso do grupo docker / sock](0256-linux-privesc-docker.md)
+- [capabilities (cap_setuid)](0253-linux-privesc-caps.md)

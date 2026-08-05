@@ -1,3 +1,15 @@
+---
+id: "0088"
+categoria: "03-api"
+familia: "api-jwt"
+slug: "aud-iss"
+angulo: "base"
+mitre: "T1550"
+owasp: ""
+tags: ["03-api", "api-jwt", "base", "t1550"]
+aliases: ["falta de validação aud/iss", "aud-iss"]
+---
+
 # falta de validação aud/iss
 
 ## Leitura rápida
@@ -48,6 +60,15 @@ Token de teste manipulado; response privilegiada; libs/versão.
 
 ## Refs
 
-- RFC 7519
-- PortSwigger JWT
-- OWASP JWT Cheat Sheet
+- [MITRE ATT&CK T1550](https://attack.mitre.org/techniques/T1550/)
+- [RFC 7519 — JWT](https://www.rfc-editor.org/rfc/rfc7519)
+- [PortSwigger — JWT attacks](https://portswigger.net/web-security/jwt)
+- [OWASP JWT Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [falta de validação aud/iss — detecção](0468-api-jwt-aud-iss--detecao.md)
+- [falta de validação aud/iss — path](0848-api-jwt-aud-iss--path.md)
+- [JWT com alg=none](0081-api-jwt-alg-none.md)
+- [Confusão RS256/HS256](0082-api-jwt-rs-hs.md)
+- [tampering de role/admin](0086-api-jwt-claim-tamper.md)

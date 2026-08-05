@@ -1,3 +1,15 @@
+---
+id: "0800"
+categoria: "02-web"
+familia: "web-idor"
+slug: "vertical"
+angulo: "path"
+mitre: "T1078"
+owasp: "WSTG-ATHZ-04"
+tags: ["02-web", "web-idor", "path", "t1078"]
+aliases: ["escalação vertical via object type", "vertical", "vertical-path"]
+---
+
 # escalação vertical via object type — path
 
 escalação vertical via object type como pivô. Path curto > monte de finding isolado.
@@ -60,6 +72,16 @@ Impacto que eu aceito: ATO, cross-tenant, escrita privilegiada, RCE. Reflection 
 
 ## Refs
 
-- OWASP API Top 10 API1
-- WSTG-ATHZ-04
-- PortSwigger Access Control
+- [MITRE ATT&CK T1078](https://attack.mitre.org/techniques/T1078/)
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [WSTG-ATHZ-04](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Bypassing_Authorization_Schema)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Access control](https://portswigger.net/web-security/access-control)
+
+## Relacionadas
+
+- [escalação vertical via object type](0040-web-idor-vertical.md)
+- [escalação vertical via object type — detecção](0420-web-idor-vertical--detecao.md)
+- [IDOR com IDs numéricos](0031-web-idor-numeric.md)
+- [endpoints batch/export](0034-web-idor-batch.md)
+- [BOLA em GraphQL](0035-web-idor-graphql.md)

@@ -1,3 +1,15 @@
+---
+id: "0894"
+categoria: "05-injection"
+familia: "inj-cmd"
+slug: "template"
+angulo: "hardening"
+mitre: ""
+owasp: "WSTG-INPV-12"
+tags: ["05-injection", "inj-cmd", "hardening"]
+aliases: ["template → command", "template", "template-hardening"]
+---
+
 # template → command — hardening
 
 Do PoC ao controle — template → command.
@@ -39,5 +51,15 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- OWASP Command Injection
-- WSTG-INPV-12
+- [WSTG-INPV-12](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection)
+- [OWASP OS Command Injection Defense](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
+- [PortSwigger — OS command injection](https://portswigger.net/web-security/os-command-injection)
+
+## Relacionadas
+
+- [template → command](0134-inj-cmd-template.md)
+- [template → command — lab](0514-inj-cmd-template--lab.md)
+- [argument injection sem shell](0133-inj-cmd-arg-inject.md)
+- [ambientes embedded/busybox](0138-inj-cmd-busybox.md)
+- [sendmail/pipe](0137-inj-cmd-email-pipe.md)
+- [bypass de denylist](0139-inj-cmd-filter-bypass.md)

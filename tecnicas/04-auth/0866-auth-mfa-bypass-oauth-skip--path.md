@@ -1,3 +1,15 @@
+---
+id: "0866"
+categoria: "04-auth"
+familia: "auth-mfa-bypass"
+slug: "oauth-skip"
+angulo: "path"
+mitre: "T1621"
+owasp: ""
+tags: ["04-auth", "auth-mfa-bypass", "path", "t1621"]
+aliases: ["token sem amr/acr", "oauth-skip", "oauth-skip-path"]
+---
+
 # token sem amr/acr — path
 
 token sem amr/acr como pivô. Path curto > monte de finding isolado.
@@ -55,5 +67,16 @@ Spray/lockout só com acordo escrito e contas canário.
 
 ## Refs
 
-- OWASP MFA Cheat Sheet
-- MITRE T1621
+- [MITRE ATT&CK T1621](https://attack.mitre.org/techniques/T1621/)
+- [OWASP Multifactor Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [token sem amr/acr](0106-auth-mfa-bypass-oauth-skip.md)
+- [token sem amr/acr — detecção](0486-auth-mfa-bypass-oauth-skip--detecao.md)
+- [backup codes em massa](0108-auth-mfa-bypass-backup-codes.md)
+- [MFA fatigue (push bombing)](0104-auth-mfa-bypass-fatigue.md)
+- [protocolos legados sem MFA](0101-auth-mfa-bypass-legacy-auth.md)
+- [OTP 6 dígitos sem rate limit](0102-auth-mfa-bypass-otp-brute.md)
+- [OAuth redirect_uri frouxo (path)](0111-auth-oauth-oidc-redirect.md)
+- [tampering de role/admin (path)](../03-api/0086-api-jwt-claim-tamper.md)

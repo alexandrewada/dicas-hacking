@@ -1,3 +1,15 @@
+---
+id: "0243"
+categoria: "10-windows"
+familia: "win-cred"
+slug: "vault"
+angulo: "base"
+mitre: "T1003"
+owasp: ""
+tags: ["10-windows", "win-cred", "base", "t1003"]
+aliases: ["Credential Manager", "vault"]
+---
+
 # Credential Manager
 
 **Credential access** · `T1003 / T1555 / T1552`
@@ -51,5 +63,16 @@ Tipo de credencial; host; uso em lateral (sem dumps completos).
 
 ## Refs
 
-- MITRE Credential Access
-- SpecterOps DPAPI
+- [MITRE ATT&CK T1003](https://attack.mitre.org/techniques/T1003/)
+- [MITRE ATT&CK T1555](https://attack.mitre.org/techniques/T1555/)
+- [MITRE ATT&CK T1552](https://attack.mitre.org/techniques/T1552/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [SpecterOps — DPAPI](https://posts.specterops.io/operational-guidance-for-offensive-user-dpapi-abuse-1fb7fac8b107)
+
+## Relacionadas
+
+- [Credential Manager — lab](0623-win-cred-vault--lab.md)
+- [browser saved passwords](0247-win-cred-browser.md)
+- [user/machine certs](0249-win-cred-cert.md)
+- [DPAPI masterkey abuse](0242-win-cred-dpapi.md)
+- [GPP/legacy secrets](0250-win-cred-gpp.md)

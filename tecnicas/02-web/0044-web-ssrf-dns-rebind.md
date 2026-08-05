@@ -1,3 +1,15 @@
+---
+id: "0044"
+categoria: "02-web"
+familia: "web-ssrf"
+slug: "dns-rebind"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["02-web", "web-ssrf", "base"]
+aliases: ["SSRF com DNS rebinding", "dns-rebind"]
+---
+
 # SSRF com DNS rebinding
 
 ## Leitura rápida
@@ -51,6 +63,13 @@ DNS/HTTP callback proof; (se autorizado) trecho de metadata redigido.
 
 ## Refs
 
-- OWASP SSRF
-- PortSwigger SSRF
-- AWS IMDSv2
+- [OWASP SSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — SSRF](https://portswigger.net/web-security/ssrf)
+- [AWS — IMDSv2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html)
+
+## Relacionadas
+
+- [SSRF com DNS rebinding — detecção](0424-web-ssrf-dns-rebind--detecao.md)
+- [SSRF com DNS rebinding — path](0804-web-ssrf-dns-rebind--path.md)
+- [SSRF até o IMDS (role cloud)](0041-web-ssrf-imds.md)
+- [SSRF cego com out-of-band](0042-web-ssrf-blind.md)

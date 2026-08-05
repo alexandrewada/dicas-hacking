@@ -1,3 +1,15 @@
+---
+id: "0309"
+categoria: "15-mobile"
+familia: "mobile-android"
+slug: "firebase"
+angulo: "base"
+mitre: "T1420"
+owasp: ""
+tags: ["15-mobile", "mobile-android", "base", "t1420"]
+aliases: ["Firebase aberto", "firebase"]
+---
+
 # Firebase aberto
 
 **Mobile** · `T1420 / T1412 (mobile ATT&CK)`
@@ -50,5 +62,16 @@ Componente explorado; dado acessado; API finding correlato.
 
 ## Refs
 
-- OWASP MASVS/MASTG
-- Frida docs
+- [MITRE ATT&CK T1420](https://attack.mitre.org/techniques/T1420/)
+- [MITRE ATT&CK T1412](https://attack.mitre.org/techniques/T1412/)
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [Frida documentation](https://frida.re/docs/home/)
+- [OWASP MASTG — Android](https://mas.owasp.org/MASTG/0x05a-Security-Testing-Android/)
+
+## Relacionadas
+
+- [Firebase aberto — evidência](0689-mobile-android-firebase--evidencia.md)
+- [token em logcat](0310-mobile-android-auth.md)
+- [backup enabled](0307-mobile-android-backup.md)
+- [clipboard leaks](0308-mobile-android-clip.md)
+- [crypto caseira fraca](0306-mobile-android-crypto.md)

@@ -1,3 +1,15 @@
+---
+id: "0375"
+categoria: "20-report"
+familia: "method-scope"
+slug: "data"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["20-report", "method-scope", "base"]
+aliases: ["manejo de PII/LGPD", "data"]
+---
+
 # manejo de PII/LGPD
 
 **Methodology** · `N/A`
@@ -51,5 +63,14 @@ Template de ROE; lista de contatos; change log de escopo.
 
 ## Refs
 
-- PTES Pre-engagement
-- CREST guides
+- [PTES](http://www.pentest-standard.org/)
+- [CREST guides](https://www.crest-approved.org/)
+- [PTES Pre-engagement](http://www.pentest-standard.org/index.php/Pre-engagement)
+
+## Relacionadas
+
+- [manejo de PII/LGPD — path](0755-method-scope-data--path.md)
+- [scoping multi-cloud](0373-method-scope-cloud.md)
+- [credenciais fornecidas vs discovered](0377-method-scope-creds.md)
+- [política de stress/DoS](0372-method-scope-ddos.md)
+- [stop-and-call criteria](0376-method-scope-emergency.md)

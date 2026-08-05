@@ -1,3 +1,15 @@
+---
+id: "0339"
+categoria: "17-redteam"
+familia: "rt-c2"
+slug: "exfil"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["17-redteam", "rt-c2", "base"]
+aliases: ["exfil controlada de dados fake", "exfil"]
+---
+
 # exfil controlada de dados fake
 
 ## Contexto
@@ -44,5 +56,14 @@ Não uso infra de C2 criminal. Não aponte para fora do escopo.
 
 ## Refs
 
-- Red Team Field Manual ethics
-- MITRE C2
+- [Red team ethics / ROE](https://attack.mitre.org/)
+- [MITRE ATT&CK — Command and Control](https://attack.mitre.org/tactics/TA0011/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+
+## Relacionadas
+
+- [exfil controlada de dados fake — evidência](0719-rt-c2-exfil--evidencia.md)
+- [debrief com SOC](0340-rt-c2-debrief.md)
+- [DNS C2](0332-rt-c2-dns.md)
+- [domain fronting histórico](0333-rt-c2-domain-front.md)
+- [HTTPS beaconing](0331-rt-c2-https.md)

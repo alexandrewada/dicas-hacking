@@ -1,3 +1,15 @@
+---
+id: "0609"
+categoria: "09-ad"
+familia: "ad-cs"
+slug: "persist"
+angulo: "lab"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-cs", "lab"]
+aliases: ["persistência via certs", "persist", "persist-lab"]
+---
+
 # persistência via certs — lab
 
 Sandbox throwaway — persistência via certs sem ruído de cliente.
@@ -29,8 +41,10 @@ Restore point.
 ## Exemplo
 
 ```bash
-ldapsearch -H ldap://DC01.lab.local -D 'USER_A@lab.local' -w PASS_LAB -b 'DC=lab,DC=local' '(sAMAccountName=USER_A)'
-# persist 1f4db4
+# AD CS persist — lab CA, conta teste
+certipy find -u USER_A@lab.local -p PASS_LAB -dc-ip DC01.lab.local -vulnerable
+# persist: renovar cert de conta teste; detect: correlacionar 4886→4768
+# tag 1f4db4 — sem shadow em prod
 ```
 
 ## Pitfall
@@ -46,5 +60,13 @@ Template vulnerável; cert de teste; auth proof; revogação.
 
 ## Refs
 
-- SpecterOps Certified Pre-Owned
-- MITRE T1649
+- [SpecterOps — Certified Pre-Owned (AD CS)](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
+- [MITRE ATT&CK T1649](https://attack.mitre.org/techniques/T1649/)
+
+## Relacionadas
+
+- [persistência via certs](0229-ad-cs-persist.md)
+- [persistência via certs — hardening](0989-ad-cs-persist--hardening.md)
+- [AD CS ESC1](0221-ad-cs-esc1.md)
+- [AD CS ESC8 (relay HTTP)](0227-ad-cs-esc8.md)
+- [detecção de enrollment anômalo](0230-ad-cs-detect.md)

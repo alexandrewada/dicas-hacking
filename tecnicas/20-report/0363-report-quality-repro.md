@@ -1,3 +1,15 @@
+---
+id: "0363"
+categoria: "20-report"
+familia: "report-quality"
+slug: "repro"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "base"]
+aliases: ["passos de reprodução perfeitos", "repro"]
+---
+
 # passos de reprodução perfeitos
 
 **Methodology** · `N/A`
@@ -46,6 +58,14 @@ Executivo: risco em 3 frases. Técnico: PoC redigido. Misturar perde os dois pú
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [passos de reprodução perfeitos — evidência](0743-report-quality-repro--evidencia.md)
+- [apêndice técnico vs executivo](0369-report-quality-appendix.md)
+- [narrativa de account takeover](0367-report-quality-ato.md)
+- [Traduzir risco pro CISO](0364-report-quality-business.md)
+- [findings encadeados](0368-report-quality-chain.md)

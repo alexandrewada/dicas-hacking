@@ -1,3 +1,15 @@
+---
+id: "0615"
+categoria: "10-windows"
+familia: "win-privesc"
+slug: "autologon"
+angulo: "lab"
+mitre: ""
+owasp: ""
+tags: ["10-windows", "win-privesc", "lab"]
+aliases: ["autologon registry secrets", "autologon", "autologon-lab"]
+---
+
 # autologon registry secrets — lab
 
 Critério: outro analista fecha sozinho com esta nota.
@@ -46,5 +58,15 @@ Vetor; whoami /priv; prova SYSTEM; cleanup.
 
 ## Refs
 
-- PayloadsAllTheThings Windows PrivEsc
-- MITRE PrivEsc
+- [PayloadsAllTheThings — Windows PrivEsc](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [HackTricks — Windows Privilege Escalation](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation)
+
+## Relacionadas
+
+- [autologon registry secrets](0235-win-privesc-autologon.md)
+- [autologon registry secrets — hardening](0995-win-privesc-autologon--hardening.md)
+- [AlwaysInstallElevated](0234-win-privesc-alwaysinstall.md)
+- [DLL hijacking](0237-win-privesc-dll-hijack.md)
+- [vulnerable driver (BYOVD)](0240-win-privesc-driver.md)
+- [Potato / SeImpersonate](0233-win-privesc-potato.md)

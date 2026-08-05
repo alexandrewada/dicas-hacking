@@ -1,3 +1,15 @@
+---
+id: "0124"
+categoria: "05-injection"
+familia: "inj-sqli"
+slug: "mssql-oob"
+angulo: "base"
+mitre: "T1190"
+owasp: ""
+tags: ["05-injection", "inj-sqli", "base", "t1190"]
+aliases: ["MSSQL out-of-band", "mssql-oob"]
+---
+
 # MSSQL out-of-band
 
 `T1190`
@@ -51,6 +63,16 @@ No PDF — Payload + response diferencial; amostra de dado de teste; query log s
 
 ## Refs
 
-- PortSwigger SQLi
-- OWASP SQLi
-- SQLMap usage ethics
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [PortSwigger — SQL injection](https://portswigger.net/web-security/sql-injection)
+- [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- [sqlmap — usage](https://sqlmap.org/)
+
+## Relacionadas
+
+- [MSSQL out-of-band — detecção](0504-inj-sqli-mssql-oob--detecao.md)
+- [MSSQL out-of-band — hardening](0884-inj-sqli-mssql-oob--hardening.md)
+- [JSON operators injection](0129-inj-sqli-json-sql.md)
+- [SQLi blind em MySQL](0122-inj-sqli-mysql-blind.md)
+- [MySQL error-based](0121-inj-sqli-mysql-error.md)
+- [polyglot SQL + NoSQL](0130-inj-sqli-nosqli-bridge.md)

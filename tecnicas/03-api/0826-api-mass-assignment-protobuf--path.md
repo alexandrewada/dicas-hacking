@@ -1,3 +1,15 @@
+---
+id: "0826"
+categoria: "03-api"
+familia: "api-mass-assignment"
+slug: "protobuf"
+angulo: "path"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-mass-assignment", "path", "t1190"]
+aliases: ["campos protobuf extras", "protobuf", "protobuf-path"]
+---
+
 # campos protobuf extras — path
 
 campos protobuf extras como pivô. Path curto > monte de finding isolado.
@@ -59,5 +71,16 @@ Começo pelo contrato real (OpenAPI/HAR/introspection), não pelo PDF de arquite
 
 ## Refs
 
-- OWASP API3
-- PortSwigger Mass Assignment
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Mass assignment](https://portswigger.net/web-security/access-control)
+- [OWASP API3 BOPLA](https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/)
+
+## Relacionadas
+
+- [campos protobuf extras](0066-api-mass-assignment-protobuf.md)
+- [campos protobuf extras — detecção](0446-api-mass-assignment-protobuf--detecao.md)
+- [import CSV com colunas extras](0069-api-mass-assignment-csv-import.md)
+- [GraphQL input objects](0067-api-mass-assignment-graphql-input.md)
+- [JSON Merge Patch RFC 7396](0065-api-mass-assignment-json-merge.md)
+- [nested JSON binding](0064-api-mass-assignment-nested.md)

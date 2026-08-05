@@ -1,3 +1,15 @@
+---
+id: "0759"
+categoria: "20-report"
+familia: "method-scope"
+slug: "timebox"
+angulo: "path"
+mitre: ""
+owasp: ""
+tags: ["20-report", "method-scope", "path"]
+aliases: ["timeboxing por superfície", "timebox", "timebox-path"]
+---
+
 # timeboxing por superfície — path
 
 timeboxing por superfície como pivô. Path curto > monte de finding isolado.
@@ -55,5 +67,14 @@ Executivo: risco em 3 frases. Técnico: PoC redigido. Misturar perde os dois pú
 
 ## Refs
 
-- PTES Pre-engagement
-- CREST guides
+- [PTES](http://www.pentest-standard.org/)
+- [CREST guides](https://www.crest-approved.org/)
+- [PTES Pre-engagement](http://www.pentest-standard.org/index.php/Pre-engagement)
+
+## Relacionadas
+
+- [timeboxing por superfície](0379-method-scope-timebox.md)
+- [scoping multi-cloud](0373-method-scope-cloud.md)
+- [credenciais fornecidas vs discovered](0377-method-scope-creds.md)
+- [manejo de PII/LGPD](0375-method-scope-data.md)
+- [política de stress/DoS](0372-method-scope-ddos.md)

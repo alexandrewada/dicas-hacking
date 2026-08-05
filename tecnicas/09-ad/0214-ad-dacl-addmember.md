@@ -1,3 +1,15 @@
+---
+id: "0214"
+categoria: "09-ad"
+familia: "ad-dacl"
+slug: "addmember"
+angulo: "base"
+mitre: "T1003"
+owasp: ""
+tags: ["09-ad", "ad-dacl", "base", "t1003"]
+aliases: ["AddMember a grupo privilegiado", "addmember"]
+---
+
 # AddMember a grupo privilegiado
 
 **Identity** · `T1003 / T1484 (adjacente) / AbuseACE`
@@ -47,5 +59,16 @@ remover ACEs excessivos.
 
 ## Refs
 
-- SpecterOps BloodHound docs
-- MITRE AD techniques
+- [MITRE ATT&CK T1003](https://attack.mitre.org/techniques/T1003/)
+- [MITRE ATT&CK T1484](https://attack.mitre.org/techniques/T1484/)
+- [SpecterOps — BloodHound docs](https://bloodhound.specterops.io/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+
+## Relacionadas
+
+- [AddMember a grupo privilegiado — lab](0594-ad-dacl-addmember--lab.md)
+- [AddMember a grupo privilegiado — hardening](0974-ad-dacl-addmember--hardening.md)
+- [GenericAll em usuário/grupo](0211-ad-dacl-genericall.md)
+- [Direitos de DCSync](0213-ad-dacl-dcsync.md)
+- [KeyCredentialLink / Shadow Credentials](0220-ad-dacl-shadowcred.md)
+- [WriteSPN → targeted roast](0216-ad-dacl-writespn.md)

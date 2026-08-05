@@ -1,3 +1,15 @@
+---
+id: "0904"
+categoria: "05-injection"
+familia: "inj-ssti"
+slug: "velocity"
+angulo: "hardening"
+mitre: "T1190"
+owasp: ""
+tags: ["05-injection", "inj-ssti", "hardening", "t1190"]
+aliases: ["Apache Velocity", "velocity", "velocity-hardening"]
+---
+
 # Apache Velocity — hardening
 
 Do PoC ao controle — Apache Velocity.
@@ -40,5 +52,15 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- PortSwigger SSTI
-- PayloadsAllTheThings SSTI
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [PortSwigger — SSTI](https://portswigger.net/web-security/server-side-template-injection)
+- [PayloadsAllTheThings — SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
+
+## Relacionadas
+
+- [Apache Velocity](0144-inj-ssti-velocity.md)
+- [Apache Velocity — lab](0524-inj-ssti-velocity--lab.md)
+- [templates de e-mail marketing](0149-inj-ssti-email-tmpl.md)
+- [Freemarker](0142-inj-ssti-freemarker.md)
+- [SSTI em Jinja2](0141-inj-ssti-jinja2.md)
+- [Mako Python](0147-inj-ssti-mako.md)

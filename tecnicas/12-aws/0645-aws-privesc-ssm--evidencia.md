@@ -1,3 +1,15 @@
+---
+id: "0645"
+categoria: "12-aws"
+familia: "aws-privesc"
+slug: "ssm"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["12-aws", "aws-privesc", "evidencia"]
+aliases: ["SSM SendCommand", "ssm", "ssm-evidencia"]
+---
+
 # SSM SendCommand — evidência
 
 Pacote pra SSM SendCommand sobreviver peer review.
@@ -50,5 +62,13 @@ Não crie backdoors permanentes. Cuidado com custos (instâncias grandes).
 
 ## Refs
 
-- Rhino Security Labs AWS privesc
-- MITRE Cloud
+- [Rhino Security Labs — AWS privilege escalation](https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
+
+## Relacionadas
+
+- [SSM SendCommand](0265-aws-privesc-ssm.md)
+- [Credencial via IMDS](0266-aws-privesc-imds.md)
+- [PassRole + compute](0262-aws-privesc-passrole.md)
+- [trust policy frouxa](0264-aws-privesc-assume-role.md)

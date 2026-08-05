@@ -1,3 +1,15 @@
+---
+id: "0599"
+categoria: "09-ad"
+familia: "ad-dacl"
+slug: "adminsdholder"
+angulo: "lab"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-dacl", "lab"]
+aliases: ["AdminSDHolder backdoor", "adminsdholder", "adminsdholder-lab"]
+---
+
 # AdminSDHolder backdoor — lab
 
 Critério: outro analista fecha sozinho com esta nota.
@@ -46,5 +58,15 @@ Edge BloodHound; PoC controlado; ACE dump.
 
 ## Refs
 
-- SpecterOps BloodHound docs
-- MITRE AD techniques
+- [SpecterOps — BloodHound docs](https://bloodhound.specterops.io/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [MITRE ATT&CK T1484](https://attack.mitre.org/techniques/T1484/)
+
+## Relacionadas
+
+- [AdminSDHolder backdoor](0219-ad-dacl-adminsdholder.md)
+- [AdminSDHolder backdoor — hardening](0979-ad-dacl-adminsdholder--hardening.md)
+- [GenericAll em usuário/grupo](0211-ad-dacl-genericall.md)
+- [Direitos de DCSync](0213-ad-dacl-dcsync.md)
+- [KeyCredentialLink / Shadow Credentials](0220-ad-dacl-shadowcred.md)
+- [WriteSPN → targeted roast](0216-ad-dacl-writespn.md)

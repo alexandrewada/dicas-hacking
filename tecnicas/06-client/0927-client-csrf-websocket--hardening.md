@@ -1,3 +1,15 @@
+---
+id: "0927"
+categoria: "06-client"
+familia: "client-csrf"
+slug: "websocket"
+angulo: "hardening"
+mitre: "T1185"
+owasp: ""
+tags: ["06-client", "client-csrf", "hardening", "t1185"]
+aliases: ["CSWSH", "websocket", "websocket-hardening"]
+---
+
 # CSWSH — hardening
 
 Do PoC ao controle — CSWSH.
@@ -40,5 +52,15 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- OWASP CSRF
-- PortSwigger CSRF
+- [MITRE ATT&CK T1185](https://attack.mitre.org/techniques/T1185/)
+- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — CSRF](https://portswigger.net/web-security/csrf)
+
+## Relacionadas
+
+- [CSWSH](0167-client-csrf-websocket.md)
+- [CSWSH — lab](0547-client-csrf-websocket--lab.md)
+- [clickjacking + CSRF](0170-client-csrf-clickjacking.md)
+- [CORS reflection + CSRF](0169-client-csrf-cors.md)
+- [JSON CSRF via text/plain](0163-client-csrf-json-csrf.md)
+- [logout CSRF](0168-client-csrf-logout.md)

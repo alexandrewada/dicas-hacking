@@ -1,3 +1,15 @@
+---
+id: "0293"
+categoria: "14-k8s"
+familia: "k8s-escape"
+slug: "privileged"
+angulo: "base"
+mitre: "T1611"
+owasp: ""
+tags: ["14-k8s", "k8s-escape", "base", "t1611"]
+aliases: ["Pod privileged", "privileged"]
+---
+
 # Pod privileged
 
 **Containers** · `T1611 Escape to Host / T1078`
@@ -18,10 +30,11 @@ docker.sock, e metadata cloud. Pentest k8s exige cuidado para não derrubar work
 ## Exemplo
 
 ```bash
-# k8s lab namespace
-kubectl -n lab-68ebe0 auth can-i --list --as=system:serviceaccount:lab:sa-privileged
-kubectl -n lab-68ebe0 get secrets
-# prova RBAC excessivo privileged
+# privileged/hostPath — lab only
+kubectl -n lab-68ebe0 auth can-i create pods --as=system:serviceaccount:lab:sa-privileged
+kubectl -n lab-68ebe0 get psp,validatingadmissionpolicy 2>/dev/null | head
+# lab only: pod privileged + hostPath / (não aplicar em prod)
+# kubectl run probe-privileged --image=busybox --privileged — tag 68ebe0
 ```
 
 ## Diferencial desta nota
@@ -47,5 +60,14 @@ no privileged.
 
 ## Refs
 
-- Kubernetes Attack Matrix
-- NSA/CISA k8s hardening
+- [MITRE ATT&CK T1611](https://attack.mitre.org/techniques/T1611/)
+- [MITRE ATT&CK T1078](https://attack.mitre.org/techniques/T1078/)
+- [Microsoft — Kubernetes attack matrix](https://microsoft.github.io/Threat-Matrix-for-Kubernetes/)
+- [NSA/CISA — Kubernetes hardening](https://media.defense.gov/2022/Aug/29/2003064742/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220829.PDF)
+
+## Relacionadas
+
+- [Pod privileged — evidência](0673-k8s-escape-privileged--evidencia.md)
+- [Token de ServiceAccount](0291-k8s-escape-sa-token.md)
+- [RBAC wildcards](0292-k8s-escape-rbac.md)
+- [cloud metadata from pod](0296-k8s-escape-imds.md)

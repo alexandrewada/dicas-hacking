@@ -1,3 +1,15 @@
+---
+id: "0747"
+categoria: "20-report"
+familia: "report-quality"
+slug: "ato"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "evidencia"]
+aliases: ["narrativa de account takeover", "ato", "ato-evidencia"]
+---
+
 # narrativa de account takeover — evidência
 
 Pacote pra narrativa de account takeover sobreviver peer review.
@@ -52,6 +64,14 @@ Não inclua dados reais de clientes em material público — redija.
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [narrativa de account takeover](0367-report-quality-ato.md)
+- [apêndice técnico vs executivo](0369-report-quality-appendix.md)
+- [Traduzir risco pro CISO](0364-report-quality-business.md)
+- [findings encadeados](0368-report-quality-chain.md)
+- [cleanup & artifact list](0366-report-quality-cleanup.md)

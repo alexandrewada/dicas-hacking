@@ -1,3 +1,15 @@
+---
+id: "0647"
+categoria: "12-aws"
+familia: "aws-privesc"
+slug: "s3"
+angulo: "evidencia"
+mitre: "T1078.004"
+owasp: ""
+tags: ["12-aws", "aws-privesc", "evidencia", "t1078.004"]
+aliases: ["S3 policy confusion", "s3", "s3-evidencia"]
+---
+
 # S3 policy confusion — evidência
 
 Pacote pra S3 policy confusion sobreviver peer review.
@@ -51,5 +63,14 @@ Não crie backdoors permanentes. Cuidado com custos (instâncias grandes).
 
 ## Refs
 
-- Rhino Security Labs AWS privesc
-- MITRE Cloud
+- [MITRE ATT&CK T1078.004](https://attack.mitre.org/techniques/T1078/004/)
+- [Rhino Security Labs — AWS privilege escalation](https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
+
+## Relacionadas
+
+- [S3 policy confusion](0267-aws-privesc-s3.md)
+- [Credencial via IMDS](0266-aws-privesc-imds.md)
+- [PassRole + compute](0262-aws-privesc-passrole.md)
+- [trust policy frouxa](0264-aws-privesc-assume-role.md)

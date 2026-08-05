@@ -1,3 +1,15 @@
+---
+id: "0598"
+categoria: "09-ad"
+familia: "ad-dacl"
+slug: "ou"
+angulo: "lab"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-dacl", "lab"]
+aliases: ["controle de OU", "ou", "ou-lab"]
+---
+
 # controle de OU — lab
 
 Sandbox throwaway — controle de OU sem ruído de cliente.
@@ -47,5 +59,15 @@ Edge BloodHound; PoC controlado; ACE dump.
 
 ## Refs
 
-- SpecterOps BloodHound docs
-- MITRE AD techniques
+- [SpecterOps — BloodHound docs](https://bloodhound.specterops.io/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [MITRE ATT&CK T1484](https://attack.mitre.org/techniques/T1484/)
+
+## Relacionadas
+
+- [controle de OU](0218-ad-dacl-ou.md)
+- [controle de OU — hardening](0978-ad-dacl-ou--hardening.md)
+- [GenericAll em usuário/grupo](0211-ad-dacl-genericall.md)
+- [Direitos de DCSync](0213-ad-dacl-dcsync.md)
+- [KeyCredentialLink / Shadow Credentials](0220-ad-dacl-shadowcred.md)
+- [WriteSPN → targeted roast](0216-ad-dacl-writespn.md)

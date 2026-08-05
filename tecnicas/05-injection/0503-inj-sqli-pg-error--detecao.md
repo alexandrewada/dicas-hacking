@@ -1,3 +1,15 @@
+---
+id: "0503"
+categoria: "05-injection"
+familia: "inj-sqli"
+slug: "pg-error"
+angulo: "detecao"
+mitre: "T1190"
+owasp: ""
+tags: ["05-injection", "inj-sqli", "detecao", "t1190"]
+aliases: ["PostgreSQL error/verbose", "pg-error", "pg-error-detecao"]
+---
+
 # PostgreSQL error/verbose — detecção
 
 Gap de detecção em `T1190` / PostgreSQL error/verbose. PoC mínimo, telemetria ligada.
@@ -54,6 +66,16 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- PortSwigger SQLi
-- OWASP SQLi
-- SQLMap usage ethics
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [PortSwigger — SQL injection](https://portswigger.net/web-security/sql-injection)
+- [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
+- [sqlmap — usage](https://sqlmap.org/)
+
+## Relacionadas
+
+- [PostgreSQL error/verbose](0123-inj-sqli-pg-error.md)
+- [PostgreSQL error/verbose — hardening](0883-inj-sqli-pg-error--hardening.md)
+- [JSON operators injection](0129-inj-sqli-json-sql.md)
+- [MSSQL out-of-band](0124-inj-sqli-mssql-oob.md)
+- [SQLi blind em MySQL](0122-inj-sqli-mysql-blind.md)
+- [MySQL error-based](0121-inj-sqli-mysql-error.md)

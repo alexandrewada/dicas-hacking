@@ -1,3 +1,15 @@
+---
+id: "0215"
+categoria: "09-ad"
+familia: "ad-dacl"
+slug: "forcechange"
+angulo: "base"
+mitre: "T1003"
+owasp: ""
+tags: ["09-ad", "ad-dacl", "base", "t1003"]
+aliases: ["ForceChangePassword", "forcechange"]
+---
+
 # ForceChangePassword
 
 **Identity** · `T1003 / T1484 (adjacente) / AbuseACE`
@@ -52,5 +64,16 @@ Edge BloodHound; PoC controlado; ACE dump.
 
 ## Refs
 
-- SpecterOps BloodHound docs
-- MITRE AD techniques
+- [MITRE ATT&CK T1003](https://attack.mitre.org/techniques/T1003/)
+- [MITRE ATT&CK T1484](https://attack.mitre.org/techniques/T1484/)
+- [SpecterOps — BloodHound docs](https://bloodhound.specterops.io/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+
+## Relacionadas
+
+- [ForceChangePassword — lab](0595-ad-dacl-forcechange--lab.md)
+- [ForceChangePassword — hardening](0975-ad-dacl-forcechange--hardening.md)
+- [GenericAll em usuário/grupo](0211-ad-dacl-genericall.md)
+- [Direitos de DCSync](0213-ad-dacl-dcsync.md)
+- [KeyCredentialLink / Shadow Credentials](0220-ad-dacl-shadowcred.md)
+- [WriteSPN → targeted roast](0216-ad-dacl-writespn.md)

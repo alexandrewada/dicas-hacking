@@ -1,3 +1,15 @@
+---
+id: "0667"
+categoria: "13-azure"
+familia: "azure-entra"
+slug: "saml"
+angulo: "evidencia"
+mitre: "T1078.004"
+owasp: ""
+tags: ["13-azure", "azure-entra", "evidencia", "t1078.004"]
+aliases: ["Enterprise app SAML abuse", "saml", "saml-evidencia"]
+---
+
 # Enterprise app SAML abuse — evidência
 
 Pacote pra Enterprise app SAML abuse sobreviver peer review.
@@ -52,5 +64,13 @@ Não mexo em produção GA sem change window.
 
 ## Refs
 
-- MSFT Entra security
-- RoadTools
+- [MITRE ATT&CK T1078.004](https://attack.mitre.org/techniques/T1078/004/)
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft Learn — Entra ID](https://learn.microsoft.com/en-us/entra/identity/)
+
+## Relacionadas
+
+- [Enterprise app SAML abuse](0287-azure-entra-saml.md)
+- [Illlicit consent grant](0281-azure-entra-consent.md)
+- [PRT / primary refresh token](0283-azure-entra-prt.md)
+- [Furos de Conditional Access](0282-azure-entra-ca-gap.md)

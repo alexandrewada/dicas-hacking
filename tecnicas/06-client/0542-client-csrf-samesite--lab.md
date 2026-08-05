@@ -1,3 +1,15 @@
+---
+id: "0542"
+categoria: "06-client"
+familia: "client-csrf"
+slug: "samesite"
+angulo: "lab"
+mitre: "T1185"
+owasp: ""
+tags: ["06-client", "client-csrf", "lab", "t1185"]
+aliases: ["SameSite=None sem Secure", "samesite", "samesite-lab"]
+---
+
 # SameSite=None sem Secure — lab
 
 Lab só pra SameSite=None sem Secure. Se não reproduz isolado, não confio no finding de prod.
@@ -49,5 +61,15 @@ PoC HTML; request forjado; efeito na conta teste.
 
 ## Refs
 
-- OWASP CSRF
-- PortSwigger CSRF
+- [MITRE ATT&CK T1185](https://attack.mitre.org/techniques/T1185/)
+- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — CSRF](https://portswigger.net/web-security/csrf)
+
+## Relacionadas
+
+- [SameSite=None sem Secure](0162-client-csrf-samesite.md)
+- [SameSite=None sem Secure — hardening](0922-client-csrf-samesite--hardening.md)
+- [clickjacking + CSRF](0170-client-csrf-clickjacking.md)
+- [CORS reflection + CSRF](0169-client-csrf-cors.md)
+- [JSON CSRF via text/plain](0163-client-csrf-json-csrf.md)
+- [logout CSRF](0168-client-csrf-logout.md)

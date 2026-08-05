@@ -1,3 +1,15 @@
+---
+id: "0693"
+categoria: "15-mobile"
+familia: "mobile-ios"
+slug: "url-scheme"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["15-mobile", "mobile-ios", "evidencia"]
+aliases: ["URL scheme hijack", "url-scheme", "url-scheme-evidencia"]
+---
+
 # URL scheme hijack — evidência
 
 Pacote pra URL scheme hijack sobreviver peer review.
@@ -43,4 +55,15 @@ Não contorne DRM de terceiros fora do escopo do app do cliente.
 
 ## Refs
 
-- OWASP MASTG iOS
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [OWASP MASTG — iOS](https://mas.owasp.org/MASTG/0x06a-Testing-IOS/)
+- [Frida documentation](https://frida.re/docs/home/)
+
+## Relacionadas
+
+- [URL scheme hijack](0313-mobile-ios-url-scheme.md)
+- [ATS exceptions](0312-mobile-ios-ats.md)
+- [itunes backup secrets](0315-mobile-ios-backup.md)
+- [biometry bypass lab](0317-mobile-ios-biometry.md)
+- [app groups misuse](0318-mobile-ios-ipc.md)
+- [Keychain fraco (path)](0311-mobile-ios-keychain.md)

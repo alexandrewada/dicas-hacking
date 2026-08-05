@@ -1,3 +1,15 @@
+---
+id: "0549"
+categoria: "06-client"
+familia: "client-csrf"
+slug: "cors"
+angulo: "lab"
+mitre: "T1185"
+owasp: ""
+tags: ["06-client", "client-csrf", "lab", "t1185"]
+aliases: ["CORS reflection + CSRF", "cors", "cors-lab"]
+---
+
 # CORS reflection + CSRF — lab
 
 Sandbox throwaway — CORS reflection + CSRF sem ruído de cliente.
@@ -49,5 +61,15 @@ PoC HTML; request forjado; efeito na conta teste.
 
 ## Refs
 
-- OWASP CSRF
-- PortSwigger CSRF
+- [MITRE ATT&CK T1185](https://attack.mitre.org/techniques/T1185/)
+- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — CSRF](https://portswigger.net/web-security/csrf)
+
+## Relacionadas
+
+- [CORS reflection + CSRF](0169-client-csrf-cors.md)
+- [CORS reflection + CSRF — hardening](0929-client-csrf-cors--hardening.md)
+- [clickjacking + CSRF](0170-client-csrf-clickjacking.md)
+- [JSON CSRF via text/plain](0163-client-csrf-json-csrf.md)
+- [logout CSRF](0168-client-csrf-logout.md)
+- [X-HTTP-Method-Override](0164-client-csrf-method-override.md)

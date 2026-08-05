@@ -1,3 +1,15 @@
+---
+id: "0110"
+categoria: "04-auth"
+familia: "auth-mfa-bypass"
+slug: "session-upgrade"
+angulo: "base"
+mitre: "T1621"
+owasp: ""
+tags: ["04-auth", "auth-mfa-bypass", "base", "t1621"]
+aliases: ["sessão pré-MFA reutilizada", "session-upgrade"]
+---
+
 # sessão pré-MFA reutilizada
 
 ## Contexto
@@ -45,5 +57,14 @@ Não bombardeie MFA de usuários reais. Fatigue é disruptivo.
 
 ## Refs
 
-- OWASP MFA Cheat Sheet
-- MITRE T1621
+- [MITRE ATT&CK T1621](https://attack.mitre.org/techniques/T1621/)
+- [OWASP Multifactor Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [sessão pré-MFA reutilizada — detecção](0490-auth-mfa-bypass-session-upgrade--detecao.md)
+- [sessão pré-MFA reutilizada — path](0870-auth-mfa-bypass-session-upgrade--path.md)
+- [backup codes em massa](0108-auth-mfa-bypass-backup-codes.md)
+- [MFA fatigue (push bombing)](0104-auth-mfa-bypass-fatigue.md)
+- [protocolos legados sem MFA](0101-auth-mfa-bypass-legacy-auth.md)
+- [token sem amr/acr](0106-auth-mfa-bypass-oauth-skip.md)

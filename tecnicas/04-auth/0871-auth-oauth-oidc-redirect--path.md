@@ -1,3 +1,15 @@
+---
+id: "0871"
+categoria: "04-auth"
+familia: "auth-oauth-oidc"
+slug: "redirect"
+angulo: "path"
+mitre: "T1528"
+owasp: ""
+tags: ["04-auth", "auth-oauth-oidc", "path", "t1528"]
+aliases: ["OAuth redirect_uri frouxo", "redirect", "redirect-path"]
+---
+
 # OAuth redirect_uri frouxo — path
 
 OAuth redirect_uri frouxo como pivô. Path curto > monte de finding isolado.
@@ -55,6 +67,19 @@ MFA bypass de verdade completa o fator sem o segundo. UI skip sem backend não �
 
 ## Refs
 
-- RFC 6749
-- RFC 8252
-- OWASP OAuth
+- [MITRE ATT&CK T1528](https://attack.mitre.org/techniques/T1528/)
+- [RFC 6749 — OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749)
+- [RFC 8252 — OAuth for Native Apps](https://www.rfc-editor.org/rfc/rfc8252)
+- [OWASP OAuth 2.0 Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html)
+- [PortSwigger — OAuth authentication](https://portswigger.net/web-security/oauth)
+
+## Relacionadas
+
+- [OAuth redirect_uri frouxo](0111-auth-oauth-oidc-redirect.md)
+- [OAuth redirect_uri frouxo — detecção](0491-auth-oauth-oidc-redirect--detecao.md)
+- [device authorization grant abuse](0119-auth-oauth-oidc-device-code.md)
+- [implicit grant legado](0114-auth-oauth-oidc-implicit.md)
+- [client_assertion fraca](0120-auth-oauth-oidc-jwt-client-auth.md)
+- [mix-up attack (multi-IdP)](0116-auth-oauth-oidc-mixup.md)
+- [CSRF de login sem state (path)](0112-auth-oauth-oidc-state.md)
+- [reflected XSS (path)](../06-client/0151-client-xss-reflected.md)

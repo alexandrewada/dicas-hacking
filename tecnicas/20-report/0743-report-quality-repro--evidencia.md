@@ -1,3 +1,15 @@
+---
+id: "0743"
+categoria: "20-report"
+familia: "report-quality"
+slug: "repro"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "evidencia"]
+aliases: ["passos de reprodução perfeitos", "repro", "repro-evidencia"]
+---
+
 # passos de reprodução perfeitos — evidência
 
 Pacote pra passos de reprodução perfeitos sobreviver peer review.
@@ -45,6 +57,14 @@ Não inclua dados reais de clientes em material público — redija.
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [passos de reprodução perfeitos](0363-report-quality-repro.md)
+- [apêndice técnico vs executivo](0369-report-quality-appendix.md)
+- [narrativa de account takeover](0367-report-quality-ato.md)
+- [Traduzir risco pro CISO](0364-report-quality-business.md)
+- [findings encadeados](0368-report-quality-chain.md)

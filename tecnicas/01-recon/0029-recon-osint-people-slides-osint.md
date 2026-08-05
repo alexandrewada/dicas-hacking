@@ -1,3 +1,15 @@
+---
+id: "0029"
+categoria: "01-recon"
+familia: "recon-osint-people"
+slug: "slides-osint"
+angulo: "base"
+mitre: "T1589"
+owasp: ""
+tags: ["01-recon", "recon-osint-people", "base", "t1589"]
+aliases: ["slides e talks públicas", "slides-osint"]
+---
+
 # slides e talks públicas
 
 **A07 Identification and Authentication Failures (contexto)** · `T1589 Gather Victim Identity Information`
@@ -34,4 +46,17 @@ Corrijo com: Treinamento contínuo; passwordless/FIDO2; rate-limit de auth; cana
 
 Levo no report: Lista de identidades com fonte; **sem** senhas em claro no relatório se evitável.
 
-Refs: OSINT Framework, MITRE T1589, NIST SP 800-63
+## Refs
+
+- [MITRE ATT&CK T1589](https://attack.mitre.org/techniques/T1589/)
+- [OSINT Framework](https://osintframework.com/)
+- [NIST SP 800-63](https://pages.nist.gov/800-63-3/)
+
+## Relacionadas
+
+- [slides e talks públicas — detecção](0409-recon-osint-people-slides-osint--detecao.md)
+- [slides e talks públicas — path](0789-recon-osint-people-slides-osint--path.md)
+- [correlação com breaches corporativos](0027-recon-osint-people-breach-corp.md)
+- [vazamento de calendários/ICS](0025-recon-osint-people-calendar-leak.md)
+- [inferência de formato de e-mail](0026-recon-osint-people-email-format.md)
+- [GitHub dorking autorizado](0021-recon-osint-people-github-dorks.md)

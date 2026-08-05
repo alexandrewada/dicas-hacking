@@ -1,3 +1,15 @@
+---
+id: "0378"
+categoria: "20-report"
+familia: "method-scope"
+slug: "third-party"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["20-report", "method-scope", "base"]
+aliases: ["ativos de terceiros", "third-party"]
+---
+
 # ativos de terceiros
 
 `N/A`
@@ -50,5 +62,14 @@ No PDF — Template de ROE; lista de contatos; change log de escopo.
 
 ## Refs
 
-- PTES Pre-engagement
-- CREST guides
+- [PTES](http://www.pentest-standard.org/)
+- [CREST guides](https://www.crest-approved.org/)
+- [PTES Pre-engagement](http://www.pentest-standard.org/index.php/Pre-engagement)
+
+## Relacionadas
+
+- [ativos de terceiros — path](0758-method-scope-third-party--path.md)
+- [scoping multi-cloud](0373-method-scope-cloud.md)
+- [credenciais fornecidas vs discovered](0377-method-scope-creds.md)
+- [manejo de PII/LGPD](0375-method-scope-data.md)
+- [política de stress/DoS](0372-method-scope-ddos.md)

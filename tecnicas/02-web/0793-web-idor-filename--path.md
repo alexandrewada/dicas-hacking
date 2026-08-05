@@ -1,3 +1,15 @@
+---
+id: "0793"
+categoria: "02-web"
+familia: "web-idor"
+slug: "filename"
+angulo: "path"
+mitre: ""
+owasp: "WSTG-ATHZ-04"
+tags: ["02-web", "web-idor", "path"]
+aliases: ["path traversal lógico em downloads", "filename", "filename-path"]
+---
+
 # path traversal lógico em downloads — path
 
 path traversal lógico em downloads como pivô. Path curto > monte de finding isolado.
@@ -60,6 +72,15 @@ Impacto que eu aceito: ATO, cross-tenant, escrita privilegiada, RCE. Reflection 
 
 ## Refs
 
-- OWASP API Top 10 API1
-- WSTG-ATHZ-04
-- PortSwigger Access Control
+- [WSTG-ATHZ-04](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Bypassing_Authorization_Schema)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Access control](https://portswigger.net/web-security/access-control)
+- [OWASP API1 BOLA](https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/)
+
+## Relacionadas
+
+- [path traversal lógico em downloads](0033-web-idor-filename.md)
+- [path traversal lógico em downloads — detecção](0413-web-idor-filename--detecao.md)
+- [IDOR com IDs numéricos](0031-web-idor-numeric.md)
+- [endpoints batch/export](0034-web-idor-batch.md)
+- [BOLA em GraphQL](0035-web-idor-graphql.md)

@@ -1,3 +1,15 @@
+---
+id: "0963"
+categoria: "09-ad"
+familia: "ad-kerberoast"
+slug: "asrep"
+angulo: "hardening"
+mitre: "T1558.003"
+owasp: ""
+tags: ["09-ad", "ad-kerberoast", "hardening", "t1558.003"]
+aliases: ["AS-REP roasting", "asrep", "asrep-hardening"]
+---
+
 # AS-REP roasting — hardening
 
 Do PoC ao controle — AS-REP roasting.
@@ -43,5 +55,17 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- MITRE T1558
-- SpecterOps Kerberoasting
+- [MITRE ATT&CK T1558.003](https://attack.mitre.org/techniques/T1558/003/)
+- [MITRE ATT&CK T1558.004](https://attack.mitre.org/techniques/T1558/004/)
+- [MITRE ATT&CK T1558](https://attack.mitre.org/techniques/T1558/)
+- [SpecterOps — Kerberoasting](https://posts.specterops.io/kerberoasting-revisited-d9c270baaf91)
+- [SpecterOps — BloodHound](https://bloodhound.specterops.io/)
+
+## Relacionadas
+
+- [AS-REP roasting](0203-ad-kerberoast-asrep.md)
+- [AS-REP roasting — lab](0583-ad-kerberoast-asrep--lab.md)
+- [Kerberoasting (TGS RC4)](0201-ad-kerberoast-rc4.md)
+- [path pós-roast](0205-ad-kerberoast-bloodhound.md)
+- [detecção de ausência de gMSA](0206-ad-kerberoast-gmsa.md)
+- [Direitos de DCSync (path)](0213-ad-dacl-dcsync.md)

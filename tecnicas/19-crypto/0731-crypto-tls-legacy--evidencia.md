@@ -1,3 +1,15 @@
+---
+id: "0731"
+categoria: "19-crypto"
+familia: "crypto-tls"
+slug: "legacy"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["19-crypto", "crypto-tls", "evidencia"]
+aliases: ["TLS 1.0/1.1 enabled", "legacy", "legacy-evidencia"]
+---
+
 # TLS 1.0/1.1 enabled — evidência
 
 Pacote pra TLS 1.0/1.1 enabled sobreviver peer review.
@@ -49,5 +61,15 @@ Não faço stress massivo em prod. POODLE-class é histórico — contextualize 
 
 ## Refs
 
-- OWASP Transport Layer Protection
-- Mozilla TLS guidelines
+- [OWASP Transport Layer Protection](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
+- [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/)
+
+## Relacionadas
+
+- [TLS 1.0/1.1 enabled](0351-crypto-tls-legacy.md)
+- [hostname mismatch](0353-crypto-tls-cert-mismatch.md)
+- [CRIME/BREACH context](0359-crypto-tls-compression.md)
+- [Certificate Transparency gaps](0360-crypto-tls-ct.md)
+- [cert expired/self-signed em prod](0354-crypto-tls-expired.md)
+- [CBC/RC4/3DES (path)](0352-crypto-tls-weak-cipher.md)
+- [perfil TLS/JA3S (path)](../01-recon/0011-recon-http-fingerprint-tls-ja3.md)

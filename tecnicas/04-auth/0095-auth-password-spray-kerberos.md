@@ -1,3 +1,15 @@
+---
+id: "0095"
+categoria: "04-auth"
+familia: "auth-password-spray"
+slug: "kerberos"
+angulo: "base"
+mitre: "T1110.003"
+owasp: ""
+tags: ["04-auth", "auth-password-spray", "base", "t1110.003"]
+aliases: ["Kerberos pre-auth spray", "kerberos"]
+---
+
 # Kerberos pre-auth spray
 
 **A07 Identification and Authentication Failures** · `T1110.003 Password Spraying`
@@ -51,5 +63,15 @@ Taxa usada; contas comprometidas de teste; logs de detecção (se purple).
 
 ## Refs
 
-- MITRE T1110.003
-- Microsoft Password Spray guidance
+- [MITRE ATT&CK T1110.003](https://attack.mitre.org/techniques/T1110/003/)
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft — Password spray guidance](https://learn.microsoft.com/en-us/defender-for-identity/password-spray-alert)
+
+## Relacionadas
+
+- [Kerberos pre-auth spray — detecção](0475-auth-password-spray-kerberos--detecao.md)
+- [Kerberos pre-auth spray — path](0855-auth-password-spray-kerberos--path.md)
+- [IMAP/POP spraying](0097-auth-password-spray-imap.md)
+- [SMTP AUTH legado](0096-auth-password-spray-legacy-smtp.md)
+- [bypass de lockout por pool de IPs](0098-auth-password-spray-lockout-bypass.md)
+- [Password spray em Microsoft 365](0091-auth-password-spray-o365.md)

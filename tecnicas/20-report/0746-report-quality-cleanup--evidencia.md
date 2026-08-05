@@ -1,3 +1,15 @@
+---
+id: "0746"
+categoria: "20-report"
+familia: "report-quality"
+slug: "cleanup"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "evidencia"]
+aliases: ["cleanup & artifact list", "cleanup", "cleanup-evidencia"]
+---
+
 # cleanup & artifact list — evidência
 
 Pacote pra cleanup & artifact list sobreviver peer review.
@@ -44,6 +56,14 @@ Não inclua dados reais de clientes em material público — redija.
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [cleanup & artifact list](0366-report-quality-cleanup.md)
+- [apêndice técnico vs executivo](0369-report-quality-appendix.md)
+- [narrativa de account takeover](0367-report-quality-ato.md)
+- [Traduzir risco pro CISO](0364-report-quality-business.md)
+- [findings encadeados](0368-report-quality-chain.md)

@@ -1,3 +1,15 @@
+---
+id: "0431"
+categoria: "02-web"
+familia: "web-upload"
+slug: "webshell"
+angulo: "detecao"
+mitre: "T1505"
+owasp: "WSTG-BUSL-08"
+tags: ["02-web", "web-upload", "detecao", "t1505"]
+aliases: ["web shell via extensão", "webshell", "webshell-detecao"]
+---
+
 # web shell via extensão — detecção
 
 Gap de detecção em `T1505 Server Software Component` / web shell via extensão. PoC mínimo, telemetria ligada.
@@ -53,5 +65,16 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- WSTG-BUSL-08
-- OWASP Unrestricted File Upload
+- [MITRE ATT&CK T1505](https://attack.mitre.org/techniques/T1505/)
+- [WSTG-BUSL-08](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/10-Business_Logic_Testing/08-Test_Upload_of_Unexpected_File_Types)
+- [OWASP File Upload Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html)
+- [PortSwigger — File upload vulnerabilities](https://portswigger.net/web-security/file-upload)
+
+## Relacionadas
+
+- [web shell via extensão](0051-web-upload-webshell.md)
+- [web shell via extensão — path](0811-web-upload-webshell--path.md)
+- [pipeline OCR/async](0058-web-upload-async-ocr.md)
+- [Content-Disposition injection](0057-web-upload-content-disp.md)
+- [formatos less-common (HEIC/TIFF)](0060-web-upload-heic.md)
+- [ImageMagick/Ghostscript sink](0055-web-upload-imagemagick.md)

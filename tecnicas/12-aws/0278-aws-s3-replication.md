@@ -1,3 +1,15 @@
+---
+id: "0278"
+categoria: "12-aws"
+familia: "aws-s3"
+slug: "replication"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["12-aws", "aws-s3", "base"]
+aliases: ["replication para conta externa", "replication"]
+---
+
 # replication para conta externa
 
 ## Leitura rápida
@@ -23,6 +35,7 @@ continuam a vazar dados. Teste também takeover de buckets referenciados (subdom
 # AWS lab — identidade de teste, sem wipe
 aws sts get-caller-identity --profile lab_130a67
 aws s3api get-bucket-policy --bucket lab-bucket-replication --profile lab_130a67
+# seguro: Get*/List*; destrutivo (DeleteBucket) só em lab throwaway
 # effective perms replication
 ```
 
@@ -44,4 +57,13 @@ URL/policy; amostra redigida; screenshot console se fornecido.
 
 ## Refs
 
-- AWS S3 security best practices
+- [AWS — S3 security best practices](https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html)
+- [HackTricks — AWS S3](https://book.hacktricks.xyz/cloud-security/aws-security/aws-unauthenticated-enum-access/s3)
+
+## Relacionadas
+
+- [replication para conta externa — evidência](0658-aws-s3-replication--evidencia.md)
+- [ACL authenticated users](0273-aws-s3-acl.md)
+- [access logs públicos](0279-aws-s3-logging.md)
+- [bucket como malware host](0280-aws-s3-malware.md)
+- [policy Principal *](0275-aws-s3-policy.md)

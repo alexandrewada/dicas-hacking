@@ -1,3 +1,15 @@
+---
+id: "0254"
+categoria: "11-linux"
+familia: "linux-privesc"
+slug: "cron"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["11-linux", "linux-privesc", "base"]
+aliases: ["cron/wildcard injection", "cron"]
+---
+
 # cron/wildcard injection
 
 ## Contexto
@@ -21,11 +33,12 @@ exploit-as-a-service.
 ## No lab ficou assim
 
 ```bash
-# linux privesc lab
-find / -perm -4000 -type f 2>/dev/null | head
-sudo -l
-getcap -r / 2>/dev/null | head
-# foco cron tag d974f3
+# linux cron — enum mínimo lab
+ls -la /etc/cron* /var/spool/cron 2>/dev/null | head
+showmount -e nfs.lab.local 2>/dev/null
+echo $LD_PRELOAD
+# kernel exploit: SOMENTE lab clonado — tag d974f3
+# prod: evidencia de versão + CVE sem crash
 ```
 
 ## OpSec
@@ -47,5 +60,13 @@ Não teste dirtypipe-like em hosts críticos sem janela.
 
 ## Refs
 
-- GTFOBins
-- HackTricks Linux PrivEsc
+- [GTFOBins](https://gtfobins.github.io/)
+- [HackTricks — Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+
+## Relacionadas
+
+- [cron/wildcard injection — evidência](0634-linux-privesc-cron--evidencia.md)
+- [SUID / GTFOBins](0251-linux-privesc-suid.md)
+- [sudoers misconfig](0252-linux-privesc-sudo.md)
+- [Abuso do grupo docker / sock](0256-linux-privesc-docker.md)
+- [capabilities (cap_setuid)](0253-linux-privesc-caps.md)

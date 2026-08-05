@@ -1,3 +1,15 @@
+---
+id: "0986"
+categoria: "09-ad"
+familia: "ad-cs"
+slug: "esc7"
+angulo: "hardening"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-cs", "hardening"]
+aliases: ["ESC7 ManageCA", "esc7", "esc7-hardening"]
+---
+
 # ESC7 ManageCA — hardening
 
 Do PoC ao controle — ESC7 ManageCA.
@@ -40,5 +52,14 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- SpecterOps Certified Pre-Owned
-- MITRE T1649
+- [SpecterOps — Certified Pre-Owned (AD CS)](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
+- [MITRE ATT&CK T1649](https://attack.mitre.org/techniques/T1649/)
+
+## Relacionadas
+
+- [ESC7 ManageCA](0226-ad-cs-esc7.md)
+- [ESC7 ManageCA — lab](0606-ad-cs-esc7--lab.md)
+- [AD CS ESC1](0221-ad-cs-esc1.md)
+- [AD CS ESC8 (relay HTTP)](0227-ad-cs-esc8.md)
+- [persistência via certs](0229-ad-cs-persist.md)
+- [detecção de enrollment anômalo](0230-ad-cs-detect.md)

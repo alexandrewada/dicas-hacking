@@ -1,3 +1,15 @@
+---
+id: "0968"
+categoria: "09-ad"
+familia: "ad-kerberoast"
+slug: "honey"
+angulo: "hardening"
+mitre: "T1558.003"
+owasp: ""
+tags: ["09-ad", "ad-kerberoast", "hardening", "t1558.003"]
+aliases: ["honey SPN detection test", "honey", "honey-hardening"]
+---
+
 # honey SPN detection test — hardening
 
 Do PoC ao controle — honey SPN detection test.
@@ -42,5 +54,17 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- MITRE T1558
-- SpecterOps Kerberoasting
+- [MITRE ATT&CK T1558.003](https://attack.mitre.org/techniques/T1558/003/)
+- [MITRE ATT&CK T1558.004](https://attack.mitre.org/techniques/T1558/004/)
+- [MITRE ATT&CK T1558](https://attack.mitre.org/techniques/T1558/)
+- [SpecterOps — Kerberoasting](https://posts.specterops.io/kerberoasting-revisited-d9c270baaf91)
+- [SpecterOps — BloodHound](https://bloodhound.specterops.io/)
+
+## Relacionadas
+
+- [honey SPN detection test](0208-ad-kerberoast-honey.md)
+- [honey SPN detection test — lab](0588-ad-kerberoast-honey--lab.md)
+- [Kerberoasting (TGS RC4)](0201-ad-kerberoast-rc4.md)
+- [AS-REP roasting](0203-ad-kerberoast-asrep.md)
+- [path pós-roast](0205-ad-kerberoast-bloodhound.md)
+- [detecção de ausência de gMSA](0206-ad-kerberoast-gmsa.md)

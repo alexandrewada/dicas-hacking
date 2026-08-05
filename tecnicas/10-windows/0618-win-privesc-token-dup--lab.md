@@ -1,3 +1,15 @@
+---
+id: "0618"
+categoria: "10-windows"
+familia: "win-privesc"
+slug: "token-dup"
+angulo: "lab"
+mitre: "T1548"
+owasp: ""
+tags: ["10-windows", "win-privesc", "lab", "t1548"]
+aliases: ["token duplication", "token-dup", "token-dup-lab"]
+---
+
 # token duplication — lab
 
 Lab só pra token duplication. Se não reproduz isolado, não confio no finding de prod.
@@ -48,5 +60,17 @@ Vetor; whoami /priv; prova SYSTEM; cleanup.
 
 ## Refs
 
-- PayloadsAllTheThings Windows PrivEsc
-- MITRE PrivEsc
+- [MITRE ATT&CK T1548](https://attack.mitre.org/techniques/T1548/)
+- [MITRE ATT&CK T1053](https://attack.mitre.org/techniques/T1053/)
+- [PayloadsAllTheThings — Windows PrivEsc](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [HackTricks — Windows Privilege Escalation](https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation)
+
+## Relacionadas
+
+- [token duplication](0238-win-privesc-token-dup.md)
+- [token duplication — hardening](0998-win-privesc-token-dup--hardening.md)
+- [AlwaysInstallElevated](0234-win-privesc-alwaysinstall.md)
+- [autologon registry secrets](0235-win-privesc-autologon.md)
+- [DLL hijacking](0237-win-privesc-dll-hijack.md)
+- [vulnerable driver (BYOVD)](0240-win-privesc-driver.md)

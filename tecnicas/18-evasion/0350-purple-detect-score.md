@@ -1,3 +1,15 @@
+---
+id: "0350"
+categoria: "18-evasion"
+familia: "purple-detect"
+slug: "score"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["18-evasion", "purple-detect", "base"]
+aliases: ["scoring de maturidade SOC", "score"]
+---
+
 # scoring de maturidade SOC
 
 **Purple Team** · `Detection engineering`
@@ -40,4 +52,16 @@ Corrijo com: Fechar gaps com rules; data sources faltantes; tuning.
 
 Levo no report: Matriz técnica→alerta; screenshots SIEM; recomendações.
 
-Refs: MITRE ATT&CK, Atomic Red Team
+## Refs
+
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+- [SigmaHQ rules](https://github.com/SigmaHQ/sigma)
+
+## Relacionadas
+
+- [scoring de maturidade SOC — evidência](0730-purple-detect-score--evidencia.md)
+- [Atomic Red Team na prática](0341-purple-detect-atomic.md)
+- [canary tokens validation](0349-purple-detect-canary.md)
+- [CloudTrail gaps](0345-purple-detect-cloudtrail.md)
+- [DNS anomaly detection test](0346-purple-detect-dns-dga.md)

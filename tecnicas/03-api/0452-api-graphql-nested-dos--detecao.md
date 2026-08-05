@@ -1,3 +1,15 @@
+---
+id: "0452"
+categoria: "03-api"
+familia: "api-graphql"
+slug: "nested-dos"
+angulo: "detecao"
+mitre: ""
+owasp: ""
+tags: ["03-api", "api-graphql", "detecao"]
+aliases: ["DoS por aninhamento", "nested-dos", "nested-dos-detecao"]
+---
+
 # DoS por aninhamento — detecção
 
 Se o SOC não vê DoS por aninhamento, o finding é de cobertura, não de ego ofensivo.
@@ -51,5 +63,14 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP GraphQL Cheat Sheet
-- PayloadsAllTheThings GraphQL
+- [OWASP GraphQL Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)
+- [PayloadsAllTheThings — GraphQL](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection)
+
+## Relacionadas
+
+- [DoS por aninhamento](0072-api-graphql-nested-dos.md)
+- [DoS por aninhamento — path](0832-api-graphql-nested-dos--path.md)
+- [aliases para bypass de rate limit](0073-api-graphql-alias-bruteforce.md)
+- [Automatic Persisted Queries abuse](0080-api-graphql-apq.md)
+- [batch HTTP GraphQL](0075-api-graphql-batch.md)
+- [CSRF em mutations cookie-based](0076-api-graphql-csrf.md)

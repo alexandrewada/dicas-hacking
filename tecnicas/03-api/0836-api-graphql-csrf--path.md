@@ -1,3 +1,15 @@
+---
+id: "0836"
+categoria: "03-api"
+familia: "api-graphql"
+slug: "csrf"
+angulo: "path"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-graphql", "path", "t1190"]
+aliases: ["CSRF em mutations cookie-based", "csrf", "csrf-path"]
+---
+
 # CSRF em mutations cookie-based — path
 
 CSRF em mutations cookie-based como pivô. Path curto > monte de finding isolado.
@@ -60,5 +72,15 @@ Schema extrato (se permitido); prova de bypass authz; custo de query.
 
 ## Refs
 
-- OWASP GraphQL Cheat Sheet
-- PayloadsAllTheThings GraphQL
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP GraphQL Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)
+- [PayloadsAllTheThings — GraphQL](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection)
+
+## Relacionadas
+
+- [CSRF em mutations cookie-based](0076-api-graphql-csrf.md)
+- [CSRF em mutations cookie-based — detecção](0456-api-graphql-csrf--detecao.md)
+- [aliases para bypass de rate limit](0073-api-graphql-alias-bruteforce.md)
+- [Automatic Persisted Queries abuse](0080-api-graphql-apq.md)
+- [batch HTTP GraphQL](0075-api-graphql-batch.md)
+- [diretivas custom perigosas](0079-api-graphql-directive.md)

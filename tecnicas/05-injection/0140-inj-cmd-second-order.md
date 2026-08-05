@@ -1,3 +1,15 @@
+---
+id: "0140"
+categoria: "05-injection"
+familia: "inj-cmd"
+slug: "second-order"
+angulo: "base"
+mitre: ""
+owasp: "WSTG-INPV-12"
+tags: ["05-injection", "inj-cmd", "base"]
+aliases: ["second-order command", "second-order"]
+---
+
 # second-order command
 
 ## Contexto
@@ -47,5 +59,15 @@ Evito `rm -rf` e forks bombs. Em Windows, cuidado com PowerShell encoding.
 
 ## Refs
 
-- OWASP Command Injection
-- WSTG-INPV-12
+- [WSTG-INPV-12](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection)
+- [OWASP OS Command Injection Defense](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
+- [PortSwigger — OS command injection](https://portswigger.net/web-security/os-command-injection)
+
+## Relacionadas
+
+- [second-order command — lab](0520-inj-cmd-second-order--lab.md)
+- [second-order command — hardening](0900-inj-cmd-second-order--hardening.md)
+- [argument injection sem shell](0133-inj-cmd-arg-inject.md)
+- [ambientes embedded/busybox](0138-inj-cmd-busybox.md)
+- [sendmail/pipe](0137-inj-cmd-email-pipe.md)
+- [bypass de denylist](0139-inj-cmd-filter-bypass.md)

@@ -1,3 +1,15 @@
+---
+id: "0777"
+categoria: "01-recon"
+familia: "recon-http-fingerprint"
+slug: "cache-headers"
+angulo: "path"
+mitre: "T1592"
+owasp: "WSTG-INFO-02"
+tags: ["01-recon", "recon-http-fingerprint", "path", "t1592"]
+aliases: ["heurística via Cache-Control/ETag", "cache-headers", "cache-headers-path"]
+---
+
 # heurística via Cache-Control/ETag — path
 
 heurística via Cache-Control/ETag como pivô. Path curto > monte de finding isolado.
@@ -55,6 +67,17 @@ Achado de recon que eu reporto: ativo fora do inventário com superfície autent
 
 ## Refs
 
-- WSTG-INFO-02
-- RFC 9110
-- OWASP Secure Headers
+- [MITRE ATT&CK T1592](https://attack.mitre.org/techniques/T1592/)
+- [WSTG-INFO-02](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server)
+- [RFC 9110 — HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110)
+- [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)
+- [PortSwigger — HTTP information gathering](https://portswigger.net/web-security)
+
+## Relacionadas
+
+- [heurística via Cache-Control/ETag](0017-recon-http-fingerprint-cache-headers.md)
+- [heurística via Cache-Control/ETag — detecção](0397-recon-http-fingerprint-cache-headers--detecao.md)
+- [endpoints ACME/challenge](0020-recon-http-fingerprint-acme-probe.md)
+- [cookies default de framework](0012-recon-http-fingerprint-cookie-banner.md)
+- [CSP como mapa de domínios](0019-recon-http-fingerprint-csp-leak.md)
+- [páginas de erro verbosas](0013-recon-http-fingerprint-error-page.md)

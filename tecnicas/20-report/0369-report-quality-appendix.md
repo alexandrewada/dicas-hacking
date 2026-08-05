@@ -1,3 +1,15 @@
+---
+id: "0369"
+categoria: "20-report"
+familia: "report-quality"
+slug: "appendix"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "base"]
+aliases: ["apêndice técnico vs executivo", "appendix"]
+---
+
 # apêndice técnico vs executivo
 
 ## Contexto
@@ -46,6 +58,14 @@ Não inclua dados reais de clientes em material público — redija.
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [apêndice técnico vs executivo — evidência](0749-report-quality-appendix--evidencia.md)
+- [narrativa de account takeover](0367-report-quality-ato.md)
+- [Traduzir risco pro CISO](0364-report-quality-business.md)
+- [findings encadeados](0368-report-quality-chain.md)
+- [cleanup & artifact list](0366-report-quality-cleanup.md)

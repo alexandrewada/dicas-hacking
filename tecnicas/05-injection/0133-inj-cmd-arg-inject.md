@@ -1,3 +1,15 @@
+---
+id: "0133"
+categoria: "05-injection"
+familia: "inj-cmd"
+slug: "arg-inject"
+angulo: "base"
+mitre: "T1059"
+owasp: "WSTG-INPV-12"
+tags: ["05-injection", "inj-cmd", "base", "t1059"]
+aliases: ["argument injection sem shell", "arg-inject"]
+---
+
 # argument injection sem shell
 
 **A03 Injection** · `T1059 Command and Scripting Interpreter`
@@ -47,5 +59,16 @@ Payload destrutivo (DROP/shutdown) fica no lab. Em prod: boolean/read-only.
 
 ## Refs
 
-- OWASP Command Injection
-- WSTG-INPV-12
+- [MITRE ATT&CK T1059](https://attack.mitre.org/techniques/T1059/)
+- [WSTG-INPV-12](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection)
+- [OWASP OS Command Injection Defense](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
+- [PortSwigger — OS command injection](https://portswigger.net/web-security/os-command-injection)
+
+## Relacionadas
+
+- [argument injection sem shell — lab](0513-inj-cmd-arg-inject--lab.md)
+- [argument injection sem shell — hardening](0893-inj-cmd-arg-inject--hardening.md)
+- [ambientes embedded/busybox](0138-inj-cmd-busybox.md)
+- [sendmail/pipe](0137-inj-cmd-email-pipe.md)
+- [bypass de denylist](0139-inj-cmd-filter-bypass.md)
+- [git options injection](0136-inj-cmd-git-hook.md)

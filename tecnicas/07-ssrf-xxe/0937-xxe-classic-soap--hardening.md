@@ -1,3 +1,15 @@
+---
+id: "0937"
+categoria: "07-ssrf-xxe"
+familia: "xxe-classic"
+slug: "soap"
+angulo: "hardening"
+mitre: "T1190"
+owasp: ""
+tags: ["07-ssrf-xxe", "xxe-classic", "hardening", "t1190"]
+aliases: ["SOAP legacy", "soap", "soap-hardening"]
+---
+
 # SOAP legacy — hardening
 
 Do PoC ao controle — SOAP legacy.
@@ -42,5 +54,15 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- OWASP XXE
-- PortSwigger XXE
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP XXE Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+- [PortSwigger — XXE](https://portswigger.net/web-security/xxe)
+
+## Relacionadas
+
+- [SOAP legacy](0177-xxe-classic-soap.md)
+- [SOAP legacy — lab](0557-xxe-classic-soap--lab.md)
+- [XML bomb (lab controlado)](0180-xxe-classic-dos.md)
+- [leitura de arquivo local](0171-xxe-classic-file-read.md)
+- [OOXML/XLSX XXE](0176-xxe-classic-office.md)
+- [OOB parameter entities](0173-xxe-classic-oob.md)

@@ -1,3 +1,15 @@
+---
+id: "0925"
+categoria: "06-client"
+familia: "client-csrf"
+slug: "referer-bypass"
+angulo: "hardening"
+mitre: "T1185"
+owasp: ""
+tags: ["06-client", "client-csrf", "hardening", "t1185"]
+aliases: ["Referer opcional/vazio", "referer-bypass", "referer-bypass-hardening"]
+---
+
 # Referer opcional/vazio — hardening
 
 Do PoC ao controle — Referer opcional/vazio.
@@ -41,5 +53,15 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- OWASP CSRF
-- PortSwigger CSRF
+- [MITRE ATT&CK T1185](https://attack.mitre.org/techniques/T1185/)
+- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger — CSRF](https://portswigger.net/web-security/csrf)
+
+## Relacionadas
+
+- [Referer opcional/vazio](0165-client-csrf-referer-bypass.md)
+- [Referer opcional/vazio — lab](0545-client-csrf-referer-bypass--lab.md)
+- [clickjacking + CSRF](0170-client-csrf-clickjacking.md)
+- [CORS reflection + CSRF](0169-client-csrf-cors.md)
+- [JSON CSRF via text/plain](0163-client-csrf-json-csrf.md)
+- [logout CSRF](0168-client-csrf-logout.md)

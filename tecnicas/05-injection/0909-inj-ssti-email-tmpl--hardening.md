@@ -1,3 +1,15 @@
+---
+id: "0909"
+categoria: "05-injection"
+familia: "inj-ssti"
+slug: "email-tmpl"
+angulo: "hardening"
+mitre: ""
+owasp: ""
+tags: ["05-injection", "inj-ssti", "hardening"]
+aliases: ["templates de e-mail marketing", "email-tmpl", "email-tmpl-hardening"]
+---
+
 # templates de e-mail marketing — hardening
 
 Do PoC ao controle — templates de e-mail marketing.
@@ -40,5 +52,14 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- PortSwigger SSTI
-- PayloadsAllTheThings SSTI
+- [PortSwigger — SSTI](https://portswigger.net/web-security/server-side-template-injection)
+- [PayloadsAllTheThings — SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
+
+## Relacionadas
+
+- [templates de e-mail marketing](0149-inj-ssti-email-tmpl.md)
+- [templates de e-mail marketing — lab](0529-inj-ssti-email-tmpl--lab.md)
+- [Freemarker](0142-inj-ssti-freemarker.md)
+- [SSTI em Jinja2](0141-inj-ssti-jinja2.md)
+- [Mako Python](0147-inj-ssti-mako.md)
+- [HTML templates → PDF](0150-inj-ssti-pdf-tmpl.md)

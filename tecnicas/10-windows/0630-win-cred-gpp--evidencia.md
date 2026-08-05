@@ -1,3 +1,15 @@
+---
+id: "0630"
+categoria: "10-windows"
+familia: "win-cred"
+slug: "gpp"
+angulo: "evidencia"
+mitre: ""
+owasp: ""
+tags: ["10-windows", "win-cred", "evidencia"]
+aliases: ["GPP/legacy secrets", "gpp", "gpp-evidencia"]
+---
+
 # GPP/legacy secrets — evidência
 
 Pacote pra GPP/legacy secrets sobreviver peer review.
@@ -50,5 +62,14 @@ Não exfiltro NTDS sem escopo de Domain Compromise explícito.
 
 ## Refs
 
-- MITRE Credential Access
-- SpecterOps DPAPI
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [SpecterOps — DPAPI](https://posts.specterops.io/operational-guidance-for-offensive-user-dpapi-abuse-1fb7fac8b107)
+- [MITRE ATT&CK T1003](https://attack.mitre.org/techniques/T1003/)
+
+## Relacionadas
+
+- [GPP/legacy secrets](0250-win-cred-gpp.md)
+- [browser saved passwords](0247-win-cred-browser.md)
+- [user/machine certs](0249-win-cred-cert.md)
+- [DPAPI masterkey abuse](0242-win-cred-dpapi.md)
+- [LSA secrets / autologon](0244-win-cred-lsa.md)

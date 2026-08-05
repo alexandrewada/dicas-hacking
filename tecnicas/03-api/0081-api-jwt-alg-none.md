@@ -1,3 +1,15 @@
+---
+id: "0081"
+categoria: "03-api"
+familia: "api-jwt"
+slug: "alg-none"
+angulo: "base"
+mitre: "T1550"
+owasp: ""
+tags: ["03-api", "api-jwt", "base", "t1550"]
+aliases: ["JWT com alg=none", "alg-none"]
+---
+
 # JWT com alg=none
 
 **A07 Identification and Authentication Failures** · `T1550 Use Alternate Authentication Material`
@@ -49,6 +61,16 @@ bind token a client quando possível; revogação.
 
 ## Refs
 
-- RFC 7519
-- PortSwigger JWT
-- OWASP JWT Cheat Sheet
+- [MITRE ATT&CK T1550](https://attack.mitre.org/techniques/T1550/)
+- [RFC 7519 — JWT](https://www.rfc-editor.org/rfc/rfc7519)
+- [PortSwigger — JWT attacks](https://portswigger.net/web-security/jwt)
+- [OWASP JWT Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [JWT com alg=none — detecção](0461-api-jwt-alg-none--detecao.md)
+- [JWT com alg=none — path](0841-api-jwt-alg-none--path.md)
+- [Confusão RS256/HS256](0082-api-jwt-rs-hs.md)
+- [tampering de role/admin](0086-api-jwt-claim-tamper.md)
+- [isAdmin/role elevation (path)](0061-api-mass-assignment-role-flag.md)
+- [scope elevation (path)](../04-auth/0118-auth-oauth-oidc-scope-escalation.md)

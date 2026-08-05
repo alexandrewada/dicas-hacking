@@ -1,3 +1,15 @@
+---
+id: "0864"
+categoria: "04-auth"
+familia: "auth-mfa-bypass"
+slug: "fatigue"
+angulo: "path"
+mitre: "T1621"
+owasp: ""
+tags: ["04-auth", "auth-mfa-bypass", "path", "t1621"]
+aliases: ["MFA fatigue (push bombing)", "fatigue", "fatigue-path"]
+---
+
 # MFA fatigue (push bombing) — path
 
 MFA fatigue (push bombing) como pivô. Path curto > monte de finding isolado.
@@ -54,5 +66,14 @@ Spray/lockout só com acordo escrito e contas canário.
 
 ## Refs
 
-- OWASP MFA Cheat Sheet
-- MITRE T1621
+- [MITRE ATT&CK T1621](https://attack.mitre.org/techniques/T1621/)
+- [OWASP Multifactor Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html)
+
+## Relacionadas
+
+- [MFA fatigue (push bombing)](0104-auth-mfa-bypass-fatigue.md)
+- [MFA fatigue (push bombing) — detecção](0484-auth-mfa-bypass-fatigue--detecao.md)
+- [backup codes em massa](0108-auth-mfa-bypass-backup-codes.md)
+- [protocolos legados sem MFA](0101-auth-mfa-bypass-legacy-auth.md)
+- [token sem amr/acr](0106-auth-mfa-bypass-oauth-skip.md)
+- [OTP 6 dígitos sem rate limit](0102-auth-mfa-bypass-otp-brute.md)

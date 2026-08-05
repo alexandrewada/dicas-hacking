@@ -1,3 +1,15 @@
+---
+id: "0479"
+categoria: "04-auth"
+familia: "auth-password-spray"
+slug: "sso-portal"
+angulo: "detecao"
+mitre: "T1110.003"
+owasp: ""
+tags: ["04-auth", "auth-password-spray", "detecao", "t1110.003"]
+aliases: ["portal SSO custom", "sso-portal", "sso-portal-detecao"]
+---
+
 # portal SSO custom — detecção
 
 Gap de detecção em `T1110.003 Password Spraying` / portal SSO custom. PoC mínimo, telemetria ligada.
@@ -53,5 +65,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- MITRE T1110.003
-- Microsoft Password Spray guidance
+- [MITRE ATT&CK T1110.003](https://attack.mitre.org/techniques/T1110/003/)
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft — Password spray guidance](https://learn.microsoft.com/en-us/defender-for-identity/password-spray-alert)
+
+## Relacionadas
+
+- [portal SSO custom](0099-auth-password-spray-sso-portal.md)
+- [portal SSO custom — path](0859-auth-password-spray-sso-portal--path.md)
+- [IMAP/POP spraying](0097-auth-password-spray-imap.md)
+- [Kerberos pre-auth spray](0095-auth-password-spray-kerberos.md)
+- [SMTP AUTH legado](0096-auth-password-spray-legacy-smtp.md)
+- [bypass de lockout por pool de IPs](0098-auth-password-spray-lockout-bypass.md)

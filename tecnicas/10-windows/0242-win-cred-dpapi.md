@@ -1,3 +1,15 @@
+---
+id: "0242"
+categoria: "10-windows"
+familia: "win-cred"
+slug: "dpapi"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["10-windows", "win-cred", "base"]
+aliases: ["DPAPI masterkey abuse", "dpapi"]
+---
+
 # DPAPI masterkey abuse
 
 ## Contexto
@@ -46,5 +58,14 @@ Não exfiltro NTDS sem escopo de Domain Compromise explícito.
 
 ## Refs
 
-- MITRE Credential Access
-- SpecterOps DPAPI
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [SpecterOps — DPAPI](https://posts.specterops.io/operational-guidance-for-offensive-user-dpapi-abuse-1fb7fac8b107)
+- [MITRE ATT&CK T1003](https://attack.mitre.org/techniques/T1003/)
+
+## Relacionadas
+
+- [DPAPI masterkey abuse — lab](0622-win-cred-dpapi--lab.md)
+- [browser saved passwords](0247-win-cred-browser.md)
+- [user/machine certs](0249-win-cred-cert.md)
+- [GPP/legacy secrets](0250-win-cred-gpp.md)
+- [LSA secrets / autologon](0244-win-cred-lsa.md)

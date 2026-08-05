@@ -1,3 +1,15 @@
+---
+id: "0150"
+categoria: "05-injection"
+familia: "inj-ssti"
+slug: "pdf-tmpl"
+angulo: "base"
+mitre: "T1190"
+owasp: ""
+tags: ["05-injection", "inj-ssti", "base", "t1190"]
+aliases: ["HTML templates → PDF", "pdf-tmpl"]
+---
+
 # HTML templates → PDF
 
 **A03 Injection** · `T1190`
@@ -36,4 +48,17 @@ Corrijo com: Não renderizar templates com input não confiável; sandboxes atua
 
 Levo no report: Engine identificado; PoC `id`; trecho de código vulnerável se fornecido.
 
-Refs: PortSwigger SSTI, PayloadsAllTheThings SSTI
+## Refs
+
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [PortSwigger — SSTI](https://portswigger.net/web-security/server-side-template-injection)
+- [PayloadsAllTheThings — SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
+
+## Relacionadas
+
+- [HTML templates → PDF — lab](0530-inj-ssti-pdf-tmpl--lab.md)
+- [HTML templates → PDF — hardening](0910-inj-ssti-pdf-tmpl--hardening.md)
+- [templates de e-mail marketing](0149-inj-ssti-email-tmpl.md)
+- [Freemarker](0142-inj-ssti-freemarker.md)
+- [SSTI em Jinja2](0141-inj-ssti-jinja2.md)
+- [Mako Python](0147-inj-ssti-mako.md)

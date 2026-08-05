@@ -1,3 +1,15 @@
+---
+id: "0511"
+categoria: "05-injection"
+familia: "inj-cmd"
+slug: "unix-blind"
+angulo: "lab"
+mitre: "T1059"
+owasp: "WSTG-INPV-12"
+tags: ["05-injection", "inj-cmd", "lab", "t1059"]
+aliases: ["Command injection cega (OOB)", "unix-blind", "unix-blind-lab"]
+---
+
 # Command injection cega (OOB) — lab
 
 Critério: outro analista fecha sozinho com esta nota.
@@ -47,5 +59,18 @@ Output de `id`/`whoami`; árvore de processo; limpeza.
 
 ## Refs
 
-- OWASP Command Injection
-- WSTG-INPV-12
+- [MITRE ATT&CK T1059](https://attack.mitre.org/techniques/T1059/)
+- [WSTG-INPV-12](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection)
+- [OWASP OS Command Injection Defense](https://cheatsheetseries.owasp.org/cheatsheets/OS_Command_Injection_Defense_Cheat_Sheet.html)
+- [PortSwigger — OS command injection](https://portswigger.net/web-security/os-command-injection)
+
+## Relacionadas
+
+- [Command injection cega (OOB)](0131-inj-cmd-unix-blind.md)
+- [Command injection cega (OOB) — hardening](0891-inj-cmd-unix-blind--hardening.md)
+- [argument injection sem shell](0133-inj-cmd-arg-inject.md)
+- [ambientes embedded/busybox](0138-inj-cmd-busybox.md)
+- [sendmail/pipe](0137-inj-cmd-email-pipe.md)
+- [bypass de denylist](0139-inj-cmd-filter-bypass.md)
+- [SUID / GTFOBins (path)](../11-linux/0251-linux-privesc-suid.md)
+- [Token de ServiceAccount (path)](../14-k8s/0291-k8s-escape-sa-token.md)

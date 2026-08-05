@@ -1,3 +1,15 @@
+---
+id: "0334"
+categoria: "17-redteam"
+familia: "rt-c2"
+slug: "redirector"
+angulo: "base"
+mitre: "T1071"
+owasp: ""
+tags: ["17-redteam", "rt-c2", "base", "t1071"]
+aliases: ["redirectors e OPSEC", "redirector"]
+---
+
 # redirectors e OPSEC
 
 **Red Team** · `T1071 Application Layer Protocol`
@@ -44,5 +56,15 @@ C2/persistência com kill-switch e janela. Beacon sem objetivo é ego.
 
 ## Refs
 
-- Red Team Field Manual ethics
-- MITRE C2
+- [MITRE ATT&CK T1071](https://attack.mitre.org/techniques/T1071/)
+- [Red team ethics / ROE](https://attack.mitre.org/)
+- [MITRE ATT&CK — Command and Control](https://attack.mitre.org/tactics/TA0011/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+
+## Relacionadas
+
+- [redirectors e OPSEC — evidência](0714-rt-c2-redirector--evidencia.md)
+- [debrief com SOC](0340-rt-c2-debrief.md)
+- [DNS C2](0332-rt-c2-dns.md)
+- [domain fronting histórico](0333-rt-c2-domain-front.md)
+- [exfil controlada de dados fake](0339-rt-c2-exfil.md)

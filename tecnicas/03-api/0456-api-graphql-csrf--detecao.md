@@ -1,3 +1,15 @@
+---
+id: "0456"
+categoria: "03-api"
+familia: "api-graphql"
+slug: "csrf"
+angulo: "detecao"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-graphql", "detecao", "t1190"]
+aliases: ["CSRF em mutations cookie-based", "csrf", "csrf-detecao"]
+---
+
 # CSRF em mutations cookie-based — detecção
 
 Gap de detecção em `T1190` / CSRF em mutations cookie-based. PoC mínimo, telemetria ligada.
@@ -55,5 +67,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP GraphQL Cheat Sheet
-- PayloadsAllTheThings GraphQL
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP GraphQL Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)
+- [PayloadsAllTheThings — GraphQL](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection)
+
+## Relacionadas
+
+- [CSRF em mutations cookie-based](0076-api-graphql-csrf.md)
+- [CSRF em mutations cookie-based — path](0836-api-graphql-csrf--path.md)
+- [aliases para bypass de rate limit](0073-api-graphql-alias-bruteforce.md)
+- [Automatic Persisted Queries abuse](0080-api-graphql-apq.md)
+- [batch HTTP GraphQL](0075-api-graphql-batch.md)
+- [diretivas custom perigosas](0079-api-graphql-directive.md)

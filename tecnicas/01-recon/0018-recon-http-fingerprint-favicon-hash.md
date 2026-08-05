@@ -1,3 +1,15 @@
+---
+id: "0018"
+categoria: "01-recon"
+familia: "recon-http-fingerprint"
+slug: "favicon-hash"
+angulo: "base"
+mitre: "T1592"
+owasp: "WSTG-INFO-02"
+tags: ["01-recon", "recon-http-fingerprint", "base", "t1592"]
+aliases: ["favicon hash (Shodan-style)", "favicon-hash"]
+---
+
 # favicon hash (Shodan-style)
 
 **A05 Security Misconfiguration** · `T1592 Gather Victim Host Information`
@@ -46,6 +58,17 @@ Alertar exposição de versões em headers.
 
 ## Refs
 
-- WSTG-INFO-02
-- RFC 9110
-- OWASP Secure Headers
+- [MITRE ATT&CK T1592](https://attack.mitre.org/techniques/T1592/)
+- [WSTG-INFO-02](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server)
+- [RFC 9110 — HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110)
+- [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)
+- [PortSwigger — HTTP information gathering](https://portswigger.net/web-security)
+
+## Relacionadas
+
+- [favicon hash (Shodan-style) — detecção](0398-recon-http-fingerprint-favicon-hash--detecao.md)
+- [favicon hash (Shodan-style) — path](0778-recon-http-fingerprint-favicon-hash--path.md)
+- [endpoints ACME/challenge](0020-recon-http-fingerprint-acme-probe.md)
+- [heurística via Cache-Control/ETag](0017-recon-http-fingerprint-cache-headers.md)
+- [cookies default de framework](0012-recon-http-fingerprint-cookie-banner.md)
+- [CSP como mapa de domínios](0019-recon-http-fingerprint-csp-leak.md)

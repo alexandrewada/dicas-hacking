@@ -1,3 +1,15 @@
+---
+id: "0907"
+categoria: "05-injection"
+familia: "inj-ssti"
+slug: "mako"
+angulo: "hardening"
+mitre: "T1190"
+owasp: ""
+tags: ["05-injection", "inj-ssti", "hardening", "t1190"]
+aliases: ["Mako Python", "mako", "mako-hardening"]
+---
+
 # Mako Python — hardening
 
 Do PoC ao controle — Mako Python.
@@ -40,5 +52,15 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- PortSwigger SSTI
-- PayloadsAllTheThings SSTI
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [PortSwigger — SSTI](https://portswigger.net/web-security/server-side-template-injection)
+- [PayloadsAllTheThings — SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
+
+## Relacionadas
+
+- [Mako Python](0147-inj-ssti-mako.md)
+- [Mako Python — lab](0527-inj-ssti-mako--lab.md)
+- [templates de e-mail marketing](0149-inj-ssti-email-tmpl.md)
+- [Freemarker](0142-inj-ssti-freemarker.md)
+- [SSTI em Jinja2](0141-inj-ssti-jinja2.md)
+- [HTML templates → PDF](0150-inj-ssti-pdf-tmpl.md)

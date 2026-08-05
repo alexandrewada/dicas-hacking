@@ -1,3 +1,15 @@
+---
+id: "0064"
+categoria: "03-api"
+familia: "api-mass-assignment"
+slug: "nested"
+angulo: "base"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-mass-assignment", "base", "t1190"]
+aliases: ["nested JSON binding", "nested"]
+---
+
 # nested JSON binding
 
 **API3:2023 Broken Object Property Level Authorization** · `T1190 Exploit Public-Facing Application`
@@ -55,5 +67,16 @@ Request com campo privilegiado; response provando alteração.
 
 ## Refs
 
-- OWASP API3
-- PortSwigger Mass Assignment
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Mass assignment](https://portswigger.net/web-security/access-control)
+- [OWASP API3 BOPLA](https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/)
+
+## Relacionadas
+
+- [nested JSON binding — detecção](0444-api-mass-assignment-nested--detecao.md)
+- [nested JSON binding — path](0824-api-mass-assignment-nested--path.md)
+- [import CSV com colunas extras](0069-api-mass-assignment-csv-import.md)
+- [GraphQL input objects](0067-api-mass-assignment-graphql-input.md)
+- [JSON Merge Patch RFC 7396](0065-api-mass-assignment-json-merge.md)
+- [ORM update com map completo](0070-api-mass-assignment-orm-bind.md)

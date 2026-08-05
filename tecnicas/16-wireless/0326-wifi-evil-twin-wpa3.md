@@ -1,3 +1,15 @@
+---
+id: "0326"
+categoria: "16-wireless"
+familia: "wifi-evil-twin"
+slug: "wpa3"
+angulo: "base"
+mitre: "T1557"
+owasp: ""
+tags: ["16-wireless", "wifi-evil-twin", "base", "t1557"]
+aliases: ["WPA3 transition mode issues", "wpa3"]
+---
+
 # WPA3 transition mode issues
 
 **Wireless** · `T1557 AiTM`
@@ -22,9 +34,11 @@ Somente com autorização de RF e isolamento — pode afetar usuários reais.
 ## Sinal / query
 
 ```bash
-# RF lab — ROE por escrito, canal/área fixos
-hostapd ./lab_wpa3.conf # SSID LAB-18503f
-# capturar cred de USER_A em portal de teste; sem pulverizar o prédio
+# RF lab — ROE escrito: canal/área/potência
+# seguro: scan passivo
+airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF wlan0mon | tee wifi_18503f.log
+# destrutivo só em lab isolado: hostapd evil twin SSID LAB-18503f
+# NÃO pulverizar o prédio — wpa3
 ```
 
 ## Campo
@@ -48,5 +62,15 @@ SSID teste; credencial de tester; gap de detecção WIPS.
 
 ## Refs
 
-- OWASP wireless
-- Aircrack docs ethics
+- [MITRE ATT&CK T1557](https://attack.mitre.org/techniques/T1557/)
+- [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/latest/)
+- [Aircrack-ng documentation](https://www.aircrack-ng.org/doku.php)
+- [HackTricks — WiFi](https://book.hacktricks.xyz/generic-methodologies-and-resources/pentesting-wifi)
+
+## Relacionadas
+
+- [WPA3 transition mode issues — evidência](0706-wifi-evil-twin-wpa3--evidencia.md)
+- [teste de WIPS](0327-wifi-evil-twin-detect.md)
+- [Evil twin / EAP sem validar cert](0323-wifi-evil-twin-eap.md)
+- [guest isolation bypass](0329-wifi-evil-twin-guest.md)
+- [IoT wifi default creds](0328-wifi-evil-twin-iot.md)

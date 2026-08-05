@@ -1,3 +1,15 @@
+---
+id: "0990"
+categoria: "09-ad"
+familia: "ad-cs"
+slug: "detect"
+angulo: "hardening"
+mitre: "T1649"
+owasp: ""
+tags: ["09-ad", "ad-cs", "hardening", "t1649"]
+aliases: ["detecção de enrollment anômalo", "detect", "detect-hardening"]
+---
+
 # detecção de enrollment anômalo — hardening
 
 Do PoC ao controle — detecção de enrollment anômalo.
@@ -41,5 +53,13 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- SpecterOps Certified Pre-Owned
-- MITRE T1649
+- [MITRE ATT&CK T1649](https://attack.mitre.org/techniques/T1649/)
+- [SpecterOps — Certified Pre-Owned (AD CS)](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
+
+## Relacionadas
+
+- [detecção de enrollment anômalo](0230-ad-cs-detect.md)
+- [detecção de enrollment anômalo — lab](0610-ad-cs-detect--lab.md)
+- [AD CS ESC1](0221-ad-cs-esc1.md)
+- [AD CS ESC8 (relay HTTP)](0227-ad-cs-esc8.md)
+- [persistência via certs](0229-ad-cs-persist.md)

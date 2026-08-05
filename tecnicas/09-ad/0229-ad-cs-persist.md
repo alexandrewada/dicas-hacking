@@ -1,3 +1,15 @@
+---
+id: "0229"
+categoria: "09-ad"
+familia: "ad-cs"
+slug: "persist"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["09-ad", "ad-cs", "base"]
+aliases: ["persistência via certs", "persist"]
+---
+
 # persistência via certs
 
 ## Leitura rápida
@@ -22,8 +34,10 @@ Relay para HTTP enrollment (ESC8) combina com coerção. Conteúdo obrigatório 
 ## No lab ficou assim
 
 ```bash
-ldapsearch -H ldap://DC01.lab.local -D 'USER_A@lab.local' -w PASS_LAB -b 'DC=lab,DC=local' '(sAMAccountName=USER_A)'
-# persist c32af2
+# AD CS persist — lab CA, conta teste
+certipy find -u USER_A@lab.local -p PASS_LAB -dc-ip DC01.lab.local -vulnerable
+# persist: renovar cert de conta teste; detect: correlacionar 4886→4768
+# tag c32af2 — sem shadow em prod
 ```
 
 Ritmo no KDC/LDAP. Conta low-priv. Zero mudança destrutiva em objeto prod sem janela.
@@ -46,5 +60,13 @@ Template vulnerável; cert de teste; auth proof; revogação.
 
 ## Refs
 
-- SpecterOps Certified Pre-Owned
-- MITRE T1649
+- [SpecterOps — Certified Pre-Owned (AD CS)](https://posts.specterops.io/certified-pre-owned-d95910965cd2)
+- [MITRE ATT&CK T1649](https://attack.mitre.org/techniques/T1649/)
+
+## Relacionadas
+
+- [persistência via certs — lab](0609-ad-cs-persist--lab.md)
+- [persistência via certs — hardening](0989-ad-cs-persist--hardening.md)
+- [AD CS ESC1](0221-ad-cs-esc1.md)
+- [AD CS ESC8 (relay HTTP)](0227-ad-cs-esc8.md)
+- [detecção de enrollment anômalo](0230-ad-cs-detect.md)

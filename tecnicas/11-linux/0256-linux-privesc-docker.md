@@ -1,3 +1,15 @@
+---
+id: "0256"
+categoria: "11-linux"
+familia: "linux-privesc"
+slug: "docker"
+angulo: "base"
+mitre: "T1548"
+owasp: ""
+tags: ["11-linux", "linux-privesc", "base", "t1548"]
+aliases: ["Abuso do grupo docker / sock", "docker"]
+---
+
 # Abuso do grupo docker / sock
 
 **Local privesc** · `T1548 / T1611`
@@ -24,11 +36,11 @@ exploit-as-a-service.
 ## Sinal / query
 
 ```bash
-# linux privesc lab
-find / -perm -4000 -type f 2>/dev/null | head
-sudo -l
-getcap -r / 2>/dev/null | head
-# foco docker tag 529e80
+# docker.sock / privileged — lab namespace
+ls -la /var/run/docker.sock
+# seguro em prod: reportar permissão sem spawn
+# lab only: docker run -v /:/mnt --rm alpine chroot /mnt id
+# tag 529e80
 ```
 
 ## Campo
@@ -53,5 +65,15 @@ Vetor; id antes/depois; artefato removido.
 
 ## Refs
 
-- GTFOBins
-- HackTricks Linux PrivEsc
+- [MITRE ATT&CK T1548](https://attack.mitre.org/techniques/T1548/)
+- [MITRE ATT&CK T1611](https://attack.mitre.org/techniques/T1611/)
+- [GTFOBins](https://gtfobins.github.io/)
+- [HackTricks — Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+
+## Relacionadas
+
+- [Abuso do grupo docker / sock — evidência](0636-linux-privesc-docker--evidencia.md)
+- [SUID / GTFOBins](0251-linux-privesc-suid.md)
+- [sudoers misconfig](0252-linux-privesc-sudo.md)
+- [capabilities (cap_setuid)](0253-linux-privesc-caps.md)
+- [docker.sock no pod (path)](../14-k8s/0295-k8s-escape-docker-sock.md)

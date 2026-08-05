@@ -1,3 +1,15 @@
+---
+id: "0796"
+categoria: "02-web"
+familia: "web-idor"
+slug: "mobile-api"
+angulo: "path"
+mitre: "T1078"
+owasp: "WSTG-ATHZ-04"
+tags: ["02-web", "web-idor", "path", "t1078"]
+aliases: ["API móvel com IDs em JWT claims vs body", "mobile-api", "mobile-api-path"]
+---
+
 # API móvel com IDs em JWT claims vs body — path
 
 API móvel com IDs em JWT claims vs body como pivô. Path curto > monte de finding isolado.
@@ -61,6 +73,16 @@ WAF bypass só depois da prova de impacto. Senão vira discussão de tool com o 
 
 ## Refs
 
-- OWASP API Top 10 API1
-- WSTG-ATHZ-04
-- PortSwigger Access Control
+- [MITRE ATT&CK T1078](https://attack.mitre.org/techniques/T1078/)
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [WSTG-ATHZ-04](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Bypassing_Authorization_Schema)
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/)
+- [PortSwigger — Access control](https://portswigger.net/web-security/access-control)
+
+## Relacionadas
+
+- [API móvel com IDs em JWT claims vs body](0036-web-idor-mobile-api.md)
+- [API móvel com IDs em JWT claims vs body — detecção](0416-web-idor-mobile-api--detecao.md)
+- [IDOR com IDs numéricos](0031-web-idor-numeric.md)
+- [endpoints batch/export](0034-web-idor-batch.md)
+- [BOLA em GraphQL](0035-web-idor-graphql.md)

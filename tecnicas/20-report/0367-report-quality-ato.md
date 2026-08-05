@@ -1,3 +1,15 @@
+---
+id: "0367"
+categoria: "20-report"
+familia: "report-quality"
+slug: "ato"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["20-report", "report-quality", "base"]
+aliases: ["narrativa de account takeover", "ato"]
+---
+
 # narrativa de account takeover
 
 **Methodology** · `N/A`
@@ -51,6 +63,14 @@ Exemplo de finding redigido; CVSS; remediação.
 
 ## Refs
 
-- PTES
-- OSSTMM
-- CVSS
+- [PTES](http://www.pentest-standard.org/)
+- [OSSTMM](https://www.isecom.org/research.html)
+- [FIRST — CVSS](https://www.first.org/cvss/)
+
+## Relacionadas
+
+- [narrativa de account takeover — evidência](0747-report-quality-ato--evidencia.md)
+- [apêndice técnico vs executivo](0369-report-quality-appendix.md)
+- [Traduzir risco pro CISO](0364-report-quality-business.md)
+- [findings encadeados](0368-report-quality-chain.md)
+- [cleanup & artifact list](0366-report-quality-cleanup.md)

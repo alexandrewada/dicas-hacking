@@ -1,3 +1,15 @@
+---
+id: "0080"
+categoria: "03-api"
+familia: "api-graphql"
+slug: "apq"
+angulo: "base"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-graphql", "base", "t1190"]
+aliases: ["Automatic Persisted Queries abuse", "apq"]
+---
+
 # Automatic Persisted Queries abuse
 
 **API Top 10 / A01 Broken Access Control** · `T1190`
@@ -38,4 +50,17 @@ persisted queries.
 
 Levo no report: Schema extrato (se permitido); prova de bypass authz; custo de query.
 
-Refs: OWASP GraphQL Cheat Sheet, PayloadsAllTheThings GraphQL
+## Refs
+
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP GraphQL Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)
+- [PayloadsAllTheThings — GraphQL](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection)
+
+## Relacionadas
+
+- [Automatic Persisted Queries abuse — detecção](0460-api-graphql-apq--detecao.md)
+- [Automatic Persisted Queries abuse — path](0840-api-graphql-apq--path.md)
+- [aliases para bypass de rate limit](0073-api-graphql-alias-bruteforce.md)
+- [batch HTTP GraphQL](0075-api-graphql-batch.md)
+- [CSRF em mutations cookie-based](0076-api-graphql-csrf.md)
+- [diretivas custom perigosas](0079-api-graphql-directive.md)

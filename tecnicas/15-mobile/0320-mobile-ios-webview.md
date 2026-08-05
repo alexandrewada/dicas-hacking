@@ -1,3 +1,15 @@
+---
+id: "0320"
+categoria: "15-mobile"
+familia: "mobile-ios"
+slug: "webview"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["15-mobile", "mobile-ios", "base"]
+aliases: ["WKWebView issues", "webview"]
+---
+
 # WKWebView issues
 
 **Mobile** · `Mobile ATT&CK`
@@ -34,4 +46,16 @@ Corrijo com: Correct Keychain accessibility; ATS; disable insecure schemes; secu
 
 Levo no report: Artefato Keychain de teste; request API.
 
-Refs: OWASP MASTG iOS
+## Refs
+
+- [OWASP MASTG](https://mas.owasp.org/MASTG/)
+- [OWASP MASTG — iOS](https://mas.owasp.org/MASTG/0x06a-Testing-IOS/)
+- [Frida documentation](https://frida.re/docs/home/)
+
+## Relacionadas
+
+- [WKWebView issues — evidência](0700-mobile-ios-webview--evidencia.md)
+- [ATS exceptions](0312-mobile-ios-ats.md)
+- [itunes backup secrets](0315-mobile-ios-backup.md)
+- [biometry bypass lab](0317-mobile-ios-biometry.md)
+- [app groups misuse](0318-mobile-ios-ipc.md)

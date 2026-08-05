@@ -1,3 +1,15 @@
+---
+id: "0880"
+categoria: "04-auth"
+familia: "auth-oauth-oidc"
+slug: "jwt-client-auth"
+angulo: "hardening"
+mitre: "T1528"
+owasp: ""
+tags: ["04-auth", "auth-oauth-oidc", "hardening", "t1528"]
+aliases: ["client_assertion fraca", "jwt-client-auth", "jwt-client-auth-hardening"]
+---
+
 # client_assertion fraca — hardening
 
 Do PoC ao controle — client_assertion fraca.
@@ -43,6 +55,17 @@ Aceite de risco só por escrito, com prazo.
 
 ## Refs
 
-- RFC 6749
-- RFC 8252
-- OWASP OAuth
+- [MITRE ATT&CK T1528](https://attack.mitre.org/techniques/T1528/)
+- [RFC 6749 — OAuth 2.0](https://www.rfc-editor.org/rfc/rfc6749)
+- [RFC 8252 — OAuth for Native Apps](https://www.rfc-editor.org/rfc/rfc8252)
+- [OWASP OAuth 2.0 Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html)
+- [PortSwigger — OAuth authentication](https://portswigger.net/web-security/oauth)
+
+## Relacionadas
+
+- [client_assertion fraca](0120-auth-oauth-oidc-jwt-client-auth.md)
+- [client_assertion fraca — detecção](0500-auth-oauth-oidc-jwt-client-auth--detecao.md)
+- [device authorization grant abuse](0119-auth-oauth-oidc-device-code.md)
+- [implicit grant legado](0114-auth-oauth-oidc-implicit.md)
+- [mix-up attack (multi-IdP)](0116-auth-oauth-oidc-mixup.md)
+- [PKCE ausente em public client](0113-auth-oauth-oidc-pkce.md)

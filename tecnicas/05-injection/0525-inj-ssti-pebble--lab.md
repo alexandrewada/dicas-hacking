@@ -1,3 +1,15 @@
+---
+id: "0525"
+categoria: "05-injection"
+familia: "inj-ssti"
+slug: "pebble"
+angulo: "lab"
+mitre: ""
+owasp: ""
+tags: ["05-injection", "inj-ssti", "lab"]
+aliases: ["Pebble", "pebble", "pebble-lab"]
+---
+
 # Pebble — lab
 
 Critério: outro analista fecha sozinho com esta nota.
@@ -48,5 +60,14 @@ Engine identificado; PoC `id`; trecho de código vulnerável se fornecido.
 
 ## Refs
 
-- PortSwigger SSTI
-- PayloadsAllTheThings SSTI
+- [PortSwigger — SSTI](https://portswigger.net/web-security/server-side-template-injection)
+- [PayloadsAllTheThings — SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
+
+## Relacionadas
+
+- [Pebble](0145-inj-ssti-pebble.md)
+- [Pebble — hardening](0905-inj-ssti-pebble--hardening.md)
+- [templates de e-mail marketing](0149-inj-ssti-email-tmpl.md)
+- [Freemarker](0142-inj-ssti-freemarker.md)
+- [SSTI em Jinja2](0141-inj-ssti-jinja2.md)
+- [Mako Python](0147-inj-ssti-mako.md)

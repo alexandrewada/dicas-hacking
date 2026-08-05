@@ -1,3 +1,15 @@
+---
+id: "0266"
+categoria: "12-aws"
+familia: "aws-privesc"
+slug: "imds"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["12-aws", "aws-privesc", "base"]
+aliases: ["Credencial via IMDS", "imds"]
+---
+
 # Credencial via IMDS
 
 ## Leitura rápida
@@ -26,6 +38,7 @@ e prova com ação mínima em conta sandbox do cliente.
 # AWS lab — identidade de teste, sem wipe
 aws sts get-caller-identity --profile lab_15a914
 aws s3api get-bucket-policy --bucket lab-bucket-imds --profile lab_15a914
+# seguro: Get*/List*; destrutivo (DeleteBucket) só em lab throwaway
 # effective perms imds
 ```
 
@@ -47,5 +60,14 @@ Identidade inicial; API calls; identidade final; cleanup.
 
 ## Refs
 
-- Rhino Security Labs AWS privesc
-- MITRE Cloud
+- [Rhino Security Labs — AWS privilege escalation](https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [AWS — Instance metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instancedata-data-retrieval.html)
+- [AWS IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
+
+## Relacionadas
+
+- [Credencial via IMDS — evidência](0646-aws-privesc-imds--evidencia.md)
+- [PassRole + compute](0262-aws-privesc-passrole.md)
+- [trust policy frouxa](0264-aws-privesc-assume-role.md)
+- [policy Principal * (path)](0275-aws-s3-policy.md)

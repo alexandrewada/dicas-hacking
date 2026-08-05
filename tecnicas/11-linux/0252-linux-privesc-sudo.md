@@ -1,3 +1,15 @@
+---
+id: "0252"
+categoria: "11-linux"
+familia: "linux-privesc"
+slug: "sudo"
+angulo: "base"
+mitre: "T1548"
+owasp: ""
+tags: ["11-linux", "linux-privesc", "base", "t1548"]
+aliases: ["sudoers misconfig", "sudo"]
+---
+
 # sudoers misconfig
 
 **Local privesc** · `T1548 / T1611`
@@ -23,11 +35,11 @@ exploit-as-a-service.
 ## Sinal / query
 
 ```bash
-# linux privesc lab
-find / -perm -4000 -type f 2>/dev/null | head
+# sudo -l em lab; sem NOPASSWD abuse em prod sem ROE
 sudo -l
-getcap -r / 2>/dev/null | head
-# foco sudo tag 51a68c
+# seguro: documentar comando permitido
+# lab only: sudo vim -c ':!id'  # se NOPASSWD vim
+# tag 51a68c (sudo)
 ```
 
 ## Campo
@@ -52,5 +64,14 @@ Vetor; id antes/depois; artefato removido.
 
 ## Refs
 
-- GTFOBins
-- HackTricks Linux PrivEsc
+- [MITRE ATT&CK T1548](https://attack.mitre.org/techniques/T1548/)
+- [MITRE ATT&CK T1611](https://attack.mitre.org/techniques/T1611/)
+- [GTFOBins](https://gtfobins.github.io/)
+- [HackTricks — Linux Privilege Escalation](https://book.hacktricks.xyz/linux-hardening/privilege-escalation)
+
+## Relacionadas
+
+- [sudoers misconfig — evidência](0632-linux-privesc-sudo--evidencia.md)
+- [SUID / GTFOBins](0251-linux-privesc-suid.md)
+- [Abuso do grupo docker / sock](0256-linux-privesc-docker.md)
+- [capabilities (cap_setuid)](0253-linux-privesc-caps.md)

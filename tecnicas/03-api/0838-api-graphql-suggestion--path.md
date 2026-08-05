@@ -1,3 +1,15 @@
+---
+id: "0838"
+categoria: "03-api"
+familia: "api-graphql"
+slug: "suggestion"
+angulo: "path"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-graphql", "path", "t1190"]
+aliases: ["field suggestions leak", "suggestion", "suggestion-path"]
+---
+
 # field suggestions leak — path
 
 field suggestions leak como pivô. Path curto > monte de finding isolado.
@@ -59,5 +71,15 @@ Batch e webhook: ACL costuma autorizar o primeiro ID do array e ignorar o resto.
 
 ## Refs
 
-- OWASP GraphQL Cheat Sheet
-- PayloadsAllTheThings GraphQL
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP GraphQL Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)
+- [PayloadsAllTheThings — GraphQL](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection)
+
+## Relacionadas
+
+- [field suggestions leak](0078-api-graphql-suggestion.md)
+- [field suggestions leak — detecção](0458-api-graphql-suggestion--detecao.md)
+- [aliases para bypass de rate limit](0073-api-graphql-alias-bruteforce.md)
+- [Automatic Persisted Queries abuse](0080-api-graphql-apq.md)
+- [batch HTTP GraphQL](0075-api-graphql-batch.md)
+- [CSRF em mutations cookie-based](0076-api-graphql-csrf.md)

@@ -1,3 +1,15 @@
+---
+id: "0786"
+categoria: "01-recon"
+familia: "recon-osint-people"
+slug: "email-format"
+angulo: "path"
+mitre: ""
+owasp: ""
+tags: ["01-recon", "recon-osint-people", "path"]
+aliases: ["inferência de formato de e-mail", "email-format", "email-format-path"]
+---
+
 # inferência de formato de e-mail — path
 
 inferência de formato de e-mail como pivô. Path curto > monte de finding isolado.
@@ -54,6 +66,15 @@ Achado de recon que eu reporto: ativo fora do inventário com superfície autent
 
 ## Refs
 
-- OSINT Framework
-- MITRE T1589
-- NIST SP 800-63
+- [OSINT Framework](https://osintframework.com/)
+- [MITRE ATT&CK T1589](https://attack.mitre.org/techniques/T1589/)
+- [NIST SP 800-63](https://pages.nist.gov/800-63-3/)
+
+## Relacionadas
+
+- [inferência de formato de e-mail](0026-recon-osint-people-email-format.md)
+- [inferência de formato de e-mail — detecção](0406-recon-osint-people-email-format--detecao.md)
+- [correlação com breaches corporativos](0027-recon-osint-people-breach-corp.md)
+- [vazamento de calendários/ICS](0025-recon-osint-people-calendar-leak.md)
+- [GitHub dorking autorizado](0021-recon-osint-people-github-dorks.md)
+- [pretext a partir de LinkedIn](0023-recon-osint-people-linkedin-pretext.md)

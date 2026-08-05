@@ -1,3 +1,15 @@
+---
+id: "0297"
+categoria: "14-k8s"
+familia: "k8s-escape"
+slug: "etcd"
+angulo: "base"
+mitre: "T1611"
+owasp: ""
+tags: ["14-k8s", "k8s-escape", "base", "t1611"]
+aliases: ["etcd exposto", "etcd"]
+---
+
 # etcd exposto
 
 **Containers** · `T1611 Escape to Host / T1078`
@@ -23,10 +35,10 @@ docker.sock, e metadata cloud. Pentest k8s exige cuidado para não derrubar work
 ## PoC mínimo
 
 ```bash
-# k8s lab namespace
-kubectl -n lab-5855e2 auth can-i --list --as=system:serviceaccount:lab:sa-etcd
-kubectl -n lab-5855e2 get secrets
-# prova RBAC excessivo etcd
+# k8s etcd lab namespace
+kubectl -n lab auth can-i --list --as=system:serviceaccount:lab:sa-etcd
+kubectl -n lab get rolebinding,clusterrolebinding -o wide | head
+# imds via pod: curl 169.254.169.254 — só lab; tag 5855e2
 ```
 
 ## Campo
@@ -51,5 +63,15 @@ kubectl auth can-i; token redigido; PoC read secret.
 
 ## Refs
 
-- Kubernetes Attack Matrix
-- NSA/CISA k8s hardening
+- [MITRE ATT&CK T1611](https://attack.mitre.org/techniques/T1611/)
+- [MITRE ATT&CK T1078](https://attack.mitre.org/techniques/T1078/)
+- [Microsoft — Kubernetes attack matrix](https://microsoft.github.io/Threat-Matrix-for-Kubernetes/)
+- [NSA/CISA — Kubernetes hardening](https://media.defense.gov/2022/Aug/29/2003064742/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220829.PDF)
+
+## Relacionadas
+
+- [etcd exposto — evidência](0677-k8s-escape-etcd--evidencia.md)
+- [Token de ServiceAccount](0291-k8s-escape-sa-token.md)
+- [RBAC wildcards](0292-k8s-escape-rbac.md)
+- [Pod privileged](0293-k8s-escape-privileged.md)
+- [cloud metadata from pod](0296-k8s-escape-imds.md)

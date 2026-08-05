@@ -1,3 +1,15 @@
+---
+id: "0455"
+categoria: "03-api"
+familia: "api-graphql"
+slug: "batch"
+angulo: "detecao"
+mitre: "T1190"
+owasp: ""
+tags: ["03-api", "api-graphql", "detecao", "t1190"]
+aliases: ["batch HTTP GraphQL", "batch", "batch-detecao"]
+---
+
 # batch HTTP GraphQL — detecção
 
 Gap de detecção em `T1190` / batch HTTP GraphQL. PoC mínimo, telemetria ligada.
@@ -54,5 +66,15 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 ## Refs
 
-- OWASP GraphQL Cheat Sheet
-- PayloadsAllTheThings GraphQL
+- [MITRE ATT&CK T1190](https://attack.mitre.org/techniques/T1190/)
+- [OWASP GraphQL Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/GraphQL_Cheat_Sheet.html)
+- [PayloadsAllTheThings — GraphQL](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection)
+
+## Relacionadas
+
+- [batch HTTP GraphQL](0075-api-graphql-batch.md)
+- [batch HTTP GraphQL — path](0835-api-graphql-batch--path.md)
+- [aliases para bypass de rate limit](0073-api-graphql-alias-bruteforce.md)
+- [Automatic Persisted Queries abuse](0080-api-graphql-apq.md)
+- [CSRF em mutations cookie-based](0076-api-graphql-csrf.md)
+- [diretivas custom perigosas](0079-api-graphql-directive.md)

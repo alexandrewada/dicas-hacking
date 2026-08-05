@@ -1,3 +1,15 @@
+---
+id: "0852"
+categoria: "04-auth"
+familia: "auth-password-spray"
+slug: "vpn"
+angulo: "path"
+mitre: "T1110.003"
+owasp: ""
+tags: ["04-auth", "auth-password-spray", "path", "t1110.003"]
+aliases: ["contra VPN SSL", "vpn", "vpn-path"]
+---
+
 # contra VPN SSL — path
 
 contra VPN SSL como pivô. Path curto > monte de finding isolado.
@@ -54,5 +66,15 @@ MFA bypass de verdade completa o fator sem o segundo. UI skip sem backend não �
 
 ## Refs
 
-- MITRE T1110.003
-- Microsoft Password Spray guidance
+- [MITRE ATT&CK T1110.003](https://attack.mitre.org/techniques/T1110/003/)
+- [Microsoft Learn — Entra ID security](https://learn.microsoft.com/en-us/entra/identity/monitoring-health/overview-monitoring-health)
+- [Microsoft — Password spray guidance](https://learn.microsoft.com/en-us/defender-for-identity/password-spray-alert)
+
+## Relacionadas
+
+- [contra VPN SSL](0092-auth-password-spray-vpn.md)
+- [contra VPN SSL — detecção](0472-auth-password-spray-vpn--detecao.md)
+- [IMAP/POP spraying](0097-auth-password-spray-imap.md)
+- [Kerberos pre-auth spray](0095-auth-password-spray-kerberos.md)
+- [SMTP AUTH legado](0096-auth-password-spray-legacy-smtp.md)
+- [bypass de lockout por pool de IPs](0098-auth-password-spray-lockout-bypass.md)

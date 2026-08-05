@@ -1,3 +1,15 @@
+---
+id: "0354"
+categoria: "19-crypto"
+familia: "crypto-tls"
+slug: "expired"
+angulo: "base"
+mitre: ""
+owasp: ""
+tags: ["19-crypto", "crypto-tls", "base"]
+aliases: ["cert expired/self-signed em prod", "expired"]
+---
+
 # cert expired/self-signed em prod
 
 ## Leitura rápida
@@ -20,10 +32,10 @@ em mobile) ainda aparece. Inclua também cookie Secure flags e HSTS. Evito DoS c
 ## PoC mínimo
 
 ```bash
-# TLS no host real do app
-nmap --script ssl-enum-ciphers -p 443 TARGET.lab.local
-echo | openssl s_client -connect TARGET.lab.local:443 -tls1_0 2>&1 | head
-# variante expired tag 27c860
+# TLS expired
+echo | openssl s_client -connect TARGET.lab.local:443 -servername WRONG.lab.local 2>&1 | grep -E 'verify|subject'
+curl -skI https://TARGET.lab.local | grep -i strict-transport
+# tag 27c860
 ```
 
 Downgrade só com cliente vulnerável no escopo.
@@ -44,5 +56,13 @@ ssllabs-like summary; cipher list; exploitability note.
 
 ## Refs
 
-- OWASP Transport Layer Protection
-- Mozilla TLS guidelines
+- [OWASP Transport Layer Protection](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
+- [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/)
+
+## Relacionadas
+
+- [cert expired/self-signed em prod — evidência](0734-crypto-tls-expired--evidencia.md)
+- [hostname mismatch](0353-crypto-tls-cert-mismatch.md)
+- [CRIME/BREACH context](0359-crypto-tls-compression.md)
+- [Certificate Transparency gaps](0360-crypto-tls-ct.md)
+- [HSTS ausente](0355-crypto-tls-hsts.md)
