@@ -24,6 +24,8 @@ import tempfile
 from pathlib import Path
 
 from examples_bank import example_block
+from links_bank import angle_frontmatter, angle_suffix, related_md
+from refs_bank import extract_mitre_ids, extract_wstg_ids, format_refs_md
 
 ROOT = Path(__file__).resolve().parents[1]
 HERE = Path(__file__).resolve().parent
@@ -269,7 +271,58 @@ def pick_bank(row: dict, n: int = 2) -> list[str]:
     return out
 
 
-def render_base(row: dict, titles: dict) -> str:
+def mitre_field(row: dict) -> str:
+    ids = extract_mitre_ids(row.get("mitre") or "")
+    return ids[0] if ids else ""
+
+
+def owasp_field(row: dict) -> str:
+    blob = " ".join([row.get("owasp") or ""] + list(row.get("refs") or []))
+    ids = extract_wstg_ids(blob)
+    return ids[0] if ids else ""
+
+
+def make_frontmatter(row: dict, ang: str | None, titles: dict, note_id: str) -> str:
+    ang_key = angle_frontmatter(ang)
+    title = title_for(row, titles)
+    short = re.sub(r"\s+", " ", title).strip()
+    if len(short) > 60:
+        short = short[:57] + "…"
+    tags = [row["cat"], row["fid"], ang_key]
+    if mitre_field(row):
+        tags.append(mitre_field(row).lower())
+    aliases = [short, row["slug"]]
+    if ang_key != "base":
+        aliases.append(f"{row['slug']}-{ang_key}")
+    owasp = owasp_field(row)
+
+    def ylist(items: list[str]) -> str:
+        return "[" + ", ".join(json.dumps(t, ensure_ascii=False) for t in items) + "]"
+
+    lines = [
+        "---",
+        f'id: "{note_id}"',
+        f'categoria: "{row["cat"]}"',
+        f'familia: "{row["fid"]}"',
+        f'slug: "{row["slug"]}"',
+        f'angulo: "{ang_key}"',
+        f'mitre: "{mitre_field(row)}"',
+        f'owasp: "{owasp}"',
+        f"tags: {ylist(tags)}",
+        f"aliases: {ylist(aliases)}",
+        "---",
+    ]
+    return "\n".join(lines)
+
+
+def tail_sections(row: dict, ang: str | None, catalog: dict) -> str:
+    refs = format_refs_md(row)
+    related = related_md(row, ang, catalog)
+    return f"## Refs\n\n{refs}\n\n## Relacionadas\n\n{related}\n"
+
+
+def render_base(row: dict, titles: dict, catalog: dict | None = None) -> str:
+    catalog = catalog or {}
     title = title_for(row, titles)
     key = f"{row['fid']}/{row['slug']}"
     h = H(key)
@@ -282,13 +335,13 @@ def render_base(row: dict, titles: dict) -> str:
     detect = row["detect"].strip()
     mitigate = row["mitigate"].strip()
     evidence = row["evidence"].strip()
-    refs = "\n".join(f"- {r}" for r in row["refs"])
     bank = pick_bank(row, 1 + (h % 2))
     bank_md = "\n\n".join(bank)
     fp = (row.get("fp") or "").strip()
     opsec = (row.get("opsec") or "").strip()
     meta = f"**{row['owasp']}** · `{row['mitre']}`"
     ex = example_block(row, None).rstrip()
+    tail = tail_sections(row, None, catalog)
 
     # layouts distintos — sem repetir foco dentro de nuance
     if layout == 0:
@@ -329,9 +382,7 @@ def render_base(row: dict, titles: dict) -> str:
 
 {evidence}
 
-## Refs
-
-{refs}
+{tail}
 """
     if layout == 1:
         return f"""# {title}
@@ -370,9 +421,7 @@ Remediação — {mitigate}
 
 No PDF — {evidence}
 
-## Refs
-
-{refs}
+{tail}
 """
     if layout == 2:
         return f"""# {title}
@@ -407,9 +456,7 @@ No PDF — {evidence}
 | Remediação | {mitigate} |
 | Evidência | {evidence} |
 
-## Refs
-
-{refs}
+{tail}
 """
     if layout == 3:
         # mais curto
@@ -437,7 +484,7 @@ Corrijo com: {mitigate}
 
 Levo no report: {evidence}
 
-Refs: {", ".join(row["refs"])}
+{tail}
 """
     if layout == 4:
         return f"""# {title}
@@ -472,9 +519,7 @@ Refs: {", ".join(row["refs"])}
 
 {evidence}
 
-## Refs
-
-{refs}
+{tail}
 """
     # layout 5
     return f"""# {title}
@@ -509,13 +554,12 @@ Refs: {", ".join(row["refs"])}
 - fix: {mitigate}
 - proof: {evidence}
 
-## Refs
-
-{refs}
+{tail}
 """
 
 
-def render_angle(row: dict, titles: dict, angle: str) -> str:
+def render_angle(row: dict, titles: dict, angle: str, catalog: dict | None = None) -> str:
+    catalog = catalog or {}
     title = title_for(row, titles)
     h = H(f"{row['fid']}/{row['slug']}/{angle}")
     steps_md = "\n".join(f"{i}. {s}" for i, s in enumerate(steps_of(row), 1))
@@ -526,9 +570,9 @@ def render_angle(row: dict, titles: dict, angle: str) -> str:
     detect = row["detect"].strip()
     mitigate = row["mitigate"].strip()
     evidence = row["evidence"].strip()
-    refs = "\n".join(f"- {r}" for r in row["refs"])
     bank = pick_bank(row, 1)[0]
     ex = example_block(row, angle).rstrip()
+    tail = tail_sections(row, angle, catalog)
     # intros variadas por hash — sem clone de ângulo
     if angle == "detecção":
         intros = [
@@ -579,9 +623,7 @@ def render_angle(row: dict, titles: dict, angle: str) -> str:
 
 Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta que não veio.
 
-## Refs
-
-{refs}
+{tail}
 """
 
     if angle == "lab":
@@ -627,9 +669,7 @@ Timestamp + identidade lab + query SIEM — ou declaração explícita de alerta
 
 {evidence}
 
-## Refs
-
-{refs}
+{tail}
 """
 
     if angle == "evidência":
@@ -672,9 +712,7 @@ Pacote pra {title} sobreviver peer review.
 
 {pits}
 
-## Refs
-
-{refs}
+{tail}
 """
 
     if angle == "path":
@@ -719,9 +757,7 @@ Remediar: {mitigate}
 
 {bank}
 
-## Refs
-
-{refs}
+{tail}
 """
 
     # hardening
@@ -758,9 +794,7 @@ Do PoC ao controle — {title}.
 
 Aceite de risco só por escrito, com prazo.
 
-## Refs
-
-{refs}
+{tail}
 """
 
 
@@ -796,11 +830,69 @@ def load_seed() -> tuple[list[dict], dict]:
     return rows, titles
 
 
+def build_catalog_entries(work: list[tuple[dict, str | None]], titles: dict) -> list[dict]:
+    """Pré-calcula fname/título de cada nota para cross-links e índice."""
+    entries = []
+    for idx, (row, ang) in enumerate(work, 1):
+        ang_key = angle_frontmatter(ang)
+        suffix = angle_suffix(ang)
+        fname = f"{idx:04d}-{row['fid']}-{row['slug']}{suffix}.md"
+        title = title_for(row, titles)
+        if ang is not None:
+            title = f"{title} — {ang}"
+        entries.append(
+            {
+                "idx": idx,
+                "fid": row["fid"],
+                "slug": row["slug"],
+                "cat": row["cat"],
+                "ang_key": ang_key,
+                "ang": ang,
+                "fname": fname,
+                "title": title,
+                "row": row,
+            }
+        )
+    return entries
+
+
+def write_category_index(cat: str, name: str, entries: list[dict], idx_dir: Path) -> None:
+    """Índice por família base com variantes aninhadas."""
+    lines = [f"# {name}\n\n"]
+    # agrupa por fid, depois slug; base primeiro, ângulos aninhados
+    by_fid: dict[str, dict[str, list[dict]]] = {}
+    for e in entries:
+        by_fid.setdefault(e["fid"], {}).setdefault(e["slug"], []).append(e)
+
+    for fid in sorted(by_fid):
+        lines.append(f"## `{fid}`\n\n")
+        for slug in sorted(by_fid[fid]):
+            group = by_fid[fid][slug]
+            bases = [e for e in group if e["ang_key"] == "base"]
+            angles = [e for e in group if e["ang_key"] != "base"]
+            angles.sort(key=lambda e: ("lab", "detecao", "evidencia", "path", "hardening").index(e["ang_key"])
+                        if e["ang_key"] in ("lab", "detecao", "evidencia", "path", "hardening") else 99)
+            primary = bases[0] if bases else (angles[0] if angles else None)
+            if not primary:
+                continue
+            lines.append(f"- [{primary['idx']:04d} — {primary['title']}](../tecnicas/{primary['cat']}/{primary['fname']})\n")
+            rest = angles if bases else angles[1:]
+            for e in rest:
+                lines.append(
+                    f"  - [{e['idx']:04d} — {e['title']}](../tecnicas/{e['cat']}/{e['fname']})\n"
+                )
+        lines.append("\n")
+    (idx_dir / f"{cat}.md").write_text("".join(lines), encoding="utf-8")
+
+
 def build(out_root: Path) -> list[str]:
     """Renderiza as 1000 notas + índices sob out_root. Retorna os paths relativos."""
+    from links_bank import build_catalog
+
     rows, titles = load_seed()
-    suf = {a: s for a, s in ANGLES}
     work = build_work(rows)
+    entries = build_catalog_entries(work, titles)
+    catalog = build_catalog(entries)
 
     out = out_root / "tecnicas"
     idx_dir = out_root / "indice"
@@ -811,17 +903,19 @@ def build(out_root: Path) -> list[str]:
         shutil.rmtree(idx_dir)
     idx_dir.mkdir(parents=True)
 
-    by_cat = {c: [] for c, _ in CATS}
+    by_cat: dict[str, list[dict]] = {c: [] for c, _ in CATS}
     hashes: set[str] = set()
     written: list[str] = []
 
-    for idx, (row, ang) in enumerate(work, 1):
+    for entry in entries:
+        row, ang = entry["row"], entry["ang"]
+        note_id = f"{entry['idx']:04d}"
         if ang is None:
-            content = render_base(row, titles)
-            suffix = ""
+            body = render_base(row, titles, catalog)
         else:
-            content = render_angle(row, titles, ang)
-            suffix = suf[ang]
+            body = render_angle(row, titles, ang, catalog)
+        fm = make_frontmatter(row, ang, titles, note_id)
+        content = fm + "\n\n" + body
         content = re.sub(r"\n{3,}", "\n\n", content).strip() + "\n"
         content = clean(content)
 
@@ -835,13 +929,11 @@ def build(out_root: Path) -> list[str]:
                 break
         hashes.add(hashlib.sha256(content.encode()).hexdigest())
 
-        fname = f"{idx:04d}-{row['fid']}-{row['slug']}{suffix}.md"  # suffix já inclui --
         folder = out / row["cat"]
         folder.mkdir(parents=True, exist_ok=True)
-        (folder / fname).write_text(content, encoding="utf-8")
-        written.append(f"tecnicas/{row['cat']}/{fname}")
-        title_line = content.splitlines()[0].lstrip("# ").strip()
-        by_cat[row["cat"]].append((idx, title_line, f"tecnicas/{row['cat']}/{fname}"))
+        (folder / entry["fname"]).write_text(content, encoding="utf-8")
+        written.append(f"tecnicas/{row['cat']}/{entry['fname']}")
+        by_cat[row["cat"]].append(entry)
 
     master = [
         "# Índice\n\n",
@@ -850,10 +942,7 @@ def build(out_root: Path) -> list[str]:
     ]
     for cat, name in CATS:
         master.append(f"- [{name}]({cat}.md)\n")
-        lines = [f"# {name}\n\n"]
-        for i, title, rel in by_cat[cat]:
-            lines.append(f"- [{i:04d} — {title}](../{rel})\n")
-        (idx_dir / f"{cat}.md").write_text("".join(lines), encoding="utf-8")
+        write_category_index(cat, name, by_cat[cat], idx_dir)
     (idx_dir / "README.md").write_text("".join(master), encoding="utf-8")
 
     assert len(list(out.rglob("*.md"))) == TARGET
